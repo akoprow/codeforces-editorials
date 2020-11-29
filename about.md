@@ -3,4 +3,4 @@ layout: page
 title: About
 ---
 
-TODO
+My short editorials for Codeforces contests.
