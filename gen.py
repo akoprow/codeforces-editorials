@@ -34,7 +34,9 @@ def generate(contestId, abbrev, shortName):
         tags = ' '.join(['`' + tag + '`' for tag in problem['tags']])
         print(f'[//]: # 🏷 {tags}', file=p)
         print(file=p)
+        print('```'file=p)
         print('TODO', file=p)
+        print('```'file=p)
         p.close()
 
     print('', file=f)
