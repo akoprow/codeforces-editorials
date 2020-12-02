@@ -20,26 +20,25 @@ def generate(contestId, abbrev, shortName):
     print('', file=f)
     print(f'[{title}](https://codeforces.com/contest/{contestId})', file=f)
     print(file=f)
-    print('* * *', file=f)
 
     for problem in data['problems']:
         index = problem['index']
         name = problem['name']
+        tags = ' '.join(['`' + tag + '`' for tag in problem['tags']])
         print(f"{{% include p/{contestId}{index}.md %}}", file=f)
-        print('* * *', file=f)
 
         p = open(f'_includes/p/{contestId}{index}.md', 'a')
-        print(f'# **{contestId}{index}** [{name}](https://codeforces.com/contest/{contestId}/problem/{index})', file=p)
-        print(file=p)
-        tags = ' '.join(['`' + tag + '`' for tag in problem['tags']])
-        print(f'[//]: # 🏷 {tags}', file=p)
-        print(file=p)
-        print('```'file=p)
-        print('TODO', file=p)
-        print('```'file=p)
+        print(f'{{% include exercise.md name="{name}" contestId="{contestId}" index="{index}"', file=p)
+        print(f'labels="{tags}"', file=p)
+        print(f'%}}', file=p)
+        print(f'```', file=p)
+        print(f'TODO', file=p)
+        print(f'```', file=p)
         p.close()
 
-    print('', file=f)
+    print(file=f)
+    print('* * *', file=f)
+    print(file=f)
     print(f"<object data='notes/{abbrev}.pdf' width='1000' height='1000' type='application/pdf'/>", file=f)
     f.close()
 
