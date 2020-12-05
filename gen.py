@@ -25,12 +25,13 @@ def generate(contestId, abbrev, shortName):
         index = problem['index']
         name = problem['name']
         tags = ' '.join(['`' + tag + '`' for tag in problem['tags']])
-        rating = problem['rating']
+        rating = problem.get('rating', None)
 
         print(f"{{% include p/{contestId}{index}.md %}}", file=f)
 
         p = open(f'_includes/p/{contestId}{index}.md', 'a')
-        print(f'{{% include exercise.md name="{name}" id="{contestId}{index}" labels="{tags}" rating={rating} %}}', file=p)
+        ratingArg = f'rating={rating}' if rating else ''
+        print(f'{{% include exercise.md name="{name}" id="{contestId}{index}" labels="{tags}" {ratingArg} %}}', file=p)
         print(file=p)
         print(f'```', file=p)
         print(f'TODO', file=p)
