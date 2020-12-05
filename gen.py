@@ -26,10 +26,10 @@ def generate(contestId, abbrev, shortName):
         name = problem['name']
         tags = ' '.join(['`' + tag + '`' for tag in problem['tags']])
         rating = problem.get('rating', None)
+        fn = f'p/{contestId[0:3]}/{contestId}{index}.md'
+        print(f"{{% include {fn} %}}", file=f)
 
-        print(f"{{% include p/{contestId}{index}.md %}}", file=f)
-
-        p = open(f'_includes/p/{contestId}{index}.md', 'a')
+        p = open(f'_includes/{fn}', 'a')
         ratingArg = f'rating={rating}' if rating else ''
         print(f'{{% include exercise.md name="{name}" id="{contestId}{index}" labels="{tags}" {ratingArg} %}}', file=p)
         print(file=p)
