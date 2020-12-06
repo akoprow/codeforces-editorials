@@ -13,36 +13,38 @@ def generate(contestId, abbrev, shortName):
     start = datetime.fromtimestamp(data['contest']['startTimeSeconds'])
     print(f'Contest: <{title}>')
 
-    f = open(f'_posts/{start.strftime("%Y-%m-%d")}-{abbrev}.md', 'a')
-    print('---', file=f)
-    print(f'title: {shortName}', file=f)
-    print('---', file=f)
-    print('', file=f)
-    print(f'[{title}](https://codeforces.com/contest/{contestId})', file=f)
-    print(file=f)
+    with open('genall.sh', 'a') as f:
+        print(f'./gen.py {contestId} {abbrev} "{shortName}"', file=f)
 
-    for problem in data['problems']:
-        index = problem['index']
-        name = problem['name']
-        tags = ' '.join(['`' + tag + '`' for tag in problem['tags']])
-        rating = problem.get('rating', None)
-        fn = f'p/{contestId[0:3]}/{contestId}{index}.md'
-        print(f"{{% include {fn} %}}", file=f)
+    with open(f'_posts/{start.strftime("%Y-%m-%d")}-{abbrev}.md', 'a') as f:
+        print('---', file=f)
+        print(f'title: {shortName}', file=f)
+        print('---', file=f)
+        print('', file=f)
+        print(f'[{title}](https://codeforces.com/contest/{contestId})', file=f)
+        print(file=f)
 
-        p = open(f'_includes/{fn}', 'a')
-        ratingArg = f'rating={rating}' if rating else ''
-        print(f'{{% include exercise.md name="{name}" id="{contestId}{index}" labels="{tags}" {ratingArg} %}}', file=p)
-        print(file=p)
-        print(f'```', file=p)
-        print(f'TODO', file=p)
-        print(f'```', file=p)
-        p.close()
+        for problem in data['problems']:
+            index = problem['index']
+            name = problem['name']
+            tags = ' '.join(['`' + tag + '`' for tag in problem['tags']])
+            rating = problem.get('rating', None)
+            fn = f'p/{contestId[0:3]}/{contestId}{index}.md'
+            print(f"{{% include {fn} %}}", file=f)
 
-    print(file=f)
-    print('* * *', file=f)
-    print(file=f)
-    print(f"<object data='notes/{abbrev}.pdf' width='1000' height='1000' type='application/pdf'/>", file=f)
-    f.close()
+            with open(f'_includes/{fn}', 'a') as p:
+                ratingArg = f'rating={rating}' if rating else ''
+                print(f'{{% include exercise.md name="{name}" id="{contestId}{index}" labels="{tags}" {ratingArg} %}}', file=p)
+                print(file=p)
+                print(f'```', file=p)
+                print(f'TODO', file=p)
+                print(f'```', file=p)
+
+        print(file=f)
+        print('* * *', file=f)
+        print(file=f)
+        print(f"<object data='notes/{abbrev}.pdf' width='1000' height='1000' type='application/pdf'/>", file=f)
+
 
 def main():
     if len(sys.argv) != 4:
