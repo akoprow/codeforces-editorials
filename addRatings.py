@@ -17,7 +17,7 @@ def generate(contestId):
         tags = ' '.join(['`' + tag + '`' for tag in problem['tags']])
         rating = problem.get('rating', None)
 
-        p = open(f'_includes/p/{contestId}{index}.md', 'a')
+        p = open(f'_includes/p/{contestId[0:3]}/{contestId}{index}.md', 'a')
         print(f'rating={rating}', file=p)
         p.close()
 
