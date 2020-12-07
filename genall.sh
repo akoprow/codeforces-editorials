@@ -1,5 +1,7 @@
 ##!/usr/bin/env bash
 
+./gen.py 1290 R-616  "Round 616 (Div I+II)"
+./gen.py 1291 R-616  "Round 616 (Div I+II)"
 ./gen.py 1431 KH-5   "Kotlin Heroes 5"
 ./gen.py 1438 R-682  "Round 682 (Div II)"
 ./gen.py 1439 R-684  "Round 684 (Div I+II)"
