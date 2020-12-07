@@ -16,3 +16,4 @@
 ./gen.py 1455 Edu-99 "Edu 99"
 ./gen.py 1456 R-687  "Round 687 (Div I)"
 ./gen.py 1457 R-687  "Round 687 (Div II)"
+./gen.py 1436 R-678 "Round 678"
