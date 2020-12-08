@@ -1,6 +1,8 @@
 ##!/usr/bin/env bash
 
 ./gen.py 1260 Edu-77 "Edu 77"
+./gen.py 1286 R-612  "Round 612 (Div I+II)"
+./gen.py 1287 R-612  "Round 612 (Div I+II)"
 ./gen.py 1290 R-616  "Round 616 (Div I+II)"
 ./gen.py 1291 R-616  "Round 616 (Div I+II)"
 ./gen.py 1301 R-619  "Round 619"
