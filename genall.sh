@@ -14,6 +14,8 @@
 ./gen.py 1439 R-684  "Round 684 (Div I+II)"
 ./gen.py 1440 R-684  "Round 684 (Div I+II)"
 ./gen.py 1442 R-681  "Round 681 (Div I+II)"
+./gen.py 1444 R-680  "Round 680 (Div I+II)"
+./gen.py 1445 R-680  "Round 680 (Div I+II)"
 ./gen.py 1446 R-683  "Round 683 (Div I+II)"
 ./gen.py 1447 R-683  "Round 683 (Div I+II)"
 ./gen.py 1450 GR-12  "Global Round 12"
