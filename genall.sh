@@ -1,6 +1,6 @@
 ##!/usr/bin/env bash
 
-./gen.py 1260 Edu-77 "Edu 77"
+./gen.py 1260 Edu-77 "Educational Round 77"
 ./gen.py 1286 R-612  "Round 612 (Div I+II)"
 ./gen.py 1287 R-612  "Round 612 (Div I+II)"
 ./gen.py 1290 R-616  "Round 616 (Div I+II)"
@@ -10,6 +10,7 @@
 ./gen.py 1434 R-679  "Round 679 (Div I+II)"
 ./gen.py 1435 R-679  "Round 679 (Div I+II)"
 ./gen.py 1436 R-678  "Round 678 (Div II)"
+./gen.py 1437 Edu-97 "Educational Round 97"
 ./gen.py 1438 R-682  "Round 682 (Div II)"
 ./gen.py 1439 R-684  "Round 684 (Div I+II)"
 ./gen.py 1440 R-684  "Round 684 (Div I+II)"
@@ -21,6 +22,6 @@
 ./gen.py 1450 GR-12  "Global Round 12"
 ./gen.py 1453 R-688  "Round 688 (Div II)"
 ./gen.py 1454 R-686  "Round 686 (Div III)"
-./gen.py 1455 Edu-99 "Edu 99"
+./gen.py 1455 Edu-99 "Educational Round 99"
 ./gen.py 1456 R-687  "Round 687 (Div I)"
 ./gen.py 1457 R-687  "Round 687 (Div II)"
