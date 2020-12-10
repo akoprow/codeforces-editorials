@@ -11,6 +11,7 @@
 ./gen.py 1420 R-672  "Round 672 (Div II)"
 ./gen.py 1421 R-676  "Round 676 (Div II)"
 ./gen.py 1431 KH-5   "Kotlin Heroes 5"
+./gen.py 1433 R-677  "Round 677 (Div III)"
 ./gen.py 1434 R-679  "Round 679 (Div I+II)"
 ./gen.py 1435 R-679  "Round 679 (Div I+II)"
 ./gen.py 1436 R-678  "Round 678 (Div II)"
