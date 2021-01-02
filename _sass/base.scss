@@ -4,6 +4,7 @@
 
 @import "rouge-base16-dark";
 @import "default_colors";
+@import "customizations";
 
 $body-background: $cod-grey !default;
 $body-foreground: $gallery !default;
@@ -19,16 +20,6 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-}
-
-/* Customization */
-rating {
-  font-size: 50%;
-  float: right;
-}
-
-tiny {
-  font-size: 50%;
 }
 
 /* General & 'Reset' Stuff */
@@ -245,7 +236,6 @@ hr {
 */
 
 a {
-  color: #63c0f5;
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
 
