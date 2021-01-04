@@ -238,54 +238,54 @@
   labels: 'bitmasks, brute force, fft'
   rating: 2900
 
-- id: '1336E1'
-  title: 'Chiori and Doll Picking (easy version)'
-  labels: 'bitmasks, brute force, combinatorics, math'
-  rating: 2700
+#- id: '1336E1'
+  #title: 'Chiori and Doll Picking (easy version)'
+  #labels: 'bitmasks, brute force, combinatorics, math'
+  #rating: 2700
 
-- id: '1336E2'
-  title: 'Chiori and Doll Picking (hard version)'
-  labels: 'bitmasks, brute force, combinatorics, math'
-  rating: 3500
+#- id: '1336E2'
+  #title: 'Chiori and Doll Picking (hard version)'
+  #labels: 'bitmasks, brute force, combinatorics, math'
+  #rating: 3500
 
-- id: '1336F'
-  title: 'Journey'
-  labels: 'data structures, divide and conquer, graphs, trees'
-  rating: 3500
+#- id: '1336F'
+  #title: 'Journey'
+  #labels: 'data structures, divide and conquer, graphs, trees'
+  #rating: 3500
 
-- id: '1337A'
-  title: 'Ichihime and Triangle'
-  labels: 'constructive algorithms, math'
-  rating: 800
-  code: 'r620-639/r635/1337a-ichihime-and-triangle.kt'
+#- id: '1337A'
+  #title: 'Ichihime and Triangle'
+  #labels: 'constructive algorithms, math'
+  #rating: 800
+  # code: 'r620-639/r635/1337a-ichihime-and-triangle.kt'
 
-- id: '1337B'
-  title: 'Kana and Dragon Quest game'
-  labels: 'greedy, implementation, math'
-  rating: 900
-  code: 'r620-639/r635/1337b-kana-and-dragon-quest-game.kt'
+#- id: '1337B'
+  #title: 'Kana and Dragon Quest game'
+  #labels: 'greedy, implementation, math'
+  #rating: 900
+  # code: 'r620-639/r635/1337b-kana-and-dragon-quest-game.kt'
 
-- id: '1337C'
-  title: 'Linova and Kingdom'
-  labels: 'dfs and similar, dp, greedy, sortings, trees'
-  rating: 1600
-  code: 'r620-639/r635/1337c-linova-and-kingdom.kt'
+#- id: '1337C'
+  #title: 'Linova and Kingdom'
+  #labels: 'dfs and similar, dp, greedy, sortings, trees'
+  #rating: 1600
+  # code: 'r620-639/r635/1337c-linova-and-kingdom.kt'
 
-- id: '1337D'
-  title: 'Xenia and Colorful Gems'
-  labels: 'binary search, data structures, implementation, math, sortings'
-  rating: 1700
-  code: 'r620-639/r635/1337d-xenia-and-colorful-gems.kt'
+#- id: '1337D'
+  #title: 'Xenia and Colorful Gems'
+  #labels: 'binary search, data structures, implementation, math, sortings'
+  #rating: 1700
+  # code: 'r620-639/r635/1337d-xenia-and-colorful-gems.kt'
 
-- id: '1337E'
-  title: 'Kaavi and Magic Spell'
-  labels: 'dp, strings'
-  rating: 2200
+#- id: '1337E'
+  #title: 'Kaavi and Magic Spell'
+  #labels: 'dp, strings'
+  #rating: 2200
 
-- id: '1337F'
-  title: 'Yui and Mahjong Set'
-  labels: 'interactive, math'
-  rating: 3200
+#- id: '1337F'
+  #title: 'Yui and Mahjong Set'
+  #labels: 'interactive, math'
+  #rating: 3200
 
 - id: '1338D'
   title: 'Nested Rubber Bands'
@@ -1458,86 +1458,86 @@
   labels: 'greedy'
   rating: 3000
 
-- id: '1466A'
-  title: 'Bovine Dilemma'
-  labels: 'brute force, math'
-  rating: 800
-  code: 'other/goodbye2020/1466a-bovine-dilemma.kt'
+#- id: '1466A'
+  #title: 'Bovine Dilemma'
+  #labels: 'brute force, math'
+  #rating: 800
+  # code: 'other/goodbye2020/1466a-bovine-dilemma.kt'
 
-- id: '1466B'
-  title: 'Last minute enhancements'
-  labels: 'dp, greedy'
-  rating: 800
-  code: 'other/goodbye2020/1466b-last-minute-enhancements.kt'
+#- id: '1466B'
+  #title: 'Last minute enhancements'
+  #labels: 'dp, greedy'
+  #rating: 800
+  # code: 'other/goodbye2020/1466b-last-minute-enhancements.kt'
 
-- id: '1466C'
-  title: 'Canine poetry'
-  rating: 1300
-  labels: 'dp, greedy, strings'
-  code: 'other/goodbye2020/1466c-canine-poetry.kt'
+#- id: '1466C'
+  #title: 'Canine poetry'
+  #rating: 1300
+  #labels: 'dp, greedy, strings'
+  # code: 'other/goodbye2020/1466c-canine-poetry.kt'
 
-- id: '1466D'
-  title: '13th Labour of Heracles'
-  rating: 1500
-  labels: 'data structures, greedy, sortings, trees'
-  code: 'other/goodbye2020/1466d-13th-labour-of-heracles.kt'
+#- id: '1466D'
+  #title: '13th Labour of Heracles'
+  #rating: 1500
+  #labels: 'data structures, greedy, sortings, trees'
+  # code: 'other/goodbye2020/1466d-13th-labour-of-heracles.kt'
 
-- id: '1466E'
-  title: 'Apollo versus Pan'
-  rating: 1800
-  labels: 'bitmasks, brute force, math'
-  code: 'other/goodbye2020/1466e-apollo-vs-pan.kt'
+#- id: '1466E'
+  #title: 'Apollo versus Pan'
+  #rating: 1800
+  #labels: 'bitmasks, brute force, math'
+  # code: 'other/goodbye2020/1466e-apollo-vs-pan.kt'
 
-- id: '1466F'
-  title: "Euclid's nightmare"
-  rating: 2100
-  labels: 'dfs and similar, dsu, graphs, greedy, math, sortings'
+#- id: '1466F'
+  #title: "Euclid's nightmare"
+  #rating: 2100
+  #labels: 'dfs and similar, dsu, graphs, greedy, math, sortings'
 
-- id: '1466G'
-  title: 'Song of the Sirens'
-  rating: 2600
-  labels: 'divide and conquer, hashing, math, strings'
+#- id: '1466G'
+  #title: 'Song of the Sirens'
+  #rating: 2600
+  #labels: 'divide and conquer, hashing, math, strings'
 
-- id: '1466H'
-  title: 'Finding satisfactory solutions'
-  labels: 'dp, graphs, greedy, math'
-  rating: 3300
+#- id: '1466H'
+  #title: 'Finding satisfactory solutions'
+  #labels: 'dp, graphs, greedy, math'
+  #rating: 3300
 
-- id: '1466I'
-  title: 'The Riddle of the Sphinx'
-  labels: 'binary search, data structures, data structures, interactive'
-  rating: 3400
+#- id: '1466I'
+  #title: 'The Riddle of the Sphinx'
+  #labels: 'binary search, data structures, data structures, interactive'
+  #rating: 3400
 
-- id: '1469A'
-  title: 'Regular Bracket Sequence'
-  labels: 'constructive algorithms, implementation'
-  rating: 1000
-  code: 'edu/edu101/1469a-regular-bracket-sequence.kt'
+#- id: '1469A'
+  #title: 'Regular Bracket Sequence'
+  #labels: 'constructive algorithms, implementation'
+  #rating: 1000
+  # code: 'edu/edu101/1469a-regular-bracket-sequence.kt'
 
-- id: '1469B'
-  title: 'Red and Blue'
-  labels: 'greedy'
-  rating: 1000
-  code: 'edu/edu101/1469b-red-and-blue.kt'
+#- id: '1469B'
+  #title: 'Red and Blue'
+  #labels: 'greedy'
+  #rating: 1000
+  # code: 'edu/edu101/1469b-red-and-blue.kt'
 
-- id: '1469C'
-  title: 'Building a Fence'
-  labels: 'dp, greedy, implementation'
-  rating: 1600
-  code: 'edu/edu101/1469c-building-a-fence.kt'
+#- id: '1469C'
+  #title: 'Building a Fence'
+  #labels: 'dp, greedy, implementation'
+  #rating: 1600
+  # code: 'edu/edu101/1469c-building-a-fence.kt'
 
-- id: '1469D'
-  title: 'Ceil Divisions'
-  labels: 'constructive algorithms, math, number theory'
-  rating: 1700
-  code: 'edu/edu101/1469d-ceil-divisions.kt'
+#- id: '1469D'
+  #title: 'Ceil Divisions'
+  #labels: 'constructive algorithms, math, number theory'
+  #rating: 1700
+  # code: 'edu/edu101/1469d-ceil-divisions.kt'
 
-- id: '1469E'
-  title: 'A Bit Similar'
-  labels: 'bitmasks, hashing, string suffix structures, strings, two pointers'
-  rating: 2400
+#- id: '1469E'
+  #title: 'A Bit Similar'
+  #labels: 'bitmasks, hashing, string suffix structures, strings, two pointers'
+  #rating: 2400
 
-- id: '1469F'
-  title: 'Power Sockets'
-  labels: 'binary search, data structures, greedy'
-  rating: 2600
+#- id: '1469F'
+  #title: 'Power Sockets'
+  #labels: 'binary search, data structures, greedy'
+  #rating: 2600
