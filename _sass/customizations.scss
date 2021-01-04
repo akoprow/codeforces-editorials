@@ -1,0 +1,35 @@
+/* Customization */
+labels {
+  float: right;
+  margin-right: 20px;
+}
+
+rating {
+  font-size: 80%;
+  float: right;
+}
+
+tiny {
+  font-size: 70%;
+}
+
+a {
+  color: #63c0f5;
+  text-decoration: none;
+}
+
+.alert > a {
+  color: darken(#63c0f5, 15%);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.badge.rounded-pill {
+  font-size: 70%;
+}
+
+.badge.tiny {
+  font-size: 50%
+}

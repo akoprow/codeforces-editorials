@@ -10,8 +10,6 @@ baseurl: /
 source: .
 destination: ./_site
 permalink: /:title
-paginate: 10
-paginate_path: /page/:num/
 
 defaults:
   -
@@ -21,11 +19,27 @@ defaults:
     values:
       layout: "post"
 
+collections:
+  problems:
+    output: true
+    permalink: /p/:path
+
 future: true
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-datapage-generator
+
+page_gen:
+- data: 'problems'
+  template: 'problem'
+  dir: 'problems'
+  index_files: false
+  name: 'id'
+  title: 'name'
+  extension: 'md'
+
 
 # Custom variables
 owner : "Adam Koprowski"

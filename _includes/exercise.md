@@ -6,7 +6,9 @@
   [CF]
   </a>
 
-  {% if include.rating %}{% include rating.md %}{% endif %}
+  {% if include.code %}<a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/{{include.code}}">(Code)</a>{% endif %}
+
+  {% if include.rating %}<rating>R:{{include.rating}} <meter min=800 max=3600 value="{{include.rating}}"/></rating>{% endif %}
 
   <labels>
   {% assign labels = include.labels | split: ", " %}

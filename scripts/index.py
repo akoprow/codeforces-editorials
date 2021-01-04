@@ -1,36 +1,36 @@
 #!/usr/bin/python3
 
+import re
 from pathlib import Path
 from tqdm import tqdm
 
-def show(label, exercises):
-    if exercises:
-        missing = ''.join(['\n  -' + str(m) for m in exercises])
-        print(f'\n{label}:{missing}')
-
-
 def main():
-    missingEditorials = []
-    missingRatings = []
-    missingCode = []
-
     for path in tqdm(sorted(Path('_includes/p').rglob('*.md'))):
         with open(path, 'rt') as f:
-            content = f.readlines()
-            hasRating = 'rating=' in content[0]
-            hasCode = 'code=' in content[0]
-            hasTutorial = all(['TODO' not in line for line in content])
-            print(f'{path} rating:{hasRating} code:{hasCode} tutorial:{hasTutorial}')
-            if hasTutorial and not hasCode:
-                missingCode.append(path)
-            if hasCode and not hasTutorial:
-                missingEditorials.append(path)
-            if not hasRating:
-                missingRatings.append(path)
+            ex = f.readlines()[0]
+            id = re.search(r"_includes/p/\d+/(.+)\.md", str(path))
+            if not id:
+                raise Exception(f'Unknown id for file: {path}')
+            name = re.search(r'name="([^"]+)"', ex)
+            if not name:
+                raise Exception(f'Unknown name in: {ex}')
+            rating = re.search(r'rating=(\d+)', ex)
+            labels = re.search(r'labels="([^"]+)"', ex)
+            if not labels:
+                raise Exception(f'Unknown labels in: {ex}')
+            code = re.search(r'code="([^"]+)"', ex)
 
-    show('Missing editorials', missingEditorials)
-    show('Missing ratings', missingRatings)
-    show('Missing code', missingCode)
+            print(f"- id: '{id.group(1)}'")
+            print(f"  title: '{name.group(1)}'")
+            print(f"  labels: '{labels.group(1)}'")
+            if rating:
+                print(f'  rating: {rating.group(1)}')
+            if code:
+                print(f"  code: '{code.group(1)}'")
+            else:
+                print(f'  todo: true')
+            print()
+
 
 if __name__ == "__main__":
     main()

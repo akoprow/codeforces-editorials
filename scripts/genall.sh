@@ -7,6 +7,7 @@
 ./gen.py 1291 R-616   "Round 616 (Div I+II)"
 ./gen.py 1301 R-619   "Round 619 (Div II)"
 ./gen.py 1333 R-632   "Round 632 (Div II)"
+./gen.py 1334 Edu-85  "Educational Round 85"
 ./gen.py 1336 R-635   "Round 635 (Div I+II)"
 ./gen.py 1337 R-635   "Round 635 (Div I+II)"
 ./gen.py 1338 R-633   "Round 633 (Div I+II)"
