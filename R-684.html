@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 684 (Div I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 684 (Div I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Round 684 (Div I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #684 (Div. 1)" />
+<meta property="og:description" content="Codeforces Round #684 (Div. 1)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 684 (Div I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/R-684","headline":"Round 684 (Div I+II)","dateModified":"2020-11-17T00:00:00+00:00","datePublished":"2020-11-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/R-684"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #684 (Div. 1)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/"><h2 class="header-link">Contests</h2></a>
+<a href="/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 684 (Div I+II)</h2>
+  <time datetime="2020-11-17T00:00:00+00:00" class="by-line">17 Nov 2020</time>
+  <p><a href="https://codeforces.com/contest/1439">Codeforces Round #684 (Div. 1)</a></p>
+
+<p><a href="https://codeforces.com/contest/1440">Codeforces Round #684 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1440</tiny>A
+
+  Buy the String
+  <a href="https://codeforces.com/contest/1440/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r684/1440a-buy-the-string.kt">(Code)</a>
+
+  <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>For each character compare the costs of: paying for it, swapping it + paying for the other one and pick smaller</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1440</tiny>B
+
+  Sum of Medians
+  <a href="https://codeforces.com/contest/1440/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r684/1440b-sum-of-medians.kt">(Code)</a>
+
+  <rating>R:900 <meter min="800" max="3600" value="900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Sort numbers and assign to a bucket until hitting the median position at which point start filling next bucket etc.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1440</tiny>C1 / <tiny>1439</tiny>A1
+
+  Binary Table (Easy Version)
+  <a href="https://codeforces.com/contest/1440/problem/C1">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r684/1440c1-binary-table-easy.kt">(Code)</a>
+
+  <rating>R:1500 <meter min="800" max="3600" value="1500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Let’s first focus on a single \(2\times2\) grid and look at the number of ones.  If there are none we are done.  If there is \(1\) we can make \(2\) or \(4\).  If there are \(2\) we can make \(1\) or \(3\) and if there are \(3\) we can make \(0\) or \(2\).  Those form the following chain:  \(4 \to 1 \to 2 \to 3 \to 0\).  So from any configuration we can get to \(0\) in at most \(4\) steps thus fixing \(4\) grid positions.
+What if the grid is not of even size?  We have enough moves to overlap those with preceeding rows/columns and still be well within the limit.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1440</tiny>C2 / <tiny>1439</tiny>A2
+
+  Binary Table (Hard Version)
+  <a href="https://codeforces.com/contest/1440/problem/C2">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r684/1440c2-binary-table-hard.kt">(Code)</a>
+
+  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>This is similar except now we don’t have the luxury to be wasteful with the last row/column for odd sizes.</p>
+
+<p>First let’s solve for only one dimension being odd and let’s assume it’s the number of columns (for rows it’s symmetrical).</p>
+
+<p>We will be sweeping from left to right and in each step fixing 2 cells.  I.e. we’re considering:  \(\begin{pmatrix}a &amp; c \\ b &amp; d \end{pmatrix}\) and want to zero \(a\) and \(b\), which we can easily do. Once we reach the final \(2\times2\) block we zero it completely as before.</p>
+
+<p>Finally we’re left with both sizes being odd.  Firstly we look at the bottom-right cell and if it’s zero we fix it by flipping it (and whatever else).  Then we apply the algorithm from the previous paragraph for rows.  Finally we’re left with the last row which can have some \(1\)s (except for the last column).  We look at it in \(2\times2\) blocks with the previous row, which is all \(0\)s and so each block can have at most \(2\) ones and so according to the initial calculation takes at most \(2\) steps to fix.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1440</tiny>D / <tiny>1439</tiny>B
+
+  Graph Subset Problem
+  <a href="https://codeforces.com/contest/1440/problem/D">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2600 <meter min="800" max="3600" value="2600" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">hashing</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1440</tiny>E / <tiny>1439</tiny>C
+
+  Greedy Shopping
+  <a href="https://codeforces.com/contest/1440/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2600 <meter min="800" max="3600" value="2600" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1439</tiny>D
+
+  INOI Final Contests
+  <a href="https://codeforces.com/contest/1439/problem/D">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3100 <meter min="800" max="3600" value="3100" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">fft</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1439</tiny>E
+
+  Cheat and Win
+  <a href="https://codeforces.com/contest/1439/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3500 <meter min="800" max="3600" value="3500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">games</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-684.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

@@ -1,30 +1,2141 @@
----
-layout: null
----
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codeforces editorials</title>
+    <description>Codeforces editorials</description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <author>
+      <name>Adam Koprowski</name>
+      <email>Adam.Koprowski@gmail.com</email>
+      <uri></uri>
+    </author>
+    
+      <item>
+        <title>Round 692 (Div I+II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1464&quot;&gt;Codeforces Round #692 (Div. 1, based on Technocup 2021 Elimination Round 3)&lt;/a&gt;&lt;/p&gt;
 
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1465&quot;&gt;Codeforces Round #692 (Div. 2, based on Technocup 2021 Elimination Round 3)&lt;/a&gt;&lt;/p&gt;
 
- <title>{{ site.title }}</title>
- <link href="{{ "/atom.xml" | prepend: site.baseurl | replace: '//', '/' }}" rel="self"/>
- <id>{{ site.baseurl }}</id>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <author>
-   <name>{{ site.author.name }}</name>
-   <uri>{{ site.author.url }}</uri>
-   <email>{{ site.author.email }}</email>
- </author>
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1465&lt;/tiny&gt;A
 
- {% for post in site.posts limit: 10 %}
+  In-game Chat
+  &lt;a href=&quot;https://codeforces.com/contest/1465/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
 
- <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"/>
-   <id>{{ post.id | prepend: site.baseurl | replace: '//', '/' }}</id>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <content type="html">{{ post.content | xml_escape | truncatewords:50 }}</content>
- </entry>
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465a-in-game-chat.kt&quot;&gt;(Code)&lt;/a&gt;
 
- {% endfor %}
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
 
-</feed>
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Trivial, just count the number of consecutive “)” at the end and if that number doubled is longer than the length of the string then the message is bad.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1465&lt;/tiny&gt;B
+
+  Fair Numbers
+  &lt;a href=&quot;https://codeforces.com/contest/1465/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465b-fair-numbers.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1000&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A trivial approach of just iterating from \(n\) until we reach an acceptable number works.&lt;/p&gt;
+
+&lt;p&gt;Why we won’t have to iterate too much?  Because \(lcm(1, \ldots, 9) = 2520\) which means that every \(2520\)-th number is divisible by all digits from \(1\) to \(9\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1465&lt;/tiny&gt;C / &lt;tiny&gt;1464&lt;/tiny&gt;A
+
+  Peaceful Rooks
+  &lt;a href=&quot;https://codeforces.com/contest/1465/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465c-peaceful-rooks.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Looking at a single rook at \((x, y)\) we have three options:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It’s already on the diagonal, i.e. \(x == y\),&lt;/li&gt;
+  &lt;li&gt;It can be moved in a single move into at least one of the following two diagonal positions: \((x, x)\) or \((y, y)\).&lt;/li&gt;
+  &lt;li&gt;Both \((x, x)\) and \((y, y)\) are attacked by some other rook.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We can apply the following greedy strategy: leave the rooks already well placed alone and for the remaining ones put them in a priority queue ordered in increasing number by the number of its target positions being blocked (\(0, 1, 2\)).  While getting rooks with \(0\) or \(1\) move them to diagonal with a single move.  When getting one with \(2\) we first need to unblock one of those positions and then move it so it costs us \(2\) moves.&lt;/p&gt;
+
+&lt;p&gt;Why does that work?  Well, think of this as a graph, where each rook at position \((x, y)\) we represent as an edge \(x \to y\).  Our goal is to transform this graph into self-loops, i.e. all rooks at positions \((x, x)\).  From the fact that no two rooks attack each other we infer that there is at most one edge leading to and from each vertex.  Which in turn means that the graph can only have simple paths and simple cycles.  A path can be unwound into a bunch of self-loops with one move per each of its node.  And a single cycle can be transformed into a path with a single move (the fact that it’s always possible comes from the fact that there is at least one row/column unoccupied).  So a total number of moves is the number of rooks, minus the number of rooks which are initially on the diagonal, plus the number of cycles.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1465&lt;/tiny&gt;D / &lt;tiny&gt;1464&lt;/tiny&gt;B
+
+  Grime Zoo
+  &lt;a href=&quot;https://codeforces.com/contest/1465/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465d-grime-zoo.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Assume \(x &amp;gt; y\); the other case is symmetrical (or we can just swap \(x\) and \(y\) and flip the string \(0 \to 1, 1 \to 0\)).&lt;/p&gt;
+
+&lt;p&gt;Let’s consider what happens to a configuration \(\vec{u}\ 1 \ \vec{v}\ 0 \ \vec{z}\) if we change it to \(\vec{u}\ 0\ \vec{v}\ 1\ \vec{z}\). Firstly, observe that the block between \(\vec{u}\) and \(\vec{z}\) has the same number of \(0\)s and \(1\)s in both cases and so the cost of pairs with at least one element outside of that block will be the same.  So we can just compare \(1\ \vec{v}\ 0\) with \(0\ \vec{v}\ 1\).  Block in the middle is again the same so we can just focus on how much pairs involving first and/or last elements contribute to the answer; let’s denote it by function \(f\).  Assume that within \(\vec{v}\) we have \(v_0\) zeroes and \(v_1\) ones.  Then we have:&lt;/p&gt;
+
+\[f(1\ \vec{v}\ 0) - f(0\ \vec{v}\ 1) = ((1+v_1)y + v_0 y) - ((1+v_1) x + v_0 x) = (1 + v_0 + v_1)(y - x)\]
+
+&lt;p&gt;\(1 + v_0 + v_1\) is positive as all its elements are positive.  Since \(x &amp;gt; y\) that means that \(y-x\) is negative and hence so is the whole formula.  Which means that by flipping \(1\ \vec{v}\ 0\) to \(0\ \vec{v}\ 1\) we can &lt;em&gt;always&lt;/em&gt; decrease the overall cost.  Which further means that, by continuing to apply this logic, in the final answer (i.e. what we substitute question marks for) we cannot have a \(1\) followed by a \(0\).  That means it must be of the shape \(00 \ldots 11\).&lt;/p&gt;
+
+&lt;p&gt;Now, the idea is to try to iterate over the number of \(0\)s in that final answer and pick the option that gives the lowest cost.  How can we do that efficiently?&lt;/p&gt;
+
+&lt;p&gt;Let’s begin by computing the cost of \(11 \ldots 11\) and then we will be successively “inserting” \(0\)s from the left. To do that we iterate through the string and keep track of: number of zeroes, \(z\), and number of \(10\) pairs we’ve seen, \(oz\).  Number of ones, \(o\) and of \(01\) pairs, \(zo\), can be easily derived from that, as we have: \(z + o = i\) (where \(i\) is the number of characters we’ve considered so far) and \(zo + oz = o*z\), i.e. we need to pick some zero and some one to form a pair of distinct digits (\(01\) or \(10\)).&lt;/p&gt;
+
+&lt;p&gt;Now we will sweep from left to right to replace ones with zeroes. To do that we will keep of four variables: \(z_l, z_r, o_l, o_r\), which are, respectively, number of zeroes/ones to the left/right of the index we’re considering.  When we see \(0\) or \(1\) we just update those variables, which is fairly simple.  When we see \(&quot;?&quot;\) we will be replacing \(1\) with a \(0\) and on top of updating those variables (careful!) we also need to update the score, we’re adding \(o_l\) \(10\) pairs to the left and \(o_r\) \(01\) pairs to the right and removing \(z_l\) \(01\) pairs to the left and \(z_r\) \(10\) pairs to the right, so in total we’re incrementing the score by \(y(o_l - z_r) + x(o_r - z_l)\).  We then take the minimal score across all considered options.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1465&lt;/tiny&gt;E / &lt;tiny&gt;1464&lt;/tiny&gt;A
+
+  Poman Numbers
+  &lt;a href=&quot;https://codeforces.com/contest/1465/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465e-poman-numbers.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Crucial observation is that the last digit will always come with a plus sign, the last but one with a minus and &lt;em&gt;all the others we can choose however we like&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s prove it.  Firstly, we can drop an arbitrary prefix of minuses by splitting on a single prefix character required number of times.  So we are left with a target of the form: \(+ \ldots +[---]-+\) (part in the brackets can be empty or can have more minuses).  We split it by taking all but one minuses from the last segment of minuses into the right part, i.e. left: \(+ \ldots +-\), right: \([---]+\).  Note that the left part is taken with a minus sign so we flip the targets and get left: \(- \ldots -+\), right: \([---]+\), so we obtain two smaller segments so our thesis follows by induction.&lt;/p&gt;
+
+&lt;p&gt;Now knowing that we update target based on the last two digits and for the rest we apply a greedy approach: we sort digits in descending orders and apply each one in turn with the sign that will bring us closer to the target.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1465&lt;/tiny&gt;F / &lt;tiny&gt;1464&lt;/tiny&gt;D
+
+  The Thorny Path
+  &lt;a href=&quot;https://codeforces.com/contest/1465/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3000&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1464&lt;/tiny&gt;E
+
+  No Game No Life
+  &lt;a href=&quot;https://codeforces.com/contest/1464/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;matrices&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1464&lt;/tiny&gt;F
+
+  My Beautiful Madness
+  &lt;a href=&quot;https://codeforces.com/contest/1464/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-692.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+        <link>//R-692</link>
+        <link href="/R-692"/>
+        <guid isPermaLink="true">/R-692</guid>
+      </item>
+    
+      <item>
+        <title>Round 691 (Div I+II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1458&quot;&gt;Codeforces Round #691 (Div. 1)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1459&quot;&gt;Codeforces Round #691 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1459&lt;/tiny&gt;A
+
+  Red-Blue Shuffle
+  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r691/1459a-red-blue-shuffle.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;probabilities&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, note that if both digits on a single card are the same then this card will not have any impact on the result and we may as well discard it.&lt;/p&gt;
+
+&lt;p&gt;After that all cards have different digits and so after permutation it will always be the first card that will decide the overall result.  So we simply look at all the cards and count cases where \(r_i &amp;gt; b_i\) and where \(b_i &amp;gt; r_i\) and compare those two numbers. If the former is larger than we answer “RED”, if latter “BLUE” and if they are equal then “EQUAL”.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1459&lt;/tiny&gt;B
+
+  Move and Turn
+  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r691/1459b-move-and-turn.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Couple of observations.  Firstly, the move rules simply mean that we alternate moves between moving along X and along Y axis (starting with arbitrary).  Secondly, we can think of those two moves independently, as they affect different components of a \((x, y)\) coordinate.&lt;/p&gt;
+
+&lt;p&gt;We have two cases.  If \(n\) is even that means we’ll do \(k = n/2\) moves of each type.  Each move modifies coordinate by \(+1\) or \(-1\).  What values we can reach on the axis we’re considering?  Well: \(k, k-2, \ldots, 0, \ldots, -k+2, -k\) and there are \(k+1\) of them.  Since both axis are independent this gives an overall answer of \((k+1)^2\).&lt;/p&gt;
+
+&lt;p&gt;What if \(n\) is odd?  We’ll do \(k = \lfloor n/2 \rfloor\) moves along one axis and\(\lceil n/2 \rceil = k + 1\) along the other axis and we can pick which is which.  For each of those choices we can use similar reasoning to the one from the previous paragraph and so we end up with \((k+1)(k+2)\) moves.&lt;/p&gt;
+
+&lt;p&gt;Now, configurations that we reach in those two cases are disjoint.  Why is that?  That’s because each move changes parity of the values along each axis and so those parities cannot be the same after \(k\) and \(k+1\) moves.  That means that the total number of combinations in the odd case is: \(2(k+1)(k+2)\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1459&lt;/tiny&gt;C / &lt;tiny&gt;1458&lt;/tiny&gt;A
+
+  Row GCD
+  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r691/1459c-row-gcd.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that the difference between two numbers must be divisible by their \(gcd\).  More formally: if \(gcd(x, y) = p\) then \(abs(x-y) % p == 0\).&lt;/p&gt;
+
+&lt;p&gt;So we can sort the initial numbers, throw away the duplicates and pre-compute \(gcd\) of all the differences, let’s call that \(G\).  Now for a query of \(b_j\) we can simply compute the answer as: \(gcd(a_1+b_j, G)\).&lt;/p&gt;
+
+&lt;p&gt;Another way to reason about that is as follows.  We know that \(gcd(x, y) = gcd(x-y, y)\).  We will want to compute \(gcd(a_1 + b_j, a_2+b_j, \ldots, a_n + b_j)\).  By subtracting the \(a_1+b_j\) from all the other terms we get that that formula equals to \(gcd(a_1 + b_j, a_2 - a_1, \ldots a_n - a_1)\), which equals to: \(gcd(a_1 + b_j, gcd(a_2 - a_1, \ldots a_n - a_1))\). We an easily see that the second argument does not depend on the queries and so we can precompute it and then answering each query comes down to a single \(gcd\) of 2 arguments.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1459&lt;/tiny&gt;D / &lt;tiny&gt;1458&lt;/tiny&gt;B
+
+  Glass Half Spilled
+  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r691/1459d-glass-half-spilled.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2000&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Few observations at first.  Let’s say we chose some \(k\) glasses; what do we need to know about them to compute the final answer?  Two things only: total capacity and amount of water in them initially.  Why is that?  Well, the optimal pouring strategy is very simple: we keep water in those glasses and pour from all the others directly to them until reaching capacity.  Let’s say that our \(k\) glasses have \(W\) water in them and a total capacity of \(C\), whereas the total amount of water in all the glasses is \(W_{all}\).  The final answer then is: \(min(C, W + (W_{all}-W)/2)\), because we cannot go over total capacity \(C\), we initially have \(W\) water in the glasses and \(W_{all}-W\) water available that we can pour, loosing half of it.&lt;/p&gt;
+
+&lt;p&gt;Once we know that we can device DP with state \(S_{(i,k,c)}\) being initial amount of water in \(k\) glasses chosen from glasses \(1..i\) such that their overall capacity is \(c\).  Knowing that we can relatively easily come up with the transitions as we have two cases for a glass: use it as one of the chosen glasses or not.&lt;/p&gt;
+
+\[S_{(i,k,c)} = max(S_{(i-1,k,c)}, S_{(i-1,k-1,c-a_i)} + b_i)\]
+
+&lt;p&gt;Not strictly necessary but if we are careful and do the computations in the right order we can get rid of the first dimension \(i\); see code for details.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1459&lt;/tiny&gt;E / &lt;tiny&gt;1458&lt;/tiny&gt;C
+
+  Latin Square
+  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;matrices&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1459&lt;/tiny&gt;F / &lt;tiny&gt;1458&lt;/tiny&gt;D
+
+  Flip and Reverse
+  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1458&lt;/tiny&gt;E
+
+  Nim Shortcuts
+  &lt;a href=&quot;https://codeforces.com/contest/1458/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1458&lt;/tiny&gt;F
+
+  Range Diameter Sum
+  &lt;a href=&quot;https://codeforces.com/contest/1458/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-691.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+        <link>//R-691</link>
+        <link href="/R-691"/>
+        <guid isPermaLink="true">/R-691</guid>
+      </item>
+    
+      <item>
+        <title>Educational Round 100</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1463&quot;&gt;Educational Codeforces Round 100 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1463&lt;/tiny&gt;A
+
+  Dungeon
+  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu100/1463a-dungeon.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that we repeatedly fire \(6\) shots at whatever we want and then the following \(3\) at all of the monsters.  That means that we can pass the dungeon beautifully if and only if:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sum of monster strengths is divisible by \(9\) and&lt;/li&gt;
+  &lt;li&gt;strength of each monster is at least \((a+b+c)/9\) (so that it does not die before we’re done)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1463&lt;/tiny&gt;B
+
+  Find The Array
+  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu100/1463b-find-the-array.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One option is for each \(b_i\) to take power of \(2\) that is closest to \(a_i\).  Hence at every position we’re at most by factor of \(2\) away from \(a_i\) and so are we for the whole sum.  Since all elements are powers of \(2\) we’re also satisfying the condition of divisibility.&lt;/p&gt;
+
+&lt;p&gt;Another option is to consider \((a_1, 1, a_3, 1, a_5 \ldots)\) and \((1, a_2, 1, a_4, 1 \ldots)\); one of them is guaranteed to be the right answer.  Divisibility condition is trivially satisfied for both.  Denote by \(S_{odd}\) and \(S_{even}\) the sum of elements at odd/even positions in \(a\).  \(S_{odd} + S_{even} = S\) and so either \(S_{odd} \le \frac{S}{2}\) or \(S_{even} \le \frac{S}{2}\).  Assume it’s the former.  Then we pick \((1, a_2, 1, a_4, 1 \ldots)\) for \(b\) and it’s easy to see that \(\sum_{i \in 1..n} \mid a_i - b_i \mid \le S_{odd}\) and so \(2 \sum_{i \in 1..n} \mid a_i - b_i \mid \le S\). // check&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1463&lt;/tiny&gt;C
+
+  Busy Robot
+  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu100/1463c-busy-robot.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Fairly simple, just a matter of clean implementation.  We can keep track of: position of the robot and its target.  After moving to the next command we move the robot and if it’s done with the previous command, update it to the current one.  We additionally keep track of whether he passed the target of the previous command.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1463&lt;/tiny&gt;D
+
+  Pairs
+  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu100/1463d-pairs.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Intuition: the set of valid \(x\) forms a contiguous segment.&lt;/p&gt;
+
+&lt;p&gt;To compute the left border we start from number \(1\), iterate upwards and calculate the number of elements in \(b\) vs not in \(b\).  We take the largest difference between the two.  More formally:&lt;/p&gt;
+
+\[l = max_{i \in 1..n} max(0, 2*\mid b_i \cap \{1, \ldots i\} \mid - i)\]
+
+&lt;p&gt;Similarly for right border except we go from \(2n\) down to \(1\).&lt;/p&gt;
+
+\[r = max_{i \in 1..n} max(0, 2*\mid b_i \cap \{n, n-1, \ldots n-i+1\} \mid - i)\]
+
+&lt;p&gt;The final answer is the length of the segment, i.e. \(r-l+1\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1463&lt;/tiny&gt;E
+
+  Plan of Lectures
+  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dsu&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1463&lt;/tiny&gt;F
+
+  Max Correct Set
+  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/Edu-100.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+        <link>//Edu-100</link>
+        <link href="/Edu-100"/>
+        <guid isPermaLink="true">/Edu-100</guid>
+      </item>
+    
+      <item>
+        <title>Round 689 (Div II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1461&quot;&gt;Codeforces Round #689 (Div. 2, based on Zed Code Competition)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1461&lt;/tiny&gt;A
+
+  String Generation
+  &lt;a href=&quot;https://codeforces.com/contest/1461/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r689/1461a-string-generation.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Simply generate \(abc\) repeated as much as needed, which does not have any palindromes in it (other than the degenerated 1-character case).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1461&lt;/tiny&gt;B
+
+  Find the Spruce
+  &lt;a href=&quot;https://codeforces.com/contest/1461/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r689/1461b-find-the-spruce.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s iterate over spruce sizes.  For size \(1\) we just count cells with “\(*\)”.  For \(i &amp;gt; 1\) we have a spruce of size \(i\) at cells \((r, c)\) iff:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we have spruces of size \(i\) at all off: \((r, c-1), (r, c), (r, c+1)\) and&lt;/li&gt;
+  &lt;li&gt;there’s a “\(*\)” at \((r-i, c)\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1461&lt;/tiny&gt;C
+
+  Random Events
+  &lt;a href=&quot;https://codeforces.com/contest/1461/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r689/1461c-random-events.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;probabilities&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s find the longest suffix which already has its numbers in the right place, let’s say the suffix is \(p, p+1, \ldots n\).  This means that any experiment with \(r_i \ge p\) will do.  We can easily compute the probability that all such experiments will fail: \(\prod_{j, r_j \ge p} (1 - r_i)\) and so the answer we’re looking for is \(1\) minus that product.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1461&lt;/tiny&gt;D
+
+  Divide and Summarize
+  &lt;a href=&quot;https://codeforces.com/contest/1461/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r689/1461d-divide-and-summarize.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;divide and conquer&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Observe that the result of a slicing operation does not depend on the order so we start by sorting the input array.&lt;/p&gt;
+
+&lt;p&gt;Then we will precalculate all \(i\) such that it’s possible to pass the \(i\)‘th prettiness test.  For that we explore all possible slicings.  A state is a pair \([l, r]\) describing the section of the array that we are considering right now.  We get its sum cheaply by having prefix sums on the original array and add that value to our set of reachable \(i\)’s.  Then we compute \(mid\), just by looking at first and last elements in the segment.  Finally we find the slicing point using binary search and continue recursively with at most two intervals that we generated.&lt;/p&gt;
+
+&lt;p&gt;Once we have this set answering the queries is trivial, we just check if the queried \(i\) belongs to out set.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1461&lt;/tiny&gt;E
+
+  Water Level
+  &lt;a href=&quot;https://codeforces.com/contest/1461/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r689/1461e-water-level.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We have two cases.&lt;/p&gt;
+
+&lt;p&gt;Easier one is \(x &amp;gt;= y\).  This means that we’ll be constantly loosing water, by \(x-y\) each day, except possibly the first one when it might be \(x\) if adding \(y\) would take us over \(r\).  All we need to do is check if we can last \(t\) days.  Careful with overflows!&lt;/p&gt;
+
+&lt;p&gt;Now if \(y &amp;gt; x\) then we can refill lost water each day and the only question is whether we can stay within \([l, r]\).  We check iteratively, in each step going as many days as we can without refill and only then refilling and continuing.&lt;/p&gt;
+
+&lt;p&gt;Just doing so would be too slow given very high limits.  However, observe that if we reach a water level that we’ve seen in earlier iteration that means we can loop it and the answer is definitely “YES”.  So we keep track of seen levels.  Notice further that those seen configuration are bound by \(x\) as each configuration will have a different value modulo \(x\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1461&lt;/tiny&gt;F
+
+  Mathematical Expression
+  &lt;a href=&quot;https://codeforces.com/contest/1461/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-689.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+        <link>//R-689</link>
+        <link href="/R-689"/>
+        <guid isPermaLink="true">/R-689</guid>
+      </item>
+    
+      <item>
+        <title>Global Round 12</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1450&quot;&gt;Codeforces Global Round 12&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;A
+
+  Avoid Trygub
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr12/1450a-avoid-trygub.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One option is just to sort the input string alphabetically since such a sorting is guaranteed not to have a “trygub” substring since it is not sorted alphabetically.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;B
+
+  Balls of Steel
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr12/1450b-balls-of-steel.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1000&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It’s (&lt;em&gt;relatively&lt;/em&gt;, sigh) easy to see that the answer must be \(-1\) or \(1\), since if we merge something from a given point, everything merges into that point and no further merging is possible.&lt;/p&gt;
+
+&lt;p&gt;So it’s enough to just check if there exist a point from which all the others are within the given distance and if so answer \(1\); otherwise it’s \(-1\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;C1
+
+  Errich-Tac-Toe (Easy Version)
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/C1&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr12/1450c1-errich-tac-toe-easy.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s divide the board into 3-coloured, red-green-blue, squares, such that every winning triple of board positions always has one piece of each colour.  This can be easily achieved by using color \((i + j) \mod 3\) for board position \((i, j)\).&lt;/p&gt;
+
+&lt;p&gt;Now let’s flip all \(X\)s of a single colour into \(O\)s, so by construction we will prevent any winning combinations.  Let’s say that the number of \(X\)s of different colours is: \(X_R, X_G, X_B\).  We have \(X_R + X_G + X_B = k\) and so \(min(X_R, X_G, X_B) \le \lfloor \frac{k}{3} \rfloor\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;C2
+
+  Errich-Tac-Toe (Hard Version)
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/C2&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr12/1450c2-errich-tac-toe-hard.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is somewhat similar to the easier version except we will:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pick one colour and change all its marks to \(X\) and&lt;/li&gt;
+  &lt;li&gt;pick another colour and change all its marks to \(O\)s.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By construction this eliminates possibility of any winning combinations on the board.&lt;/p&gt;
+
+&lt;p&gt;If we pick the best pair we’re also guaranteed to be within the limit of moves as:&lt;/p&gt;
+
+\[X_R + X_G + X_B + O_R + O_G + O_B = k\]
+
+&lt;p&gt;Now, let us denote by \(f_{c_1 c_2}\) the cost of flipping colour \(c_1\) to \(X\)s and \(c_2\) to \(O\)s, so: \(f_{c_1 c_2} = X_{c_1} + O_{c_2}\).  Combining we obtain:&lt;/p&gt;
+
+\[f_{RG} + f_{RB} + f_{GB} + f_{GR} + f_{BR} + f_{BG} = 2k\]
+
+&lt;p&gt;and hence:&lt;/p&gt;
+
+\[min(f_{RG} + f_{RB} + f_{GB} + f_{GR} + f_{BR} + f_{BG}) = \lfloor \frac{k}{3} \rfloor\]
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;D
+
+  Rating Compression
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr12/1450d-rating-compression.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Tricky.  Firstly let’s observe that for:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(k=1\) we just need the input array to be a permutation&lt;/li&gt;
+  &lt;li&gt;\(k=n\) it’s enough that \(1 \in \vec{a}\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What about other \(k\)? Let’s think about \(k=n-1\). Firstly, we need to have \(1\) on either border of the array; otherwise we’ll be stuck with two copies of it.  Secondly, we need the rest of the array to reduce to \(2\) which means that \(2\) must be a minimum of that subarray.&lt;/p&gt;
+
+&lt;p&gt;Moving on to \(k=n-2\) we remove \(1\) from either end of the array, check that \(2\) is on either end and that the minimum is now \(3\).&lt;/p&gt;
+
+&lt;p&gt;This process can easily be implemented with two pointers for beginning/end of the considered range and a multiset of elements that are left to be considered, to efficiently compute \(min\) in each step.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;E
+
+  Capitalism
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;F
+
+  The Struggling Contestant
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;G
+
+  Communism
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/G&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;H1
+
+  Multithreading (Easy Version)
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/H1&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1450&lt;/tiny&gt;H2
+
+  Multithreading (Hard Version)
+  &lt;a href=&quot;https://codeforces.com/contest/1450/problem/H2&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- TODO Add ratings --&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/GR-12.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+        <link>//GR-12</link>
+        <link href="/GR-12"/>
+        <guid isPermaLink="true">/GR-12</guid>
+      </item>
+    
+      <item>
+        <title>Round 688 (Div II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1453&quot;&gt;Codeforces Round #688 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1453&lt;/tiny&gt;A
+
+  Cancel the Trains
+  &lt;a href=&quot;https://codeforces.com/contest/1453/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r688/1453a-cancel-the-trains.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It’s easy to observe that only trains with equal numbers can crash into each other and in that case cancelling one of them is enough.  So we can convert both train numbers to sets and the size of their intersection is our answer.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1453&lt;/tiny&gt;B
+
+  Suffix Operations
+  &lt;a href=&quot;https://codeforces.com/contest/1453/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r688/1453b-suffix-operations.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Tricky beast.  Firstly, let’s observe that our goal is to make all elements in the array equal to the first one.  That’s because the only way to change that first element is by changing the whole array which, relatively speaking, does not change anything so is useless.&lt;/p&gt;
+
+&lt;p&gt;Let’s first forget about the allowed single change and solve it for the initial array.  The optimal strategy is to sweep from left to right, fixing elements one by one.  Fixing each one costs us the absolute difference with the previous element, so the total cost is: \(\sum_{i \in 2..n} \mid a_i - a_{i-1} \mid\).&lt;/p&gt;
+
+&lt;p&gt;Now, how much can we save from that cost by changing a single element?  We can either make the first element equal to the second one, hence saving \(\mid a_2 - a_1\mid\) or make last two equal hence saving: \(\mid a_n - a_{n-1}\mid\) or make element at position \(i\) equal to its predecessor, saving: \(\mid a_i - a_{i-1} \mid + \mid a_{i+1} - a_{i} \mid - \mid a_{i+1} - a_{i-1} \mid\) (for \(a, b, c\) we don’t have to go from \(a\) to \(b\) and from \(b\) to \(c\) but instead go directly from \(a\) to \(c\)).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1453&lt;/tiny&gt;C
+
+  Triangles
+  &lt;a href=&quot;https://codeforces.com/contest/1453/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r688/1453c-triangles.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We can consider each digit separately, so we basically have a grid of boolean values and we need to find a biggest triangle rooted at \(3\) points out of which at least \(2\) are \(true\).&lt;/p&gt;
+
+&lt;p&gt;Note that the area of a triangle multiplied by \(2\) (what we’re asked) is simply the length of the base of the triangle times its height; and since the base is parallel to the axis this is easy to compute (and is an integer).&lt;/p&gt;
+
+&lt;p&gt;Let’s say that we have a position in the matrix with the right digit at \((i, j)\) and we’ll want to change digit at position \((p, q)\).  We have two cases to consider:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;\(i = p\).  We want the base as long as possible so clearly we want to make \(j = 1\) or \(j = n\), whichever gets longer, making the length of the base \(max(j-1, n-j)\).  What about the remaining third point?  The only thing that affects the computation is the row in which it will be and, since we want to maximize the height of the triangle, it’s clear that we want to use \(r_min\) or \(r_max\) where those are the minimal, respectively maximal, rows where we have the right digit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;\(j = q\).  Similarly, \(p\) will be either \(1\) or \(n\) and we’ll want to pre-compute \(c_min\) and \(c_max\), i.e. minimal/maximal columns with the right digit.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that we do not need to think separately about the case where the changed point is not part of the base since it can always be moved so that it is, without changing the area of the resulting triangle.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1453&lt;/tiny&gt;D
+
+  Checkpoints
+  &lt;a href=&quot;https://codeforces.com/contest/1453/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r688/1453d-checkpoints.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;probabilities&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, observe that solving segments between two checkpoints is independent and so the total expected number of tries is a sum of expected tries over all segments.&lt;/p&gt;
+
+&lt;p&gt;Now let’s call by \(F(i)\) expected number of tries to solve \(i\) levels between checkpoints. Clearly \(F(1) = 2\).  For \(i=1\) we need to solve all the preceding \(i-1\) levels and then we will succeed half of the time, leading to: \(F(i) = 2*(F(i-1)+1)\), so we have \(F(2) = 6, F(3) = 14\) etc.&lt;/p&gt;
+
+&lt;p&gt;Now our problem basically comes down to expressing \(k\) as a sum of \(F(i)\) values. Clearly, if \(k\) is odd then that is not possible. If it is even then it turns out that we can always do that.&lt;/p&gt;
+
+&lt;p&gt;One strategy is to do it greedily: generate \(F(i)\) values for \(i=1..58\) (\(F(58)\) is larger than the largest possible \(k\) we can get) and then greedily use largest value that is less than \(k\), decrement \(k\) and continue.  Turns out that in the worst case this will use \(1654\) stages, though I did not even attempt to prove it during the contest.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1453&lt;/tiny&gt;E
+
+  Dog Snacks
+  &lt;a href=&quot;https://codeforces.com/contest/1453/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1453&lt;/tiny&gt;F
+
+  Even Harder
+  &lt;a href=&quot;https://codeforces.com/contest/1453/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-688.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+        <link>//R-688</link>
+        <link href="/R-688"/>
+        <guid isPermaLink="true">/R-688</guid>
+      </item>
+    
+      <item>
+        <title>Educational Round 99</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1455&quot;&gt;Educational Codeforces Round 99 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1455&lt;/tiny&gt;A
+
+  Strange Functions
+  &lt;a href=&quot;https://codeforces.com/contest/1455/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu99/1455a-strange-functions.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Given this was an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; and the large limits, it was possible to just guess that the answer is the length of the input number.  But why?&lt;/p&gt;
+
+&lt;p&gt;Well, it’s not difficult to see that for \(g(x)\) we are diving the input number by itself with all the leading zeros dropped, as that’s what \(f(f(x))\) does.  Which means \(g(x) = 10^i\) where \(i \in 0 .. (s-1)\), where \(s\) is the length of the input number (as a string).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1455&lt;/tiny&gt;B
+
+  Jumps
+  &lt;a href=&quot;https://codeforces.com/contest/1455/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu99/1455b-jumps.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is a tricky one.  Firstly, let’s observe that by doing \(s\) forward steps we will get to \(s (s+1) / 2\) and we can always do that until we’re past \(x\) and then retract if needed.  However, that won’t work even on a test case, as for \(4\) we’d do \(1 + 2 + 3 - 1 - 1\), i.e. \(5\) steps, whereas we can do it in \(4\): \(-1 + 2 + 3\).&lt;/p&gt;
+
+&lt;p&gt;So we need to consider replacing one of the forward steps with \(-1\).  If before we got to \(p\) then by replacing \(k\)‘th one with \(-1\) we’ll instead get to \(p - k - 1\), so we can cover the range \([p-s-1 .. p-2]\). Since \(p-s&amp;lt;x\), if \(x &amp;lt; p-1\) we can do the fix with no extra moves!  Only for \(p = x+1\) we need to corret with an extra \(-1\) move.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1455&lt;/tiny&gt;C
+
+  Ping-pong
+  &lt;a href=&quot;https://codeforces.com/contest/1455/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu99/1455c-ping-pong.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Again, it was relatively easy to guess that the answer is \((x-1, y)\) but why?&lt;/p&gt;
+
+&lt;p&gt;Let’s compute \(f'(x, y)\) for a variant of the game where the first player &lt;em&gt;can give up his right to serve and loose that first game&lt;/em&gt;.  Clearly \(f'(x, 0) = (x, 0)\) and \(f'(0, y) = (0, y)\).  Otherwise as a first player we can:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hit the ball: \(f'(x, y) = rev(f'(y, x-1))\) where \(rev(a, b) = (b, a)\) or&lt;/li&gt;
+  &lt;li&gt;give up: in which case the second player &lt;em&gt;must&lt;/em&gt; serve, \(f'(x, y) = f(x, y-1) + (0,1)\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now, based on our intuition we observe that \(f'(x, y) = (x, y)\) and prove it by induction.&lt;/p&gt;
+
+&lt;p&gt;Finally, Alice starts and does not have the option not to serve, hence \(f(x, y) = rev(f'(y, x-1)) = rev(y, x-1) = (x-1, y)\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1455&lt;/tiny&gt;D
+
+  Sequence and Swaps
+  &lt;a href=&quot;https://codeforces.com/contest/1455/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu99/1455d-sequence-and-swaps.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Key observation is that \(x\) will be increasing throughout this process and since we want to get to the sorted array, that means that indices where we put it will also need to increase.&lt;/p&gt;
+
+&lt;p&gt;This can lead to a DP based solution, where \(DP_{i, j}\) is minimum number of steps to solve where the last move was replacing \(a_i\) for \(j\) (so now \(x = a_i\)).&lt;/p&gt;
+
+&lt;p&gt;However, a simpler greedy approach works: until the array is not sorted we scan from left to right and apply the operation to the first element larger than \(x\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1455&lt;/tiny&gt;E
+
+  Four Points
+  &lt;a href=&quot;https://codeforces.com/contest/1455/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;flows&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;geometry&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;ternary search&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1455&lt;/tiny&gt;F
+
+  String and Operations
+  &lt;a href=&quot;https://codeforces.com/contest/1455/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1455&lt;/tiny&gt;G
+
+  Forbidden Value
+  &lt;a href=&quot;https://codeforces.com/contest/1455/problem/G&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/Edu-99.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
+        <link>//Edu-99</link>
+        <link href="/Edu-99"/>
+        <guid isPermaLink="true">/Edu-99</guid>
+      </item>
+    
+      <item>
+        <title>Round 687 (Div I+II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1456&quot;&gt;Codeforces Round #687 (Div. 1, based on Technocup 2021 Elimination Round 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1457&quot;&gt;Codeforces Round #687 (Div. 2, based on Technocup 2021 Elimination Round 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1457&lt;/tiny&gt;A
+
+  Prison Break
+  &lt;a href=&quot;https://codeforces.com/contest/1457/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r687/1457a-prison-break.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It’s pretty clear that the answer is the cell located furthest from the exit and it’s not hard to see that it must be one of the 4 corners of the prison.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1457&lt;/tiny&gt;B
+
+  Repainting Street
+  &lt;a href=&quot;https://codeforces.com/contest/1457/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r687/1457b-repainting-street.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;With so few colors we can try them one by one and pick the cheapest.  So we know what color we want the street to be, how much is it going to cost to paint it so?  Well, we do a linear scan, skip over all houses of the right color and upon finding a wrong one, increment the score by \(1\) and skip over the following \(k\) houses (as we’ll paint them all).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1457&lt;/tiny&gt;C / &lt;tiny&gt;1456&lt;/tiny&gt;A
+
+  Bouncing Ball
+  &lt;a href=&quot;https://codeforces.com/contest/1457/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r687/1457c-bouncing-ball.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;With DP for every position we’ll compute the cost of the level assuming that the given cell will be the \(p\) cell of the level.  That’s easy, for position \(i\) it’s just \(0\) or \(x\), when \(a_i = 1\) or \(a_i = 0\), respectively, plus already computed cost at \(i+k\).&lt;/p&gt;
+
+&lt;p&gt;Once we have that we can iterate over all positions and consider cost of dropping the prefix plus cost of the suffix, precomputed as per above.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1457&lt;/tiny&gt;D / &lt;tiny&gt;1456&lt;/tiny&gt;B
+
+  XOR-gun
+  &lt;a href=&quot;https://codeforces.com/contest/1457/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r687/1457d-xor-gun.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2000&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s group numbers into groups based on their highest bit.  If we have any group with at least \(3\) numbers, say \((a, b, c)\), in it then the answer is \(1\) as in one step we transform them into \((a, b \oplus c)\) and \(b \oplus c\) is smaller than \(a\) as it does not have that highest bit set, whereas \(a\) does.&lt;/p&gt;
+
+&lt;p&gt;If there is no such group then we have just a handful of numbers; at most \(2\) per bit for a total of \(60\) or less. We want to get \((a, b)\) with \(a &amp;gt; b\).  Note that \(a\) is a xor of some contiguous segment until some point and \(b\) is a xor from that point up to another point.  So we can just consider all combinations \((l, m, r)\) where \(a\) is a xor of numbers from \([l, m)\) and \(b\) of numbers from \([m, r)\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1457&lt;/tiny&gt;E / &lt;tiny&gt;1456&lt;/tiny&gt;C
+
+  New Game Plus!
+  &lt;a href=&quot;https://codeforces.com/contest/1457/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1456&lt;/tiny&gt;D
+
+  Cakes for Clones
+  &lt;a href=&quot;https://codeforces.com/contest/1456/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1456&lt;/tiny&gt;E
+
+  XOR-ranges
+  &lt;a href=&quot;https://codeforces.com/contest/1456/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-687.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Sun, 29 Nov 2020 00:00:00 +0000</pubDate>
+        <link>//R-687</link>
+        <link href="/R-687"/>
+        <guid isPermaLink="true">/R-687</guid>
+      </item>
+    
+      <item>
+        <title>Round 686 (Div III)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1454&quot;&gt;Codeforces Round #686 (Div. 3)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1454&lt;/tiny&gt;A
+
+  Special Permutation
+  &lt;a href=&quot;https://codeforces.com/contest/1454/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r686/1454a-special-permutation.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;probabilities&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Enough to take \(n, 1, 2, \ldots, n-1\).  It also crossed my mind to pick a random permutation and I wasted quite some time exploring this avenue before giving up.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1454&lt;/tiny&gt;B
+
+  Unique Bid Auction
+  &lt;a href=&quot;https://codeforces.com/contest/1454/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r686/1454b-unique-bid-auction.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Just do as asked, keep map from number to its last index, or \(null\) if it occurred more than once.  Then pick smallest non-null value in the map.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1454&lt;/tiny&gt;C
+
+  Sequence Transformation
+  &lt;a href=&quot;https://codeforces.com/contest/1454/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r686/1454c-sequence-transformation.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;blocks&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s process by blocks (of equal values) and keep track of the number of blocks for each number.  Now, if we pick \(x\) the answer is the number of blocks of \(x\) plus \(1\), as there are that many segments between: \(\ldots, x, \ldots, x, \ldots\), except decrement that by \(1\) if \(x\) is the first element and further by \(1\) if its last.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1454&lt;/tiny&gt;D
+
+  Number into Sequence
+  &lt;a href=&quot;https://codeforces.com/contest/1454/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r686/1454d-number-into-sequence.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;factorization&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Factorize the number, \(n = f_1^{p_1} f_2^{p_2} \ldots f_k^{p_k}\), pick the maximal \(p_i\) and the answer is simply \(p_i-1\) copies of \(f_i\) followed by \(n / f_i^{p_i-1}\)&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1454&lt;/tiny&gt;E
+
+  Number of Simple Paths
+  &lt;a href=&quot;https://codeforces.com/contest/1454/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r686/1454e-number-of-simple-paths.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2000&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The graph is “almost-a-tree”; more precisely it’s a single cycle with trees hanging from (some) vertices of said cycle.  If that tree has \(v\) vertices then, firstly, we have \(v(v-1)/2\) paths within the tree itself and also \(2v(n-v)\) paths with vertices outside of the tree. The latter is because: pick vertex in the tree, pick vertex outside of the tree and we have two paths between them: going clockwise or anti-clockwise on the cycle.  If we drop the \(2\) factor, to avoid double counting, each tree contributes \(v(v-1)/2 + v(n-v)\) to the answer.&lt;/p&gt;
+
+&lt;p&gt;How do we find tree sizes and the cycle?  Simplest is to keep map from node to its size.  Start with everything being of size \(1\) and moving from the leafs, if \(u\) is connected to \(v\) increment \(size_v\) by \(size_u\) and if now \(v\) becomes a leaf add it to the queue to process.  Nodes that remain after this process is done are on the cycle and their sizes will be the sizes of trees attached to them.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1454&lt;/tiny&gt;F
+
+  Array Partition
+  &lt;a href=&quot;https://codeforces.com/contest/1454/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-686.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+        <link>//R-686</link>
+        <link href="/R-686"/>
+        <guid isPermaLink="true">/R-686</guid>
+      </item>
+    
+      <item>
+        <title>Round 685 (Div II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1451&quot;&gt;Codeforces Round #685 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1451&lt;/tiny&gt;A
+
+  Subtract or Divide
+  &lt;a href=&quot;https://codeforces.com/contest/1451/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r685/1451a-subract-or-divide.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I got &lt;strong&gt;hopelessly lost&lt;/strong&gt; with this problem! In fact; it’s about parities. First solve for all \(n \le 3\).  For larger \(n\) the answer is \(2\) if \(n\) is even: divide it by \(\frac{n}{2}\) and then subtract \(1\).  If \(n\) is odd the answer is \(3\): subtract \(1\) and then continue with the solution for even.  I lost a lot of time on this problem and came up with something way more complicated.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1451&lt;/tiny&gt;B
+
+  Non-Substring Subsequence
+  &lt;a href=&quot;https://codeforces.com/contest/1451/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r685/1451b-non-substring-subsequence.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Again, I came up with a sub-optimal solution.  I basically tried an exhaustive search.  Since we must match with a non-contiguous segment there must be an index at which point we do not match with a consecutive character.  So I tried all such split points exhaustively.&lt;/p&gt;
+
+&lt;p&gt;As a matter of fact solution is much simpler: we answer YES iff the first character is present somewhere before the segment &lt;em&gt;or&lt;/em&gt; the last character is present somewhere after the last segment.&lt;/p&gt;
+
+&lt;p&gt;It’s clear that this is a sufficient condition as we can easily construct the right segment if it holds.  Why is it neccessary?  Assume that a segment exists but the above condition does not hold. First character does not occur before so our match cannot start before and last character does not occur after so our match must end with the end of the segment, so we’re only left with the segment itself but that’s not non-contiguous.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1451&lt;/tiny&gt;C
+
+  String Equality
+  &lt;a href=&quot;https://codeforces.com/contest/1451/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r685/1451c-string-equality.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;hashing&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, note that the order does not matter as we can swap however we like.  Sort target and build frequency map for the source and start matching in order.  If the smallest available character in the source is greater than what we match against  answer NO.  If it’s the same, just match.  If it’s smaller try to promote \(k\) smallest characters and continue with the matching.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1451&lt;/tiny&gt;D
+
+  Circle Game
+  &lt;a href=&quot;https://codeforces.com/contest/1451/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r685/1451d-circle-game.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;geometry&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I was counting the number of moves following the “diagonal” and answered based on its parity, without fully understanding why that works.&lt;/p&gt;
+
+&lt;p&gt;The reasoning instead is to find maximum \(z\) such that point \((kz, kz)\) is within the circle.  Now if \((kz, k(z+1))\) is within the circle first player wins; otherwise he looses.&lt;/p&gt;
+
+&lt;p&gt;Why does he loose in the second case?  Because second player can always follow the diagonal and so at its end the first player has no move.&lt;/p&gt;
+
+&lt;p&gt;Why does he win in the first case?  There’s a bit more math to it but we can show that it’s equivalent to the first player’s situation in the other case.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1451&lt;/tiny&gt;E1
+
+  Bitwise Queries (Easy Version)
+  &lt;a href=&quot;https://codeforces.com/contest/1451/problem/E1&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r685/1451e1-bitwise-queries-easy.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2000&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I did not finish within contest time.  The crucial observation is that if we know at least one number we can get to know all the remaining ones with one move per number.  Say we know what \(a\) is and want to reveal the following \(b\).  We ask for its \(xor\) with \(a\): \(a \oplus b = p\).  Then \(a \oplus a \oplus b = a \oplus p\) and so \(b = a \oplus p\).&lt;/p&gt;
+
+&lt;p&gt;The second observation is that we can solve it in a boolean algebra and then just do it bit-by-bit for full numbers.&lt;/p&gt;
+
+&lt;p&gt;How to find some number?  First, observe that just querying two numbers is hopless, due to symmetry of all the operations.  If we instead look at \(3\) numbers we can use \(5\) queries for them and it turns out that asking any distinct \(5\) queries involving and/or gives us the answer, which can be verified by exploring truth tables for \(3\) boolean variables.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1451&lt;/tiny&gt;E2
+
+  Bitwise Queries (Hard Version)
+  &lt;a href=&quot;https://codeforces.com/contest/1451/problem/E2&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;tiny&gt;1451&lt;/tiny&gt;F
+
+  Nullify The Matrix
+  &lt;a href=&quot;https://codeforces.com/contest/1451/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-685.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+        <link>//R-685</link>
+        <link href="/R-685"/>
+        <guid isPermaLink="true">/R-685</guid>
+      </item>
+    
+  </channel>
+</rss>

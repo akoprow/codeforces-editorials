@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 633 (Div I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 633 (Div I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Round 633 (Div I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #633 (Div. 1)" />
+<meta property="og:description" content="Codeforces Round #633 (Div. 1)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-12T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 633 (Div I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/R-633","headline":"Round 633 (Div I+II)","dateModified":"2020-04-12T00:00:00+01:00","datePublished":"2020-04-12T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/R-633"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #633 (Div. 1)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/"><h2 class="header-link">Contests</h2></a>
+<a href="/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 633 (Div I+II)</h2>
+  <time datetime="2020-04-12T00:00:00+01:00" class="by-line">12 Apr 2020</time>
+  <p><a href="https://codeforces.com/contest/1338">Codeforces Round #633 (Div. 1)</a></p>
+
+<p><a href="https://codeforces.com/contest/1339">Codeforces Round #633 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1339</tiny>A
+
+  Filling Diamonds
+  <a href="https://codeforces.com/contest/1339/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r620-639/r633/1339a-filling-diamonds.kt">(Code)</a>
+
+  <rating>R:900 <meter min="800" max="3600" value="900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Placing of the vertical diamond fixes everything else and there are exactly \(n\) positions for it, so the answer is simply \(n\).</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1339</tiny>B
+
+  Sorted Adjacent Differences
+  <a href="https://codeforces.com/contest/1339/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r620-639/r633/1339b-sorted-adjacent-differences.kt">(Code)</a>
+
+  <rating>R:1200 <meter min="800" max="3600" value="1200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<p>Sort the array and then list it starting in the middle and then move in an oscillating fashion: \(a_i, a_{i+1}, a_{i-1}, a_{i+2}, a_{i-2}, \ldots\).  It’s relatively easy to see that by doing so the distances we “travel” with each jump will form a non-decreasing sequence.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1339</tiny>C / <tiny>1338</tiny>A
+
+  Powered Addition
+  <a href="https://codeforces.com/contest/1339/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r620-639/r633/1339c-powered-addition.kt">(Code)</a>
+
+  <rating>R:1500 <meter min="800" max="3600" value="1500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>In round \(i\) we’re adding \(2^i\) to arbitrary elements in the array and the question is what’s the smallest \(i\) that after \(i\)-th round we can make the array non-decreasing?  Let’s look at all subsequent elements \(a_i &gt; a_{i+1}\).  If there is no such pair we’re done, if there are many let’s take the largest one.  Suppose \(\delta = a_i - a_{i+1}\) is the largest such difference.  We need to bump \(a_{i+1}\) by at least \(\delta\).  However many rounds we need for that will allow us to make the whole array non-decreasing.  Note that when we’re bumping an index, we can always bump the whole suffix from then on, meaning we do not disturb relative differences between any other elements.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1339</tiny>D / <tiny>1338</tiny>B
+
+  Edge Weight Assignment
+  <a href="https://codeforces.com/contest/1339/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r620-639/r633/1339d-edge-weight-assignment.kt">(Code)</a>
+
+  <rating>R:1800 <meter min="800" max="3600" value="1800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<p>Let’s re-root the tree at any leaf, let’s call that \(R\).  Let’s say that we look at two other leaves \(L_1\) and \(L_2\) whose common ancestor is \(C\).  We’ll make a construction such that XOR on paths \(RC, CL_1, CL_2\) are the same.</p>
+
+<p>First let’s think how to do it to use minimal number of values.  Let’s look at lengths of paths from root to all the leaves.  If all the paths have the same parity then \(1\) is the answer as all the paths will have even length and we can put the same number everywhere and it xor-ed with itself odd number of times will give \(0\).  Otherwise \(3\) is the answer as we can fill the paths with \(a\), \(b\) and \(a \oplus b\), ensuring that each path has equal number of \(a\)s and \(b\)s and the final edge to the (non-root) leaf is \(a \oplus b\).</p>
+
+<p>As for the maximum for all non-leaf nodes we can use unique \(2^i\) where \(i\) is the id of the node, so that all nodes have unique numbers.  And then for the final edge to the leaf we put the xor of all the values from the root to the last node, ensuring that the path from the root will give \(0\) when xor’ed.  In this way all the nodes will have unique values except for multiple leaves attached to the same interior node, which all will share the value.  It’s fairly easy to find how many of them there are and hence what the maximum is.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1339</tiny>E / <tiny>1338</tiny>C
+
+  Perfect Triples
+  <a href="https://codeforces.com/contest/1339/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2200 <meter min="800" max="3600" value="2200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1338</tiny>D
+
+  Nested Rubber Bands
+  <a href="https://codeforces.com/contest/1338/problem/D">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2700 <meter min="800" max="3600" value="2700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1338</tiny>E
+
+  JYPnation
+  <a href="https://codeforces.com/contest/1338/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3500 <meter min="800" max="3600" value="3500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-633.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

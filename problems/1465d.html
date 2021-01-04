@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Grime Zoo</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Grime Zoo | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Grime Zoo" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces editorials" />
+<meta property="og:description" content="Codeforces editorials" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Grime Zoo" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"/problems/1465d","headline":"Grime Zoo","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/"><h2 class="header-link">Contests</h2></a>
+<a href="/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <!-- <div class="alert alert-primary" role="alert">
+  
+  <tiny>1465</tiny>D
+
+  
+  <a href="/problems/1465d.html">
+    Grime Zoo
+  </a>
+  <a href="https://codeforces.com/contest/1465/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/">(Code)</a>
+
+  <rating>R:2100 <meter min=800 max=3600 value="2100"/></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+ -->
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1465</tiny>D / <tiny>1464</tiny>B
+
+  Grime Zoo
+  <a href="https://codeforces.com/contest/1465/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465d-grime-zoo.kt">(Code)</a>
+
+  <rating>R:2100 <meter min="800" max="3600" value="2100" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Assume \(x &gt; y\); the other case is symmetrical (or we can just swap \(x\) and \(y\) and flip the string \(0 \to 1, 1 \to 0\)).</p>
+
+<p>Let’s consider what happens to a configuration \(\vec{u}\ 1 \ \vec{v}\ 0 \ \vec{z}\) if we change it to \(\vec{u}\ 0\ \vec{v}\ 1\ \vec{z}\). Firstly, observe that the block between \(\vec{u}\) and \(\vec{z}\) has the same number of \(0\)s and \(1\)s in both cases and so the cost of pairs with at least one element outside of that block will be the same.  So we can just compare \(1\ \vec{v}\ 0\) with \(0\ \vec{v}\ 1\).  Block in the middle is again the same so we can just focus on how much pairs involving first and/or last elements contribute to the answer; let’s denote it by function \(f\).  Assume that within \(\vec{v}\) we have \(v_0\) zeroes and \(v_1\) ones.  Then we have:</p>
+
+\[f(1\ \vec{v}\ 0) - f(0\ \vec{v}\ 1) = ((1+v_1)y + v_0 y) - ((1+v_1) x + v_0 x) = (1 + v_0 + v_1)(y - x)\]
+
+<p>\(1 + v_0 + v_1\) is positive as all its elements are positive.  Since \(x &gt; y\) that means that \(y-x\) is negative and hence so is the whole formula.  Which means that by flipping \(1\ \vec{v}\ 0\) to \(0\ \vec{v}\ 1\) we can <em>always</em> decrease the overall cost.  Which further means that, by continuing to apply this logic, in the final answer (i.e. what we substitute question marks for) we cannot have a \(1\) followed by a \(0\).  That means it must be of the shape \(00 \ldots 11\).</p>
+
+<p>Now, the idea is to try to iterate over the number of \(0\)s in that final answer and pick the option that gives the lowest cost.  How can we do that efficiently?</p>
+
+<p>Let’s begin by computing the cost of \(11 \ldots 11\) and then we will be successively “inserting” \(0\)s from the left. To do that we iterate through the string and keep track of: number of zeroes, \(z\), and number of \(10\) pairs we’ve seen, \(oz\).  Number of ones, \(o\) and of \(01\) pairs, \(zo\), can be easily derived from that, as we have: \(z + o = i\) (where \(i\) is the number of characters we’ve considered so far) and \(zo + oz = o*z\), i.e. we need to pick some zero and some one to form a pair of distinct digits (\(01\) or \(10\)).</p>
+
+<p>Now we will sweep from left to right to replace ones with zeroes. To do that we will keep of four variables: \(z_l, z_r, o_l, o_r\), which are, respectively, number of zeroes/ones to the left/right of the index we’re considering.  When we see \(0\) or \(1\) we just update those variables, which is fairly simple.  When we see \("?"\) we will be replacing \(1\) with a \(0\) and on top of updating those variables (careful!) we also need to update the score, we’re adding \(o_l\) \(10\) pairs to the left and \(o_r\) \(01\) pairs to the right and removing \(z_l\) \(01\) pairs to the left and \(z_r\) \(10\) pairs to the right, so in total we’re incrementing the score by \(y(o_l - z_r) + x(o_r - z_l)\).  We then take the minimal score across all considered options.</p>
+
+
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

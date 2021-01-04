@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Educational Round 85</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Educational Round 85 | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Educational Round 85" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Educational Codeforces Round 85 (Rated for Div. 2)" />
+<meta property="og:description" content="Educational Codeforces Round 85 (Rated for Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-10T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Educational Round 85" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/Edu-85","headline":"Educational Round 85","dateModified":"2020-04-10T00:00:00+01:00","datePublished":"2020-04-10T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/Edu-85"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Educational Codeforces Round 85 (Rated for Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/"><h2 class="header-link">Contests</h2></a>
+<a href="/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Educational Round 85</h2>
+  <time datetime="2020-04-10T00:00:00+01:00" class="by-line">10 Apr 2020</time>
+  <p><a href="https://codeforces.com/contest/1334">Educational Codeforces Round 85 (Rated for Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1334</tiny>A
+
+  Level Statistics
+  <a href="https://codeforces.com/contest/1334/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu85/1334a-level-statistics.kt">(Code)</a>
+
+  <rating>R:1200 <meter min="800" max="3600" value="1200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>So what conditions need to hold for a single move to be “valid”? (i.e. to correspond to some hypothetical sequence of plays).  Let’s call \(\Delta_p\) and \(\Delta_c\) the differences between the current and previous number of games, and number of clears, respectively (we can add \((0, 0)\) sentinel pair at the beginning to easily deal with the first entry).  Since the stats are given in chronological order, clearly neither can be negative.  Moreover \(\Delta_c\) is bound by \(\Delta_p\) (most clears we can have if every game was finished successfully) and so we cannot have \(\Delta_c &gt; \Delta_p\).  It’s fairly easy to convince oneself that those conditions are enough.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1334</tiny>B
+
+  Middle Class
+  <a href="https://codeforces.com/contest/1334/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu85/1334bmiddle-class.kt">(Code)</a>
+
+  <rating>R:1100 <meter min="800" max="3600" value="1100" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, it doesn’t pay off to do more than one reform.  Each reform keeps the sum of all the money equal and since we aim at everyone having at least \(x\) the best strategy is to just do one big reform among a group of people whose average is at least \(x\).
+How many people can we make wealthy?  We can try all options in the range \([0, n]\).  For a given \(r\) it’s easy to see that we should take the \(r\) richest people and do a single reform among them.  So we can just sort the array \(a\) in decreasing order and then find largest \(r\) such that \((a_1 + \ldots + a_r) / r \ge x\), or, in other words, the sum on that prefix is at least \(rx\).  We can easily do that by sweeping over the array and keeping running sum.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1334</tiny>C
+
+  Circle of Monsters
+  <a href="https://codeforces.com/contest/1334/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu85/1334c-circle-of-monsters.kt">(Code)</a>
+
+  <rating>R:1600 <meter min="800" max="3600" value="1600" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>It’s pretty clear that we should start shooting at some monster \(i\) until we kill it and then continue clockwise until done, thus maximizing the damage due to explosions.</p>
+
+<p>So the only question is where to start.  If we start with the second monster then we need to shoot it \(a_1\) times and all the remaining ones \(max(0, a_i - b_{i-1})\) times.  That means we want to pick \(i\) that minimizes \(a_{i+1} - max(0, a_{i+1}-b{i})\), which is the extra number of shots we need to spend because we cannot use the explosion of the previous monster.  Once we find that we can easily calculate the total cost starting at \(i\).</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1334</tiny>D
+
+  Minimum Euler Cycle
+  <a href="https://codeforces.com/contest/1334/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu85/1334d-minimum-euler-cycle.kt">(Code)</a>
+
+  <rating>R:1800 <meter min="800" max="3600" value="1800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Finding optimal path should be done greedily, i.e. at every step we make move to the lowest numbered note such that we will be able to complete the Euler cycle by doing so.  This follows from the fact that we’re looking for a lexicographically smallest one.</p>
+
+<p>For example a solution for \(n=5\) is:</p>
+
+\[1\ 2\ 1\ 3\ 1\ 4\ 1\ 5\ 2\ 3\ 2\ 4\ 2\ 5\ 3\ 4\ 3\ 5\ 4\ 5\ 1\]
+
+<p>The crucial observation is to find a recursive structure in this procedure, i.e.:</p>
+
+\[(1\ 2\ 1\ 3\ 1\ 4\ 1\ 5\ (2\ 3\ 2\ 4\ 2\ 5\ (3\ 4\ 3\ 5\ (4\ 5\ ())))\ 1)\]
+
+<p>Once we see that it’s just a matter of writing a loop for each of those segments, have counter for the nodes and print them only if it is within the segment of interest \([l, r]\).  Additionally, instead of iterating we can skip a full segment if we see that it does not intersect \([l, r]\) at all, hence reducing the complexity from \(O(n^2)\) to \(O(\mid r-l \mid)\).</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1334</tiny>E
+
+  Divisor Paths
+  <a href="https://codeforces.com/contest/1334/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2200 <meter min="800" max="3600" value="2200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1334</tiny>F
+
+  Strange Function
+  <a href="https://codeforces.com/contest/1334/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2500 <meter min="800" max="3600" value="2500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1334</tiny>G
+
+  Substring Search
+  <a href="https://codeforces.com/contest/1334/problem/G">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2900 <meter min="800" max="3600" value="2900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">fft</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/Edu-85.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

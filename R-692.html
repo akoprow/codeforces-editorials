@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 692 (Div I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 692 (Div I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Round 692 (Div I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #692 (Div. 1, based on Technocup 2021 Elimination Round 3)" />
+<meta property="og:description" content="Codeforces Round #692 (Div. 1, based on Technocup 2021 Elimination Round 3)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-20T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 692 (Div I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/R-692","headline":"Round 692 (Div I+II)","dateModified":"2020-12-20T00:00:00+00:00","datePublished":"2020-12-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/R-692"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #692 (Div. 1, based on Technocup 2021 Elimination Round 3)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/"><h2 class="header-link">Contests</h2></a>
+<a href="/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 692 (Div I+II)</h2>
+  <time datetime="2020-12-20T00:00:00+00:00" class="by-line">20 Dec 2020</time>
+  <p><a href="https://codeforces.com/contest/1464">Codeforces Round #692 (Div. 1, based on Technocup 2021 Elimination Round 3)</a></p>
+
+<p><a href="https://codeforces.com/contest/1465">Codeforces Round #692 (Div. 2, based on Technocup 2021 Elimination Round 3)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1465</tiny>A
+
+  In-game Chat
+  <a href="https://codeforces.com/contest/1465/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465a-in-game-chat.kt">(Code)</a>
+
+  <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Trivial, just count the number of consecutive “)” at the end and if that number doubled is longer than the length of the string then the message is bad.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1465</tiny>B
+
+  Fair Numbers
+  <a href="https://codeforces.com/contest/1465/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465b-fair-numbers.kt">(Code)</a>
+
+  <rating>R:1000 <meter min="800" max="3600" value="1000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>A trivial approach of just iterating from \(n\) until we reach an acceptable number works.</p>
+
+<p>Why we won’t have to iterate too much?  Because \(lcm(1, \ldots, 9) = 2520\) which means that every \(2520\)-th number is divisible by all digits from \(1\) to \(9\).</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1465</tiny>C / <tiny>1464</tiny>A
+
+  Peaceful Rooks
+  <a href="https://codeforces.com/contest/1465/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465c-peaceful-rooks.kt">(Code)</a>
+
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+  </labels>
+</div>
+
+<p>Looking at a single rook at \((x, y)\) we have three options:</p>
+
+<ul>
+  <li>It’s already on the diagonal, i.e. \(x == y\),</li>
+  <li>It can be moved in a single move into at least one of the following two diagonal positions: \((x, x)\) or \((y, y)\).</li>
+  <li>Both \((x, x)\) and \((y, y)\) are attacked by some other rook.</li>
+</ul>
+
+<p>We can apply the following greedy strategy: leave the rooks already well placed alone and for the remaining ones put them in a priority queue ordered in increasing number by the number of its target positions being blocked (\(0, 1, 2\)).  While getting rooks with \(0\) or \(1\) move them to diagonal with a single move.  When getting one with \(2\) we first need to unblock one of those positions and then move it so it costs us \(2\) moves.</p>
+
+<p>Why does that work?  Well, think of this as a graph, where each rook at position \((x, y)\) we represent as an edge \(x \to y\).  Our goal is to transform this graph into self-loops, i.e. all rooks at positions \((x, x)\).  From the fact that no two rooks attack each other we infer that there is at most one edge leading to and from each vertex.  Which in turn means that the graph can only have simple paths and simple cycles.  A path can be unwound into a bunch of self-loops with one move per each of its node.  And a single cycle can be transformed into a path with a single move (the fact that it’s always possible comes from the fact that there is at least one row/column unoccupied).  So a total number of moves is the number of rooks, minus the number of rooks which are initially on the diagonal, plus the number of cycles.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1465</tiny>D / <tiny>1464</tiny>B
+
+  Grime Zoo
+  <a href="https://codeforces.com/contest/1465/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465d-grime-zoo.kt">(Code)</a>
+
+  <rating>R:2100 <meter min="800" max="3600" value="2100" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Assume \(x &gt; y\); the other case is symmetrical (or we can just swap \(x\) and \(y\) and flip the string \(0 \to 1, 1 \to 0\)).</p>
+
+<p>Let’s consider what happens to a configuration \(\vec{u}\ 1 \ \vec{v}\ 0 \ \vec{z}\) if we change it to \(\vec{u}\ 0\ \vec{v}\ 1\ \vec{z}\). Firstly, observe that the block between \(\vec{u}\) and \(\vec{z}\) has the same number of \(0\)s and \(1\)s in both cases and so the cost of pairs with at least one element outside of that block will be the same.  So we can just compare \(1\ \vec{v}\ 0\) with \(0\ \vec{v}\ 1\).  Block in the middle is again the same so we can just focus on how much pairs involving first and/or last elements contribute to the answer; let’s denote it by function \(f\).  Assume that within \(\vec{v}\) we have \(v_0\) zeroes and \(v_1\) ones.  Then we have:</p>
+
+\[f(1\ \vec{v}\ 0) - f(0\ \vec{v}\ 1) = ((1+v_1)y + v_0 y) - ((1+v_1) x + v_0 x) = (1 + v_0 + v_1)(y - x)\]
+
+<p>\(1 + v_0 + v_1\) is positive as all its elements are positive.  Since \(x &gt; y\) that means that \(y-x\) is negative and hence so is the whole formula.  Which means that by flipping \(1\ \vec{v}\ 0\) to \(0\ \vec{v}\ 1\) we can <em>always</em> decrease the overall cost.  Which further means that, by continuing to apply this logic, in the final answer (i.e. what we substitute question marks for) we cannot have a \(1\) followed by a \(0\).  That means it must be of the shape \(00 \ldots 11\).</p>
+
+<p>Now, the idea is to try to iterate over the number of \(0\)s in that final answer and pick the option that gives the lowest cost.  How can we do that efficiently?</p>
+
+<p>Let’s begin by computing the cost of \(11 \ldots 11\) and then we will be successively “inserting” \(0\)s from the left. To do that we iterate through the string and keep track of: number of zeroes, \(z\), and number of \(10\) pairs we’ve seen, \(oz\).  Number of ones, \(o\) and of \(01\) pairs, \(zo\), can be easily derived from that, as we have: \(z + o = i\) (where \(i\) is the number of characters we’ve considered so far) and \(zo + oz = o*z\), i.e. we need to pick some zero and some one to form a pair of distinct digits (\(01\) or \(10\)).</p>
+
+<p>Now we will sweep from left to right to replace ones with zeroes. To do that we will keep of four variables: \(z_l, z_r, o_l, o_r\), which are, respectively, number of zeroes/ones to the left/right of the index we’re considering.  When we see \(0\) or \(1\) we just update those variables, which is fairly simple.  When we see \("?"\) we will be replacing \(1\) with a \(0\) and on top of updating those variables (careful!) we also need to update the score, we’re adding \(o_l\) \(10\) pairs to the left and \(o_r\) \(01\) pairs to the right and removing \(z_l\) \(01\) pairs to the left and \(z_r\) \(10\) pairs to the right, so in total we’re incrementing the score by \(y(o_l - z_r) + x(o_r - z_l)\).  We then take the minimal score across all considered options.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1465</tiny>E / <tiny>1464</tiny>A
+
+  Poman Numbers
+  <a href="https://codeforces.com/contest/1465/problem/E">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r692/1465e-poman-numbers.kt">(Code)</a>
+
+  <rating>R:2300 <meter min="800" max="3600" value="2300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>Crucial observation is that the last digit will always come with a plus sign, the last but one with a minus and <em>all the others we can choose however we like</em>.</p>
+
+<p>Let’s prove it.  Firstly, we can drop an arbitrary prefix of minuses by splitting on a single prefix character required number of times.  So we are left with a target of the form: \(+ \ldots +[---]-+\) (part in the brackets can be empty or can have more minuses).  We split it by taking all but one minuses from the last segment of minuses into the right part, i.e. left: \(+ \ldots +-\), right: \([---]+\).  Note that the left part is taken with a minus sign so we flip the targets and get left: \(- \ldots -+\), right: \([---]+\), so we obtain two smaller segments so our thesis follows by induction.</p>
+
+<p>Now knowing that we update target based on the last two digits and for the rest we apply a greedy approach: we sort digits in descending orders and apply each one in turn with the sign that will bring us closer to the target.</p>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1465</tiny>F / <tiny>1464</tiny>D
+
+  The Thorny Path
+  <a href="https://codeforces.com/contest/1465/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3000 <meter min="800" max="3600" value="3000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1464</tiny>E
+
+  No Game No Life
+  <a href="https://codeforces.com/contest/1464/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2700 <meter min="800" max="3600" value="2700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">games</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">matrices</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  <tiny>1464</tiny>F
+
+  My Beautiful Madness
+  <a href="https://codeforces.com/contest/1464/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3500 <meter min="800" max="3600" value="3500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-692.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
