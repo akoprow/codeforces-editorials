@@ -8,6 +8,7 @@ author:
 source: .
 destination: ./_site
 permalink: /:title
+baseurl: /codeforces-editorials
 
 defaults:
   -
