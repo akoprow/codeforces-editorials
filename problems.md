@@ -10,8 +10,8 @@ title: Problems
 <li>
   <tiny>{{problem.id | slice:0,4}}</tiny>{{problem.id | slice:4,2}}{% if problem.also-as %} / <tiny>{{problem.also-as | slice:0,4}}</tiny>{{problem.also-as | slice:4,2}}{% endif %}
 
-  {% capture link %}{{problem.id | slugify}}.html{% endcapture %}
-  <a href="{{ link }}">
+  {% capture link %}problems/{{problem.id | slugify }}{% endcapture %}
+  <a href="{{ link | relative_url }}">
     {{problem.title}}
   </a>
 

@@ -32,8 +32,7 @@ plugins:
 page_gen:
 - data: 'problems'
   template: 'problem'
-  dir: 'problems'
-  index_files: false
+  index_files: true
   name: 'id'
   title: 'name'
   extension: 'md'
