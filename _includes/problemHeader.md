@@ -10,7 +10,7 @@
   [CF]
   </a>
 
-  {% if problem.code %}<a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/{{include.code}}">(Code)</a>{% endif %}
+  {% if problem.code %}<a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/{{problem.code}}">(Code)</a>{% endif %}
 
   {% if problem.rating %}<rating>R:{{problem.rating}} <meter min=800 max=3600 value="{{problem.rating}}"/></rating>{% endif %}
 

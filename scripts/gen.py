@@ -13,7 +13,7 @@ def generate(contestId, abbrev, shortName):
     start = datetime.fromtimestamp(data['contest']['startTimeSeconds'])
     print(f'Contest: <{title}>')
 
-    with open('genall.sh', 'a') as f:
+    with open('scripts/genall.sh', 'a') as f:
         print(f'./gen.py {contestId} {abbrev} "{shortName}"', file=f)
 
     with open(f'_posts/{start.strftime("%Y-%m-%d")}-{abbrev}.md', 'a') as f:
@@ -44,6 +44,20 @@ def generate(contestId, abbrev, shortName):
         print('* * *', file=f)
         print(file=f)
         print(f"<object data='notes/{abbrev}.pdf' width='1000' height='1000' type='application/pdf'/>", file=f)
+
+    with open('_data/problems.yaml', 'a') as f:
+        for problem in data['problems']:
+            index = problem['index']
+            name = problem['name']
+            labels = ', '.join(problem['tags'])
+            rating = problem.get('rating', None)
+
+            print(f"- id: '{contestId}{index}'", file=f)
+            print(f"  title: '{name}'", file=f)
+            print(f"  labels: '{labels}'", file=f)
+            if rating:
+                print(f"  rating: '{rating}'", file=f)
+            print(file=f)
 
 
 def main():
