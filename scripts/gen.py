@@ -27,7 +27,7 @@ def generate(contestId, abbrev, shortName):
         for problem in data['problems']:
             index = problem['index']
             name = problem['name']
-            tags = ' '.join(['`' + tag + '`' for tag in problem['tags']])
+            tags = ', '.join(problem['tags'])
             rating = problem.get('rating', None)
             fn = f'p/{contestId[0:3]}/{contestId}{index}.md'
             print(f"{{% include {fn} %}}", file=f)
