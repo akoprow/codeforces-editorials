@@ -165,6 +165,36 @@
   labels: 'dfs and similar, graphs, implementation, shortest paths'
   rating: 2600
 
+- id: '1325A'
+  title: 'EhAb AnD gCd'
+  labels: 'constructive algorithms, greedy, number theory'
+  rating: '800'
+
+- id: '1325B'
+  title: 'CopyCopyCopyCopyCopy'
+  labels: 'greedy, implementation'
+  rating: '800'
+
+- id: '1325C'
+  title: 'Ehab and Path-etic MEXs'
+  labels: 'constructive algorithms, dfs and similar, greedy, trees'
+  rating: '1500'
+
+- id: '1325D'
+  title: 'Ehab the Xorcist'
+  labels: 'bitmasks, constructive algorithms, greedy, number theory'
+  rating: '1700'
+
+- id: '1325E'
+  title: "Ehab's REAL Number Theory Problem"
+  labels: 'brute force, dfs and similar, graphs, number theory, shortest paths'
+  rating: '2600'
+
+- id: '1325F'
+  title: "Ehab's Last Theorem"
+  labels: 'constructive algorithms, dfs and similar, graphs, greedy'
+  rating: '2500'
+
 - id: '1327A'
   title: 'Sum of Odd Integers'
   labels: 'math'
@@ -1456,6 +1486,41 @@
   labels: 'constructive algorithms, dp, greedy'
   rating: 2700
 
+- id: '1462A'
+  title: 'Favorite Sequence'
+  labels: 'implementation, two pointers'
+  rating: '800'
+
+- id: '1462B'
+  title: "Last Year's Substring"
+  labels: 'dp, implementation, strings'
+  rating: '800'
+
+- id: '1462C'
+  title: 'Unique Number'
+  labels: 'brute force, greedy, math'
+  rating: '900'
+
+- id: '1462D'
+  title: 'Add to Neighbour and Remove'
+  labels: 'greedy, math, number theory'
+  rating: '1400'
+
+- id: '1462E1'
+  title: 'Close Tuples (easy version)'
+  labels: 'binary search, combinatorics, math, sortings, two pointers'
+  rating: '1500'
+
+- id: '1462E2'
+  title: 'Close Tuples (hard version)'
+  labels: 'binary search, combinatorics, implementation, math, sortings, two pointers'
+  rating: '1700'
+
+- id: '1462F'
+  title: 'The Treasure of The Segments'
+  labels: 'binary search, data structures, greedy'
+  rating: '1800'
+
 - id: '1463A'
   title: 'Dungeon'
   labels: 'math'
@@ -1618,3 +1683,125 @@
   title: 'Power Sockets'
   labels: 'binary search, data structures, greedy'
   rating: 2600
+
+- id: '1473A'
+  title: 'Replacing Elements'
+  labels: 'greedy, implementation, math, sortings'
+  rating: '800'
+
+- id: '1473B'
+  title: 'String LCM'
+  labels: 'brute force, math, number theory, strings'
+  rating: '1000'
+
+- id: '1473C'
+  title: 'No More Inversions'
+  labels: 'constructive algorithms, math'
+  rating: '1500'
+
+- id: '1473D'
+  title: 'Program'
+  labels: 'data structures, dp, implementation, strings'
+  rating: '1700'
+
+- id: '1473E'
+  title: 'Minimum Path'
+  labels: 'graphs, shortest paths'
+  rating: '2400'
+
+- id: '1473F'
+  title: 'Strange Set'
+  labels: 'flows, math'
+  rating: '2700'
+
+- id: '1473G'
+  title: 'Tiles'
+  labels: 'combinatorics, dp, fft, math'
+  rating: '2800'
+
+- id: '1474A'
+  title: 'Puzzle From the Future'
+  labels: 'greedy'
+
+- id: '1474B'
+  title: 'Different Divisors'
+  labels: 'constructive algorithms, greedy, math, number theory'
+
+- id: '1474C'
+  title: 'Array Destruction'
+  labels: 'constructive algorithms, greedy'
+
+- id: '1474D'
+  title: 'Cleaning'
+  labels: 'data structures, dp, greedy, math'
+
+- id: '1474E'
+  title: 'What Is It?'
+  labels: 'constructive algorithms, math'
+
+- id: '1474F'
+  title: '1 2 3 4 ...'
+  labels: 'dp, matrices'
+- id: '1471A'
+  title: 'Strange Partition'
+  labels: 'greedy, math, number theory'
+  rating: '900'
+
+- id: '1470E'
+  title: 'Strange Permutation'
+  labels: 'binary search, combinatorics, data structures, dp, graphs, implementation, two pointers'
+  rating: '3200'
+
+- id: '1470F'
+  title: 'Strange Covering'
+  labels: 'divide and conquer'
+  rating: '3500'
+
+- id: '1471B'
+  title: 'Strange List'
+  labels: 'brute force, greedy, implementation, math'
+  rating: '1100'
+
+- id: '1471C'
+  title: 'Strange Birthday Party'
+  labels: 'brute force, greedy, sortings'
+  rating: '1300'
+
+- id: '1471D'
+  title: 'Strange Definition'
+  labels: 'bitmasks, graphs, hashing, math, number theory'
+  rating: '1900'
+
+- id: '1471E'
+  title: 'Strange Shuffle'
+  labels: 'binary search, brute force, constructive algorithms, interactive'
+  rating: '2500'
+
+- id: '1471F'
+  title: 'Strange Housing'
+  labels: 'constructive algorithms, dfs and similar, graphs, greedy'
+  rating: '2200'
+- id: '1467A'
+  title: 'Wizard of Orz'
+  labels: 'constructive algorithms, greedy, math'
+  rating: '900'
+
+- id: '1467B'
+  title: 'Hills And Valleys'
+  labels: 'brute force, implementation'
+  rating: '1700'
+
+- id: '1467C'
+  title: 'Three Bags'
+  labels: 'constructive algorithms, greedy'
+  rating: '1900'
+
+- id: '1467D'
+  title: 'Sum of Paths'
+  labels: 'combinatorics, dp, math'
+  rating: '2200'
+
+- id: '1467E'
+  title: 'Distinctive Roots in a Tree'
+  labels: 'data structures, dfs and similar, dp, trees'
+  rating: '2500'
