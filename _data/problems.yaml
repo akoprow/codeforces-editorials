@@ -1,1807 +1,1825 @@
-- id: '1260A'
-  title: 'Heating'
-  labels: 'math'
+- id: "1260A"
+  title: "Heating"
+  labels: "math"
   rating: 1000
-  code: 'edu/edu77/1260a-heating.kt'
+  code: "edu/edu77/1260a-heating.kt"
 
-- id: '1260B'
-  title: 'Obtain Two Zeroes'
-  labels: 'binary search, math'
+- id: "1260B"
+  title: "Obtain Two Zeroes"
+  labels: "binary search, math"
   rating: 1300
-  code: 'edu/edu77/1260b-obtain-two-zeros.kt'
+  code: "edu/edu77/1260b-obtain-two-zeros.kt"
 
-- id: '1260C'
-  title: 'Infinite Fence'
-  labels: 'greedy, math, number theory'
+- id: "1260C"
+  title: "Infinite Fence"
+  labels: "greedy, math, number theory"
   rating: 1700
-  code: 'edu/edu77/1260c-infinite-fence.kt'
+  code: "edu/edu77/1260c-infinite-fence.kt"
 
-- id: '1260D'
-  title: 'A Game with Traps'
-  labels: 'binary search, dp, greedy, sortings'
+- id: "1260D"
+  title: "A Game with Traps"
+  labels: "binary search, dp, greedy, sortings"
   rating: 1900
-  code: 'edu/edu77/1260d-a-game-with-traps.kt'
+  code: "edu/edu77/1260d-a-game-with-traps.kt"
 
-- id: '1260E'
-  title: 'Tournament'
-  labels: 'brute force, dp, greedy'
+- id: "1260E"
+  title: "Tournament"
+  labels: "brute force, dp, greedy"
   rating: 2400
 
-- id: '1260F'
-  title: 'Colored Tree'
-  labels: 'data structures, trees'
+- id: "1260F"
+  title: "Colored Tree"
+  labels: "data structures, trees"
   rating: 2700
 
-- id: '1286E'
-  title: 'Fedya the Potter Strikes Back'
-  labels: 'data structures, strings'
+- id: "1286E"
+  title: "Fedya the Potter Strikes Back"
+  labels: "data structures, strings"
   rating: 3200
 
-- id: '1286F'
-  title: 'Harry The Potter'
-  labels: 'brute force, constructive algorithms, dp, fft, implementation, math'
+- id: "1286F"
+  title: "Harry The Potter"
+  labels: "brute force, constructive algorithms, dp, fft, implementation, math"
   rating: 3100
 
-- id: '1287A'
-  title: 'Angry Students'
-  labels: 'greedy, implementation'
+- id: "1287A"
+  title: "Angry Students"
+  labels: "greedy, implementation"
   rating: 800
-  code: 'r600-619/r612/1287-IIa-angry-students.kt'
+  code: "r600-619/r612/1287-IIa-angry-students.kt"
 
-- id: '1287B'
-  title: 'Hyperset'
-  labels: 'brute force, data structures, implementation'
+- id: "1287B"
+  title: "Hyperset"
+  labels: "brute force, data structures, implementation"
   rating: 1500
-  code: 'r600-619/r612/1287-IIb-hyperset.kt'
+  code: "r600-619/r612/1287-IIb-hyperset.kt"
 
-- id: '1287C'
-  title: 'Garland'
-  labels: 'dp, greedy, sortings'
+- id: "1287C"
+  title: "Garland"
+  labels: "dp, greedy, sortings"
   rating: 1800
-  code: 'r600-619/r612/1286-Ia-garland.kt'
+  code: "r600-619/r612/1286-Ia-garland.kt"
 
-- id: '1287D'
-  title: 'Numbers on Tree'
-  labels: 'constructive algorithms, data structures, dfs and similar, graphs, trees'
+- id: "1287D"
+  title: "Numbers on Tree"
+  labels: "constructive algorithms, data structures, dfs and similar, graphs, trees"
   rating: 1800
-  code: 'r600-619/r612/1286-Ib-numbers-on-tree.kt'
+  code: "r600-619/r612/1286-Ib-numbers-on-tree.kt"
 
-- id: '1287E1'
-  title: 'Madhouse (Easy version)'
-  labels: 'constructive algorithms, interactive'
+- id: "1287E1"
+  title: "Madhouse (Easy version)"
+  labels: "constructive algorithms, interactive"
   rating: 2400
 
-- id: '1287E2'
-  title: 'Madhouse (Hard version)'
-  labels: 'constructive algorithms, interactive'
+- id: "1287E2"
+  title: "Madhouse (Hard version)"
+  labels: "constructive algorithms, interactive"
   rating: 2800
 
-- id: '1287F'
-  title: 'LCC'
-  labels: 'data structures, math, probabilities'
+- id: "1287F"
+  title: "LCC"
+  labels: "data structures, math, probabilities"
   rating: 3100
 
-- id: '1290D'
-  title: 'Coffee Varieties (hard version)'
-  labels: 'constructive algorithms, graphs, interactive'
+- id: "1290D"
+  title: "Coffee Varieties (hard version)"
+  labels: "constructive algorithms, graphs, interactive"
   rating: 3000
 
-- id: '1290E'
-  title: 'Cartesian Tree '
-  labels: 'data structures'
+- id: "1290E"
+  title: "Cartesian Tree "
+  labels: "data structures"
   rating: 3300
 
-- id: '1290F'
-  title: 'Making Shapes'
-  labels: 'dp'
+- id: "1290F"
+  title: "Making Shapes"
+  labels: "dp"
   rating: 3500
 
-- id: '1291A'
-  title: 'Even But Not Even'
-  labels: 'greedy, math, strings'
+- id: "1291A"
+  title: "Even But Not Even"
+  labels: "greedy, math, strings"
   rating: 900
-  code: 'r600-619/r616/1291a-even-but-not-even.kt'
+  code: "r600-619/r616/1291a-even-but-not-even.kt"
 
-- id: '1291B'
-  title: 'Array Sharpening'
-  labels: 'greedy, implementation'
+- id: "1291B"
+  title: "Array Sharpening"
+  labels: "greedy, implementation"
   rating: 1300
-  code: 'r600-619/r616/1291b-array-sharpening.kt'
+  code: "r600-619/r616/1291b-array-sharpening.kt"
 
-- id: '1291C'
-  title: 'Mind Control'
-  labels: 'brute force, data structures, greedy, math'
+- id: "1291C"
+  title: "Mind Control"
+  labels: "brute force, data structures, greedy, math"
   rating: 1600
-  code: 'r600-619/r616/1291c-mind-control.kt'
+  code: "r600-619/r616/1291c-mind-control.kt"
 
-- id: '1291D'
-  title: 'Irreducible Anagrams'
-  labels: 'binary search, constructive algorithms, data structures, strings, two pointers'
+- id: "1291D"
+  title: "Irreducible Anagrams"
+  labels: "binary search, constructive algorithms, data structures, strings, two pointers"
   rating: 1800
-  code: 'r600-619/r616/1291d-irreducible-anagrams.kt'
+  code: "r600-619/r616/1291d-irreducible-anagrams.kt"
 
-- id: '1291E'
-  title: 'Prefix Enlightenment'
-  labels: 'dfs and similar, dsu, graphs'
+- id: "1291E"
+  title: "Prefix Enlightenment"
+  labels: "dfs and similar, dsu, graphs"
   rating: 2400
 
-- id: '1291F'
-  title: 'Coffee Varieties (easy version)'
-  labels: 'graphs, interactive'
+- id: "1291F"
+  title: "Coffee Varieties (easy version)"
+  labels: "graphs, interactive"
   rating: 2800
 
-- id: '1301A'
-  title: 'Three Strings'
-  labels: 'implementation, strings'
+- id: "1301A"
+  title: "Three Strings"
+  labels: "implementation, strings"
   rating: 800
-  code: 'r600-619/r619/1301a-three-strings.kt'
+  code: "r600-619/r619/1301a-three-strings.kt"
 
-- id: '1301B'
+- id: "1301B"
   title: "Motarack's Birthday"
-  labels: 'binary search, greedy, ternary search'
+  labels: "binary search, greedy, ternary search"
   rating: 1500
-  code: 'r600-619/r619/1301b-motaracks-birthday.kt'
+  code: "r600-619/r619/1301b-motaracks-birthday.kt"
 
-- id: '1301C'
+- id: "1301C"
   title: "Ayoub's function"
-  labels: 'binary search, combinatorics, greedy, math, strings'
+  labels: "binary search, combinatorics, greedy, math, strings"
   rating: 1700
-  code: 'r600-619/r619/1301c-ayoubs-function.kt'
+  code: "r600-619/r619/1301c-ayoubs-function.kt"
 
-- id: '1301D'
-  title: 'Time to Run'
-  labels: 'constructive algorithms, graphs, implementation'
+- id: "1301D"
+  title: "Time to Run"
+  labels: "constructive algorithms, graphs, implementation"
   rating: 2000
-  code: 'r600-619/r619/1301d-time-to-run.kt'
+  code: "r600-619/r619/1301d-time-to-run.kt"
 
-- id: '1301E'
-  title: 'Nanosoft'
-  labels: 'binary search, data structures, dp, implementation'
+- id: "1301E"
+  title: "Nanosoft"
+  labels: "binary search, data structures, dp, implementation"
   rating: 2500
-  code: 'r600-619/r619/1301e-nanosoft.kt'
+  code: "r600-619/r619/1301e-nanosoft.kt"
 
-- id: '1301F'
-  title: 'Super Jaber'
-  labels: 'dfs and similar, graphs, implementation, shortest paths'
+- id: "1301F"
+  title: "Super Jaber"
+  labels: "dfs and similar, graphs, implementation, shortest paths"
   rating: 2600
 
-- id: '1325A'
-  title: 'EhAb AnD gCd'
-  labels: 'constructive algorithms, greedy, number theory'
-  rating: '800'
+- id: "1325A"
+  title: "EhAb AnD gCd"
+  labels: "constructive algorithms, greedy, number theory"
+  rating: 800
+  code: "r620-639/r628/1325a-ehab-and-gcd.kt"
 
-- id: '1325B'
-  title: 'CopyCopyCopyCopyCopy'
-  labels: 'greedy, implementation'
-  rating: '800'
+- id: "1325B"
+  title: "CopyCopyCopyCopyCopy"
+  labels: "greedy, implementation"
+  rating: 800
+  code: "r620-639/r628/1325b-copy-copy-copy-copy-copy.kt"
 
-- id: '1325C'
-  title: 'Ehab and Path-etic MEXs'
-  labels: 'constructive algorithms, dfs and similar, greedy, trees'
-  rating: '1500'
+- id: "1325C"
+  title: "Ehab and Path-etic MEXs"
+  labels: "constructive algorithms, dfs and similar, greedy, trees"
+  rating: 1500
+  code: "r620-639/r628/1325c-ehab-and-path-etic-mexes.kt"
 
-- id: '1325D'
-  title: 'Ehab the Xorcist'
-  labels: 'bitmasks, constructive algorithms, greedy, number theory'
-  rating: '1700'
+- id: "1325D"
+  title: "Ehab the Xorcist"
+  labels: "bitmasks, constructive algorithms, greedy, number theory"
+  rating: 1700
+  code: "r620-639/r628/1325d-ehab-and-xorcist.kt"
 
-- id: '1325E'
+- id: "1325E"
   title: "Ehab's REAL Number Theory Problem"
-  labels: 'brute force, dfs and similar, graphs, number theory, shortest paths'
-  rating: '2600'
+  labels: "brute force, dfs and similar, graphs, number theory, shortest paths"
+  rating: 2600
 
-- id: '1325F'
+- id: "1325F"
   title: "Ehab's Last Theorem"
-  labels: 'constructive algorithms, dfs and similar, graphs, greedy'
-  rating: '2500'
-
-- id: '1327A'
-  title: 'Sum of Odd Integers'
-  labels: 'math'
-  rating: '1100'
-
-- id: '1327B'
-  title: 'Princesses and Princes'
-  labels: 'brute force, graphs, greedy'
-  rating: '1200'
-
-- id: '1327C'
-  title: 'Game with Chips'
-  labels: 'constructive algorithms, implementation'
-  rating: '1600'
-
-- id: '1327D'
-  title: 'Infinite Path'
-  labels: 'brute force, dfs and similar, graphs, math, number theory'
-  rating: '2200'
-
-- id: '1327E'
-  title: 'Count The Blocks'
-  labels: 'combinatorics, dp, math'
-  rating: '1800'
-
-- id: '1327F'
-  title: 'AND Segments'
-  labels: 'bitmasks, combinatorics, data structures, dp, two pointers'
-  rating: '2500'
-
-- id: '1327G'
-  title: 'Letters and Question Marks'
-  labels: 'bitmasks, dp, string suffix structures'
-  rating: '2800'
-
-- id: '1329D'
-  title: 'Dreamoon Likes Strings'
-  labels: 'constructive algorithms, data structures'
-  rating: '3100'
-
-- id: '1329E'
-  title: 'Dreamoon Loves AA'
-  labels: 'binary search, greedy'
-  rating: '3300'
-
-- id: '1330A'
-  title: 'Dreamoon and Ranking Collection'
-  labels: 'implementation'
-  rating: '900'
-  code: 'r620-639/r631/1330a-dreamoon-and-ranking-collection.kt'
-
-- id: '1330B'
-  title: 'Dreamoon Likes Permutations'
-  labels: 'implementation, math'
-  rating: '1400'
-  code: 'r620-639/r631/1330b-dreamoon-likes-permutations.kt'
-
-- id: '1330C'
-  title: 'Dreamoon Likes Coloring'
-  labels: 'constructive algorithms, greedy'
-  rating: '1800'
-  also-as: '1329A'
-  code: 'r620-639/r631/1330c-dreamoon-likes-coloring.kt'
-
-- id: '1330D'
-  title: 'Dreamoon Likes Sequences'
-  labels: 'bitmasks, constructive algorithms, dp, math'
-  rating: '1700'
-  also-as: '1329B'
-  code: 'r620-639/r631/1330d-dreamoon-likes-sequences.kt'
-
-- id: '1330E'
-  title: 'Drazil Likes Heap'
-  labels: 'data structures, greedy, implementation'
-  also-as: '1329C'
-  rating: '2400'
-
-- id: '1333A'
-  title: 'Little Artem'
-  labels: 'constructive algorithms'
-  rating: 1000
-  code: 'r620-639/r632/1333a-little-artem.kt'
-
-- id: '1333B'
-  title: 'Kind Anton'
-  labels: 'greedy, implementation'
-  rating: 1100
-  code: 'r620-639/r632/1333b-kind-anton.kt'
-
-- id: '1333C'
-  title: 'Eugene and an array'
-  labels: 'binary search, data structures, implementation, two pointers'
-  rating: 1700
-  code: 'r620-639/r632/1333c-eugene-and-an-array.kt'
-
-- id: '1333D'
-  title: 'Challenges in school №41'
-  labels: 'brute force, constructive algorithms, games, graphs, greedy, implementation, sortings'
-  rating: 2100
-  code: 'r620-639/r632/1333d-challenges-in-school-no41.kt'
-
-- id: '1333E'
-  title: 'Road to 1600'
-  labels: 'brute force, constructive algorithms'
-  rating: 2400
-
-- id: '1333F'
-  title: 'Kate and imperfection'
-  labels: 'greedy, implementation, math, number theory, sortings, two pointers'
-  rating: 2200
-
-- id: '1334A'
-  title: 'Level Statistics'
-  labels: 'implementation, math'
-  rating: 1200
-  code: 'edu/edu85/1334a-level-statistics.kt'
-
-- id: '1334B'
-  title: 'Middle Class'
-  labels: 'greedy, sortings'
-  rating: 1100
-  code: 'edu/edu85/1334bmiddle-class.kt'
-
-- id: '1334C'
-  title: 'Circle of Monsters'
-  labels: 'brute force, constructive algorithms, greedy, math'
-  rating: 1600
-  code: 'edu/edu85/1334c-circle-of-monsters.kt'
-
-- id: '1334D'
-  title: 'Minimum Euler Cycle'
-  labels: 'constructive algorithms, graphs, greedy, implementation'
-  rating: 1800
-  code: 'edu/edu85/1334d-minimum-euler-cycle.kt'
-
-- id: '1334E'
-  title: 'Divisor Paths'
-  labels: 'combinatorics, graphs, greedy, math, number theory'
-  rating: 2200
-
-- id: '1334F'
-  title: 'Strange Function'
-  labels: 'binary search, data structures, dp, greedy'
+  labels: "constructive algorithms, dfs and similar, graphs, greedy"
   rating: 2500
 
-- id: '1334G'
-  title: 'Substring Search'
-  labels: 'bitmasks, brute force, fft'
-  rating: 2900
-
-- id: '1336E1'
-  title: 'Chiori and Doll Picking (easy version)'
-  labels: 'bitmasks, brute force, combinatorics, math'
-  rating: 2700
-
-- id: '1336E2'
-  title: 'Chiori and Doll Picking (hard version)'
-  labels: 'bitmasks, brute force, combinatorics, math'
-  rating: 3500
-
-- id: '1336F'
-  title: 'Journey'
-  labels: 'data structures, divide and conquer, graphs, trees'
-  rating: 3500
-
-- id: '1337A'
-  title: 'Ichihime and Triangle'
-  labels: 'constructive algorithms, math'
-  rating: 800
-  code: 'r620-639/r635/1337a-ichihime-and-triangle.kt'
-
-- id: '1337B'
-  title: 'Kana and Dragon Quest game'
-  labels: 'greedy, implementation, math'
-  rating: 900
-  code: 'r620-639/r635/1337b-kana-and-dragon-quest-game.kt'
-
-- id: '1337C'
-  title: 'Linova and Kingdom'
-  labels: 'dfs and similar, dp, greedy, sortings, trees'
-  rating: 1600
-  code: 'r620-639/r635/1337c-linova-and-kingdom.kt'
-
-- id: '1337D'
-  title: 'Xenia and Colorful Gems'
-  labels: 'binary search, data structures, implementation, math, sortings'
-  rating: 1700
-  code: 'r620-639/r635/1337d-xenia-and-colorful-gems.kt'
-
-- id: '1337E'
-  title: 'Kaavi and Magic Spell'
-  labels: 'dp, strings'
-  rating: 2200
-
-- id: '1337F'
-  title: 'Yui and Mahjong Set'
-  labels: 'interactive, math'
-  rating: 3200
-
-- id: '1338D'
-  title: 'Nested Rubber Bands'
-  labels: 'constructive algorithms, dfs and similar, dp, math, trees'
-  rating: 2700
-
-- id: '1338E'
-  title: 'JYPnation'
-  labels: 'graphs'
-  rating: 3500
-
-- id: '1339A'
-  title: 'Filling Diamonds'
-  labels: 'brute force, dp, implementation, math'
-  rating: 900
-  code: 'r620-639/r633/1339a-filling-diamonds.kt'
-
-- id: '1339B'
-  title: 'Sorted Adjacent Differences'
-  labels: 'constructive algorithms, sortings'
-  rating: 1200
-  code: 'r620-639/r633/1339b-sorted-adjacent-differences.kt'
-
-- id: '1339C'
-  title: 'Powered Addition'
-  labels: 'bitmasks, brute force, greedy'
-  rating: 1500
-  code: 'r620-639/r633/1339c-powered-addition.kt'
-
-- id: '1339D'
-  title: 'Edge Weight Assignment'
-  labels: 'bitmasks, constructive algorithms, greedy, trees'
-  rating: 1800
-  code: 'r620-639/r633/1339d-edge-weight-assignment.kt'
-
-- id: '1339E'
-  title: 'Perfect Triples'
-  labels: 'bitmasks, constructive algorithms, implementation, math'
-  rating: 2200
-
-- id: '1340E'
-  title: 'Nastya and Bees'
-  labels: 'graphs, interactive, probabilities'
-  rating: 3000
-
-- id: '1340F'
-  title: 'Nastya and CBS'
-  labels: 'brute force, data structures, hashing'
-  rating: 3300
-
-- id: '1341A'
-  title: 'Nastya and Rice'
-  labels: 'math'
-  rating: 900
-  code: 'r620-639/r637/1341a-nastya-and-rice.kt'
-
-- id: '1341B'
-  title: 'Nastya and Door'
-  labels: 'greedy, implementation'
-  rating: 1300
-  code: 'r620-639/r637/1341b-nastya-and-door.kt'
-
-- id: '1341C'
-  title: 'Nastya and Strange Generator'
-  labels: 'greedy, implementation'
-  rating: 1500
-  code: 'r620-639/r637/1341c-nastya-and-strange-generator.kt'
-
-- id: '1341D'
-  title: 'Nastya and Scoreboard'
-  labels: 'bitmasks, dp, greedy'
-  rating: 1700
-  code: 'r620-639/r637/1341d-nastya-and-scoreboard.kt'
-
-- id: '1341E'
-  title: 'Nastya and Unexpected Guest'
-  labels: 'graphs, implementation, shortest paths'
-  rating: 2400
-
-- id: '1341F'
-  title: 'Nastya and Time Machine'
-  labels: 'constructive algorithms, dfs and similar, graphs'
-  rating: 2600
-
-- id: '1342A'
-  title: 'Road To Zero'
-  labels: 'greedy, math'
-  rating: 1000
-  code: 'edu/edu86/1342a-road-to-zero.kt'
-
-- id: '1342B'
-  title: 'Binary Period'
-  labels: 'constructive algorithms, strings'
+- id: "1327A"
+  title: "Sum of Odd Integers"
+  labels: "math"
   rating: 1100
-  code: 'edu/edu86/1342b-binary-period.kt'
 
-- id: '1342C'
-  title: 'Yet Another Counting Problem'
-  labels: 'math, number theory'
+- id: "1327B"
+  title: "Princesses and Princes"
+  labels: "brute force, graphs, greedy"
+  rating: 1200
+
+- id: "1327C"
+  title: "Game with Chips"
+  labels: "constructive algorithms, implementation"
   rating: 1600
-  code: 'edu/edu86/1342c-yet-another-counting-problem.kt'
 
-- id: '1342D'
-  title: 'Multiple Testcases'
-  labels: 'binary search, constructive algorithms, data structures, greedy, sortings, two pointers'
-  rating: 1900
-  code: 'edu/edu86/1342d-multiple-testcases.kt'
+- id: "1327D"
+  title: "Infinite Path"
+  labels: "brute force, dfs and similar, graphs, math, number theory"
+  rating: 2200
 
-- id: '1342E'
-  title: 'Placing Rooks'
-  labels: 'combinatorics, fft, math'
-  rating: 2300
+- id: "1327E"
+  title: "Count The Blocks"
+  labels: "combinatorics, dp, math"
+  rating: 1800
 
-- id: '1342F'
-  title: 'Make It Ascending'
-  labels: 'bitmasks, brute force, dp'
-  rating: 3000
+- id: "1327F"
+  title: "AND Segments"
+  labels: "bitmasks, combinatorics, data structures, dp, two pointers"
+  rating: 2500
 
-- id: '1344E'
-  title: 'Train Tracks'
-  labels: 'data structures, trees'
+- id: "1327G"
+  title: "Letters and Question Marks"
+  labels: "bitmasks, dp, string suffix structures"
+  rating: 2800
+
+- id: "1329D"
+  title: "Dreamoon Likes Strings"
+  labels: "constructive algorithms, data structures"
   rating: 3100
 
-- id: '1344F'
+- id: "1329E"
+  title: "Dreamoon Loves AA"
+  labels: "binary search, greedy"
+  rating: 3300
+
+- id: "1330A"
+  title: "Dreamoon and Ranking Collection"
+  labels: "implementation"
+  rating: 900
+  code: "r620-639/r631/1330a-dreamoon-and-ranking-collection.kt"
+
+- id: "1330B"
+  title: "Dreamoon Likes Permutations"
+  labels: "implementation, math"
+  rating: 1400
+  code: "r620-639/r631/1330b-dreamoon-likes-permutations.kt"
+
+- id: "1330C"
+  title: "Dreamoon Likes Coloring"
+  labels: "constructive algorithms, greedy"
+  rating: 1800
+  code: "r620-639/r631/1330c-dreamoon-likes-coloring.kt"
+
+- id: "1330D"
+  title: "Dreamoon Likes Sequences"
+  labels: "bitmasks, constructive algorithms, dp, math"
+  rating: 1700
+  code: "r620-639/r631/1330d-dreamoon-likes-sequences.kt"
+
+- id: "1330E"
+  title: "Drazil Likes Heap"
+  labels: "data structures, greedy, implementation"
+  rating: 2400
+
+- id: "1333A"
+  title: "Little Artem"
+  labels: "constructive algorithms"
+  rating: 1000
+  code: "r620-639/r632/1333a-little-artem.kt"
+
+- id: "1333B"
+  title: "Kind Anton"
+  labels: "greedy, implementation"
+  rating: 1100
+  code: "r620-639/r632/1333b-kind-anton.kt"
+
+- id: "1333C"
+  title: "Eugene and an array"
+  labels: "binary search, data structures, implementation, two pointers"
+  rating: 1700
+  code: "r620-639/r632/1333c-eugene-and-an-array.kt"
+
+- id: "1333D"
+  title: "Challenges in school №41"
+  labels: "brute force, constructive algorithms, games, graphs, greedy, implementation, sortings"
+  rating: 2100
+  code: "r620-639/r632/1333d-challenges-in-school-no41.kt"
+
+- id: "1333E"
+  title: "Road to 1600"
+  labels: "brute force, constructive algorithms"
+  rating: 2400
+
+- id: "1333F"
+  title: "Kate and imperfection"
+  labels: "greedy, implementation, math, number theory, sortings, two pointers"
+  rating: 2200
+
+- id: "1334A"
+  title: "Level Statistics"
+  labels: "implementation, math"
+  rating: 1200
+  code: "edu/edu85/1334a-level-statistics.kt"
+
+- id: "1334B"
+  title: "Middle Class"
+  labels: "greedy, sortings"
+  rating: 1100
+  code: "edu/edu85/1334bmiddle-class.kt"
+
+- id: "1334C"
+  title: "Circle of Monsters"
+  labels: "brute force, constructive algorithms, greedy, math"
+  rating: 1600
+  code: "edu/edu85/1334c-circle-of-monsters.kt"
+
+- id: "1334D"
+  title: "Minimum Euler Cycle"
+  labels: "constructive algorithms, graphs, greedy, implementation"
+  rating: 1800
+  code: "edu/edu85/1334d-minimum-euler-cycle.kt"
+
+- id: "1334E"
+  title: "Divisor Paths"
+  labels: "combinatorics, graphs, greedy, math, number theory"
+  rating: 2200
+
+- id: "1334F"
+  title: "Strange Function"
+  labels: "binary search, data structures, dp, greedy"
+  rating: 2500
+
+- id: "1334G"
+  title: "Substring Search"
+  labels: "bitmasks, brute force, fft"
+  rating: 2900
+
+- id: "1336E1"
+  title: "Chiori and Doll Picking (easy version)"
+  labels: "bitmasks, brute force, combinatorics, math"
+  rating: 2700
+
+- id: "1336E2"
+  title: "Chiori and Doll Picking (hard version)"
+  labels: "bitmasks, brute force, combinatorics, math"
+  rating: 3500
+
+- id: "1336F"
+  title: "Journey"
+  labels: "data structures, divide and conquer, graphs, trees"
+  rating: 3500
+
+- id: "1337A"
+  title: "Ichihime and Triangle"
+  labels: "constructive algorithms, math"
+  rating: 800
+  code: "r620-639/r635/1337a-ichihime-and-triangle.kt"
+
+- id: "1337B"
+  title: "Kana and Dragon Quest game"
+  labels: "greedy, implementation, math"
+  rating: 900
+  code: "r620-639/r635/1337b-kana-and-dragon-quest-game.kt"
+
+- id: "1337C"
+  title: "Linova and Kingdom"
+  labels: "dfs and similar, dp, greedy, sortings, trees"
+  rating: 1600
+  code: "r620-639/r635/1337c-linova-and-kingdom.kt"
+
+- id: "1337D"
+  title: "Xenia and Colorful Gems"
+  labels: "binary search, data structures, implementation, math, sortings"
+  rating: 1700
+  code: "r620-639/r635/1337d-xenia-and-colorful-gems.kt"
+
+- id: "1337E"
+  title: "Kaavi and Magic Spell"
+  labels: "dp, strings"
+  rating: 2200
+
+- id: "1337F"
+  title: "Yui and Mahjong Set"
+  labels: "interactive, math"
+  rating: 3200
+
+- id: "1338D"
+  title: "Nested Rubber Bands"
+  labels: "constructive algorithms, dfs and similar, dp, math, trees"
+  rating: 2700
+
+- id: "1338E"
+  title: "JYPnation"
+  labels: "graphs"
+  rating: 3500
+
+- id: "1339A"
+  title: "Filling Diamonds"
+  labels: "brute force, dp, implementation, math"
+  rating: 900
+  code: "r620-639/r633/1339a-filling-diamonds.kt"
+
+- id: "1339B"
+  title: "Sorted Adjacent Differences"
+  labels: "constructive algorithms, sortings"
+  rating: 1200
+  code: "r620-639/r633/1339b-sorted-adjacent-differences.kt"
+
+- id: "1339C"
+  title: "Powered Addition"
+  labels: "bitmasks, brute force, greedy"
+  rating: 1500
+  code: "r620-639/r633/1339c-powered-addition.kt"
+
+- id: "1339D"
+  title: "Edge Weight Assignment"
+  labels: "bitmasks, constructive algorithms, greedy, trees"
+  rating: 1800
+  code: "r620-639/r633/1339d-edge-weight-assignment.kt"
+
+- id: "1339E"
+  title: "Perfect Triples"
+  labels: "bitmasks, constructive algorithms, implementation, math"
+  rating: 2200
+
+- id: "1340E"
+  title: "Nastya and Bees"
+  labels: "graphs, interactive, probabilities"
+  rating: 3000
+
+- id: "1340F"
+  title: "Nastya and CBS"
+  labels: "brute force, data structures, hashing"
+  rating: 3300
+
+- id: "1341A"
+  title: "Nastya and Rice"
+  labels: "math"
+  rating: 900
+  code: "r620-639/r637/1341a-nastya-and-rice.kt"
+
+- id: "1341B"
+  title: "Nastya and Door"
+  labels: "greedy, implementation"
+  rating: 1300
+  code: "r620-639/r637/1341b-nastya-and-door.kt"
+
+- id: "1341C"
+  title: "Nastya and Strange Generator"
+  labels: "greedy, implementation"
+  rating: 1500
+  code: "r620-639/r637/1341c-nastya-and-strange-generator.kt"
+
+- id: "1341D"
+  title: "Nastya and Scoreboard"
+  labels: "bitmasks, dp, greedy"
+  rating: 1700
+  code: "r620-639/r637/1341d-nastya-and-scoreboard.kt"
+
+- id: "1341E"
+  title: "Nastya and Unexpected Guest"
+  labels: "graphs, implementation, shortest paths"
+  rating: 2400
+
+- id: "1341F"
+  title: "Nastya and Time Machine"
+  labels: "constructive algorithms, dfs and similar, graphs"
+  rating: 2600
+
+- id: "1342A"
+  title: "Road To Zero"
+  labels: "greedy, math"
+  rating: 1000
+  code: "edu/edu86/1342a-road-to-zero.kt"
+
+- id: "1342B"
+  title: "Binary Period"
+  labels: "constructive algorithms, strings"
+  rating: 1100
+  code: "edu/edu86/1342b-binary-period.kt"
+
+- id: "1342C"
+  title: "Yet Another Counting Problem"
+  labels: "math, number theory"
+  rating: 1600
+  code: "edu/edu86/1342c-yet-another-counting-problem.kt"
+
+- id: "1342D"
+  title: "Multiple Testcases"
+  labels: "binary search, constructive algorithms, data structures, greedy, sortings, two pointers"
+  rating: 1900
+  code: "edu/edu86/1342d-multiple-testcases.kt"
+
+- id: "1342E"
+  title: "Placing Rooks"
+  labels: "combinatorics, fft, math"
+  rating: 2300
+
+- id: "1342F"
+  title: "Make It Ascending"
+  labels: "bitmasks, brute force, dp"
+  rating: 3000
+
+- id: "1344E"
+  title: "Train Tracks"
+  labels: "data structures, trees"
+  rating: 3100
+
+- id: "1344F"
   title: "Piet's Palette"
-  labels: 'matrices'
+  labels: "matrices"
   rating: 3200
 
-- id: '1345A'
-  title: 'Puzzle Pieces'
-  labels: 'math'
+- id: "1345A"
+  title: "Puzzle Pieces"
+  labels: "math"
   rating: 800
-  code: 'r620-639/r639/1345a-puzzle-pieces.kt'
+  code: "r620-639/r639/1345a-puzzle-pieces.kt"
 
-- id: '1345B'
-  title: 'Card Constructions'
-  labels: 'binary search, brute force, dp, math'
+- id: "1345B"
+  title: "Card Constructions"
+  labels: "binary search, brute force, dp, math"
   rating: 1100
-  code: 'r620-639/r639/1345b-card-constructions.kt'
+  code: "r620-639/r639/1345b-card-constructions.kt"
 
-- id: '1345C'
+- id: "1345C"
   title: "Hilbert's Hotel"
-  labels: 'math, sortings'
+  labels: "math, sortings"
   rating: 1600
-  code: 'codeforces/r620-639/r639/1345c-hilberts-hotel.kt'
+  code: "codeforces/r620-639/r639/1345c-hilberts-hotel.kt"
 
-- id: '1345D'
-  title: 'Monopole Magnets'
-  labels: 'constructive algorithms, dfs and similar, dsu'
+- id: "1345D"
+  title: "Monopole Magnets"
+  labels: "constructive algorithms, dfs and similar, dsu"
   rating: 2000
-  code: 'r620-639/r639/1345d-monopole-magnets.kt'
+  code: "r620-639/r639/1345d-monopole-magnets.kt"
 
-- id: '1345E'
-  title: 'Quantifier Question'
-  labels: 'dfs and similar, dp, graphs'
+- id: "1345E"
+  title: "Quantifier Question"
+  labels: "dfs and similar, dp, graphs"
   rating: 2600
 
-- id: '1345F'
-  title: 'Résumé Review'
-  labels: 'binary search, greedy'
+- id: "1345F"
+  title: "Résumé Review"
+  labels: "binary search, greedy"
   rating: 2700
 
-- id: '1348A'
-  title: 'Phoenix and Balance'
-  labels: 'greedy, math'
+- id: "1348A"
+  title: "Phoenix and Balance"
+  labels: "greedy, math"
   rating: 800
-  code: 'r620-639/r638/1348a-phoenix-and-balance.kt'
+  code: "r620-639/r638/1348a-phoenix-and-balance.kt"
 
-- id: '1348B'
-  title: 'Phoenix and Beauty'
-  labels: 'constructive algorithms, data structures, greedy, sortings'
+- id: "1348B"
+  title: "Phoenix and Beauty"
+  labels: "constructive algorithms, data structures, greedy, sortings"
   rating: 1400
-  code: 'r620-639/r638/1438b-phoenix-and-beauty.kt'
+  code: "r620-639/r638/1438b-phoenix-and-beauty.kt"
 
-- id: '1348C'
-  title: 'Phoenix and Distribution'
-  labels: 'constructive algorithms, greedy, sortings, strings'
+- id: "1348C"
+  title: "Phoenix and Distribution"
+  labels: "constructive algorithms, greedy, sortings, strings"
   rating: 1600
-  code: 'r620-639/r638/1438c-phoenix-and-distribution.kt'
+  code: "r620-639/r638/1438c-phoenix-and-distribution.kt"
 
-- id: '1348D'
-  title: 'Phoenix and Science'
-  labels: 'binary search, constructive algorithms, greedy, implementation, math'
+- id: "1348D"
+  title: "Phoenix and Science"
+  labels: "binary search, constructive algorithms, greedy, implementation, math"
   rating: 1900
-  code: 'r620-639/r638/1438d-phoenix-and-science.kt'
+  code: "r620-639/r638/1438d-phoenix-and-science.kt"
 
-- id: '1348E'
-  title: 'Phoenix and Berries'
-  labels: 'brute force, dp, greedy, math'
+- id: "1348E"
+  title: "Phoenix and Berries"
+  labels: "brute force, dp, greedy, math"
   rating: 2400
 
-- id: '1348F'
-  title: 'Phoenix and Memory'
-  labels: 'data structures, dfs and similar, graphs, greedy'
+- id: "1348F"
+  title: "Phoenix and Memory"
+  labels: "data structures, dfs and similar, graphs, greedy"
   rating: 2600
 
-- id: '1353A'
-  title: 'Most Unstable Array'
-  labels: 'constructive algorithms, greedy, math'
+- id: "1353A"
+  title: "Most Unstable Array"
+  labels: "constructive algorithms, greedy, math"
   rating: 800
-  code: 'r640-659/r642/1353a-most-unstable-array.kt'
+  code: "r640-659/r642/1353a-most-unstable-array.kt"
 
-- id: '1353B'
-  title: 'Two Arrays And Swaps'
-  labels: 'greedy, sortings'
+- id: "1353B"
+  title: "Two Arrays And Swaps"
+  labels: "greedy, sortings"
   rating: 800
-  code: 'r640-659/r642/1353b-two-arrays-and-swaps.kt'
+  code: "r640-659/r642/1353b-two-arrays-and-swaps.kt"
 
-- id: '1353C'
-  title: 'Board Moves'
-  labels: 'math'
+- id: "1353C"
+  title: "Board Moves"
+  labels: "math"
   rating: 1000
-  code: 'r640-659/r642/1353c-board-moves.kt'
+  code: "r640-659/r642/1353c-board-moves.kt"
 
-- id: '1353D'
-  title: 'Constructing the Array'
-  labels: 'constructive algorithms, data structures, sortings'
+- id: "1353D"
+  title: "Constructing the Array"
+  labels: "constructive algorithms, data structures, sortings"
   rating: 1600
-  code: 'r640-659/r642/1353d-constructing-the-array.kt'
+  code: "r640-659/r642/1353d-constructing-the-array.kt"
 
-- id: '1353E'
-  title: 'K-periodic Garland'
-  labels: 'brute force, dp, greedy'
+- id: "1353E"
+  title: "K-periodic Garland"
+  labels: "brute force, dp, greedy"
   rating: 1900
-  code: 'r640-659/r642/1353e-k-periodic-garland.kt'
+  code: "r640-659/r642/1353e-k-periodic-garland.kt"
 
-- id: '1353F'
-  title: 'Decreasing Heights'
-  labels: 'brute force, dp'
+- id: "1353F"
+  title: "Decreasing Heights"
+  labels: "brute force, dp"
   rating: 2200
 
-- id: '1354A'
-  title: 'Alarm Clock'
-  labels: 'math'
+- id: "1354A"
+  title: "Alarm Clock"
+  labels: "math"
   rating: 900
-  code: 'edu/edu87/1354a-alarm-clock.kt'
+  code: "edu/edu87/1354a-alarm-clock.kt"
 
-- id: '1354B'
-  title: 'Ternary String'
-  labels: 'binary search, dp, implementation, two pointers'
+- id: "1354B"
+  title: "Ternary String"
+  labels: "binary search, dp, implementation, two pointers"
   rating: 1200
-  code: 'edu/edu87/1354b-ternary-string.kt'
+  code: "edu/edu87/1354b-ternary-string.kt"
 
-- id: '1354C1'
-  title: 'Simple Polygon Embedding'
-  labels: 'binary search, geometry, math, ternary search'
+- id: "1354C1"
+  title: "Simple Polygon Embedding"
+  labels: "binary search, geometry, math, ternary search"
   rating: 1400
-  code: 'edu/edu87/1354c1-simple-polygon-embedding.kt'
+  code: "edu/edu87/1354c1-simple-polygon-embedding.kt"
 
-- id: '1354C2'
-  title: 'Not So Simple Polygon Embedding'
-  labels: 'binary search, brute force, geometry, math'
+- id: "1354C2"
+  title: "Not So Simple Polygon Embedding"
+  labels: "binary search, brute force, geometry, math"
   rating: 2000
-  code: 'edu/edu87/1354c2-not-so-simple-polygon-embedding.kt'
+  code: "edu/edu87/1354c2-not-so-simple-polygon-embedding.kt"
 
-- id: '1354D'
-  title: 'Multiset'
-  labels: 'binary search, data structures'
+- id: "1354D"
+  title: "Multiset"
+  labels: "binary search, data structures"
   rating: 1900
 
-- id: '1354E'
-  title: 'Graph Coloring'
-  labels: 'dfs and similar, dp, graphs'
+- id: "1354E"
+  title: "Graph Coloring"
+  labels: "dfs and similar, dp, graphs"
   rating: 2100
 
-- id: '1354F'
-  title: 'Summoning Minions'
-  labels: 'constructive algorithms, dp, flows, graph matchings, greedy, sortings'
+- id: "1354F"
+  title: "Summoning Minions"
+  labels: "constructive algorithms, dp, flows, graph matchings, greedy, sortings"
   rating: 2500
 
-- id: '1354G'
-  title: 'Find a Gift'
-  labels: 'binary search, interactive, probabilities'
+- id: "1354G"
+  title: "Find a Gift"
+  labels: "binary search, interactive, probabilities"
   rating: 2600
 
-- id: '1420A'
-  title: 'Cubes Sorting'
-  labels: 'math, sortings'
+- id: "1420A"
+  title: "Cubes Sorting"
+  labels: "math, sortings"
   rating: 900
-  code: 'r660-679/r672/1420a-cubes-sorting.kt'
+  code: "r660-679/r672/1420a-cubes-sorting.kt"
 
-- id: '1420B'
-  title: 'Rock and Lever'
-  labels: 'bitmasks, math'
+- id: "1420B"
+  title: "Rock and Lever"
+  labels: "bitmasks, math"
   rating: 1200
-  code: 'r660-679/r672/1420b-rock-and-lever.kt'
+  code: "r660-679/r672/1420b-rock-and-lever.kt"
 
-- id: '1420C1'
-  title: 'Pokémon Army (easy version)'
-  labels: 'constructive algorithms, dp, greedy'
+- id: "1420C1"
+  title: "Pokémon Army (easy version)"
+  labels: "constructive algorithms, dp, greedy"
   rating: 1300
-  code: 'r660-679/r672/1420c1-pokemon-army-easy.kt'
+  code: "r660-679/r672/1420c1-pokemon-army-easy.kt"
 
-- id: '1420C2'
-  title: 'Pokémon Army (hard version)'
-  labels: 'data structures, divide and conquer, dp, greedy, implementation'
+- id: "1420C2"
+  title: "Pokémon Army (hard version)"
+  labels: "data structures, divide and conquer, dp, greedy, implementation"
   rating: 2100
-  code: 'r660-679/r672/1420c2-pokemon-army-hard.kt'
+  code: "r660-679/r672/1420c2-pokemon-army-hard.kt"
 
-- id: '1420D'
-  title: 'Rescue Nibel!'
-  labels: 'combinatorics, data structures, sortings'
+- id: "1420D"
+  title: "Rescue Nibel!"
+  labels: "combinatorics, data structures, sortings"
   rating: 1800
-  code: 'r660-679/r672/1420d-rescue-nibel.kt'
+  code: "r660-679/r672/1420d-rescue-nibel.kt"
 
-- id: '1420E'
-  title: 'Battle Lemmings'
-  labels: 'dp, greedy'
+- id: "1420E"
+  title: "Battle Lemmings"
+  labels: "dp, greedy"
   rating: 2500
 
-- id: '1421A'
-  title: 'XORwice'
-  labels: 'bitmasks, greedy, math'
+- id: "1421A"
+  title: "XORwice"
+  labels: "bitmasks, greedy, math"
   rating: 800
-  code: 'r660-679/r676/1421a-xorwice.kt'
+  code: "r660-679/r676/1421a-xorwice.kt"
 
-- id: '1421B'
-  title: 'Putting Bricks in the Wall'
-  labels: 'constructive algorithms, implementation'
+- id: "1421B"
+  title: "Putting Bricks in the Wall"
+  labels: "constructive algorithms, implementation"
   rating: 1100
-  code: 'r660-679/r676/1421b-putting-bricks-in-the-wall.kt.kt'
+  code: "r660-679/r676/1421b-putting-bricks-in-the-wall.kt.kt"
 
-- id: '1421C'
-  title: 'Palindromifier'
-  labels: 'constructive algorithms, strings'
+- id: "1421C"
+  title: "Palindromifier"
+  labels: "constructive algorithms, strings"
   rating: 1400
-  code: 'r660-679/r676/1421c-palindromifier.kt'
+  code: "r660-679/r676/1421c-palindromifier.kt"
 
-- id: '1421D'
-  title: 'Hexagons'
-  labels: 'brute force, constructive algorithms, greedy, implementation, math, shortest paths'
+- id: "1421D"
+  title: "Hexagons"
+  labels: "brute force, constructive algorithms, greedy, implementation, math, shortest paths"
   rating: 1900
-  code: 'r660-679/r676/1421d-hexagons.kt'
+  code: "r660-679/r676/1421d-hexagons.kt"
 
-- id: '1421E'
-  title: 'Swedish Heroes'
-  labels: 'brute force, dp, implementation'
+- id: "1421E"
+  title: "Swedish Heroes"
+  labels: "brute force, dp, implementation"
   rating: 2700
 
-- id: '1431A'
-  title: 'Selling Hamburgers'
-  labels: '*special, bruteforce'
+- id: "1431A"
+  title: "Selling Hamburgers"
+  labels: "*special, bruteforce"
   rating: 800
-  code: 'other/kotlinHeroes5/1431a-selling-hamburgers.kt'
+  code: "other/kotlinHeroes5/1431a-selling-hamburgers.kt"
 
-- id: '1431B'
-  title: 'Polycarp and the Language of Gods'
-  labels: '*special, implementation, two pointers, blocks, greedy'
+- id: "1431B"
+  title: "Polycarp and the Language of Gods"
+  labels: "*special, implementation, two pointers, blocks, greedy"
   rating: 1400
-  code: 'other/kotlinHeroes5/1431b-polycarp-and-the-language-of-gods.kt'
+  code: "other/kotlinHeroes5/1431b-polycarp-and-the-language-of-gods.kt"
 
-- id: '1431C'
-  title: 'Black Friday'
-  labels: '*special, implementation, greedy, bruteforce'
+- id: "1431C"
+  title: "Black Friday"
+  labels: "*special, implementation, greedy, bruteforce"
   rating: 1600
-  code: 'other/kotlinHeroes5/1431c-black-friday.kt'
+  code: "other/kotlinHeroes5/1431c-black-friday.kt"
 
-- id: '1431D'
-  title: 'Used Markers'
-  labels: '*special, greedy, constructive algorithms'
+- id: "1431D"
+  title: "Used Markers"
+  labels: "*special, greedy, constructive algorithms"
   rating: 1500
-  code: 'other/kotlinHeroes5/1431d-used-markers.kt'
+  code: "other/kotlinHeroes5/1431d-used-markers.kt"
 
-- id: '1431E'
-  title: 'Chess Match'
-  labels: '*special'
+- id: "1431E"
+  title: "Chess Match"
+  labels: "*special"
   rating: 2000
-  code: 'other/kotlinHeroes5/1431e-chess-match.kt'
+  code: "https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/other/kotlinHeroes5/1431e-chess-match.kt"
 
-- id: '1431F'
-  title: 'Neural Network Problem'
-  labels: '*special, binary search, greedy, constructive algorithms'
+- id: "1431F"
+  title: "Neural Network Problem"
+  labels: "*special, binary search, greedy, constructive algorithms"
   rating: 2100
-  code: 'other/kotlinHeroes5/1431f-neural-network-problem.kt'
+  code: "https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/other/kotlinHeroes5/1431f-neural-network-problem.kt"
 
-- id: '1431G'
-  title: 'Number Deletion Game'
-  labels: '*special, dp, games, greedy'
+- id: "1431G"
+  title: "Number Deletion Game"
+  labels: "*special, dp, games, greedy"
   rating: 2100
-  code: 'other/kotlinHeroes5/1431g-numbers-game.kt'
+  code: "https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/other/kotlinHeroes5/1431g-numbers-game.kt"
 
-- id: '1431H'
-  title: 'Rogue-like Game'
-  labels: '*special, brute force, greedy, two pointers'
+- id: "1431H"
+  title: "Rogue-like Game"
+  labels: "*special, brute force, greedy, two pointers"
   rating: 2600
 
-- id: '1431I'
-  title: 'Cyclic Shifts'
-  labels: '*special, strings'
+- id: "1431I"
+  title: "Cyclic Shifts"
+  labels: "*special, strings"
   rating: 2900
 
-- id: '1431J'
-  title: 'Zero-XOR Array'
-  labels: '*special, dp'
+- id: "1431J"
+  title: "Zero-XOR Array"
+  labels: "*special, dp"
   rating: 3400
 
-- id: '1433A'
-  title: 'Boring Apartments'
-  labels: 'implementation, math'
+- id: "1433A"
+  title: "Boring Apartments"
+  labels: "implementation, math"
   rating: 800
-  code: 'r660-679/r677/1433a-boring-apartments.kt'
+  code: "r660-679/r677/1433a-boring-apartments.kt"
 
-- id: '1433B'
-  title: 'Yet Another Bookshelf'
-  labels: 'greedy, implementation'
+- id: "1433B"
+  title: "Yet Another Bookshelf"
+  labels: "greedy, implementation"
   rating: 800
-  code: 'r660-679/r677/1433b-yet-another-bookshelf.kt'
+  code: "r660-679/r677/1433b-yet-another-bookshelf.kt"
 
-- id: '1433C'
-  title: 'Dominant Piranha'
-  labels: 'constructive algorithms, greedy'
+- id: "1433C"
+  title: "Dominant Piranha"
+  labels: "constructive algorithms, greedy"
   rating: 900
-  code: 'r660-679/r677/1433c-dominant-piranha.kt'
+  code: "r660-679/r677/1433c-dominant-piranha.kt"
 
-- id: '1433D'
-  title: 'Districts Connection'
-  labels: 'constructive algorithms, dfs and similar'
+- id: "1433D"
+  title: "Districts Connection"
+  labels: "constructive algorithms, dfs and similar"
   rating: 1200
-  code: 'r660-679/r677/1433d-districts-connections.kt'
+  code: "r660-679/r677/1433d-districts-connections.kt"
 
-- id: '1433E'
-  title: 'Two Round Dances'
-  labels: 'combinatorics, math'
+- id: "1433E"
+  title: "Two Round Dances"
+  labels: "combinatorics, math"
   rating: 1300
-  code: 'r660-679/r677/1433e-two-round-dances.kt'
+  code: "r660-679/r677/1433e-two-round-dances.kt"
 
-- id: '1433F'
-  title: 'Zero Remainder Sum '
-  labels: 'dp'
+- id: "1433F"
+  title: "Zero Remainder Sum "
+  labels: "dp"
   rating: 2100
-  code: 'r660-679/r677/1433f-zero-remainder-sum.kt'
+  code: "r660-679/r677/1433f-zero-remainder-sum.kt"
 
-- id: '1433G'
-  title: 'Reducing Delivery Cost'
-  labels: 'brute force, graphs, shortest paths'
+- id: "1433G"
+  title: "Reducing Delivery Cost"
+  labels: "brute force, graphs, shortest paths"
   rating: 2100
-  code: 'r660-679/r677/1433g-reducing-delivery-cost.kt'
+  code: "r660-679/r677/1433g-reducing-delivery-cost.kt"
 
-- id: '1434D'
-  title: 'Roads and Ramen'
-  labels: 'data structures, dfs and similar, trees'
+- id: "1434D"
+  title: "Roads and Ramen"
+  labels: "data structures, dfs and similar, trees"
   rating: 2800
 
-- id: '1434E'
-  title: 'A Convex Game'
-  labels: 'dsu, games'
+- id: "1434E"
+  title: "A Convex Game"
+  labels: "dsu, games"
   rating: 3500
 
-- id: '1435A'
-  title: 'Finding Sasuke'
-  labels: 'math'
+- id: "1435A"
+  title: "Finding Sasuke"
+  labels: "math"
   rating: 800
-  code: 'r660-679/r679/1435-IIa-finding-sasuke.kt'
+  code: "r660-679/r679/1435-IIa-finding-sasuke.kt"
 
-- id: '1435B'
-  title: 'A New Technique'
-  labels: 'constructive algorithms, implementation'
+- id: "1435B"
+  title: "A New Technique"
+  labels: "constructive algorithms, implementation"
   rating: 1100
-  code: 'r660-679/r679/1435-IIb-a-new-technique.kt'
+  code: "r660-679/r679/1435-IIb-a-new-technique.kt"
 
-- id: '1435C'
-  title: 'Perform Easily'
-  labels: 'brute force, data structures, dp, sortings, two pointers'
+- id: "1435C"
+  title: "Perform Easily"
+  labels: "brute force, data structures, dp, sortings, two pointers"
   rating: 1900
-  code: 'r660-679/r679/1434-Ia-perform-easily.kt'
+  code: "r660-679/r679/1434-Ia-perform-easily.kt"
 
-- id: '1435D'
-  title: 'Shurikens'
-  labels: 'data structures, greedy, schedules'
+- id: "1435D"
+  title: "Shurikens"
+  labels: "data structures, greedy, schedules"
   rating: 1700
-  code: 'r660-679/r679/1434-Ib-shurikens.kt'
+  code: "r660-679/r679/1434-Ib-shurikens.kt"
 
-- id: '1435E'
-  title: 'Solo mid Oracle'
-  labels: 'binary search, greedy, math, number theory, ternary search'
+- id: "1435E"
+  title: "Solo mid Oracle"
+  labels: "binary search, greedy, math, number theory, ternary search"
   rating: 2100
 
-- id: '1436A'
-  title: 'Reorder'
-  labels: 'math'
+- id: "1436A"
+  title: "Reorder"
+  labels: "math"
   rating: 800
-  code: 'r660-679/r678/1436a-reorder.kt'
+  code: "r660-679/r678/1436a-reorder.kt"
 
-- id: '1436B'
-  title: 'Prime Square'
-  labels: 'constructive algorithms, math'
+- id: "1436B"
+  title: "Prime Square"
+  labels: "constructive algorithms, math"
   rating: 900
-  code: 'r660-679/r678/1436b-prime-square.kt'
+  code: "r660-679/r678/1436b-prime-square.kt"
 
-- id: '1436C'
-  title: 'Binary Search'
-  labels: 'binary search, combinatorics'
+- id: "1436C"
+  title: "Binary Search"
+  labels: "binary search, combinatorics"
   rating: 1500
-  code: 'r660-679/r678/1436c-binary-search.kt'
+  code: "r660-679/r678/1436c-binary-search.kt"
 
-- id: '1436D'
-  title: 'Bandit in a City'
-  labels: 'binary search, dfs and similar, graphs, greedy, trees'
+- id: "1436D"
+  title: "Bandit in a City"
+  labels: "binary search, dfs and similar, graphs, greedy, trees"
   rating: 1900
-  code: 'r660-679/r678/1436d-bandit-in-a-city.kt'
+  code: "r660-679/r678/1436d-bandit-in-a-city.kt"
 
-- id: '1436E'
-  title: 'Complicated Computations'
-  labels: 'binary search, data structures, two pointers'
+- id: "1436E"
+  title: "Complicated Computations"
+  labels: "binary search, data structures, two pointers"
   rating: 2400
 
-- id: '1436F'
-  title: 'Sum Over Subsets'
-  labels: 'combinatorics, math, number theory'
+- id: "1436F"
+  title: "Sum Over Subsets"
+  labels: "combinatorics, math, number theory"
   rating: 2800
 
-- id: '1437A'
-  title: 'Marketing Scheme'
-  labels: 'brute force, constructive algorithms, greedy, math'
+- id: "1437A"
+  title: "Marketing Scheme"
+  labels: "brute force, constructive algorithms, greedy, math"
   rating: 800
-  code: 'edu97/1437a-marketing-scheme.kt'
+  code: "edu97/1437a-marketing-scheme.kt"
 
-- id: '1437B'
-  title: 'Reverse Binary Strings'
-  labels: 'constructive algorithms, greedy'
+- id: "1437B"
+  title: "Reverse Binary Strings"
+  labels: "constructive algorithms, greedy"
   rating: 1200
-  code: 'edu/edu97/1437b-reverse-binary-strings.kt'
+  code: "edu/edu97/1437b-reverse-binary-strings.kt"
 
-- id: '1437C'
-  title: 'Chef Monocarp'
-  labels: 'dp, flows, graph matchings, greedy, math, sortings'
+- id: "1437C"
+  title: "Chef Monocarp"
+  labels: "dp, flows, graph matchings, greedy, math, sortings"
   rating: 1800
-  code: 'edu/edu97/1437c-chef-monocarp.kt'
+  code: "edu/edu97/1437c-chef-monocarp.kt"
 
-- id: '1437D'
-  title: 'Minimal Height Tree'
-  labels: 'graphs, greedy, shortest paths, trees'
+- id: "1437D"
+  title: "Minimal Height Tree"
+  labels: "graphs, greedy, shortest paths, trees"
   rating: 1600
-  code: 'edu/edu97/1437d-minimal-height-tree.kt'
+  code: "edu/edu97/1437d-minimal-height-tree.kt"
 
-- id: '1437E'
-  title: 'Make It Increasing'
-  labels: 'binary search, constructive algorithms, data structures, dp, implementation'
+- id: "1437E"
+  title: "Make It Increasing"
+  labels: "binary search, constructive algorithms, data structures, dp, implementation"
   rating: 2200
 
-- id: '1437F'
-  title: 'Emotional Fishermen'
-  labels: 'combinatorics, dp, math, two pointers'
+- id: "1437F"
+  title: "Emotional Fishermen"
+  labels: "combinatorics, dp, math, two pointers"
   rating: 2600
 
-- id: '1437G'
-  title: 'Death DBMS'
-  labels: 'data structures, string suffix structures, strings, trees'
+- id: "1437G"
+  title: "Death DBMS"
+  labels: "data structures, string suffix structures, strings, trees"
   rating: 2600
 
-- id: '1438A'
-  title: 'Specific Tastes of Andre '
-  labels: 'constructive algorithms, implementation'
+- id: "1438A"
+  title: "Specific Tastes of Andre "
+  labels: "constructive algorithms, implementation"
   rating: 800
-  code: 'r680-699/r682/1438a-specific-tastes-of-andre.kt'
+  code: "r680-699/r682/1438a-specific-tastes-of-andre.kt"
 
-- id: '1438B'
-  title: 'Valerii Against Everyone'
-  labels: 'constructive algorithms, data structures, greedy, sortings'
+- id: "1438B"
+  title: "Valerii Against Everyone"
+  labels: "constructive algorithms, data structures, greedy, sortings"
   rating: 1000
-  code: 'r680-699/r682/1438b-valerii-against-everyone.kt'
+  code: "r680-699/r682/1438b-valerii-against-everyone.kt"
 
-- id: '1438C'
-  title: 'Engineer Artem'
-  labels: '2-sat, chinese remainder theorem, constructive algorithms, fft, flows'
+- id: "1438C"
+  title: "Engineer Artem"
+  labels: "2-sat, chinese remainder theorem, constructive algorithms, fft, flows"
   rating: 2000
-  code: 'r680-699/r682/1438c-engineer-artem.kt'
+  code: "r680-699/r682/1438c-engineer-artem.kt"
 
-- id: '1438D'
-  title: 'Powerful Ksenia'
-  labels: 'bitmasks, constructive algorithms, math'
+- id: "1438D"
+  title: "Powerful Ksenia"
+  labels: "bitmasks, constructive algorithms, math"
   rating: 2200
-  code: 'r680-699/r682/1438d-powerful-ksenia.kt'
+  code: "r680-699/r682/1438d-powerful-ksenia.kt"
 
-- id: '1438E'
-  title: 'Yurii Can Do Everything'
-  labels: 'binary search, bitmasks, brute force, constructive algorithms, divide and conquer, two pointers'
+- id: "1438E"
+  title: "Yurii Can Do Everything"
+  labels: "binary search, bitmasks, brute force, constructive algorithms, divide and conquer, two pointers"
   rating: 2500
 
-- id: '1438F'
-  title: 'Olha and Igor'
-  labels: 'interactive, probabilities, trees'
+- id: "1438F"
+  title: "Olha and Igor"
+  labels: "interactive, probabilities, trees"
   rating: 3000
 
-- id: '1439D'
-  title: 'INOI Final Contests'
-  labels: 'combinatorics, dp, fft'
+- id: "1439D"
+  title: "INOI Final Contests"
+  labels: "combinatorics, dp, fft"
   rating: 3100
 
-- id: '1439E'
-  title: 'Cheat and Win'
-  labels: 'bitmasks, data structures, games, trees'
+- id: "1439E"
+  title: "Cheat and Win"
+  labels: "bitmasks, data structures, games, trees"
   rating: 3500
 
-- id: '1440A'
-  title: 'Buy the String'
-  labels: 'implementation, math'
+- id: "1440A"
+  title: "Buy the String"
+  labels: "implementation, math"
   rating: 800
-  code: 'r680-699/r684/1440a-buy-the-string.kt'
+  code: "r680-699/r684/1440a-buy-the-string.kt"
 
-- id: '1440B'
-  title: 'Sum of Medians'
-  labels: 'greedy, math'
+- id: "1440B"
+  title: "Sum of Medians"
+  labels: "greedy, math"
   rating: 900
-  code: 'r680-699/r684/1440b-sum-of-medians.kt'
+  code: "r680-699/r684/1440b-sum-of-medians.kt"
 
-- id: '1440C1'
-  title: 'Binary Table (Easy Version)'
-  labels: 'constructive algorithms, implementation'
+- id: "1440C1"
+  title: "Binary Table (Easy Version)"
+  labels: "constructive algorithms, implementation"
   rating: 1500
-  code: 'r680-699/r684/1440c1-binary-table-easy.kt'
+  code: "r680-699/r684/1440c1-binary-table-easy.kt"
 
-- id: '1440C2'
-  title: 'Binary Table (Hard Version)'
-  labels: 'constructive algorithms, implementation'
+- id: "1440C2"
+  title: "Binary Table (Hard Version)"
+  labels: "constructive algorithms, implementation"
   rating: 1900
-  code: 'r680-699/r684/1440c2-binary-table-hard.kt'
+  code: "r680-699/r684/1440c2-binary-table-hard.kt"
 
-- id: '1440D'
-  title: 'Graph Subset Problem'
-  labels: 'data structures, graphs, hashing'
+- id: "1440D"
+  title: "Graph Subset Problem"
+  labels: "data structures, graphs, hashing"
   rating: 2600
 
-- id: '1440E'
-  title: 'Greedy Shopping'
-  labels: 'binary search, data structures, greedy'
+- id: "1440E"
+  title: "Greedy Shopping"
+  labels: "binary search, data structures, greedy"
   rating: 2600
 
-- id: '1442C'
-  title: 'Graph Transpositions'
-  labels: 'dfs and similar, graphs, greedy, shortest paths'
+- id: "1442C"
+  title: "Graph Transpositions"
+  labels: "dfs and similar, graphs, greedy, shortest paths"
   rating: 2400
 
-- id: '1442D'
-  title: 'Sum'
-  labels: 'data structures, divide and conquer, dp, greedy'
+- id: "1442D"
+  title: "Sum"
+  labels: "data structures, divide and conquer, dp, greedy"
   rating: 2800
 
-- id: '1442E'
-  title: 'Black, White and Grey Tree'
-  labels: 'binary search, constructive algorithms, dfs and similar, dp, greedy, trees'
+- id: "1442E"
+  title: "Black, White and Grey Tree"
+  labels: "binary search, constructive algorithms, dfs and similar, dp, greedy, trees"
   rating: 3000
 
-- id: '1442F'
-  title: 'Differentiating Games'
-  labels: 'games, interactive'
+- id: "1442F"
+  title: "Differentiating Games"
+  labels: "games, interactive"
   rating: 3400
 
-- id: '1443A'
-  title: 'Kids Seating'
-  labels: 'constructive algorithms, math'
+- id: "1443A"
+  title: "Kids Seating"
+  labels: "constructive algorithms, math"
   rating: 800
-  code: 'r680-699/r681/1443a-kids-seating.kt'
+  code: "r680-699/r681/1443a-kids-seating.kt"
 
-- id: '1443B'
-  title: 'Saving the City'
-  labels: 'dp, greedy, math, sortings'
+- id: "1443B"
+  title: "Saving the City"
+  labels: "dp, greedy, math, sortings"
   rating: 1300
-  code: 'r680-699/r681/1443b-saving-the-city.kt'
+  code: "r680-699/r681/1443b-saving-the-city.kt"
 
-- id: '1443C'
-  title: 'The Delivery Dilemma'
-  labels: 'binary search, greedy, sortings'
+- id: "1443C"
+  title: "The Delivery Dilemma"
+  labels: "binary search, greedy, sortings"
   rating: 1400
-  code: 'r680-699/r681/1443c-the-delivery-dilemma.kt'
+  code: "r680-699/r681/1443c-the-delivery-dilemma.kt"
 
-- id: '1443D'
-  title: 'Extreme Subtraction'
-  labels: 'dp, greedy, math'
+- id: "1443D"
+  title: "Extreme Subtraction"
+  labels: "dp, greedy, math"
   rating: 1800
-  code: 'r680-699/r681/1443d-extreme-subtraction.kt'
+  code: "r680-699/r681/1443d-extreme-subtraction.kt"
 
-- id: '1443E'
-  title: 'Long Permutation'
-  labels: 'brute force, math, two pointers'
+- id: "1443E"
+  title: "Long Permutation"
+  labels: "brute force, math, two pointers"
   rating: 2400
 
-- id: '1443F'
-  title: 'Identify the Operations'
-  labels: 'brute force, combinatorics, data structures, greedy, math'
+- id: "1443F"
+  title: "Identify the Operations"
+  labels: "brute force, combinatorics, data structures, greedy, math"
   rating: 1800
-  code: 'r680-699/r681/1443f-identify-the-operations.kt'
+  code: "https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r681/1443f-identify-the-operations.kt"
 
-- id: '1444D'
-  title: 'Rectangular Polyline'
-  labels: 'constructive algorithms, dp, geometry'
+- id: "1444D"
+  title: "Rectangular Polyline"
+  labels: "constructive algorithms, dp, geometry"
   rating: 2900
 
-- id: '1444E'
-  title: 'Finding the Vertex'
-  labels: 'brute force, dfs and similar, dp, interactive, trees'
+- id: "1444E"
+  title: "Finding the Vertex"
+  labels: "brute force, dfs and similar, dp, interactive, trees"
   rating: 3500
 
-- id: '1445A'
-  title: 'Array Rearrangment'
-  labels: 'greedy, sortings'
+- id: "1445A"
+  title: "Array Rearrangment"
+  labels: "greedy, sortings"
   rating: 800
-  code: 'r680-699/r680/1445-IIa-array-rearrangement.kt'
+  code: "r680-699/r680/1445-IIa-array-rearrangement.kt"
 
-- id: '1445B'
-  title: 'Elimination'
-  labels: 'greedy, math'
+- id: "1445B"
+  title: "Elimination"
+  labels: "greedy, math"
   rating: 900
-  code: 'r680-699/r680/1445-IIb-elimination.kt'
+  code: "r680-699/r680/1445-IIb-elimination.kt"
 
-- id: '1445C'
-  title: 'Division'
-  labels: 'math, number theory, factorization'
+- id: "1445C"
+  title: "Division"
+  labels: "math, number theory, factorization"
   rating: 1500
-  code: 'r680-699/r680/1444-Ia-division.kt'
+  code: "r680-699/r680/1444-Ia-division.kt"
 
-- id: '1445D'
-  title: 'Divide and Sum'
-  labels: 'combinatorics, math, sortings, modulo arithmetic'
+- id: "1445D"
+  title: "Divide and Sum"
+  labels: "combinatorics, math, sortings, modulo arithmetic"
   rating: 1900
-  code: 'r680-699/r680/1444-Ib-divide-and-sum.kt'
+  code: "r680-699/r680/1444-Ib-divide-and-sum.kt"
 
-- id: '1445E'
-  title: 'Team-Building'
-  labels: 'dfs and similar, dsu, graphs'
+- id: "1445E"
+  title: "Team-Building"
+  labels: "dfs and similar, dsu, graphs"
   rating: 2500
 
-- id: '1446E'
-  title: 'Long Recovery'
-  labels: 'constructive algorithms, dfs and similar'
+- id: "1446E"
+  title: "Long Recovery"
+  labels: "constructive algorithms, dfs and similar"
   rating: 3500
 
-- id: '1446F'
-  title: 'Line Distance'
-  labels: 'binary search, data structures, geometry'
+- id: "1446F"
+  title: "Line Distance"
+  labels: "binary search, data structures, geometry"
   rating: 3200
 
-- id: '1447A'
-  title: 'Add Candies'
-  labels: 'constructive algorithms, math'
+- id: "1447A"
+  title: "Add Candies"
+  labels: "constructive algorithms, math"
   rating: 800
-  code: 'r680-699/r683/1447a-add-candies.kt'
+  code: "r680-699/r683/1447a-add-candies.kt"
 
-- id: '1447B'
-  title: 'Numbers Box'
-  labels: 'greedy, math'
+- id: "1447B"
+  title: "Numbers Box"
+  labels: "greedy, math"
   rating: 1000
-  code: 'r680-699/r683/1447b-numbers-box.kt'
+  code: "r680-699/r683/1447b-numbers-box.kt"
 
-- id: '1447C'
-  title: 'Knapsack'
-  labels: 'constructive algorithms, greedy, math, sortings'
+- id: "1447C"
+  title: "Knapsack"
+  labels: "constructive algorithms, greedy, math, sortings"
   rating: 1300
-  code: 'r680-699/r683/1447c-knapsack.kt'
+  code: "r680-699/r683/1447c-knapsack.kt"
 
-- id: '1447D'
-  title: 'Catching Cheaters'
-  labels: 'dp, greedy, strings'
+- id: "1447D"
+  title: "Catching Cheaters"
+  labels: "dp, greedy, strings"
   rating: 1800
-  code: 'r680-699/r683/1447d-catching-cheaters.kt'
+  code: "r680-699/r683/1447d-catching-cheaters.kt"
 
-- id: '1447E'
-  title: 'Xor Tree'
-  labels: 'bitmasks, divide and conquer, dp, graphs, string suffix structures, trees'
+- id: "1447E"
+  title: "Xor Tree"
+  labels: "bitmasks, divide and conquer, dp, graphs, string suffix structures, trees"
   rating: 2100
-  code: 'r680-699/r683/1447e-xor-tree.kt'
+  code: "r680-699/r683/1447e-xor-tree.kt"
 
-- id: '1447F1'
-  title: 'Frequency Problem (Easy Version)'
-  labels: 'data structures, greedy'
+- id: "1447F1"
+  title: "Frequency Problem (Easy Version)"
+  labels: "data structures, greedy"
   rating: 2600
 
-- id: '1447F2'
-  title: 'Frequency Problem (Hard Version)'
-  labels: 'data structures, greedy'
+- id: "1447F2"
+  title: "Frequency Problem (Hard Version)"
+  labels: "data structures, greedy"
   rating: 3000
 
-- id: '1450A'
-  title: 'Avoid Trygub'
-  labels: 'sortings'
+- id: "1450A"
+  title: "Avoid Trygub"
+  labels: "sortings"
   rating: 800
-  code: 'gr/gr12/1450a-avoid-trygub.kt'
+  code: "gr/gr12/1450a-avoid-trygub.kt"
 
-- id: '1450B'
-  title: 'Balls of Steel'
-  labels: 'brute force, greedy'
+- id: "1450B"
+  title: "Balls of Steel"
+  labels: "brute force, greedy"
   rating: 1000
-  code: 'gr/gr12/1450b-balls-of-steel.kt'
+  code: "gr/gr12/1450b-balls-of-steel.kt"
 
-- id: '1450C1'
-  title: 'Errich-Tac-Toe (Easy Version)'
-  labels: 'constructive algorithms'
+- id: "1450C1"
+  title: "Errich-Tac-Toe (Easy Version)"
+  labels: "constructive algorithms"
   rating: 2100
-  code: 'gr/gr12/1450c1-errich-tac-toe-easy.kt'
+  code: "gr/gr12/1450c1-errich-tac-toe-easy.kt"
 
-- id: '1450C2'
-  title: 'Errich-Tac-Toe (Hard Version)'
-  labels: 'constructive algorithms'
+- id: "1450C2"
+  title: "Errich-Tac-Toe (Hard Version)"
+  labels: "constructive algorithms"
   rating: 2300
-  code: 'gr/gr12/1450c2-errich-tac-toe-hard.kt'
+  code: "gr/gr12/1450c2-errich-tac-toe-hard.kt"
 
-- id: '1450D'
-  title: 'Rating Compression'
-  labels: 'binary search, data structures, implementation'
+- id: "1450D"
+  title: "Rating Compression"
+  labels: "binary search, data structures, implementation"
   rating: 1800
-  code: 'gr/gr12/1450d-rating-compression.kt'
+  code: "gr/gr12/1450d-rating-compression.kt"
 
-- id: '1450E'
-  title: 'Capitalism'
-  labels: 'constructive algorithms, dfs and similar, graphs'
+- id: "1450E"
+  title: "Capitalism"
+  labels: "constructive algorithms, dfs and similar, graphs"
   rating: 2700
 
-- id: '1450F'
-  title: 'The Struggling Contestant'
-  labels: 'greedy'
+- id: "1450F"
+  title: "The Struggling Contestant"
+  labels: "greedy"
   rating: 2400
 
-- id: '1450G'
-  title: 'Communism'
-  labels: 'dp, trees'
+- id: "1450G"
+  title: "Communism"
+  labels: "dp, trees"
   rating: 3500
 
-- id: '1450H1'
-  title: 'Multithreading (Easy Version)'
-  labels: 'combinatorics, math'
+- id: "1450H1"
+  title: "Multithreading (Easy Version)"
+  labels: "combinatorics, math"
   rating: 2900
 
-- id: '1450H2'
-  title: 'Multithreading (Hard Version)'
-  labels: 'combinatorics, math'
+- id: "1450H2"
+  title: "Multithreading (Hard Version)"
+  labels: "combinatorics, math"
   rating: 3300
 
-- id: '1451A'
-  title: 'Subtract or Divide'
-  labels: 'greedy, math'
+- id: "1451A"
+  title: "Subtract or Divide"
+  labels: "greedy, math"
   rating: 800
-  code: 'r680-699/r685/1451a-subract-or-divide.kt'
+  code: "r680-699/r685/1451a-subract-or-divide.kt"
 
-- id: '1451B'
-  title: 'Non-Substring Subsequence'
-  labels: 'dp, greedy, implementation, strings'
+- id: "1451B"
+  title: "Non-Substring Subsequence"
+  labels: "dp, greedy, implementation, strings"
   rating: 900
-  code: 'r680-699/r685/1451b-non-substring-subsequence.kt'
+  code: "r680-699/r685/1451b-non-substring-subsequence.kt"
 
-- id: '1451C'
-  title: 'String Equality'
-  labels: 'dp, greedy, hashing, implementation, strings'
+- id: "1451C"
+  title: "String Equality"
+  labels: "dp, greedy, hashing, implementation, strings"
   rating: 1400
-  code: 'r680-699/r685/1451c-string-equality.kt'
+  code: "r680-699/r685/1451c-string-equality.kt"
 
-- id: '1451D'
-  title: 'Circle Game'
-  labels: 'games, geometry, math'
+- id: "1451D"
+  title: "Circle Game"
+  labels: "games, geometry, math"
   rating: 1700
-  code: 'r680-699/r685/1451d-circle-game.kt'
+  code: "r680-699/r685/1451d-circle-game.kt"
 
-- id: '1451E1'
-  title: 'Bitwise Queries (Easy Version)'
-  labels: 'bitmasks, constructive algorithms, interactive, math'
+- id: "1451E1"
+  title: "Bitwise Queries (Easy Version)"
+  labels: "bitmasks, constructive algorithms, interactive, math"
   rating: 2000
-  code: 'r680-699/r685/1451e1-bitwise-queries-easy.kt'
+  code: "r680-699/r685/1451e1-bitwise-queries-easy.kt"
 
-- id: '1451E2'
-  title: 'Bitwise Queries (Hard Version)'
-  labels: 'bitmasks, constructive algorithms, interactive, math'
+- id: "1451E2"
+  title: "Bitwise Queries (Hard Version)"
+  labels: "bitmasks, constructive algorithms, interactive, math"
   rating: 2300
 
-- id: '1451F'
-  title: 'Nullify The Matrix'
-  labels: 'constructive algorithms, games'
+- id: "1451F"
+  title: "Nullify The Matrix"
+  labels: "constructive algorithms, games"
   rating: 2700
 
-- id: '1453A'
-  title: 'Cancel the Trains'
-  labels: 'implementation'
+- id: "1453A"
+  title: "Cancel the Trains"
+  labels: "implementation"
   rating: 800
-  code: 'r680-699/r688/1453a-cancel-the-trains.kt'
+  code: "r680-699/r688/1453a-cancel-the-trains.kt"
 
-- id: '1453B'
-  title: 'Suffix Operations'
-  labels: 'constructive algorithms, implementation'
+- id: "1453B"
+  title: "Suffix Operations"
+  labels: "constructive algorithms, implementation"
   rating: 1400
-  code: 'r680-699/r688/1453b-suffix-operations.kt'
+  code: "r680-699/r688/1453b-suffix-operations.kt"
 
-- id: '1453C'
-  title: 'Triangles'
-  labels: 'greedy, implementation'
+- id: "1453C"
+  title: "Triangles"
+  labels: "greedy, implementation"
   rating: 1700
-  code: 'r680-699/r688/1453c-triangles.kt'
+  code: "r680-699/r688/1453c-triangles.kt"
 
-- id: '1453D'
-  title: 'Checkpoints'
-  labels: 'brute force, constructive algorithms, greedy, math, probabilities'
+- id: "1453D"
+  title: "Checkpoints"
+  labels: "brute force, constructive algorithms, greedy, math, probabilities"
   rating: 1900
-  code: 'r680-699/r688/1453d-checkpoints.kt'
+  code: "r680-699/r688/1453d-checkpoints.kt"
 
-- id: '1453E'
-  title: 'Dog Snacks'
-  labels: 'binary search, dfs and similar, dp, greedy, trees'
+- id: "1453E"
+  title: "Dog Snacks"
+  labels: "binary search, dfs and similar, dp, greedy, trees"
   rating: 2300
 
-- id: '1453F'
-  title: 'Even Harder'
-  labels: 'dp'
+- id: "1453F"
+  title: "Even Harder"
+  labels: "dp"
   rating: 2700
 
-- id: '1454A'
-  title: 'Special Permutation'
-  labels: 'constructive algorithms, probabilities'
+- id: "1454A"
+  title: "Special Permutation"
+  labels: "constructive algorithms, probabilities"
   rating: 800
-  code: 'r680-699/r686/1454a-special-permutation.kt'
+  code: "r680-699/r686/1454a-special-permutation.kt"
 
-- id: '1454B'
-  title: 'Unique Bid Auction'
-  labels: 'implementation'
+- id: "1454B"
+  title: "Unique Bid Auction"
+  labels: "implementation"
   rating: 800
-  code: 'r680-699/r686/1454b-unique-bid-auction.kt'
+  code: "r680-699/r686/1454b-unique-bid-auction.kt"
 
-- id: '1454C'
-  title: 'Sequence Transformation'
-  labels: 'greedy, implementation, blocks'
+- id: "1454C"
+  title: "Sequence Transformation"
+  labels: "greedy, implementation, blocks"
   rating: 1200
-  code: 'r680-699/r686/1454c-sequence-transformation.kt'
+  code: "r680-699/r686/1454c-sequence-transformation.kt"
 
-- id: '1454D'
-  title: 'Number into Sequence'
-  labels: 'constructive algorithms, math, number theory, factorization'
+- id: "1454D"
+  title: "Number into Sequence"
+  labels: "constructive algorithms, math, number theory, factorization"
   rating: 1300
-  code: 'r680-699/r686/1454d-number-into-sequence.kt'
+  code: "r680-699/r686/1454d-number-into-sequence.kt"
 
-- id: '1454E'
-  title: 'Number of Simple Paths'
-  labels: 'combinatorics, dfs and similar, graphs, trees'
+- id: "1454E"
+  title: "Number of Simple Paths"
+  labels: "combinatorics, dfs and similar, graphs, trees"
   rating: 2000
-  code: 'r680-699/r686/1454e-number-of-simple-paths.kt'
+  code: "r680-699/r686/1454e-number-of-simple-paths.kt"
 
-- id: '1454F'
-  title: 'Array Partition'
-  labels: 'binary search, data structures, greedy, two pointers'
+- id: "1454F"
+  title: "Array Partition"
+  labels: "binary search, data structures, greedy, two pointers"
   rating: 2100
 
-- id: '1455A'
-  title: 'Strange Functions'
-  labels: 'constructive algorithms, math, number theory'
+- id: "1455A"
+  title: "Strange Functions"
+  labels: "constructive algorithms, math, number theory"
   rating: 800
-  code: 'edu/edu99/1455a-strange-functions.kt'
+  code: "edu/edu99/1455a-strange-functions.kt"
 
-- id: '1455B'
-  title: 'Jumps'
-  labels: 'binary search, math'
+- id: "1455B"
+  title: "Jumps"
+  labels: "binary search, math"
   rating: 1200
-  code: 'edu/edu99/1455b-jumps.kt'
+  code: "edu/edu99/1455b-jumps.kt"
 
-- id: '1455C'
-  title: 'Ping-pong'
-  labels: 'constructive algorithms, games, math'
+- id: "1455C"
+  title: "Ping-pong"
+  labels: "constructive algorithms, games, math"
   rating: 1100
-  code: 'edu/edu99/1455c-ping-pong.kt'
+  code: "edu/edu99/1455c-ping-pong.kt"
 
-- id: '1455D'
-  title: 'Sequence and Swaps'
-  labels: 'dp, greedy, sortings'
+- id: "1455D"
+  title: "Sequence and Swaps"
+  labels: "dp, greedy, sortings"
   rating: 1600
-  code: 'edu/edu99/1455d-sequence-and-swaps.kt'
+  code: "edu/edu99/1455d-sequence-and-swaps.kt"
 
-- id: '1455E'
-  title: 'Four Points'
-  labels: 'brute force, constructive algorithms, flows, geometry, greedy, math, ternary search'
+- id: "1455E"
+  title: "Four Points"
+  labels: "brute force, constructive algorithms, flows, geometry, greedy, math, ternary search"
   rating: 2400
 
-- id: '1455F'
-  title: 'String and Operations'
-  labels: 'dp, greedy'
+- id: "1455F"
+  title: "String and Operations"
+  labels: "dp, greedy"
   rating: 2800
 
-- id: '1455G'
-  title: 'Forbidden Value'
-  labels: 'data structures, dp'
+- id: "1455G"
+  title: "Forbidden Value"
+  labels: "data structures, dp"
   rating: 2900
 
-- id: '1456D'
-  title: 'Cakes for Clones'
-  labels: 'dp, greedy'
+- id: "1456D"
+  title: "Cakes for Clones"
+  labels: "dp, greedy"
   rating: 2900
 
-- id: '1456E'
-  title: 'XOR-ranges'
-  labels: 'dp, greedy'
+- id: "1456E"
+  title: "XOR-ranges"
+  labels: "dp, greedy"
   rating: 3500
 
-- id: '1457A'
-  title: 'Prison Break'
-  labels: 'brute force, math'
+- id: "1457A"
+  title: "Prison Break"
+  labels: "brute force, math"
   rating: 800
-  code: 'r680-699/r687/1457a-prison-break.kt'
+  code: "r680-699/r687/1457a-prison-break.kt"
 
-- id: '1457B'
-  title: 'Repainting Street'
-  labels: 'brute force, greedy'
+- id: "1457B"
+  title: "Repainting Street"
+  labels: "brute force, greedy"
   rating: 1100
-  code: 'r680-699/r687/1457b-repainting-street.kt'
+  code: "r680-699/r687/1457b-repainting-street.kt"
 
-- id: '1457C'
-  title: 'Bouncing Ball'
-  labels: 'dp, implementation'
+- id: "1457C"
+  title: "Bouncing Ball"
+  labels: "dp, implementation"
   rating: 1400
-  code: 'r680-699/r687/1457c-bouncing-ball.kt'
+  code: "r680-699/r687/1457c-bouncing-ball.kt"
 
-- id: '1457D'
-  title: 'XOR-gun'
-  labels: 'brute force, constructive algorithms, dp'
+- id: "1457D"
+  title: "XOR-gun"
+  labels: "brute force, constructive algorithms, dp"
   rating: 2000
-  code: 'r680-699/r687/1457d-xor-gun.kt'
+  code: "r680-699/r687/1457d-xor-gun.kt"
 
-- id: '1457E'
-  title: 'New Game Plus!'
-  labels: 'data structures, greedy'
+- id: "1457E"
+  title: "New Game Plus!"
+  labels: "data structures, greedy"
   rating: 2200
 
-- id: '1458E'
-  title: 'Nim Shortcuts'
-  labels: 'data structures, games'
+- id: "1458E"
+  title: "Nim Shortcuts"
+  labels: "data structures, games"
   rating: 3100
 
-- id: '1458F'
-  title: 'Range Diameter Sum'
-  labels: 'data structures, games'
+- id: "1458F"
+  title: "Range Diameter Sum"
+  labels: "data structures, games"
   rating: 3500
 
-- id: '1459A'
-  title: 'Red-Blue Shuffle'
-  labels: 'math, probabilities'
+- id: "1459A"
+  title: "Red-Blue Shuffle"
+  labels: "math, probabilities"
   rating: 800
-  code: 'r680-699/r691/1459a-red-blue-shuffle.kt'
+  code: "r680-699/r691/1459a-red-blue-shuffle.kt"
 
-- id: '1459B'
-  title: 'Move and Turn'
-  labels: 'dp, math'
+- id: "1459B"
+  title: "Move and Turn"
+  labels: "dp, math"
   rating: 1300
-  code: 'r680-699/r691/1459b-move-and-turn.kt'
+  code: "r680-699/r691/1459b-move-and-turn.kt"
 
-- id: '1459C'
-  title: 'Row GCD'
-  labels: 'math, number theory'
+- id: "1459C"
+  title: "Row GCD"
+  labels: "math, number theory"
   rating: 1600
-  code: 'r680-699/r691/1459c-row-gcd.kt'
+  code: "r680-699/r691/1459c-row-gcd.kt"
 
-- id: '1459D'
-  title: 'Glass Half Spilled'
-  labels: 'brute force, dp, greedy'
+- id: "1459D"
+  title: "Glass Half Spilled"
+  labels: "brute force, dp, greedy"
   rating: 2000
-  code: 'r680-699/r691/1459d-glass-half-spilled.kt'
+  code: "r680-699/r691/1459d-glass-half-spilled.kt"
 
-- id: '1459E'
-  title: 'Latin Square'
-  labels: 'math, matrices'
+- id: "1459E"
+  title: "Latin Square"
+  labels: "math, matrices"
   rating: 2700
 
-- id: '1459F'
-  title: 'Flip and Reverse'
-  labels: 'graphs, greedy'
+- id: "1459F"
+  title: "Flip and Reverse"
+  labels: "graphs, greedy"
   rating: 3100
 
-- id: '1461A'
-  title: 'String Generation'
-  labels: 'constructive algorithms, greedy'
+- id: "1461A"
+  title: "String Generation"
+  labels: "constructive algorithms, greedy"
   rating: 800
-  code: 'r680-699/r689/1461a-string-generation.kt'
+  code: "r680-699/r689/1461a-string-generation.kt"
 
-- id: '1461B'
-  title: 'Find the Spruce'
-  labels: 'brute force, dp'
+- id: "1461B"
+  title: "Find the Spruce"
+  labels: "brute force, dp"
   rating: 1400
-  code: 'r680-699/r689/1461b-find-the-spruce.kt'
+  code: "r680-699/r689/1461b-find-the-spruce.kt"
 
-- id: '1461C'
-  title: 'Random Events'
-  labels: 'probabilities'
+- id: "1461C"
+  title: "Random Events"
+  labels: "probabilities"
   rating: 1500
-  code: 'r680-699/r689/1461c-random-events.kt'
+  code: "r680-699/r689/1461c-random-events.kt"
 
-- id: '1461D'
-  title: 'Divide and Summarize'
-  labels: 'divide and conquer, implementation, sortings'
+- id: "1461D"
+  title: "Divide and Summarize"
+  labels: "divide and conquer, implementation, sortings"
   rating: 1600
-  code: 'r680-699/r689/1461d-divide-and-summarize.kt'
+  code: "r680-699/r689/1461d-divide-and-summarize.kt"
 
-- id: '1461E'
-  title: 'Water Level'
-  labels: 'brute force, dfs and similar, dp, graphs, math'
+- id: "1461E"
+  title: "Water Level"
+  labels: "brute force, dfs and similar, dp, graphs, math"
   rating: 2200
-  code: 'r680-699/r689/1461e-water-level.kt'
+  code: "r680-699/r689/1461e-water-level.kt"
 
-- id: '1461F'
-  title: 'Mathematical Expression'
-  labels: 'constructive algorithms, dp, greedy'
+- id: "1461F"
+  title: "Mathematical Expression"
+  labels: "constructive algorithms, dp, greedy"
   rating: 2700
 
-- id: '1462A'
-  title: 'Favorite Sequence'
-  labels: 'implementation, two pointers'
-  rating: '800'
+- id: "1462A"
+  title: "Favorite Sequence"
+  labels: "implementation, two pointers"
+  rating: 800
+  code: "r680-699/r690/1462a-favorite-sequence.kt"
 
-- id: '1462B'
+- id: "1462B"
   title: "Last Year's Substring"
-  labels: 'dp, implementation, strings'
-  rating: '800'
+  labels: "dp, implementation, strings"
+  rating: 800
+  code: "r680-699/r690/1462b-last-years-substring.kt"
 
-- id: '1462C'
-  title: 'Unique Number'
-  labels: 'brute force, greedy, math'
-  rating: '900'
+- id: "1462C"
+  title: "Unique Number"
+  labels: "brute force, greedy, math"
+  rating: 900
+  code: "r680-699/r690/1462c-unique-number.kt"
 
-- id: '1462D'
-  title: 'Add to Neighbour and Remove'
-  labels: 'greedy, math, number theory'
-  rating: '1400'
-
-- id: '1462E1'
-  title: 'Close Tuples (easy version)'
-  labels: 'binary search, combinatorics, math, sortings, two pointers'
-  rating: '1500'
-
-- id: '1462E2'
-  title: 'Close Tuples (hard version)'
-  labels: 'binary search, combinatorics, implementation, math, sortings, two pointers'
-  rating: '1700'
-
-- id: '1462F'
-  title: 'The Treasure of The Segments'
-  labels: 'binary search, data structures, greedy'
-  rating: '1800'
-
-- id: '1463A'
-  title: 'Dungeon'
-  labels: 'math'
-  rating: 1100
-  code: 'edu/edu100/1463a-dungeon.kt'
-
-- id: '1463B'
-  title: 'Find The Array'
-  labels: 'constructive algorithms'
+- id: "1462D"
+  title: "Add to Neighbour and Remove"
+  labels: "greedy, math, number theory"
   rating: 1400
-  code: 'edu/edu100/1463b-find-the-array.kt'
+  code: "r680-699/r690/1462d-add-to-neighbour-and-remove.kt"
 
-- id: '1463C'
-  title: 'Busy Robot'
-  labels: 'implementation, math'
+- id: "1462E1"
+  title: "Close Tuples (easy version)"
+  labels: "binary search, combinatorics, math, sortings, two pointers"
+  rating: 1500
+  code: "r680-699/r690/1462e1-close-tuples-easy.kt"
+
+- id: "1462E2"
+  title: "Close Tuples (hard version)"
+  labels: "binary search, combinatorics, implementation, math, sortings, two pointers"
+  rating: 1700
+  code: "r680-699/r690/1462e2-close-tuples-hard.kt"
+
+- id: "1462F"
+  title: "The Treasure of The Segments"
+  labels: "binary search, data structures, greedy"
   rating: 1800
-  code: 'edu/edu100/1463c-busy-robot.kt'
+  code: "r680-699/r690/1462f-the-treasure-of-the-segments.kt"
 
-- id: '1463D'
-  title: 'Pairs'
-  labels: 'binary search, constructive algorithms, greedy'
+- id: "1463A"
+  title: "Dungeon"
+  labels: "math"
+  rating: 1100
+  code: "edu/edu100/1463a-dungeon.kt"
+
+- id: "1463B"
+  title: "Find The Array"
+  labels: "constructive algorithms"
+  rating: 1400
+  code: "edu/edu100/1463b-find-the-array.kt"
+
+- id: "1463C"
+  title: "Busy Robot"
+  labels: "implementation, math"
   rating: 1800
-  code: 'edu/edu100/1463d-pairs.kt'
+  code: "edu/edu100/1463c-busy-robot.kt"
 
-- id: '1463E'
-  title: 'Plan of Lectures'
-  labels: 'dfs and similar, dsu, graphs'
+- id: "1463D"
+  title: "Pairs"
+  labels: "binary search, constructive algorithms, greedy"
+  rating: 1800
+  code: "edu/edu100/1463d-pairs.kt"
+
+- id: "1463E"
+  title: "Plan of Lectures"
+  labels: "dfs and similar, dsu, graphs"
   rating: 2400
 
-- id: '1463F'
-  title: 'Max Correct Set'
-  labels: 'bitmasks, dp'
+- id: "1463F"
+  title: "Max Correct Set"
+  labels: "bitmasks, dp"
   rating: 3100
 
-- id: '1464E'
-  title: 'No Game No Life'
-  labels: 'dfs and similar, games, math, matrices'
+- id: "1464E"
+  title: "No Game No Life"
+  labels: "dfs and similar, games, math, matrices"
   rating: 2700
 
-- id: '1464F'
-  title: 'My Beautiful Madness'
-  labels: 'data structures, trees'
+- id: "1464F"
+  title: "My Beautiful Madness"
+  labels: "data structures, trees"
   rating: 3500
 
-- id: '1465A'
-  title: 'In-game Chat'
-  labels: 'implementation'
+- id: "1465A"
+  title: "In-game Chat"
+  labels: "implementation"
   rating: 800
-  code: 'r680-699/r692/1465a-in-game-chat.kt'
+  code: "r680-699/r692/1465a-in-game-chat.kt"
 
-- id: '1465B'
-  title: 'Fair Numbers'
-  labels: 'number theory'
+- id: "1465B"
+  title: "Fair Numbers"
+  labels: "number theory"
   rating: 1000
-  code: 'r680-699/r692/1465b-fair-numbers.kt'
+  code: "r680-699/r692/1465b-fair-numbers.kt"
 
-- id: '1465C'
-  title: 'Peaceful Rooks'
-  labels: 'dfs and similar'
+- id: "1465C"
+  title: "Peaceful Rooks"
+  labels: "dfs and similar"
   rating: 1700
-  code: 'r680-699/r692/1465c-peaceful-rooks.kt'
+  code: "r680-699/r692/1465c-peaceful-rooks.kt"
 
-- id: '1465D'
-  title: 'Grime Zoo'
-  labels: 'dp, greedy, implementation, math'
+- id: "1465D"
+  title: "Grime Zoo"
+  labels: "dp, greedy, implementation, math"
   rating: 2100
-  code: 'r680-699/r692/1465d-grime-zoo.kt'
+  code: "r680-699/r692/1465d-grime-zoo.kt"
 
-- id: '1465E'
-  title: 'Poman Numbers'
-  labels: 'greedy'
+- id: "1465E"
+  title: "Poman Numbers"
+  labels: "greedy"
   rating: 2300
-  code: 'r680-699/r692/1465e-poman-numbers.kt'
+  code: "r680-699/r692/1465e-poman-numbers.kt"
 
-- id: '1465F'
-  title: 'The Thorny Path'
-  labels: 'greedy'
+- id: "1465F"
+  title: "The Thorny Path"
+  labels: "greedy"
   rating: 3000
 
-- id: '1466A'
-  title: 'Bovine Dilemma'
-  labels: 'brute force, math'
-  rating: 800
-  code: 'other/goodbye2020/1466a-bovine-dilemma.kt'
+- id: "1466A"
+  title: "Bovine Dilemma"
+  labels: "brute force, math"
+  code: "other/goodbye2020/1466a-bovine-dilemma.kt"
 
-- id: '1466B'
-  title: 'Last minute enhancements'
-  labels: 'dp, greedy'
-  rating: 800
-  code: 'other/goodbye2020/1466b-last-minute-enhancements.kt'
+- id: "1466B"
+  title: "Last minute enhancements"
+  labels: "dp, greedy"
+  code: "other/goodbye2020/1466b-last-minute-enhancements.kt"
 
-- id: '1466C'
-  title: 'Canine poetry'
-  rating: 1300
-  labels: 'dp, greedy, strings'
-  code: 'other/goodbye2020/1466c-canine-poetry.kt'
+- id: "1466C"
+  title: "Canine poetry"
+  labels: "dp, greedy, strings"
+  code: "other/goodbye2020/1466c-canine-poetry.kt"
 
-- id: '1466D'
-  title: '13th Labour of Heracles'
-  rating: 1500
-  labels: 'data structures, greedy, sortings, trees'
-  code: 'other/goodbye2020/1466d-13th-labour-of-heracles.kt'
+- id: "1466D"
+  title: "13th Labour of Heracles"
+  labels: "data structures, greedy, sortings, trees"
+  code: "other/goodbye2020/1466d-13th-labour-of-heracles.kt"
 
-- id: '1466E'
-  title: 'Apollo versus Pan'
-  rating: 1800
-  labels: 'bitmasks, brute force, math'
-  code: 'other/goodbye2020/1466e-apollo-vs-pan.kt'
+- id: "1466E"
+  title: "Apollo versus Pan"
+  labels: "bitmasks, brute force, math"
+  code: "other/goodbye2020/1466e-apollo-vs-pan.kt"
 
-- id: '1466F'
+- id: "1466F"
   title: "Euclid's nightmare"
-  rating: 2100
-  labels: 'dfs and similar, dsu, graphs, greedy, math, sortings'
+  labels: "dfs and similar, dsu, graphs, greedy, math, sortings"
 
-- id: '1466G'
-  title: 'Song of the Sirens'
-  rating: 2600
-  labels: 'divide and conquer, hashing, math, strings'
+- id: "1466G"
+  title: "Song of the Sirens"
+  labels: "divide and conquer, hashing, math, strings"
 
-- id: '1466H'
-  title: 'Finding satisfactory solutions'
-  labels: 'dp, graphs, greedy, math'
-  rating: 3300
+- id: "1466H"
+  title: "Finding satisfactory solutions"
+  labels: "dp, graphs, greedy, math"
 
-- id: '1466I'
-  title: 'The Riddle of the Sphinx'
-  labels: 'binary search, data structures, data structures, interactive'
-  rating: 3400
+- id: "1466I"
+  title: "The Riddle of the Sphinx"
+  labels: "binary search, data structures, data structures, interactive"
 
-- id: '1469A'
-  title: 'Regular Bracket Sequence'
-  labels: 'constructive algorithms, implementation'
-  rating: 1000
-  code: 'edu/edu101/1469a-regular-bracket-sequence.kt'
+- id: "1467A"
+  title: "Wizard of Orz"
+  labels: "constructive algorithms, greedy, math"
+  rating: 900
+  code: "r680-699/r695/1467a-wizard-of-orz.kt"
 
-- id: '1469B'
-  title: 'Red and Blue'
-  labels: 'greedy'
-  rating: 1000
-  code: 'edu/edu101/1469b-red-and-blue.kt'
-
-- id: '1469C'
-  title: 'Building a Fence'
-  labels: 'dp, greedy, implementation'
-  rating: 1600
-  code: 'edu/edu101/1469c-building-a-fence.kt'
-
-- id: '1469D'
-  title: 'Ceil Divisions'
-  labels: 'constructive algorithms, math, number theory'
+- id: "1467B"
+  title: "Hills And Valleys"
+  labels: "brute force, implementation"
   rating: 1700
-  code: 'edu/edu101/1469d-ceil-divisions.kt'
+  code: "r680-699/r695/1467b-hills-and-valleys.kt"
 
-- id: '1469E'
-  title: 'A Bit Similar'
-  labels: 'bitmasks, hashing, string suffix structures, strings, two pointers'
+- id: "1467C"
+  title: "Three Bags"
+  labels: "constructive algorithms, greedy"
+  rating: 1900
+  code: "r680-699/r695/1467c-three-bags.kt"
+
+- id: "1467D"
+  title: "Sum of Paths"
+  labels: "combinatorics, dp, math"
+  rating: 2200
+
+- id: "1467E"
+  title: "Distinctive Roots in a Tree"
+  labels: "data structures, dfs and similar, dp, trees"
+  rating: 2500
+
+- id: "1469A"
+  title: "Regular Bracket Sequence"
+  labels: "constructive algorithms, implementation"
+  rating: 1000
+  code: "edu/edu101/1469a-regular-bracket-sequence.kt"
+
+- id: "1469B"
+  title: "Red and Blue"
+  labels: "greedy"
+  rating: 1000
+  code: "edu/edu101/1469b-red-and-blue.kt"
+
+- id: "1469C"
+  title: "Building a Fence"
+  labels: "dp, greedy, implementation"
+  rating: 1600
+  code: "edu/edu101/1469c-building-a-fence.kt"
+
+- id: "1469D"
+  title: "Ceil Divisions"
+  labels: "constructive algorithms, math, number theory"
+  rating: 1700
+  code: "edu/edu101/1469d-ceil-divisions.kt"
+
+- id: "1469E"
+  title: "A Bit Similar"
+  labels: "bitmasks, hashing, string suffix structures, strings, two pointers"
   rating: 2400
 
-- id: '1469F'
-  title: 'Power Sockets'
-  labels: 'binary search, data structures, greedy'
+- id: "1469F"
+  title: "Power Sockets"
+  labels: "binary search, data structures, greedy"
   rating: 2600
 
-- id: '1473A'
-  title: 'Replacing Elements'
-  labels: 'greedy, implementation, math, sortings'
-  rating: '800'
+- id: "1470E"
+  title: "Strange Permutation"
+  labels: "binary search, combinatorics, data structures, dp, graphs, implementation, two pointers"
+  rating: 3200
 
-- id: '1473B'
-  title: 'String LCM'
-  labels: 'brute force, math, number theory, strings'
-  rating: '1000'
+- id: "1470F"
+  title: "Strange Covering"
+  labels: "divide and conquer"
+  rating: 3500
 
-- id: '1473C'
-  title: 'No More Inversions'
-  labels: 'constructive algorithms, math'
-  rating: '1500'
+- id: "1471A"
+  title: "Strange Partition"
+  labels: "greedy, math, number theory"
+  rating: 900
+  code: "r680-699/r694/1471a-strange-partition.kt"
 
-- id: '1473D'
-  title: 'Program'
-  labels: 'data structures, dp, implementation, strings'
-  rating: '1700'
+- id: "1471B"
+  title: "Strange List"
+  labels: "brute force, greedy, implementation, math"
+  rating: 1100
+  code: "r680-699/r694/1471b-strange-list.kt"
 
-- id: '1473E'
-  title: 'Minimum Path'
-  labels: 'graphs, shortest paths'
-  rating: '2400'
+- id: "1471C"
+  title: "Strange Birthday Party"
+  labels: "brute force, greedy, sortings"
+  rating: 1300
+  code: "r680-699/r694/1471c-strange-birthday-party.kt"
 
-- id: '1473F'
-  title: 'Strange Set'
-  labels: 'flows, math'
-  rating: '2700'
+- id: "1471D"
+  title: "Strange Definition"
+  labels: "bitmasks, graphs, hashing, math, number theory"
+  rating: 1900
+  code: "r680-699/r694/1471d-strange-definition.kt"
 
-- id: '1473G'
-  title: 'Tiles'
-  labels: 'combinatorics, dp, fft, math'
-  rating: '2800'
+- id: "1471E"
+  title: "Strange Shuffle"
+  labels: "binary search, brute force, constructive algorithms, interactive"
+  rating: 2500
+  code: "r680-699/r694/1471e-strange-shuffle.kt"
 
-- id: '1474A'
-  title: 'Puzzle From the Future'
-  labels: 'greedy'
+- id: "1471F"
+  title: "Strange Housing"
+  labels: "constructive algorithms, dfs and similar, graphs, greedy"
+  rating: 2200
 
-- id: '1474B'
-  title: 'Different Divisors'
-  labels: 'constructive algorithms, greedy, math, number theory'
+- id: "1473A"
+  title: "Replacing Elements"
+  labels: "greedy, implementation, math, sortings"
+  rating: 800
+  code: "edu/edu102/1473a-replacing-elements.kt"
 
-- id: '1474C'
-  title: 'Array Destruction'
-  labels: 'constructive algorithms, greedy'
+- id: "1473B"
+  title: "String LCM"
+  labels: "brute force, math, number theory, strings"
+  rating: 1000
+  code: "edu/edu102/1473b-string-lcm.kt"
 
-- id: '1474D'
-  title: 'Cleaning'
-  labels: 'data structures, dp, greedy, math'
+- id: "1473C"
+  title: "No More Inversions"
+  labels: "constructive algorithms, math"
+  rating: 1500
+  code: "edu/edu102/1473c-no-more-inversions.kt"
 
-- id: '1474E'
-  title: 'What Is It?'
-  labels: 'constructive algorithms, math'
+- id: "1473D"
+  title: "Program"
+  labels: "data structures, dp, implementation, strings"
+  rating: 1700
+  code: "edu/edu102/1473d-program.kt"
 
-- id: '1474F'
-  title: '1 2 3 4 ...'
-  labels: 'dp, matrices'
-- id: '1471A'
-  title: 'Strange Partition'
-  labels: 'greedy, math, number theory'
-  rating: '900'
+- id: "1473E"
+  title: "Minimum Path"
+  labels: "graphs, shortest paths"
+  rating: 2400
 
-- id: '1470E'
-  title: 'Strange Permutation'
-  labels: 'binary search, combinatorics, data structures, dp, graphs, implementation, two pointers'
-  rating: '3200'
+- id: "1473F"
+  title: "Strange Set"
+  labels: "flows, math"
+  rating: 2700
 
-- id: '1470F'
-  title: 'Strange Covering'
-  labels: 'divide and conquer'
-  rating: '3500'
+- id: "1473G"
+  title: "Tiles"
+  labels: "combinatorics, dp, fft, math"
+  rating: 2800
 
-- id: '1471B'
-  title: 'Strange List'
-  labels: 'brute force, greedy, implementation, math'
-  rating: '1100'
+- id: "1474A"
+  title: "Puzzle From the Future"
+  labels: "greedy"
+  code: "r680-699/r696/1474a-puzzle-from-the-future.kt"
 
-- id: '1471C'
-  title: 'Strange Birthday Party'
-  labels: 'brute force, greedy, sortings'
-  rating: '1300'
+- id: "1474B"
+  title: "Different Divisors"
+  labels: "constructive algorithms, greedy, math, number theory"
+  code: "r680-699/r696/1474b-different-divisors.kt"
 
-- id: '1471D'
-  title: 'Strange Definition'
-  labels: 'bitmasks, graphs, hashing, math, number theory'
-  rating: '1900'
+- id: "1474C"
+  title: "Array Destruction"
+  labels: "constructive algorithms, greedy"
+  code: "r680-699/r696/1474c-array-destruction.kt"
 
-- id: '1471E'
-  title: 'Strange Shuffle'
-  labels: 'binary search, brute force, constructive algorithms, interactive'
-  rating: '2500'
+- id: "1474D"
+  title: "Cleaning"
+  labels: "data structures, dp, greedy, math"
+  code: "r680-699/r696/1474d-cleaning.kt"
 
-- id: '1471F'
-  title: 'Strange Housing'
-  labels: 'constructive algorithms, dfs and similar, graphs, greedy'
-  rating: '2200'
-- id: '1467A'
-  title: 'Wizard of Orz'
-  labels: 'constructive algorithms, greedy, math'
-  rating: '900'
+- id: "1474E"
+  title: "What Is It?"
+  labels: "constructive algorithms, math"
 
-- id: '1467B'
-  title: 'Hills And Valleys'
-  labels: 'brute force, implementation'
-  rating: '1700'
+- id: "1474F"
+  title: "1 2 3 4 ..."
+  labels: "dp, matrices"
 
-- id: '1467C'
-  title: 'Three Bags'
-  labels: 'constructive algorithms, greedy'
-  rating: '1900'
-
-- id: '1467D'
-  title: 'Sum of Paths'
-  labels: 'combinatorics, dp, math'
-  rating: '2200'
-
-- id: '1467E'
-  title: 'Distinctive Roots in a Tree'
-  labels: 'data structures, dfs and similar, dp, trees'
-  rating: '2500'

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<!-- {% include problemHeader.md id=page.id %} -->
+{% include problemHeader.md id=page.id %}
 
 {% capture page %}p/{{page.id | slice:0,3}}/{{page.id}}.md{% endcapture %}
 {% include {{page}} %}

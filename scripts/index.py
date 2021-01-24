@@ -20,15 +20,14 @@ def main():
                 raise Exception(f'Unknown labels in: {ex}')
             code = re.search(r'code="([^"]+)"', ex)
 
-            print(f"- id: '{id.group(1)}'")
-            print(f"  title: '{name.group(1)}'")
-            print(f"  labels: '{labels.group(1)}'")
+            print(f'- id: "{id.group(1)}"')
+            print(f'  title: "{name.group(1)}"')
+            print(f'  labels: "{labels.group(1)}"')
             if rating:
                 print(f'  rating: {rating.group(1)}')
+
             if code:
-                print(f"  code: '{code.group(1)}'")
-            else:
-                print(f'  todo: true')
+                print(f'  code: "{code.group(1)}"')
             print()
 
 

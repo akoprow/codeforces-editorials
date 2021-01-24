@@ -2,8 +2,8 @@
   {% assign problem = site.data.problems | find:'id',include.id %}
   <tiny>{{include.id | slice:0,4}}</tiny>{{include.id | slice:4,2}}{% if problem.also-as %} / <tiny>{{problem.also-as | slice:0,4}}</tiny>{{problem.also-as | slice:4,2}}{% endif %}
 
-  {% capture link %}/problems/{{include.id | slugify}}.html{% endcapture %}
-  <a href="{{ link }}">
+  {% capture link %}/problems/{{include.id | slugify}}/{% endcapture %}
+  <a href="{{ link | relative_url }}">
     {{problem.title}}
   </a>
   <a href="https://codeforces.com/contest/{{include.id | slice:0,4}}/problem/{{include.id | slice:4,2}}">
