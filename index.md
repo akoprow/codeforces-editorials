@@ -33,6 +33,6 @@ title: Contests
   {% endfor %}
   </ul>
 
-  Total of {{ site.posts | size }} contests.
+  Total number of contests: {{ site.posts | size }}
 
 </section>
