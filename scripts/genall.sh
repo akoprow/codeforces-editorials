@@ -60,3 +60,7 @@
 ./gen.py 1471 R-694   "Round 694 (Div I+II)"
 ./gen.py 1473 Edu-102 "Educational Round 102"
 ./gen.py 1474 R-696   "Round 696 (Div II)"
+./gen.py 1475 R-697   "Round 697 (Div III)"
+./gen.py 1477 R-698   "Round 698 (Div I+II)"
+./gen.py 1478 R-698   "Round 698 (Div I+II)"
+./gen.py 1476 Edu-103 "Educational Round 103"
