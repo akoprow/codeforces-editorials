@@ -53,7 +53,7 @@ def generate(contestId, abbrev, shortName):
             print(f'  title: "{name}"', file=f)
             print(f'  labels: "{labels}"', file=f)
             if rating:
-                print(f'  rating: "{rating}"', file=f)
+                print(f'  rating: {rating}', file=f)
             print(file=f)
 
 

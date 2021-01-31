@@ -3,6 +3,8 @@ layout: page
 title: Contests
 ---
 
+Total number of contests: {{ site.posts | size }}
+
 <section>
   {% capture currentyear %}{{ 'now' | date: "%Y" }}{% endcapture %}
   {% capture firstpostyear %}{{ site.posts[0].date | date: '%Y' }}{% endcapture %}
@@ -32,7 +34,5 @@ title: Contests
       </li>
   {% endfor %}
   </ul>
-
-  Total number of contests: {{ site.posts | size }}
 
 </section>

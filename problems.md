@@ -3,12 +3,19 @@ layout: page
 title: Problems
 ---
 
-<ul>
 {% assign numProblems = 0 %}
-
 {% for problem in site.data.problems %}
 {% if problem.code %}
 {% assign numProblems = numProblems | plus: 1 %}
+{% endif %}
+{% endfor %}
+
+Total number of problems: {{numProblems}}
+
+<ul>
+
+{% for problem in site.data.problems %}
+{% if problem.code %}
 <li>
   <tiny>{{problem.id | slice:0,4}}</tiny>{{problem.id | slice:4,2}}{% if problem.also-as %} / <tiny>{{problem.also-as | slice:0,4}}</tiny>{{problem.also-as | slice:4,2}}{% endif %}
 
@@ -30,4 +37,3 @@ title: Problems
 {% endfor %}
 
 </ul>
-Total number of problems: {{numProblems}}

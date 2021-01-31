@@ -273,6 +273,46 @@
   labels: "data structures, greedy, implementation"
   rating: 2400
 
+- id: "1332A"
+  title: "Exercising Walk"
+  labels: "greedy, implementation, math"
+  rating: 1100
+  code: "r620-639/r630/1332a-exercising-walk.kt"
+
+- id: "1332B"
+  title: "Composite Coloring"
+  labels: "brute force, constructive algorithms, greedy, math, number theory"
+  rating: 1400
+  code: "r620-639/r630/1332b-composite-coloring.kt"
+
+- id: "1332C"
+  title: "K-Complete Word"
+  labels: "dfs and similar, dsu, greedy, implementation, strings"
+  rating: 1500
+  code: "r620-639/r630/1332c-k-complete-word.kt"
+
+- id: "1332D"
+  title: "Walk on Matrix"
+  labels: "bitmasks, constructive algorithms, math"
+  rating: 1700
+  code: "r620-639/r630/1332d-walk-on-matrix.kt"
+
+- id: "1332E"
+  title: "Height All the Same"
+  labels: "combinatorics, constructive algorithms, math, matrices"
+  rating: 2100
+  code: "r620-639/r630/1332e-height-all-the-same.kt"
+
+- id: "1332F"
+  title: "Independent Set"
+  labels: "dfs and similar, dp, trees"
+  rating: 2500
+
+- id: "1332G"
+  title: "No Monotone Triples"
+  labels: "data structures"
+  rating: 3100
+
 - id: "1333A"
   title: "Little Artem"
   labels: "constructive algorithms"
