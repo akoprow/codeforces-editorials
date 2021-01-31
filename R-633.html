@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 633 (Div I+II) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 633 (Div I+II)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 633 (Div I+II)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-633","headline":"Round 633 (Div I+II)","dateModified":"2020-04-12T00:00:00+01:00","datePublished":"2020-04-12T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-633"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #633 (Div. 1)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 633 (Div I+II)","dateModified":"2020-04-12T00:00:00+01:00","url":"/codeforces-editorials/R-633","datePublished":"2020-04-12T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-633"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #633 (Div. 1)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -91,9 +91,13 @@
 <p><a href="https://codeforces.com/contest/1339">Codeforces Round #633 (Div. 2)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1339</tiny>A
 
-  Filling Diamonds
+  
+  <a href="/codeforces-editorials/problems/1339a/">
+    Filling Diamonds
+  </a>
   <a href="https://codeforces.com/contest/1339/problem/A">
   [CF]
   </a>
@@ -119,9 +123,13 @@
 <p>Placing of the vertical diamond fixes everything else and there are exactly \(n\) positions for it, so the answer is simply \(n\).</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1339</tiny>B
 
-  Sorted Adjacent Differences
+  
+  <a href="/codeforces-editorials/problems/1339b/">
+    Sorted Adjacent Differences
+  </a>
   <a href="https://codeforces.com/contest/1339/problem/B">
   [CF]
   </a>
@@ -143,9 +151,13 @@
 <p>Sort the array and then list it starting in the middle and then move in an oscillating fashion: \(a_i, a_{i+1}, a_{i-1}, a_{i+2}, a_{i-2}, \ldots\).  It’s relatively easy to see that by doing so the distances we “travel” with each jump will form a non-decreasing sequence.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1339</tiny>C / <tiny>1338</tiny>A
+  
+  <tiny>1339</tiny>C
 
-  Powered Addition
+  
+  <a href="/codeforces-editorials/problems/1339c/">
+    Powered Addition
+  </a>
   <a href="https://codeforces.com/contest/1339/problem/C">
   [CF]
   </a>
@@ -169,9 +181,13 @@
 <p>In round \(i\) we’re adding \(2^i\) to arbitrary elements in the array and the question is what’s the smallest \(i\) that after \(i\)-th round we can make the array non-decreasing?  Let’s look at all subsequent elements \(a_i &gt; a_{i+1}\).  If there is no such pair we’re done, if there are many let’s take the largest one.  Suppose \(\delta = a_i - a_{i+1}\) is the largest such difference.  We need to bump \(a_{i+1}\) by at least \(\delta\).  However many rounds we need for that will allow us to make the whole array non-decreasing.  Note that when we’re bumping an index, we can always bump the whole suffix from then on, meaning we do not disturb relative differences between any other elements.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1339</tiny>D / <tiny>1338</tiny>B
+  
+  <tiny>1339</tiny>D
 
-  Edge Weight Assignment
+  
+  <a href="/codeforces-editorials/problems/1339d/">
+    Edge Weight Assignment
+  </a>
   <a href="https://codeforces.com/contest/1339/problem/D">
   [CF]
   </a>
@@ -201,9 +217,13 @@
 <p>As for the maximum for all non-leaf nodes we can use unique \(2^i\) where \(i\) is the id of the node, so that all nodes have unique numbers.  And then for the final edge to the leaf we put the xor of all the values from the root to the last node, ensuring that the path from the root will give \(0\) when xor’ed.  In this way all the nodes will have unique values except for multiple leaves attached to the same interior node, which all will share the value.  It’s fairly easy to find how many of them there are and hence what the maximum is.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1339</tiny>E / <tiny>1338</tiny>C
+  
+  <tiny>1339</tiny>E
 
-  Perfect Triples
+  
+  <a href="/codeforces-editorials/problems/1339e/">
+    Perfect Triples
+  </a>
   <a href="https://codeforces.com/contest/1339/problem/E">
   [CF]
   </a>
@@ -230,9 +250,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1338</tiny>D
 
-  Nested Rubber Bands
+  
+  <a href="/codeforces-editorials/problems/1338d/">
+    Nested Rubber Bands
+  </a>
   <a href="https://codeforces.com/contest/1338/problem/D">
   [CF]
   </a>
@@ -261,9 +285,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1338</tiny>E
 
-  JYPnation
+  
+  <a href="/codeforces-editorials/problems/1338e/">
+    JYPnation
+  </a>
   <a href="https://codeforces.com/contest/1338/problem/E">
   [CF]
   </a>

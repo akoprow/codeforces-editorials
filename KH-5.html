@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Kotlin Heroes 5 | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Kotlin Heroes 5" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Kotlin Heroes 5" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/KH-5","headline":"Kotlin Heroes 5","dateModified":"2020-11-12T00:00:00+00:00","datePublished":"2020-11-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/KH-5"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Kotlin Heroes 5: ICPC Round","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Kotlin Heroes 5","dateModified":"2020-11-12T00:00:00+00:00","url":"/codeforces-editorials/KH-5","datePublished":"2020-11-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/KH-5"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Kotlin Heroes 5: ICPC Round","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -89,9 +89,13 @@
   <p><a href="https://codeforces.com/contest/1431">Kotlin Heroes 5: ICPC Round</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>A
 
-  Selling Hamburgers
+  
+  <a href="/codeforces-editorials/problems/1431a/">
+    Selling Hamburgers
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/A">
   [CF]
   </a>
@@ -113,9 +117,13 @@
 <p>Observe that \(m\) must be equal to one of \(a_i\).  Try all, pick best.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>B
 
-  Polycarp and the Language of Gods
+  
+  <a href="/codeforces-editorials/problems/1431b/">
+    Polycarp and the Language of Gods
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/B">
   [CF]
   </a>
@@ -143,9 +151,13 @@
 <p>Every \(w\) needs to be underlined and every pair of \(vv\).</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>C
 
-  Black Friday
+  
+  <a href="/codeforces-editorials/problems/1431c/">
+    Black Friday
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/C">
   [CF]
   </a>
@@ -171,9 +183,13 @@
 <p>Consider all possible number of elements a person can buy, which must be int he range \([1..n]\).  Given the size it’s clear which items we get for free, pick best.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>D
 
-  Used Markers
+  
+  <a href="/codeforces-editorials/problems/1431d/">
+    Used Markers
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/D">
   [CF]
   </a>
@@ -197,9 +213,13 @@
 <p>To maximize marker changes we want to use values with \(a_i\) as small as possible and between them place large values, since they don’t matter.  So sort everything and use double ended queue to construct optimal solution.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>E
 
-  Chess Match
+  
+  <a href="/codeforces-editorials/problems/1431e/">
+    Chess Match
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/E">
   [CF]
   </a>
@@ -219,9 +239,13 @@
 <p>Suppose that players from the first team will loose \(k\) games, for that it’s best to pair worst \(k\) players from the first team with the best \(k\) players from the second one and it’s best to pair them as \((a_1, b_{n-k}), (a_2, b_{n-k+1}), \ldots, (a_k, b_n)\); similarly for the rest.  Now consider all \(k \in [1..n]\) and pick best.  As it turns out that means that the final solution will be a cyclic shift of an identity permutation.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>F
 
-  Neural Network Problem
+  
+  <a href="/codeforces-editorials/problems/1431f/">
+    Neural Network Problem
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/F">
   [CF]
   </a>
@@ -249,9 +273,13 @@
 <p>We can do that greedily.  Let’s add elements one by one to a block.  If sum exceeds \(s\) remove the largest element in the block so far.  If by doing so we run out of removals we can do, answer is no.  If block reaches size \(x\) start a new block.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>G
 
-  Number Deletion Game
+  
+  <a href="/codeforces-editorials/problems/1431g/">
+    Number Deletion Game
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/G">
   [CF]
   </a>
@@ -281,9 +309,13 @@
 <p>DP follows, where \(T_{k, i}\) is the best score with \(k\) moves playing on numbers up to and including index \(i\).  For \(T_{k, i}\) we can either not play at \(i\), so take \(T_{k,i-1}\) or we can play a segment ending there.  Let \(s\) be the length of that segment (we consider all possible options), then we get: \(T_{k,i} = min_s dp_{k-s, i-2*s} + (\sum_{i \in i-s+1..i} a_i)- (\sum_{i \in i-2*s+1..i-s+1} a_i)\).</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>H
 
-  Rogue-like Game
+  
+  <a href="/codeforces-editorials/problems/1431h/">
+    Rogue-like Game
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/H">
   [CF]
   </a>
@@ -310,9 +342,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>I
 
-  Cyclic Shifts
+  
+  <a href="/codeforces-editorials/problems/1431i/">
+    Cyclic Shifts
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/I">
   [CF]
   </a>
@@ -335,9 +371,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1431</tiny>J
 
-  Zero-XOR Array
+  
+  <a href="/codeforces-editorials/problems/1431j/">
+    Zero-XOR Array
+  </a>
   <a href="https://codeforces.com/contest/1431/problem/J">
   [CF]
   </a>

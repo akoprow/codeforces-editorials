@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 685 (Div II) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 685 (Div II)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 685 (Div II)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-685","headline":"Round 685 (Div II)","dateModified":"2020-11-21T00:00:00+00:00","datePublished":"2020-11-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-685"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #685 (Div. 2)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 685 (Div II)","dateModified":"2020-11-21T00:00:00+00:00","url":"/codeforces-editorials/R-685","datePublished":"2020-11-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-685"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #685 (Div. 2)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -89,9 +89,13 @@
   <p><a href="https://codeforces.com/contest/1451">Codeforces Round #685 (Div. 2)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1451</tiny>A
 
-  Subtract or Divide
+  
+  <a href="/codeforces-editorials/problems/1451a/">
+    Subtract or Divide
+  </a>
   <a href="https://codeforces.com/contest/1451/problem/A">
   [CF]
   </a>
@@ -113,9 +117,13 @@
 <p>I got <strong>hopelessly lost</strong> with this problem! In fact; it’s about parities. First solve for all \(n \le 3\).  For larger \(n\) the answer is \(2\) if \(n\) is even: divide it by \(\frac{n}{2}\) and then subtract \(1\).  If \(n\) is odd the answer is \(3\): subtract \(1\) and then continue with the solution for even.  I lost a lot of time on this problem and came up with something way more complicated.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1451</tiny>B
 
-  Non-Substring Subsequence
+  
+  <a href="/codeforces-editorials/problems/1451b/">
+    Non-Substring Subsequence
+  </a>
   <a href="https://codeforces.com/contest/1451/problem/B">
   [CF]
   </a>
@@ -145,9 +153,13 @@
 <p>It’s clear that this is a sufficient condition as we can easily construct the right segment if it holds.  Why is it neccessary?  Assume that a segment exists but the above condition does not hold. First character does not occur before so our match cannot start before and last character does not occur after so our match must end with the end of the segment, so we’re only left with the segment itself but that’s not non-contiguous.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1451</tiny>C
 
-  String Equality
+  
+  <a href="/codeforces-editorials/problems/1451c/">
+    String Equality
+  </a>
   <a href="https://codeforces.com/contest/1451/problem/C">
   [CF]
   </a>
@@ -175,9 +187,13 @@
 <p>Firstly, note that the order does not matter as we can swap however we like.  Sort target and build frequency map for the source and start matching in order.  If the smallest available character in the source is greater than what we match against  answer NO.  If it’s the same, just match.  If it’s smaller try to promote \(k\) smallest characters and continue with the matching.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1451</tiny>D
 
-  Circle Game
+  
+  <a href="/codeforces-editorials/problems/1451d/">
+    Circle Game
+  </a>
   <a href="https://codeforces.com/contest/1451/problem/D">
   [CF]
   </a>
@@ -207,9 +223,13 @@
 <p>Why does he win in the first case?  There’s a bit more math to it but we can show that it’s equivalent to the first player’s situation in the other case.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1451</tiny>E1
 
-  Bitwise Queries (Easy Version)
+  
+  <a href="/codeforces-editorials/problems/1451e1/">
+    Bitwise Queries (Easy Version)
+  </a>
   <a href="https://codeforces.com/contest/1451/problem/E1">
   [CF]
   </a>
@@ -239,9 +259,13 @@
 <p>How to find some number?  First, observe that just querying two numbers is hopless, due to symmetry of all the operations.  If we instead look at \(3\) numbers we can use \(5\) queries for them and it turns out that asking any distinct \(5\) queries involving and/or gives us the answer, which can be verified by exploring truth tables for \(3\) boolean variables.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1451</tiny>E2
 
-  Bitwise Queries (Hard Version)
+  
+  <a href="/codeforces-editorials/problems/1451e2/">
+    Bitwise Queries (Hard Version)
+  </a>
   <a href="https://codeforces.com/contest/1451/problem/E2">
   [CF]
   </a>
@@ -268,9 +292,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1451</tiny>F
 
-  Nullify The Matrix
+  
+  <a href="/codeforces-editorials/problems/1451f/">
+    Nullify The Matrix
+  </a>
   <a href="https://codeforces.com/contest/1451/problem/F">
   [CF]
   </a>

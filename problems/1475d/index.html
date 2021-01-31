@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Cleaning the Phone</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Cleaning the Phone | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Cleaning the Phone" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces editorials" />
+<meta property="og:description" content="Codeforces editorials" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Cleaning the Phone" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Cleaning the Phone","url":"/codeforces-editorials/problems/1475d/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <div class="alert alert-primary" role="alert">
+  
+  <tiny>1475</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1475d/">
+    Cleaning the Phone
+  </a>
+  <a href="https://codeforces.com/contest/1475/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r697/1475d-cleaning-the-phone.kt">(Code)</a>
+
+  <rating>R:1800 <meter min="800" max="3600" value="1800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">two pointers</span>
+  
+  </labels>
+</div>
+
+<p>Let’s split applications into two groups: one with \(b_i = 1\) (normal) and the other with \(b_i = 2\) (important).  For each group let’s take the application size in decreasing order and compute prefix sums.</p>
+
+<p>We will iterate over \(x\), indicating how many elements we take from the normal group, from \(0\) up to all the elements in the group.  We compute how much size will that free us up which is the sum of the first \(x\) elements.  Based on that we compute how much more space we need to free up with important applications.  We find the number of important applications we need to remove, \(y\), using binary search.</p>
+
+<p>Having those two we know that we will loose \(2y+x\) convenience points and we pick the minimum one.</p>
+
+<p>Actually, instead of binary search we can use two pointers as as we take more and more of normal applications, we will always be decreasing the number of important applications.  So we don’t even need prefix sums, just two pointers over those two arrays.</p>
+
+
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

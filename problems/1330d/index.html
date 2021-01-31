@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Dreamoon Likes Sequences</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Dreamoon Likes Sequences | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Dreamoon Likes Sequences" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces editorials" />
+<meta property="og:description" content="Codeforces editorials" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dreamoon Likes Sequences" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Dreamoon Likes Sequences","url":"/codeforces-editorials/problems/1330d/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <div class="alert alert-primary" role="alert">
+  
+  <tiny>1330</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1330d/">
+    Dreamoon Likes Sequences
+  </a>
+  <a href="https://codeforces.com/contest/1330/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r620-639/r631/1330d-dreamoon-likes-sequences.kt">(Code)</a>
+
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Let’s denote by \(\mathcal{H}(x)\) the highest bit set in \(x\).</p>
+
+<p>The crucial observation is that \(\mathcal{H}(a_1) &lt; \mathcal{H}(a_2) &lt; \ldots &lt; \mathcal{H}(a_n)\).  Why is that?  Firstly, if that condition is true then we can easily see that \(\mathcal{H}(b_i) = \mathcal{H}(a_i)\), which easily implies that \(b_1 &lt; \ldots &lt; b_n\), so that’s a sufficient condition.  Why is it also required?  Suppose otherwise.  Since \(a_i\) is increasing that means we must have \(\mathcal{H}(a_k) = \mathcal{H}(a_{k+1})\) for some \(k\).  We can show that then \(\mathcal{H}(b_k) = \mathcal{H}(a_k) = \mathcal{H}(a_{k+1})\).  Since \(b_{k+1} = a_{k+1} \oplus b_k\) we can see that the highest bit that was set in \(a_{k+1}\) and \(b_k\) will not be set in \(b_{k+1}\) and therefore \(\mathcal{H}(b_{k+1}) &lt; \mathcal{H}(b_k)\) and hence \(b_{k+1} &lt; b_k\); contradiction.</p>
+
+<p>Once we know that we know that all numbers in a sequence must have different first bits set.  So what we do is we iterate over all bits in range \([1, 30]\), for each bit calculate how many different numbers with that bit set we can use by just taking the width of the range and being careful to cap the numbers at \(d\), so effectively considering the range:</p>
+
+\[[2^i, min(2^{i+1}-1, d)]\]
+
+<p>then we add one to that number (since for each bit we can either choose sum number in it or not choose anything with that bit set) and take a product across all bits (we can choose numbers there independently).  It only remains to subtract one from the final answer, since we counted an option of not taking anything in all of the bits but that’s not a valid option.</p>
+
+
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

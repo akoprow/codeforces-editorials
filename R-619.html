@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 619 (Div II) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 619 (Div II)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 619 (Div II)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-619","headline":"Round 619 (Div II)","dateModified":"2020-02-13T00:00:00+00:00","datePublished":"2020-02-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-619"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #619 (Div. 2)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 619 (Div II)","dateModified":"2020-02-13T00:00:00+00:00","url":"/codeforces-editorials/R-619","datePublished":"2020-02-13T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-619"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #619 (Div. 2)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -89,9 +89,13 @@
   <p><a href="https://codeforces.com/contest/1301">Codeforces Round #619 (Div. 2)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1301</tiny>A
 
-  Three Strings
+  
+  <a href="/codeforces-editorials/problems/1301a/">
+    Three Strings
+  </a>
   <a href="https://codeforces.com/contest/1301/problem/A">
   [CF]
   </a>
@@ -113,9 +117,13 @@
 <p>Fairly simple observation that every character in \(C\) must match either \(A\) or \(B\) on same position.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1301</tiny>B
 
-  Motarack's Birthday
+  
+  <a href="/codeforces-editorials/problems/1301b/">
+    Motarack's Birthday
+  </a>
   <a href="https://codeforces.com/contest/1301/problem/B">
   [CF]
   </a>
@@ -139,9 +147,13 @@
 <p>Look at all consecutive elements.  Compute biggest difference among present ones.  If the ones adjacent to empty slots form a range \([l, r]\) then it’s clearly optimal to choose \({l+r}\over{2}\).  Combine both to find maximal final difference.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1301</tiny>C
 
-  Ayoub's function
+  
+  <a href="/codeforces-editorials/problems/1301c/">
+    Ayoub's function
+  </a>
   <a href="https://codeforces.com/contest/1301/problem/C">
   [CF]
   </a>
@@ -169,9 +181,13 @@
 <p>First observe that greedy works in the sense that it’s best to spread \(1\)s as evenly as possible throughout the string.  Next observe that the answer for a given string is \(n_* - n_0\) where \(n_*\) is the number of all subsequences and \(n_0\) is the number of subsequences with only \(0\)s.  Clearly \(n_* = \frac{n (n+1)}{2}\), for a given block of \(0\)s of length \(k\) the number of “only-zero” subsequences is \(\frac{k (k+1)}{2}\) and \(n_0\) is sum over all such block.  Putting it all together this can actually be solved in \(O(1)\).</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1301</tiny>D
 
-  Time to Run
+  
+  <a href="/codeforces-editorials/problems/1301d/">
+    Time to Run
+  </a>
   <a href="https://codeforces.com/contest/1301/problem/D">
   [CF]
   </a>
@@ -203,9 +219,13 @@
 <p>Careful to not do more steps than necessary!</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1301</tiny>E
 
-  Nanosoft
+  
+  <a href="/codeforces-editorials/problems/1301e/">
+    Nanosoft
+  </a>
   <a href="https://codeforces.com/contest/1301/problem/E">
   [CF]
   </a>
@@ -235,9 +255,13 @@
 <p>Once we have that for each query we find the maximal size of the logo within that query.  We once again use binary search + 2d-range max-queries (using 2d Fenwick).</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1301</tiny>F
 
-  Super Jaber
+  
+  <a href="/codeforces-editorials/problems/1301f/">
+    Super Jaber
+  </a>
   <a href="https://codeforces.com/contest/1301/problem/F">
   [CF]
   </a>

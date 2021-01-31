@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 688 (Div II) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 688 (Div II)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 688 (Div II)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-688","headline":"Round 688 (Div II)","dateModified":"2020-12-04T00:00:00+00:00","datePublished":"2020-12-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-688"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #688 (Div. 2)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 688 (Div II)","dateModified":"2020-12-04T00:00:00+00:00","url":"/codeforces-editorials/R-688","datePublished":"2020-12-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-688"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #688 (Div. 2)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -89,9 +89,13 @@
   <p><a href="https://codeforces.com/contest/1453">Codeforces Round #688 (Div. 2)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1453</tiny>A
 
-  Cancel the Trains
+  
+  <a href="/codeforces-editorials/problems/1453a/">
+    Cancel the Trains
+  </a>
   <a href="https://codeforces.com/contest/1453/problem/A">
   [CF]
   </a>
@@ -111,9 +115,13 @@
 <p>It’s easy to observe that only trains with equal numbers can crash into each other and in that case cancelling one of them is enough.  So we can convert both train numbers to sets and the size of their intersection is our answer.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1453</tiny>B
 
-  Suffix Operations
+  
+  <a href="/codeforces-editorials/problems/1453b/">
+    Suffix Operations
+  </a>
   <a href="https://codeforces.com/contest/1453/problem/B">
   [CF]
   </a>
@@ -139,9 +147,13 @@
 <p>Now, how much can we save from that cost by changing a single element?  We can either make the first element equal to the second one, hence saving \(\mid a_2 - a_1\mid\) or make last two equal hence saving: \(\mid a_n - a_{n-1}\mid\) or make element at position \(i\) equal to its predecessor, saving: \(\mid a_i - a_{i-1} \mid + \mid a_{i+1} - a_{i} \mid - \mid a_{i+1} - a_{i-1} \mid\) (for \(a, b, c\) we don’t have to go from \(a\) to \(b\) and from \(b\) to \(c\) but instead go directly from \(a\) to \(c\)).</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1453</tiny>C
 
-  Triangles
+  
+  <a href="/codeforces-editorials/problems/1453c/">
+    Triangles
+  </a>
   <a href="https://codeforces.com/contest/1453/problem/C">
   [CF]
   </a>
@@ -178,9 +190,13 @@
 <p>Note that we do not need to think separately about the case where the changed point is not part of the base since it can always be moved so that it is, without changing the area of the resulting triangle.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1453</tiny>D
 
-  Checkpoints
+  
+  <a href="/codeforces-editorials/problems/1453d/">
+    Checkpoints
+  </a>
   <a href="https://codeforces.com/contest/1453/problem/D">
   [CF]
   </a>
@@ -214,9 +230,13 @@
 <p>One strategy is to do it greedily: generate \(F(i)\) values for \(i=1..58\) (\(F(58)\) is larger than the largest possible \(k\) we can get) and then greedily use largest value that is less than \(k\), decrement \(k\) and continue.  Turns out that in the worst case this will use \(1654\) stages, though I did not even attempt to prove it during the contest.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1453</tiny>E
 
-  Dog Snacks
+  
+  <a href="/codeforces-editorials/problems/1453e/">
+    Dog Snacks
+  </a>
   <a href="https://codeforces.com/contest/1453/problem/E">
   [CF]
   </a>
@@ -245,9 +265,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1453</tiny>F
 
-  Even Harder
+  
+  <a href="/codeforces-editorials/problems/1453f/">
+    Even Harder
+  </a>
   <a href="https://codeforces.com/contest/1453/problem/F">
   [CF]
   </a>

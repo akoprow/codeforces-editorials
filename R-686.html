@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 686 (Div III) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 686 (Div III)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 686 (Div III)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-686","headline":"Round 686 (Div III)","dateModified":"2020-11-24T00:00:00+00:00","datePublished":"2020-11-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-686"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #686 (Div. 3)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 686 (Div III)","dateModified":"2020-11-24T00:00:00+00:00","url":"/codeforces-editorials/R-686","datePublished":"2020-11-24T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-686"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #686 (Div. 3)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -89,9 +89,13 @@
   <p><a href="https://codeforces.com/contest/1454">Codeforces Round #686 (Div. 3)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1454</tiny>A
 
-  Special Permutation
+  
+  <a href="/codeforces-editorials/problems/1454a/">
+    Special Permutation
+  </a>
   <a href="https://codeforces.com/contest/1454/problem/A">
   [CF]
   </a>
@@ -113,9 +117,13 @@
 <p>Enough to take \(n, 1, 2, \ldots, n-1\).  It also crossed my mind to pick a random permutation and I wasted quite some time exploring this avenue before giving up.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1454</tiny>B
 
-  Unique Bid Auction
+  
+  <a href="/codeforces-editorials/problems/1454b/">
+    Unique Bid Auction
+  </a>
   <a href="https://codeforces.com/contest/1454/problem/B">
   [CF]
   </a>
@@ -135,9 +143,13 @@
 <p>Just do as asked, keep map from number to its last index, or \(null\) if it occurred more than once.  Then pick smallest non-null value in the map.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1454</tiny>C
 
-  Sequence Transformation
+  
+  <a href="/codeforces-editorials/problems/1454c/">
+    Sequence Transformation
+  </a>
   <a href="https://codeforces.com/contest/1454/problem/C">
   [CF]
   </a>
@@ -161,9 +173,13 @@
 <p>Let’s process by blocks (of equal values) and keep track of the number of blocks for each number.  Now, if we pick \(x\) the answer is the number of blocks of \(x\) plus \(1\), as there are that many segments between: \(\ldots, x, \ldots, x, \ldots\), except decrement that by \(1\) if \(x\) is the first element and further by \(1\) if its last.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1454</tiny>D
 
-  Number into Sequence
+  
+  <a href="/codeforces-editorials/problems/1454d/">
+    Number into Sequence
+  </a>
   <a href="https://codeforces.com/contest/1454/problem/D">
   [CF]
   </a>
@@ -189,9 +205,13 @@
 <p>Factorize the number, \(n = f_1^{p_1} f_2^{p_2} \ldots f_k^{p_k}\), pick the maximal \(p_i\) and the answer is simply \(p_i-1\) copies of \(f_i\) followed by \(n / f_i^{p_i-1}\)</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1454</tiny>E
 
-  Number of Simple Paths
+  
+  <a href="/codeforces-editorials/problems/1454e/">
+    Number of Simple Paths
+  </a>
   <a href="https://codeforces.com/contest/1454/problem/E">
   [CF]
   </a>
@@ -219,9 +239,13 @@
 <p>How do we find tree sizes and the cycle?  Simplest is to keep map from node to its size.  Start with everything being of size \(1\) and moving from the leafs, if \(u\) is connected to \(v\) increment \(size_v\) by \(size_u\) and if now \(v\) becomes a leaf add it to the queue to process.  Nodes that remain after this process is done are on the cycle and their sizes will be the sizes of trees attached to them.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1454</tiny>F
 
-  Array Partition
+  
+  <a href="/codeforces-editorials/problems/1454f/">
+    Array Partition
+  </a>
   <a href="https://codeforces.com/contest/1454/problem/F">
   [CF]
   </a>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Educational Round 101</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Educational Round 101 | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Educational Round 101" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Educational Codeforces Round 101 (Rated for Div. 2)" />
+<meta property="og:description" content="Educational Codeforces Round 101 (Rated for Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Educational Round 101" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Educational Round 101","dateModified":"2020-12-28T00:00:00+00:00","url":"/codeforces-editorials/Edu-101","datePublished":"2020-12-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/Edu-101"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Educational Codeforces Round 101 (Rated for Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Educational Round 101</h2>
+  <time datetime="2020-12-28T00:00:00+00:00" class="by-line">28 Dec 2020</time>
+  <p><a href="https://codeforces.com/contest/1469">Educational Codeforces Round 101 (Rated for Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1469</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1469a/">
+    Regular Bracket Sequence
+  </a>
+  <a href="https://codeforces.com/contest/1469/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu101/1469a-regular-bracket-sequence.kt">(Code)</a>
+
+  <rating>R:1000 <meter min="800" max="3600" value="1000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Clearly the following three conditions <em>must</em> hold for there to be an answer:</p>
+
+<ul>
+  <li>length of the sequence must be even (so that we have equal number of opening and closing parentheses),</li>
+  <li>it cannot start with “)” (we cannot put anything before it and so it will clearly remain unmatched) and</li>
+  <li>it cannot end with “(“ (for similar reasons to the above).</li>
+</ul>
+
+<p>But we can also prove that if the above conditions are satisfied then an answer <em>does</em> actually exist.  Why?  Well, we have “(“ and “)” somewhere in the sequence.  Recall that to check that parenthesis are well-formed we can go from left to right and keep the number of unmatched opening parenthesis, increasing the counter by 1 on every “(“ and decreasing it by 1 on every “)”.  If the counter never go below \(0\) and is \(0\) at the end then the expression is well formed.  Now we assign question marks in the following way:</p>
+
+<ul>
+  <li>make sure that we have equal number of “(“ and “)” in the sequence and</li>
+  <li>put all “(“ before “)” (i.e. replace first bunch of “?” with “(“ and only then use “)”).</li>
+</ul>
+
+<p>We will get \(0\) at we have equal number of opening and closing parenthesis and we will never go below zero because we have all the “(“ before all “)”, with the exception of a single “)” which was placed for us but we know it’s not on the first position and so there’s at least one “(“ coming before it.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1469</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1469b/">
+    Red and Blue
+  </a>
+  <a href="https://codeforces.com/contest/1469/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu101/1469b-red-and-blue.kt">(Code)</a>
+
+  <rating>R:1000 <meter min="800" max="3600" value="1000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>Note that a prefix of \(a\) will contain some prefix of \(r\) and some prefix of \(b\).  We can choose those prefixes independently and we want to maximize their sum; then we can reconstruct \(a\) by first placing chosen elements from \(r\) then chosen elements from \(b\) and then all the rest in arbitrary order.  So simply iterate through \(r\) (and then \(b\)) and pick the largest prefix sum.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1469</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1469c/">
+    Building a Fence
+  </a>
+  <a href="https://codeforces.com/contest/1469/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu101/1469c-building-a-fence.kt">(Code)</a>
+
+  <rating>R:1600 <meter min="800" max="3600" value="1600" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>We keep track of the valid segment at which the fence on the given position can start.  We start with \([h_1, h_1]\).  Then for the following segment we have two constraints:</p>
+
+<ul>
+  <li>the segment must have at least one overlap with the previous one and</li>
+  <li>the lowest it can be is on the ground and the highest is \(k-1\) from the ground.</li>
+</ul>
+
+<p>By (carefully!) applying those constraints we get a new, possibly empty, segment of valid positions.  Solution exists if we’re able to place the last fence element on the ground, i.e. \(h_n\) belongs to the computed segment of allowed positions after last iteration.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1469</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1469d/">
+    Ceil Divisions
+  </a>
+  <a href="https://codeforces.com/contest/1469/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu101/1469d-ceil-divisions.kt">(Code)</a>
+
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>The idea is that if we’re solving segment \([1, x]\) then for \(x = 2\) we’re done and otherwise we want to:</p>
+
+<ul>
+  <li>pick the largest \(y\) such that we can use it to get \(x\) to \(1\) in two divisions,</li>
+  <li>start by decreasing to \(1\) everything from \(y+1\) to \(x-1\) by division on \(x\),</li>
+  <li>divide \(x\) by \(y\) twice to get it to \(1\),</li>
+  <li>continue recursively with segment \([1, x]\).</li>
+</ul>
+
+<p>By doing so we’re only spending one extra division (on \(x\)) and we’re going from \([1, x]\) to \([1, \sqrt{x}]\), which is plenty enough to solve this problem.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1469</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1469e/">
+    A Bit Similar
+  </a>
+  <a href="https://codeforces.com/contest/1469/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2400 <meter min="800" max="3600" value="2400" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">hashing</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">string suffix structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">two pointers</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1469</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1469f/">
+    Power Sockets
+  </a>
+  <a href="https://codeforces.com/contest/1469/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2600 <meter min="800" max="3600" value="2600" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/Edu-101.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

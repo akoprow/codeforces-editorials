@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Educational Round 85 | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Educational Round 85" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Educational Round 85" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/Edu-85","headline":"Educational Round 85","dateModified":"2020-04-10T00:00:00+01:00","datePublished":"2020-04-10T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/Edu-85"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Educational Codeforces Round 85 (Rated for Div. 2)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Educational Round 85","dateModified":"2020-04-10T00:00:00+01:00","url":"/codeforces-editorials/Edu-85","datePublished":"2020-04-10T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/Edu-85"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Educational Codeforces Round 85 (Rated for Div. 2)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -89,9 +89,13 @@
   <p><a href="https://codeforces.com/contest/1334">Educational Codeforces Round 85 (Rated for Div. 2)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1334</tiny>A
 
-  Level Statistics
+  
+  <a href="/codeforces-editorials/problems/1334a/">
+    Level Statistics
+  </a>
   <a href="https://codeforces.com/contest/1334/problem/A">
   [CF]
   </a>
@@ -113,9 +117,13 @@
 <p>So what conditions need to hold for a single move to be “valid”? (i.e. to correspond to some hypothetical sequence of plays).  Let’s call \(\Delta_p\) and \(\Delta_c\) the differences between the current and previous number of games, and number of clears, respectively (we can add \((0, 0)\) sentinel pair at the beginning to easily deal with the first entry).  Since the stats are given in chronological order, clearly neither can be negative.  Moreover \(\Delta_c\) is bound by \(\Delta_p\) (most clears we can have if every game was finished successfully) and so we cannot have \(\Delta_c &gt; \Delta_p\).  It’s fairly easy to convince oneself that those conditions are enough.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1334</tiny>B
 
-  Middle Class
+  
+  <a href="/codeforces-editorials/problems/1334b/">
+    Middle Class
+  </a>
   <a href="https://codeforces.com/contest/1334/problem/B">
   [CF]
   </a>
@@ -138,9 +146,13 @@
 How many people can we make wealthy?  We can try all options in the range \([0, n]\).  For a given \(r\) it’s easy to see that we should take the \(r\) richest people and do a single reform among them.  So we can just sort the array \(a\) in decreasing order and then find largest \(r\) such that \((a_1 + \ldots + a_r) / r \ge x\), or, in other words, the sum on that prefix is at least \(rx\).  We can easily do that by sweeping over the array and keeping running sum.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1334</tiny>C
 
-  Circle of Monsters
+  
+  <a href="/codeforces-editorials/problems/1334c/">
+    Circle of Monsters
+  </a>
   <a href="https://codeforces.com/contest/1334/problem/C">
   [CF]
   </a>
@@ -168,9 +180,13 @@ How many people can we make wealthy?  We can try all options in the range \([0, 
 <p>So the only question is where to start.  If we start with the second monster then we need to shoot it \(a_1\) times and all the remaining ones \(max(0, a_i - b_{i-1})\) times.  That means we want to pick \(i\) that minimizes \(a_{i+1} - max(0, a_{i+1}-b{i})\), which is the extra number of shots we need to spend because we cannot use the explosion of the previous monster.  Once we find that we can easily calculate the total cost starting at \(i\).</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1334</tiny>D
 
-  Minimum Euler Cycle
+  
+  <a href="/codeforces-editorials/problems/1334d/">
+    Minimum Euler Cycle
+  </a>
   <a href="https://codeforces.com/contest/1334/problem/D">
   [CF]
   </a>
@@ -206,9 +222,13 @@ How many people can we make wealthy?  We can try all options in the range \([0, 
 <p>Once we see that it’s just a matter of writing a loop for each of those segments, have counter for the nodes and print them only if it is within the segment of interest \([l, r]\).  Additionally, instead of iterating we can skip a full segment if we see that it does not intersect \([l, r]\) at all, hence reducing the complexity from \(O(n^2)\) to \(O(\mid r-l \mid)\).</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1334</tiny>E
 
-  Divisor Paths
+  
+  <a href="/codeforces-editorials/problems/1334e/">
+    Divisor Paths
+  </a>
   <a href="https://codeforces.com/contest/1334/problem/E">
   [CF]
   </a>
@@ -237,9 +257,13 @@ How many people can we make wealthy?  We can try all options in the range \([0, 
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1334</tiny>F
 
-  Strange Function
+  
+  <a href="/codeforces-editorials/problems/1334f/">
+    Strange Function
+  </a>
   <a href="https://codeforces.com/contest/1334/problem/F">
   [CF]
   </a>
@@ -266,9 +290,13 @@ How many people can we make wealthy?  We can try all options in the range \([0, 
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1334</tiny>G
 
-  Substring Search
+  
+  <a href="/codeforces-editorials/problems/1334g/">
+    Substring Search
+  </a>
   <a href="https://codeforces.com/contest/1334/problem/G">
   [CF]
   </a>

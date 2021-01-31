@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 642 (Div III) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 642 (Div III)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 642 (Div III)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-642","headline":"Round 642 (Div III)","dateModified":"2020-05-14T00:00:00+01:00","datePublished":"2020-05-14T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-642"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #642 (Div. 3)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 642 (Div III)","dateModified":"2020-05-14T00:00:00+01:00","url":"/codeforces-editorials/R-642","datePublished":"2020-05-14T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-642"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #642 (Div. 3)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -89,9 +89,13 @@
   <p><a href="https://codeforces.com/contest/1353">Codeforces Round #642 (Div. 3)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1353</tiny>A
 
-  Most Unstable Array
+  
+  <a href="/codeforces-editorials/problems/1353a/">
+    Most Unstable Array
+  </a>
   <a href="https://codeforces.com/contest/1353/problem/A">
   [CF]
   </a>
@@ -121,9 +125,13 @@
 \[n&gt;2, a=[0,m,0,\ldots,0], result=2m\]
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1353</tiny>B
 
-  Two Arrays And Swaps
+  
+  <a href="/codeforces-editorials/problems/1353b/">
+    Two Arrays And Swaps
+  </a>
   <a href="https://codeforces.com/contest/1353/problem/B">
   [CF]
   </a>
@@ -145,9 +153,13 @@
 <p>Fairly simple take: \(n-k\) largest elements from \(a\) and \(k\) largest elements from union of \(k\) largest elements of \(b\) and remaining elements from \(a\) (we can either keep them or swap for largest from \(b\)).</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1353</tiny>C
 
-  Board Moves
+  
+  <a href="/codeforces-editorials/problems/1353c/">
+    Board Moves
+  </a>
   <a href="https://codeforces.com/contest/1353/problem/C">
   [CF]
   </a>
@@ -189,9 +201,13 @@
 <p>Last transition by <a href="https://en.wikipedia.org/wiki/Square_pyramidal_number">Square pyramidial numbers</a>, which is not really needed, a loop would do.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1353</tiny>D
 
-  Constructing the Array
+  
+  <a href="/codeforces-editorials/problems/1353d/">
+    Constructing the Array
+  </a>
   <a href="https://codeforces.com/contest/1353/problem/D">
   [CF]
   </a>
@@ -215,9 +231,13 @@
 <p>Just simulate. Store segments on a heap sorted lexicographically by length, then start.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1353</tiny>E
 
-  K-periodic Garland
+  
+  <a href="/codeforces-editorials/problems/1353e/">
+    K-periodic Garland
+  </a>
   <a href="https://codeforces.com/contest/1353/problem/E">
   [CF]
   </a>
@@ -251,9 +271,13 @@
 <p>How to compute that quickly for a string \(s\)?  Denote by \(dp_i\) the minimal score to make the first \(i\) characters good and such that character \(i\) is \(1\).  Then at step \(i\) we do:  \(dp_i = make(s_i, 1) + min(ones(s_{[0..i-1]}), dp_{i-1})\) where \(make(s_i, 1)\) is the cost of flipping \(s_i\) to \(1\) (either \(0\) or \(1\)) and \(ones(s)\) is the number of \(1\) in \(s\) (which we can compute efficiently using prefix sums).  Then the final answer is: \(min(ones(s), min_i dp_i + ones(s_{i+1..n}))\)</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1353</tiny>F
 
-  Decreasing Heights
+  
+  <a href="/codeforces-editorials/problems/1353f/">
+    Decreasing Heights
+  </a>
   <a href="https://codeforces.com/contest/1353/problem/F">
   [CF]
   </a>

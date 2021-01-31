@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 694 (Div I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 694 (Div I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 694 (Div I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #694 (Div. 1)" />
+<meta property="og:description" content="Codeforces Round #694 (Div. 1)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 694 (Div I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 694 (Div I+II)","dateModified":"2021-01-05T00:00:00+00:00","url":"/codeforces-editorials/R-694","datePublished":"2021-01-05T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-694"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #694 (Div. 1)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 694 (Div I+II)</h2>
+  <time datetime="2021-01-05T00:00:00+00:00" class="by-line">05 Jan 2021</time>
+  <p><a href="https://codeforces.com/contest/1470">Codeforces Round #694 (Div. 1)</a></p>
+
+<p><a href="https://codeforces.com/contest/1471">Codeforces Round #694 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1471</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1471a/">
+    Strange Partition
+  </a>
+  <a href="https://codeforces.com/contest/1471/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471a-strange-partition.kt">(Code)</a>
+
+  <rating>R:900 <meter min="800" max="3600" value="900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>If all numbers are divisible by \(x\) then it doesn’t matter how many operations we will perform, they will never affect the result.  Otherwise they could and it is not too difficult to see that if we want to minimize the result then it’s best to collapse everything into a single number in which case the answer is:</p>
+
+\[\lceil \frac{\sum_i a_i}{x} \rceil\]
+
+<p>and to maximize it it’s best not too do any operations for the result of:</p>
+
+\[\sum_i \lceil \frac{a_i}{x} \rceil\]
+
+<p>The reason for that is because for any \(a, b, x\) we have:</p>
+
+\[\lceil \frac{a+b}{x} \rceil \le \lceil \frac{a}{x} \rceil + \lceil \frac{b}{x} \rceil\]
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1471</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1471b/">
+    Strange List
+  </a>
+  <a href="https://codeforces.com/contest/1471/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471b-strange-list.kt">(Code)</a>
+
+  <rating>R:1100 <meter min="800" max="3600" value="1100" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>We essentially simulate what the robot does by passing through the array, only instead of adding new elements to the array we keep a total sum of its elements and we keep track of the divisor which is \(x\) initially and gets multiplied by \(x\) after each iteration.  If we process an element we add it to the total result (even though it’ll be added in several chunks they will all sum up to its original value).  And once we reach an element that stops being divisible we stop.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1471</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1471c/">
+    Strange Birthday Party
+  </a>
+  <a href="https://codeforces.com/contest/1471/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471c-strange-birthday-party.kt">(Code)</a>
+
+  <rating>R:1300 <meter min="800" max="3600" value="1300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<p>We solve it greedily by observing that it’s best to give cheapest gifts to people later in the array.  To prove that let’s say that we have two people \(k_i\) and \(k_j\) where \(j &gt; i\), and so \(k_j \ge k_i\), who got gifts \(x\) and \(y\), respectively, with \(x \gt y\) for a total cost of \(x + y\).  Now let’s swap those gifts so that \(k_i\) gets \(y\) (if it was ok to give him \(x\) then it must also be ok to give him smaller \(y\)) and \(k_j\) gets \(min(x, C_j)\) (if it was OK to give \(x\) to \(k_i\) then it must be ok to give it to \(k_j\) as \(k_j \ge k_i\)).  The total cost now becomes \(min(x, C_j) + y\) which is less than or equal than what we had before.</p>
+
+<p>Now it’s just a matter of starting with giving money to everyone and then going from cheapest to more expensive gifts and handle them to people from right to left for as long as we can.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1471</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1471d/">
+    Strange Definition
+  </a>
+  <a href="https://codeforces.com/contest/1471/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471d-strange-definition.kt">(Code)</a>
+
+  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">hashing</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>First, let’s try to see what the adjacency condition means.  Let’s take:</p>
+
+\[x = p_1^{\alpha_1} \cdot \ldots \cdot p_n^{\alpha_n}\]
+
+\[y = p_1^{\beta_1} \cdot \ldots \cdot p_n^{\beta_n}\]
+
+<p>(some \(\alpha_i, \beta_i\) might be \(0\)). Then we can see that:</p>
+
+\[gcd(x, y) = p_1^{\min(\alpha_1, \beta_1)} \cdot \ldots \cdot p_n^{min(\alpha_n, \beta_n)}\]
+
+\[lcm(x, y) = p_1^{\max(\alpha_1, \beta_1)} \cdot \ldots \cdot p_n^{max(\alpha_n, \beta_n)}\]
+
+\[\frac{lcm(x, y)}{gcd(x, y)} = p_1^{max(\alpha_1, \beta_1) - min(\alpha_1, \beta_1)} \cdot \ldots = p_1^{\mid \alpha_1 - \beta_1 \mid} \cdot \ldots \cdot p_n^{\mid \alpha_n - \beta_n \mid}\]
+
+<p>Now for a number to be a perfect square, all its exponents must be even as then:</p>
+
+\[\sqrt{p_1^{2\alpha_1} \cdot \ldots \cdot p_n^{2\alpha_n}} = p_1^{\alpha_1} \cdot \ldots \cdot p_n^{\alpha_n}\]
+
+<p>Going back to the previous formula we therefore conclude that two numbers are adjacent if all their exponents have the same parity.  That means that we don’t care about the exponent, only about their parities so we can normalize all numbers by:</p>
+
+\[\mathcal{N}(p_1^{\alpha_1} \cdot \ldots \cdot p_n^{\alpha_n}) = p_1^{\alpha_1 \mod 2} \cdot \ldots \cdot p_n^{\alpha_n \mod 2}\]
+
+<p>and then we also have that \(x\) is adjacent to \(y\) iff \(\mathcal{N}(x) = \mathcal{N}(y)\).</p>
+
+<p>So let’s normalize the input numbers and count frequencies for them (how many copies of each number we have).  The highest frequency count is our initial beauty.</p>
+
+<p>Now what happens when we start replacing?  If any number occurs with an even frequency then it will be immediately collapsed to \(1\) (as after multiplication all the exponents will be even), otherwise it will remain unchanged.  Which means that after the first step everything will stabilize and will not change any more.</p>
+
+<p>So we can just compute the initial beauty and the beauty after single step and then use those two numbers to answer queries \(w = 0\) and \(w &gt; 0\), respectively.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1471</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1471e/">
+    Strange Shuffle
+  </a>
+  <a href="https://codeforces.com/contest/1471/problem/E">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471e-strange-shuffle.kt">(Code)</a>
+
+  <rating>R:2500 <meter min="800" max="3600" value="2500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+  </labels>
+</div>
+
+<p>Let’s first see the number of card changes after a couple of turns (underlined number is the impostor)</p>
+
+\[\ldots, 4, 4, 4, \mathbf{\underline{4}}, 4, 4, 4, \ldots\]
+
+\[\ldots, 4, 4, \mathbf{3, \underline{4}, 5}, 4, 4, \ldots\]
+
+\[\ldots, 4, \mathbf{3, 3, \underline{4}, 5, 5}, 4, \ldots\]
+
+\[\ldots, \mathbf{3, 3, 3, \underline{4}, 5, 5, 5}, \ldots\]
+
+<p>Crucial observations are:</p>
+
+<ul>
+  <li>impostor will continue holding \(k\) cards,</li>
+  <li>affected people to the left of him will have less than \(k\) cards and to the right of him more than \(k\) cards,</li>
+  <li>number of affected people (to left and right) increases by one after each move.</li>
+</ul>
+
+<p>The idea is to first try to find a block of affected people and, once we have that, we can zone in on the impostor using binary search.</p>
+
+<p>How do find the block?  In the first moves the number of affected people is so small that it’s hopeless. However, we can wait, say 500 turns, by which point the block will grow to \(500+1+500\).  We need to be careful with hitting impostor so to avoid that we will always query for two consecutive positions in every block.  Even for the maximal \(n = 10^5\) we only have \(100\) blocks and so we will identify a block in at most \(200\) queries.</p>
+
+<p>Let’s say we found an affected person at position \(i\).  We know whether the affected person is to the left or right of the impostor.  If he’s to the left then we know that impostor is somewhere in the segment of \([i, i+700]\) (or however many turns into the game we are); similarly for the other case, when the person is to the right of impostor.  For such a small segment we can find an impostor in \(\log s\) queries, where \(s\) is the size of the segment, so in this case we need at most \(10\) additional queries.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1471</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1471f/">
+    Strange Housing
+  </a>
+  <a href="https://codeforces.com/contest/1471/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2200 <meter min="800" max="3600" value="2200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1470</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1470e/">
+    Strange Permutation
+  </a>
+  <a href="https://codeforces.com/contest/1470/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3200 <meter min="800" max="3600" value="3200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">two pointers</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1470</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1470f/">
+    Strange Covering
+  </a>
+  <a href="https://codeforces.com/contest/1470/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3500 <meter min="800" max="3600" value="3500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">divide and conquer</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-694.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

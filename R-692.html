@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 692 (Div I+II) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 692 (Div I+II)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 692 (Div I+II)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-692","headline":"Round 692 (Div I+II)","dateModified":"2020-12-20T00:00:00+00:00","datePublished":"2020-12-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-692"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #692 (Div. 1, based on Technocup 2021 Elimination Round 3)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 692 (Div I+II)","dateModified":"2020-12-20T00:00:00+00:00","url":"/codeforces-editorials/R-692","datePublished":"2020-12-20T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-692"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #692 (Div. 1, based on Technocup 2021 Elimination Round 3)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -91,9 +91,13 @@
 <p><a href="https://codeforces.com/contest/1465">Codeforces Round #692 (Div. 2, based on Technocup 2021 Elimination Round 3)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1465</tiny>A
 
-  In-game Chat
+  
+  <a href="/codeforces-editorials/problems/1465a/">
+    In-game Chat
+  </a>
   <a href="https://codeforces.com/contest/1465/problem/A">
   [CF]
   </a>
@@ -113,9 +117,13 @@
 <p>Trivial, just count the number of consecutive “)” at the end and if that number doubled is longer than the length of the string then the message is bad.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1465</tiny>B
 
-  Fair Numbers
+  
+  <a href="/codeforces-editorials/problems/1465b/">
+    Fair Numbers
+  </a>
   <a href="https://codeforces.com/contest/1465/problem/B">
   [CF]
   </a>
@@ -137,9 +145,13 @@
 <p>Why we won’t have to iterate too much?  Because \(lcm(1, \ldots, 9) = 2520\) which means that every \(2520\)-th number is divisible by all digits from \(1\) to \(9\).</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1465</tiny>C / <tiny>1464</tiny>A
+  
+  <tiny>1465</tiny>C
 
-  Peaceful Rooks
+  
+  <a href="/codeforces-editorials/problems/1465c/">
+    Peaceful Rooks
+  </a>
   <a href="https://codeforces.com/contest/1465/problem/C">
   [CF]
   </a>
@@ -169,9 +181,13 @@
 <p>Why does that work?  Well, think of this as a graph, where each rook at position \((x, y)\) we represent as an edge \(x \to y\).  Our goal is to transform this graph into self-loops, i.e. all rooks at positions \((x, x)\).  From the fact that no two rooks attack each other we infer that there is at most one edge leading to and from each vertex.  Which in turn means that the graph can only have simple paths and simple cycles.  A path can be unwound into a bunch of self-loops with one move per each of its node.  And a single cycle can be transformed into a path with a single move (the fact that it’s always possible comes from the fact that there is at least one row/column unoccupied).  So a total number of moves is the number of rooks, minus the number of rooks which are initially on the diagonal, plus the number of cycles.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1465</tiny>D / <tiny>1464</tiny>B
+  
+  <tiny>1465</tiny>D
 
-  Grime Zoo
+  
+  <a href="/codeforces-editorials/problems/1465d/">
+    Grime Zoo
+  </a>
   <a href="https://codeforces.com/contest/1465/problem/D">
   [CF]
   </a>
@@ -209,9 +225,13 @@
 <p>Now we will sweep from left to right to replace ones with zeroes. To do that we will keep of four variables: \(z_l, z_r, o_l, o_r\), which are, respectively, number of zeroes/ones to the left/right of the index we’re considering.  When we see \(0\) or \(1\) we just update those variables, which is fairly simple.  When we see \("?"\) we will be replacing \(1\) with a \(0\) and on top of updating those variables (careful!) we also need to update the score, we’re adding \(o_l\) \(10\) pairs to the left and \(o_r\) \(01\) pairs to the right and removing \(z_l\) \(01\) pairs to the left and \(z_r\) \(10\) pairs to the right, so in total we’re incrementing the score by \(y(o_l - z_r) + x(o_r - z_l)\).  We then take the minimal score across all considered options.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1465</tiny>E / <tiny>1464</tiny>A
+  
+  <tiny>1465</tiny>E
 
-  Poman Numbers
+  
+  <a href="/codeforces-editorials/problems/1465e/">
+    Poman Numbers
+  </a>
   <a href="https://codeforces.com/contest/1465/problem/E">
   [CF]
   </a>
@@ -235,9 +255,13 @@
 <p>Now knowing that we update target based on the last two digits and for the rest we apply a greedy approach: we sort digits in descending orders and apply each one in turn with the sign that will bring us closer to the target.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1465</tiny>F / <tiny>1464</tiny>D
+  
+  <tiny>1465</tiny>F
 
-  The Thorny Path
+  
+  <a href="/codeforces-editorials/problems/1465f/">
+    The Thorny Path
+  </a>
   <a href="https://codeforces.com/contest/1465/problem/F">
   [CF]
   </a>
@@ -258,9 +282,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1464</tiny>E
 
-  No Game No Life
+  
+  <a href="/codeforces-editorials/problems/1464e/">
+    No Game No Life
+  </a>
   <a href="https://codeforces.com/contest/1464/problem/E">
   [CF]
   </a>
@@ -287,9 +315,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1464</tiny>F
 
-  My Beautiful Madness
+  
+  <a href="/codeforces-editorials/problems/1464f/">
+    My Beautiful Madness
+  </a>
   <a href="https://codeforces.com/contest/1464/problem/F">
   [CF]
   </a>

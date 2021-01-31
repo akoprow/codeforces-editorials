@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Strange Beauty</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Strange Beauty | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Strange Beauty" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces editorials" />
+<meta property="og:description" content="Codeforces editorials" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Strange Beauty" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Strange Beauty","url":"/codeforces-editorials/problems/1475g/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <div class="alert alert-primary" role="alert">
+  
+  <tiny>1475</tiny>G
+
+  
+  <a href="/codeforces-editorials/problems/1475g/">
+    Strange Beauty
+  </a>
+  <a href="https://codeforces.com/contest/1475/problem/G">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r697/1475g-strange-beauty.kt">(Code)</a>
+
+  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, let’s sort the input array.  Now for each number \(x\) we will want to see how many numbers smaller than \(x\) we can put together with \(x\) to form a beautiful array.  We keep track of a mapping from a number to that value, let’s call that \(f\), and when seeing \(x\) update mapping for \(x\) to:</p>
+
+\[\max_{d \in \mathcal{D}(x)} f(d)+1\]
+
+<p>where \(\mathcal{D}{x}\) is a set of all divisors of \(x\).  In other words we go through all divisors of \(d\) (those are all numbers that can be with \(x\) in a beautiful array) and pick the best one, adding \(1\) because we extend the sequence with \(x\).</p>
+
+<p>To do that we need to efficiently iterate through all divisors of any number and we do that by precomputing all divisors of all numbers up to \(2 \cdot 10^5\) using the sieve of Eratosthenes.</p>
+
+<p>I actually had a lot of problems avoiding TLE on this problem with Kotlin.</p>
+
+
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

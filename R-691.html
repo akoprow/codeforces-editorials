@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 691 (Div I+II) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 691 (Div I+II)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 691 (Div I+II)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-691","headline":"Round 691 (Div I+II)","dateModified":"2020-12-19T00:00:00+00:00","datePublished":"2020-12-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-691"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #691 (Div. 1)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 691 (Div I+II)","dateModified":"2020-12-19T00:00:00+00:00","url":"/codeforces-editorials/R-691","datePublished":"2020-12-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-691"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #691 (Div. 1)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -91,9 +91,13 @@
 <p><a href="https://codeforces.com/contest/1459">Codeforces Round #691 (Div. 2)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1459</tiny>A
 
-  Red-Blue Shuffle
+  
+  <a href="/codeforces-editorials/problems/1459a/">
+    Red-Blue Shuffle
+  </a>
   <a href="https://codeforces.com/contest/1459/problem/A">
   [CF]
   </a>
@@ -117,9 +121,13 @@
 <p>After that all cards have different digits and so after permutation it will always be the first card that will decide the overall result.  So we simply look at all the cards and count cases where \(r_i &gt; b_i\) and where \(b_i &gt; r_i\) and compare those two numbers. If the former is larger than we answer “RED”, if latter “BLUE” and if they are equal then “EQUAL”.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1459</tiny>B
 
-  Move and Turn
+  
+  <a href="/codeforces-editorials/problems/1459b/">
+    Move and Turn
+  </a>
   <a href="https://codeforces.com/contest/1459/problem/B">
   [CF]
   </a>
@@ -147,9 +155,13 @@
 <p>Now, configurations that we reach in those two cases are disjoint.  Why is that?  That’s because each move changes parity of the values along each axis and so those parities cannot be the same after \(k\) and \(k+1\) moves.  That means that the total number of combinations in the odd case is: \(2(k+1)(k+2)\).</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1459</tiny>C / <tiny>1458</tiny>A
+  
+  <tiny>1459</tiny>C
 
-  Row GCD
+  
+  <a href="/codeforces-editorials/problems/1459c/">
+    Row GCD
+  </a>
   <a href="https://codeforces.com/contest/1459/problem/C">
   [CF]
   </a>
@@ -175,9 +187,13 @@
 <p>Another way to reason about that is as follows.  We know that \(gcd(x, y) = gcd(x-y, y)\).  We will want to compute \(gcd(a_1 + b_j, a_2+b_j, \ldots, a_n + b_j)\).  By subtracting the \(a_1+b_j\) from all the other terms we get that that formula equals to \(gcd(a_1 + b_j, a_2 - a_1, \ldots a_n - a_1)\), which equals to: \(gcd(a_1 + b_j, gcd(a_2 - a_1, \ldots a_n - a_1))\). We an easily see that the second argument does not depend on the queries and so we can precompute it and then answering each query comes down to a single \(gcd\) of 2 arguments.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1459</tiny>D / <tiny>1458</tiny>B
+  
+  <tiny>1459</tiny>D
 
-  Glass Half Spilled
+  
+  <a href="/codeforces-editorials/problems/1459d/">
+    Glass Half Spilled
+  </a>
   <a href="https://codeforces.com/contest/1459/problem/D">
   [CF]
   </a>
@@ -207,9 +223,13 @@
 <p>Not strictly necessary but if we are careful and do the computations in the right order we can get rid of the first dimension \(i\); see code for details.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1459</tiny>E / <tiny>1458</tiny>C
+  
+  <tiny>1459</tiny>E
 
-  Latin Square
+  
+  <a href="/codeforces-editorials/problems/1459e/">
+    Latin Square
+  </a>
   <a href="https://codeforces.com/contest/1459/problem/E">
   [CF]
   </a>
@@ -232,9 +252,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1459</tiny>F / <tiny>1458</tiny>D
+  
+  <tiny>1459</tiny>F
 
-  Flip and Reverse
+  
+  <a href="/codeforces-editorials/problems/1459f/">
+    Flip and Reverse
+  </a>
   <a href="https://codeforces.com/contest/1459/problem/F">
   [CF]
   </a>
@@ -257,9 +281,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1458</tiny>E
 
-  Nim Shortcuts
+  
+  <a href="/codeforces-editorials/problems/1458e/">
+    Nim Shortcuts
+  </a>
   <a href="https://codeforces.com/contest/1458/problem/E">
   [CF]
   </a>
@@ -282,9 +310,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1458</tiny>F
 
-  Range Diameter Sum
+  
+  <a href="/codeforces-editorials/problems/1458f/">
+    Range Diameter Sum
+  </a>
   <a href="https://codeforces.com/contest/1458/problem/F">
   [CF]
   </a>

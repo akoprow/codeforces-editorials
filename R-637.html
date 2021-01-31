@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 637 (Div I+II) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 637 (Div I+II)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 637 (Div I+II)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-637","headline":"Round 637 (Div I+II)","dateModified":"2020-04-23T00:00:00+01:00","datePublished":"2020-04-23T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-637"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #637 (Div. 1) - Thanks, Ivan Belonogov!","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 637 (Div I+II)","dateModified":"2020-04-23T00:00:00+01:00","url":"/codeforces-editorials/R-637","datePublished":"2020-04-23T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-637"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #637 (Div. 1) - Thanks, Ivan Belonogov!","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -91,9 +91,13 @@
 <p><a href="https://codeforces.com/contest/1341">Codeforces Round #637 (Div. 2) - Thanks, Ivan Belonogov!</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1341</tiny>A
 
-  Nastya and Rice
+  
+  <a href="/codeforces-editorials/problems/1341a/">
+    Nastya and Rice
+  </a>
   <a href="https://codeforces.com/contest/1341/problem/A">
   [CF]
   </a>
@@ -113,9 +117,13 @@
 <p>It is important to understand that not every grain must weigh the same.  Which in turn means that all grain together can weight <em>any</em> value in \([n(a-b), n(a+b)]\) and we need only check whether that segment intersects with \([c-d, c+d]\), which represents possible weights of the package.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1341</tiny>B
 
-  Nastya and Door
+  
+  <a href="/codeforces-editorials/problems/1341b/">
+    Nastya and Door
+  </a>
   <a href="https://codeforces.com/contest/1341/problem/B">
   [CF]
   </a>
@@ -137,9 +145,13 @@
 <p>We have a constant time check to see if a given index is a peak or not.  So we just maintain a window of size \(k\) and count the number of peaks within the window.  Moving to the next index one position falls out of our window and one falls into it so we need to do at most two updates to our set of peaks.  Careful with off-by-one errors due to boundary conditions! (segment boundary never counts as a peak)</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1341</tiny>C / <tiny>1340</tiny>A
+  
+  <tiny>1341</tiny>C
 
-  Nastya and Strange Generator
+  
+  <a href="/codeforces-editorials/problems/1341c/">
+    Nastya and Strange Generator
+  </a>
   <a href="https://codeforces.com/contest/1341/problem/C">
   [CF]
   </a>
@@ -161,9 +173,13 @@
 <p>What happens in the first step?  All \(count_i\) are \(1\) and so we choose arbitrary position for \(1\).  What next?  The counts will be \(1, 1, \ldots, 0, 2, 1, \ldots 1\) and we will be forced to fill indices after \(1\) one by one until the end of the array.  Then we will repeat the process on the prefix of the array with remaining numbers.  Overall that means that we need to check if \(p_i\) consist of a series of sequences increasing by 1.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1341</tiny>D / <tiny>1340</tiny>B
+  
+  <tiny>1341</tiny>D
 
-  Nastya and Scoreboard
+  
+  <a href="/codeforces-editorials/problems/1341d/">
+    Nastya and Scoreboard
+  </a>
   <a href="https://codeforces.com/contest/1341/problem/D">
   [CF]
   </a>
@@ -189,9 +205,13 @@
 <p>Once we have that if \(D_{n,k} = false\) we answer \(-1\).  Otherwise, we need to reconstruct the answer.  To do that we go from left to right and greedily choose the largest possible target digit we can, such that we will be able to turn it into a total solution, as per \(D\).  By choosing largest digit we can at each step we guarantee that the final score will be as high as possible.</p>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1341</tiny>E / <tiny>1340</tiny>C
+  
+  <tiny>1341</tiny>E
 
-  Nastya and Unexpected Guest
+  
+  <a href="/codeforces-editorials/problems/1341e/">
+    Nastya and Unexpected Guest
+  </a>
   <a href="https://codeforces.com/contest/1341/problem/E">
   [CF]
   </a>
@@ -216,9 +236,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
-  <tiny>1341</tiny>F / <tiny>1340</tiny>D
+  
+  <tiny>1341</tiny>F
 
-  Nastya and Time Machine
+  
+  <a href="/codeforces-editorials/problems/1341f/">
+    Nastya and Time Machine
+  </a>
   <a href="https://codeforces.com/contest/1341/problem/F">
   [CF]
   </a>
@@ -243,9 +267,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1340</tiny>E
 
-  Nastya and Bees
+  
+  <a href="/codeforces-editorials/problems/1340e/">
+    Nastya and Bees
+  </a>
   <a href="https://codeforces.com/contest/1340/problem/E">
   [CF]
   </a>
@@ -270,9 +298,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1340</tiny>F
 
-  Nastya and CBS
+  
+  <a href="/codeforces-editorials/problems/1340f/">
+    Nastya and CBS
+  </a>
   <a href="https://codeforces.com/contest/1340/problem/F">
   [CF]
   </a>

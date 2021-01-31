@@ -15,7 +15,7 @@
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Round 638 (Div II) | Codeforces editorials</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Round 638 (Div II)" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
@@ -27,7 +27,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Round 638 (Div II)" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"/codeforces-editorials/R-638","headline":"Round 638 (Div II)","dateModified":"2020-05-01T00:00:00+01:00","datePublished":"2020-05-01T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-638"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #638 (Div. 2)","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Round 638 (Div II)","dateModified":"2020-05-01T00:00:00+01:00","url":"/codeforces-editorials/R-638","datePublished":"2020-05-01T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-638"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #638 (Div. 2)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -89,9 +89,13 @@
   <p><a href="https://codeforces.com/contest/1348">Codeforces Round #638 (Div. 2)</a></p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1348</tiny>A
 
-  Phoenix and Balance
+  
+  <a href="/codeforces-editorials/problems/1348a/">
+    Phoenix and Balance
+  </a>
   <a href="https://codeforces.com/contest/1348/problem/A">
   [CF]
   </a>
@@ -113,9 +117,13 @@
 <p>The heaviest coin is heavier than all the other ones combined: think binary representation for easy proof. So we take it together with all the lightest ones to minimize the difference between the piles.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1348</tiny>B
 
-  Phoenix and Beauty
+  
+  <a href="/codeforces-editorials/problems/1348b/">
+    Phoenix and Beauty
+  </a>
   <a href="https://codeforces.com/contest/1348/problem/B">
   [CF]
   </a>
@@ -141,9 +149,13 @@
 <p>For the array to be beautiful it must be \(k\)-periodic.  We collect all the numbers in \(a\).  If there are more than \(k\) different numbers in it then clearly the answer is \(-1\).  Otherwise we take numbers from \(a\) one by one and put \(k-1\) \(1\)s in between them to ensure the result is \(k\)-periodic.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1348</tiny>C
 
-  Phoenix and Distribution
+  
+  <a href="/codeforces-editorials/problems/1348c/">
+    Phoenix and Distribution
+  </a>
   <a href="https://codeforces.com/contest/1348/problem/C">
   [CF]
   </a>
@@ -169,9 +181,13 @@
 <p>We sort the input and check if first and \(k\)-th letter are equal.  If they are not then the \(k\)-th letter is the answer, as that means there is a smaller letter before it and it makes sense to append all the remaining letters to it as it will still be lexicographically smaller than the \(k\)-th letter on its own.  Otherwise, if \(k\) first letters are the same then we have two cases: if all the remaining letters are the same then we distribute them equally; if they are not then it is optimal to attach all of them to a single pile and that is the answer.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1348</tiny>D
 
-  Phoenix and Science
+  
+  <a href="/codeforces-editorials/problems/1348d/">
+    Phoenix and Science
+  </a>
   <a href="https://codeforces.com/contest/1348/problem/D">
   [CF]
   </a>
@@ -199,9 +215,13 @@
 <p>Let’s think about the total growth from day to day.  If we had \(x\) bacteria then during the night the mass will increase to something between \(x+1\) and \(2x\).  So the problem can be reworded as finding the shortest increasing sequence that sums up to \(n\) and consecutive elements are at most doubled.  A possible construction is to double the value is every step until reaching \(n\) – so possibly the last element will be smaller.  It’s enough to put that element in its right place (i.e. to maintain the property that the array is sorted).  All the constraints will be satisfied and it’s fairly easy to convince oneself that this is the shortest possible sequence.</p>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1348</tiny>E
 
-  Phoenix and Berries
+  
+  <a href="/codeforces-editorials/problems/1348e/">
+    Phoenix and Berries
+  </a>
   <a href="https://codeforces.com/contest/1348/problem/E">
   [CF]
   </a>
@@ -228,9 +248,13 @@
 </code></pre></div></div>
 
 <div class="alert alert-primary" role="alert">
+  
   <tiny>1348</tiny>F
 
-  Phoenix and Memory
+  
+  <a href="/codeforces-editorials/problems/1348f/">
+    Phoenix and Memory
+  </a>
   <a href="https://codeforces.com/contest/1348/problem/F">
   [CF]
   </a>
