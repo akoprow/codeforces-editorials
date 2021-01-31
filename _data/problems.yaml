@@ -1648,55 +1648,55 @@
   labels: "greedy"
   rating: 3000
 
-- id: "1466A"
-  title: "Bovine Dilemma"
-  labels: "brute force, math"
-  #code: "other/goodbye2020/1466a-bovine-dilemma.kt"
-  rating: 800
-
-- id: "1466B"
-  title: "Last minute enhancements"
-  labels: "dp, greedy"
-  #code: "other/goodbye2020/1466b-last-minute-enhancements.kt"
-  rating: 800
-
-- id: "1466C"
-  title: "Canine poetry"
-  labels: "dp, greedy, strings"
-  #code: "other/goodbye2020/1466c-canine-poetry.kt"
-  rating: 1300
-
-- id: "1466D"
-  title: "13th Labour of Heracles"
-  labels: "data structures, greedy, sortings, trees"
-  #code: "other/goodbye2020/1466d-13th-labour-of-heracles.kt"
-  rating: 1500
-
-- id: "1466E"
-  title: "Apollo versus Pan"
-  labels: "bitmasks, brute force, math"
-  #code: "other/goodbye2020/1466e-apollo-vs-pan.kt"
-  rating: 1800
-
-- id: "1466F"
-  title: "Euclid's nightmare"
-  labels: "dfs and similar, dsu, graphs, greedy, math, sortings"
-  rating: 2100
-
-- id: "1466G"
-  title: "Song of the Sirens"
-  labels: "divide and conquer, hashing, math, strings"
-  rating: 2600
-
-- id: "1466H"
-  title: "Finding satisfactory solutions"
-  labels: "dp, graphs, greedy, math"
-  rating: 3300
-
-- id: "1466I"
-  title: "The Riddle of the Sphinx"
-  labels: "binary search, data structures, data structures, interactive"
-  rating: 3400
+# - id: "1466A"
+#   title: "Bovine Dilemma"
+#   labels: "brute force, math"
+#   code: "other/goodbye2020/1466a-bovine-dilemma.kt"
+#   rating: 800
+#
+# - id: "1466B"
+#   title: "Last minute enhancements"
+#   labels: "dp, greedy"
+#   code: "other/goodbye2020/1466b-last-minute-enhancements.kt"
+#   rating: 800
+#
+# - id: "1466C"
+#   title: "Canine poetry"
+#   labels: "dp, greedy, strings"
+#   code: "other/goodbye2020/1466c-canine-poetry.kt"
+#   rating: 1300
+#
+# - id: "1466D"
+#   title: "13th Labour of Heracles"
+#   labels: "data structures, greedy, sortings, trees"
+#   code: "other/goodbye2020/1466d-13th-labour-of-heracles.kt"
+#   rating: 1500
+#
+# - id: "1466E"
+#   title: "Apollo versus Pan"
+#   labels: "bitmasks, brute force, math"
+#   code: "other/goodbye2020/1466e-apollo-vs-pan.kt"
+#   rating: 1800
+#
+# - id: "1466F"
+#   title: "Euclid's nightmare"
+#   labels: "dfs and similar, dsu, graphs, greedy, math, sortings"
+#   rating: 2100
+#
+# - id: "1466G"
+#   title: "Song of the Sirens"
+#   labels: "divide and conquer, hashing, math, strings"
+#   rating: 2600
+#
+# - id: "1466H"
+#   title: "Finding satisfactory solutions"
+#   labels: "dp, graphs, greedy, math"
+#   rating: 3300
+#
+# - id: "1466I"
+#   title: "The Riddle of the Sphinx"
+#   labels: "binary search, data structures, data structures, interactive"
+#   rating: 3400
 
 - id: "1467A"
   title: "Wizard of Orz"
@@ -1805,44 +1805,44 @@
   labels: "constructive algorithms, dfs and similar, graphs, greedy"
   rating: 2200
 
-- id: "1473A"
-  title: "Replacing Elements"
-  labels: "greedy, implementation, math, sortings"
-  rating: 800
-  #code: "edu/edu102/1473a-replacing-elements.kt"
-
-- id: "1473B"
-  title: "String LCM"
-  labels: "brute force, math, number theory, strings"
-  rating: 1000
-  #code: "edu/edu102/1473b-string-lcm.kt"
-
-- id: "1473C"
-  title: "No More Inversions"
-  labels: "constructive algorithms, math"
-  rating: 1500
-  #code: "edu/edu102/1473c-no-more-inversions.kt"
-
-- id: "1473D"
-  title: "Program"
-  labels: "data structures, dp, implementation, strings"
-  rating: 1700
-  #code: "edu/edu102/1473d-program.kt"
-
-- id: "1473E"
-  title: "Minimum Path"
-  labels: "graphs, shortest paths"
-  rating: 2400
-
-- id: "1473F"
-  title: "Strange Set"
-  labels: "flows, math"
-  rating: 2700
-
-- id: "1473G"
-  title: "Tiles"
-  labels: "combinatorics, dp, fft, math"
-  rating: 2800
+# - id: "1473A"
+#   title: "Replacing Elements"
+#   labels: "greedy, implementation, math, sortings"
+#   rating: 800
+#   code: "edu/edu102/1473a-replacing-elements.kt"
+#
+# - id: "1473B"
+#   title: "String LCM"
+#   labels: "brute force, math, number theory, strings"
+#   rating: 1000
+#   code: "edu/edu102/1473b-string-lcm.kt"
+#
+# - id: "1473C"
+#   title: "No More Inversions"
+#   labels: "constructive algorithms, math"
+#   rating: 1500
+#   code: "edu/edu102/1473c-no-more-inversions.kt"
+#
+# - id: "1473D"
+#   title: "Program"
+#   labels: "data structures, dp, implementation, strings"
+#   rating: 1700
+#   code: "edu/edu102/1473d-program.kt"
+#
+# - id: "1473E"
+#   title: "Minimum Path"
+#   labels: "graphs, shortest paths"
+#   rating: 2400
+#
+# - id: "1473F"
+#   title: "Strange Set"
+#   labels: "flows, math"
+#   rating: 2700
+#
+# - id: "1473G"
+#   title: "Tiles"
+#   labels: "combinatorics, dp, fft, math"
+#   rating: 2800
 
 - id: "1474A"
   title: "Puzzle From the Future"
@@ -1920,76 +1920,76 @@
   rating: 1900
   code: "r680-699/r697/1475g-strange-beauty.kt"
 
-- id: "1476A"
-  title: "K-divisible Sum"
-  labels: "binary search, constructive algorithms, greedy, math"
-  #code: "edu/edu103/1476a-k-divisible-sum.kt"
-
-- id: "1476B"
-  title: "Inflation"
-  labels: "binary search, brute force, greedy, math"
-  #code: "edu/edu103/1476b-inflation.kt"
-
-- id: "1476C"
-  title: "Longest Simple Cycle"
-  labels: "dp, graphs, greedy"
-  #code: "edu/edu103/1476c-longest-simple-cycle.kt"
-
-- id: "1476D"
-  title: "Journey"
-  labels: "dfs and similar, dp, dsu"
-  #code: "edu/edu103/1476d-journey.kt"
-
-- id: "1476E"
-  title: "Pattern Matching"
-  labels: "bitmasks, data structures, dfs and similar, graphs, implementation, strings"
-
-- id: "1476F"
-  title: "Lanterns"
-  labels: "data structures, dp"
-
-- id: "1476G"
-  title: "Minimum Difference"
-  labels: "data structures, two pointers"
-
-- id: "1477D"
-  title: "Nezzar and Hidden Permutations"
-  labels: "dfs and similar, dfs and similar"
-
-- id: "1477E"
-  title: "Nezzar and Tournaments"
-  labels: "data structures, greedy"
-
-- id: "1477F"
-  title: "Nezzar and Chocolate Bars"
-  labels: "combinatorics, fft, math, probabilities"
-
-- id: "1478A"
-  title: "Nezzar and Colorful Balls"
-  labels: "brute force, greedy"
-  #code: "r680-699/r698/1478a-nezzar-and-colorful-balls.kt"
-
-- id: "1478B"
-  title: "Nezzar and Lucky Number"
-  labels: "brute force, dp, math"
-  #code: "r680-699/r698/1478b-nezzar-and-lucky-numbers.kt"
-
-- id: "1478C"
-  title: "Nezzar and Symmetric Array"
-  labels: "constructive algorithms, implementation, math, sortings"
-  #code: "r680-699/r698/1478c-nezzar-and-symetric-array.kt"
-
-- id: "1478D"
-  title: "Nezzar and Board"
-  labels: "math, number theory"
-  also-as: "1477A"
-
-- id: "1478E"
-  title: "Nezzar and Binary String"
-  labels: "data structures, greedy, trees"
-  also-as: "1477B"
-
-- id: "1478F"
-  title: "Nezzar and Nice Beatmap"
-  labels: "constructive algorithms, geometry"
-  also-as: "1477C"
+# - id: "1476A"
+#   title: "K-divisible Sum"
+#   labels: "binary search, constructive algorithms, greedy, math"
+#   code: "edu/edu103/1476a-k-divisible-sum.kt"
+#
+# - id: "1476B"
+#   title: "Inflation"
+#   labels: "binary search, brute force, greedy, math"
+#   code: "edu/edu103/1476b-inflation.kt"
+#
+# - id: "1476C"
+#   title: "Longest Simple Cycle"
+#   labels: "dp, graphs, greedy"
+#   code: "edu/edu103/1476c-longest-simple-cycle.kt"
+#
+# - id: "1476D"
+#   title: "Journey"
+#   labels: "dfs and similar, dp, dsu"
+#   code: "edu/edu103/1476d-journey.kt"
+#
+# - id: "1476E"
+#   title: "Pattern Matching"
+#   labels: "bitmasks, data structures, dfs and similar, graphs, implementation, strings"
+#
+# - id: "1476F"
+#   title: "Lanterns"
+#   labels: "data structures, dp"
+#
+# - id: "1476G"
+#   title: "Minimum Difference"
+#   labels: "data structures, two pointers"
+#
+# - id: "1477D"
+#   title: "Nezzar and Hidden Permutations"
+#   labels: "dfs and similar, dfs and similar"
+#
+# - id: "1477E"
+#   title: "Nezzar and Tournaments"
+#   labels: "data structures, greedy"
+#
+# - id: "1477F"
+#   title: "Nezzar and Chocolate Bars"
+#   labels: "combinatorics, fft, math, probabilities"
+#
+# - id: "1478A"
+#   title: "Nezzar and Colorful Balls"
+#   labels: "brute force, greedy"
+#   code: "r680-699/r698/1478a-nezzar-and-colorful-balls.kt"
+#
+# - id: "1478B"
+#   title: "Nezzar and Lucky Number"
+#   labels: "brute force, dp, math"
+#   code: "r680-699/r698/1478b-nezzar-and-lucky-numbers.kt"
+#
+# - id: "1478C"
+#   title: "Nezzar and Symmetric Array"
+#   labels: "constructive algorithms, implementation, math, sortings"
+#   code: "r680-699/r698/1478c-nezzar-and-symetric-array.kt"
+#
+# - id: "1478D"
+#   title: "Nezzar and Board"
+#   labels: "math, number theory"
+#   also-as: "1477A"
+#
+# - id: "1478E"
+#   title: "Nezzar and Binary String"
+#   labels: "data structures, greedy, trees"
+#   also-as: "1477B"
+#
+# - id: "1478F"
+#   title: "Nezzar and Nice Beatmap"
+#   labels: "constructive algorithms, geometry"
+#   also-as: "1477C"
