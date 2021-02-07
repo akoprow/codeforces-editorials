@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Educational Round 103</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Educational Round 103 | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Educational Round 103" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Educational Codeforces Round 103 (Rated for Div. 2)" />
+<meta property="og:description" content="Educational Codeforces Round 103 (Rated for Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Educational Round 103" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Educational Round 103","dateModified":"2021-01-29T00:00:00+00:00","url":"/codeforces-editorials/Edu-103","datePublished":"2021-01-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/Edu-103"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Educational Codeforces Round 103 (Rated for Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Educational Round 103</h2>
+  <time datetime="2021-01-29T00:00:00+00:00" class="by-line">29 Jan 2021</time>
+  <p><a href="https://codeforces.com/contest/1476">Educational Codeforces Round 103 (Rated for Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1476</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1476a/">
+    K-divisible Sum
+  </a>
+  <a href="https://codeforces.com/contest/1476/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu103/1476a-k-divisible-sum.kt">(Code)</a>
+
+  <rating>R:1000 <meter min="800" max="3600" value="1000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>We essentially have three cases:</p>
+
+<ul>
+  <li>\(n \ge k\) and \(n\) is divisible by \(k\) then the answer is \(1\) as all elements equal to \(1\) are a correct solution</li>
+  <li>\(n \ge k\) but \(n\) not divisible by \(k\) then the answer is \(2\) as all \(1\) is not divisible by \(k\) and we need to bump up some elements to \(2\).</li>
+  <li>\(k &lt; n\) the answer is \(\lceil \frac{k}{n} \rceil\) as we are aiming for the total sum to be \(k\) in this case and that’s the maximum we will need to put in a single element.</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1476</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1476b/">
+    Inflation
+  </a>
+  <a href="https://codeforces.com/contest/1476/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu103/1476b-inflation.kt">(Code)</a>
+
+  <rating>R:1300 <meter min="800" max="3600" value="1300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>We want:</p>
+
+\[\frac{p_i}{p_0 + \ldots + p_{i-1}} \le \frac{k}{100}\]
+
+<p>or, equivalently:</p>
+
+\[100 \cdot p_i \le k \cdot (p_0 + \ldots + p_{i-1})\]
+
+<p>We compute that by keeping track of the running sum.  If at any point the equation does not hold we compute the delta by which we need to increase the running sum, i.e.:</p>
+
+\[\lceil \frac{100 \cdot p_i - k \cdot (p_0 + \ldots + p_{i-1}}{k} \rceil\]
+
+<p>we update the running sum and continue further.  The sum of all the deltas is our answer.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1476</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1476c/">
+    Longest Simple Cycle
+  </a>
+  <a href="https://codeforces.com/contest/1476/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu103/1476c-longest-simple-cycle.kt">(Code)</a>
+
+  <rating>R:1600 <meter min="800" max="3600" value="1600" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>It’s clear that the cycle’s right side will be one of the chains.  So we’ll iterate over that chain, \(i\), and will keep track of the current longest cycle that we can built to the left of \(i\), let’s call that \(q_i\).  To simplify things, notice that we can swap \(a_i\) and \(b_i\) without influencing the result, so let’s normalize it so that always \(a_i &lt; b_i\).</p>
+
+<p>We have two cases.  If \(a_i = b_i\) then the current chain is connected to the same vertex so \(q_i = 2\) as we can only use the two links to that vertex.</p>
+
+<p>Otherwise we have two options (a picture is worth a thousand words so see notes for a diagram)</p>
+
+<ul>
+  <li>either we follow the links to the previous chain and then follow that chain, that gives us \(2 + b_i - a_i\) or</li>
+  <li>we follow the links and then combine it with the longest cycle so far for \(2 + q_{i-1} + (a_i - 1) + (c_{i-1} - b_i)\).</li>
+</ul>
+
+<p>We combine those two options for the final formula:</p>
+
+\[q_i = 2 + max(b_i - a_i, q_{i-1} + (a_i - 1) + (c_{i-1} - b_i))\]
+
+<p>Now at each position we close the cycle so need to add the path traversed along the last chain so the final answer is \(max_i (q_i + c_i - 1)\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1476</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1476d/">
+    Journey
+  </a>
+  <a href="https://codeforces.com/contest/1476/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu103/1476d-journey.kt">(Code)</a>
+
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dsu</span>
+  
+  </labels>
+</div>
+
+<p>The crucial observation is that if we start at city \(i\) and move to other city \(j\), we can always come back to \(i\).  We can easily see that that’s possible after one step and we can prove it for arbitrary number of steps by induction (or just convince ourselves that it works by observing \(2\) or \(3\) steps).</p>
+
+<p>So now for each city we compute \(L(i)\) and \(L_rev(i)\) denoting how many steps to the left can we move from city \(i\) in initial/reversed setup (all arrows reversed), respectively.  We have \(L(i) = L_rev(i-1)+1\) if \(s_{i-1} = "L"\) and \(0\) otherwise.  Similarly \(L_rev(i) = L(i-1) + 1\) if \(s_{i-1} = "R"\) and \(0\) otherwise.</p>
+
+<p>Now, we do the same for \(R(i)\) and \(R_rev(i)\) to compute our moves to the right.  And we combine it for each city by seeing how far we can go to the left and right, plus the city itself, giving us the final answer for city \(i\) of: \(L_i + R_i + 1\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1476</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1476e/">
+    Pattern Matching
+  </a>
+  <a href="https://codeforces.com/contest/1476/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2300 <meter min="800" max="3600" value="2300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1476</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1476f/">
+    Lanterns
+  </a>
+  <a href="https://codeforces.com/contest/1476/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3000 <meter min="800" max="3600" value="3000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1476</tiny>G
+
+  
+  <a href="/codeforces-editorials/problems/1476g/">
+    Minimum Difference
+  </a>
+  <a href="https://codeforces.com/contest/1476/problem/G">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3100 <meter min="800" max="3600" value="3100" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">two pointers</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/Edu-103.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
