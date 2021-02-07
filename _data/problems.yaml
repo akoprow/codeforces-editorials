@@ -165,6 +165,46 @@
   labels: "dfs and similar, graphs, implementation, shortest paths"
   rating: 2600
 
+- id: "1312A"
+  title: "Two Regular Polygons"
+  labels: "geometry, greedy, math, number theory"
+  rating: 800
+  code: "edu/edu83/1312a-two-regular-polygons.kt"
+
+- id: "1312B"
+  title: "Bogosort"
+  labels: "constructive algorithms, sortings"
+  rating: 1000
+  code: "edu/edu83/1312b-bogosort.kt"
+
+- id: "1312C"
+  title: "Adding Powers"
+  labels: "bitmasks, greedy, implementation, math, number theory, ternary search"
+  rating: 1400
+  code: "edu/edu83/1312c-adding-powers.kt"
+
+- id: "1312D"
+  title: "Count the Arrays"
+  labels: "combinatorics, math"
+  rating: 1700
+  code: "edu/edu83/1312d-count-the-arrays.kt"
+
+- id: "1312E"
+  title: "Array Shrinking"
+  labels: "dp, greedy"
+  rating: 2100
+  code: "edu/edu83/1312e-array-shrinking.kt"
+
+- id: "1312F"
+  title: "Attack on Red Kingdom"
+  labels: "games, two pointers"
+  rating: 2500
+
+- id: "1312G"
+  title: "Autocompletion"
+  labels: "data structures, dfs and similar, dp"
+  rating: 2600
+
 - id: "1325A"
   title: "EhAb AnD gCd"
   labels: "constructive algorithms, greedy, number theory"
@@ -1805,6 +1845,47 @@
   labels: "constructive algorithms, dfs and similar, graphs, greedy"
   rating: 2200
 
+# - id: "1472A"
+#   title: "Cards for Friends"
+#   labels: "greedy, math"
+#   rating: 800
+#   code: "r680-699/r693/1472a-cards-for-friends.kt"
+#
+# - id: "1472B"
+#   title: "Fair Division"
+#   labels: "dp, greedy, math"
+#   rating: 800
+#   code: "r680-699/r693/1472b-fair-division.kt"
+#
+# - id: "1472C"
+#   title: "Long Jumps"
+#   labels: "dp, graphs"
+#   rating: 1100
+#   code: "r680-699/r693/1472c-long-jumps.kt"
+#
+# - id: "1472D"
+#   title: "Even-Odd Game"
+#   labels: "dp, games, greedy, sortings"
+#   rating: 1200
+#   code: "r680-699/r693/1472d-even-odd-game.kt"
+#
+# - id: "1472E"
+#   title: "Correct Placement"
+#   labels: "binary search, data structures, dp, sortings, two pointers"
+#   rating: 1700
+#   code: "r680-699/r693/1472e-correct-placement.kt"
+#
+# - id: "1472F"
+#   title: "New Year's Puzzle"
+#   labels: "brute force, dp, graph matchings, greedy, sortings"
+#   rating: 2100
+#   code: "r680-699/r693/1472f-new-years-puzzle.kt"
+#
+# - id: "1472G"
+#   title: "Moving to the Capital"
+#   labels: "dfs and similar, dp, graphs, shortest paths"
+#   rating: 2100
+
 # - id: "1473A"
 #   title: "Replacing Elements"
 #   labels: "greedy, implementation, math, sortings"
@@ -1920,38 +2001,45 @@
   rating: 1900
   code: "r680-699/r697/1475g-strange-beauty.kt"
 
-# - id: "1476A"
-#   title: "K-divisible Sum"
-#   labels: "binary search, constructive algorithms, greedy, math"
-#   code: "edu/edu103/1476a-k-divisible-sum.kt"
-#
-# - id: "1476B"
-#   title: "Inflation"
-#   labels: "binary search, brute force, greedy, math"
-#   code: "edu/edu103/1476b-inflation.kt"
-#
-# - id: "1476C"
-#   title: "Longest Simple Cycle"
-#   labels: "dp, graphs, greedy"
-#   code: "edu/edu103/1476c-longest-simple-cycle.kt"
-#
-# - id: "1476D"
-#   title: "Journey"
-#   labels: "dfs and similar, dp, dsu"
-#   code: "edu/edu103/1476d-journey.kt"
-#
-# - id: "1476E"
-#   title: "Pattern Matching"
-#   labels: "bitmasks, data structures, dfs and similar, graphs, implementation, strings"
-#
-# - id: "1476F"
-#   title: "Lanterns"
-#   labels: "data structures, dp"
-#
-# - id: "1476G"
-#   title: "Minimum Difference"
-#   labels: "data structures, two pointers"
-#
+- id: "1476A"
+  title: "K-divisible Sum"
+  labels: "binary search, constructive algorithms, greedy, math"
+  rating: 1000
+  code: "edu/edu103/1476a-k-divisible-sum.kt"
+
+- id: "1476B"
+  title: "Inflation"
+  labels: "binary search, brute force, greedy, math"
+  rating: 1300
+  code: "edu/edu103/1476b-inflation.kt"
+
+- id: "1476C"
+  title: "Longest Simple Cycle"
+  labels: "dp, graphs, greedy"
+  rating: 1600
+  code: "edu/edu103/1476c-longest-simple-cycle.kt"
+
+- id: "1476D"
+  title: "Journey"
+  labels: "dfs and similar, dp, dsu"
+  rating: 1700
+  code: "edu/edu103/1476d-journey.kt"
+
+- id: "1476E"
+  title: "Pattern Matching"
+  rating: 2300
+  labels: "bitmasks, data structures, dfs and similar, graphs, implementation, strings"
+
+- id: "1476F"
+  title: "Lanterns"
+  labels: "data structures, dp"
+  rating: 3000
+
+- id: "1476G"
+  title: "Minimum Difference"
+  labels: "data structures, two pointers"
+  rating: 3100
+
 # - id: "1477D"
 #   title: "Nezzar and Hidden Permutations"
 #   labels: "dfs and similar, dfs and similar"
@@ -1993,3 +2081,64 @@
 #   title: "Nezzar and Nice Beatmap"
 #   labels: "constructive algorithms, geometry"
 #   also-as: "1477C"
+
+# - id: "1481A"
+#   title: "Space Navigation "
+#   labels: "greedy, implementation, math, strings"
+#
+# - id: "1481B"
+#   title: "New Colony"
+#   labels: "brute force, greedy, implementation"
+#
+# - id: "1481C"
+#   title: "Fence Painting"
+#   labels: "brute force, constructive algorithms, greedy, implementation"
+#
+# - id: "1481D"
+#   title: "AB Graph"
+#   labels: "constructive algorithms, graphs, greedy, implementation, strings"
+#
+# - id: "1481E"
+#   title: "Sorting Books"
+#   labels: "data structures, dp"
+#
+# - id: "1481F"
+#   title: "AB Tree"
+#   labels: "dp, trees"
+#
+
+# - id: "1479D"
+#   title: "Odd Mineral Resource"
+#   labels: "data structures, probabilities, trees"
+#
+# - id: "1479E"
+#   title: "School Clubs"
+#   labels: "dp, fft, math, number theory, probabilities"
+#
+# - id: "1480A"
+#   title: "Yet Another String Game"
+#   labels: "games, greedy, strings"
+#
+# - id: "1480B"
+#   title: "The Great Hero"
+#   labels: "greedy, implementation"
+#
+# - id: "1480C"
+#   title: "Searching Local Minimum"
+#   labels: "binary search, interactive"
+#   also-as: "1479A"
+#
+# - id: "1480D1"
+#   title: "Painting the Array I"
+#   labels: "data structures, dp, greedy"
+#   also-as: "1479B1"
+#
+# - id: "1480D2"
+#   title: "Painting the Array II"
+#   labels: "data structures, dp, greedy"
+#   also-as: "1479B2"
+#
+# - id: "1480E"
+#   title: "Continuous City"
+#   labels: "bitmasks, constructive algorithms"
+#   also-as: "1479C"
