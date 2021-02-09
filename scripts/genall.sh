@@ -70,3 +70,5 @@
 ./gen.py 1479 R-700   "Round 700 (Div I+II)"
 ./gen.py 1480 R-700   "Round 700 (Div II)"
 ./gen.py 1481 R-699   "Round 699 (Div II)"
+./gen.py 1323 R-626 "Round 626 (Div I+II)"
+./gen.py 1322 R-626 "Round 626 (Div I+II)"

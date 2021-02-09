@@ -205,6 +205,53 @@
   labels: "data structures, dfs and similar, dp"
   rating: 2600
 
+- id: "1322E"
+  title: "Median Mountain Range"
+  labels: "data structures"
+  rating: 3300
+
+- id: "1322F"
+  title: "Assigning Fares"
+  labels: "dp, trees"
+  rating: 3500
+
+- id: "1323A"
+  title: "Even Subset Sum Problem"
+  labels: "brute force, dp, greedy, implementation"
+  rating: 800
+  code: "r620-639/r626/1323a-even-subset-sum-problem.kt"
+
+- id: "1323B"
+  title: "Count Subrectangles"
+  labels: "binary search, greedy, implementation"
+  rating: 1500
+  code: "r620-639/r626/1323b-count-subrectangles.kt"
+
+- id: "1323C"
+  title: "Unusual Competitions"
+  labels: "constructive algorithms"
+  also-as: "1322A"
+  rating: 1300
+  code: "r620-639/r626/1323c-unusual-competitions.kt"
+
+- id: "1323D"
+  title: "Present"
+  labels: "binary search, bitmasks, math, sortings"
+  also-as: "1322B"
+  rating: 2100
+
+- id: "1323E"
+  title: "Instant Noodles"
+  labels: "graphs, math, number theory"
+  also-as: "1322C"
+  rating: 2300
+
+- id: "1323F"
+  title: "Reality Show"
+  labels: "bitmasks, dp, dp"
+  also-as: "1322D"
+  rating: 2800
+
 - id: "1325A"
   title: "EhAb AnD gCd"
   labels: "constructive algorithms, greedy, number theory"
@@ -2082,6 +2129,47 @@
 #   labels: "constructive algorithms, geometry"
 #   also-as: "1477C"
 
+# - id: "1479D"
+#   title: "Odd Mineral Resource"
+#   labels: "data structures, probabilities, trees"
+#
+# - id: "1479E"
+#   title: "School Clubs"
+#   labels: "dp, fft, math, number theory, probabilities"
+#
+# - id: "1480A"
+#   title: "Yet Another String Game"
+#   labels: "games, greedy, strings"
+#   code: "r700-719/r700/1480a-yet-another-string-game.kt"
+#
+# - id: "1480B"
+#   title: "The Great Hero"
+#   labels: "greedy, implementation"
+#   code: "r700-719/r700/1480b-the-great-hero.kt"
+#
+# - id: "1480C"
+#   title: "Searching Local Minimum"
+#   labels: "binary search, interactive"
+#   also-as: "1479A"
+#   code: "r700-719/r700/1480c-searching-local-minimum.kt"
+#
+# - id: "1480D1"
+#   title: "Painting the Array I"
+#   labels: "data structures, dp, greedy"
+#   also-as: "1479B1"
+#   code: "r700-719/r700/1480d1-painting-the-array-i.kt"
+#
+# - id: "1480D2"
+#   title: "Painting the Array II"
+#   labels: "data structures, dp, greedy"
+#   also-as: "1479B2"
+#   code: "r700-719/r700/1480d2-painting-the-array-ii.kt"
+#
+# - id: "1480E"
+#   title: "Continuous City"
+#   labels: "bitmasks, constructive algorithms"
+#   also-as: "1479C"
+
 # - id: "1481A"
 #   title: "Space Navigation "
 #   labels: "greedy, implementation, math, strings"
@@ -2106,39 +2194,3 @@
 #   title: "AB Tree"
 #   labels: "dp, trees"
 #
-
-# - id: "1479D"
-#   title: "Odd Mineral Resource"
-#   labels: "data structures, probabilities, trees"
-#
-# - id: "1479E"
-#   title: "School Clubs"
-#   labels: "dp, fft, math, number theory, probabilities"
-#
-# - id: "1480A"
-#   title: "Yet Another String Game"
-#   labels: "games, greedy, strings"
-#
-# - id: "1480B"
-#   title: "The Great Hero"
-#   labels: "greedy, implementation"
-#
-# - id: "1480C"
-#   title: "Searching Local Minimum"
-#   labels: "binary search, interactive"
-#   also-as: "1479A"
-#
-# - id: "1480D1"
-#   title: "Painting the Array I"
-#   labels: "data structures, dp, greedy"
-#   also-as: "1479B1"
-#
-# - id: "1480D2"
-#   title: "Painting the Array II"
-#   labels: "data structures, dp, greedy"
-#   also-as: "1479B2"
-#
-# - id: "1480E"
-#   title: "Continuous City"
-#   labels: "bitmasks, constructive algorithms"
-#   also-as: "1479C"
