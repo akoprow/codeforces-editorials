@@ -2129,46 +2129,46 @@
 #   labels: "constructive algorithms, geometry"
 #   also-as: "1477C"
 
-# - id: "1479D"
-#   title: "Odd Mineral Resource"
-#   labels: "data structures, probabilities, trees"
-#
-# - id: "1479E"
-#   title: "School Clubs"
-#   labels: "dp, fft, math, number theory, probabilities"
-#
-# - id: "1480A"
-#   title: "Yet Another String Game"
-#   labels: "games, greedy, strings"
-#   code: "r700-719/r700/1480a-yet-another-string-game.kt"
-#
-# - id: "1480B"
-#   title: "The Great Hero"
-#   labels: "greedy, implementation"
-#   code: "r700-719/r700/1480b-the-great-hero.kt"
-#
-# - id: "1480C"
-#   title: "Searching Local Minimum"
-#   labels: "binary search, interactive"
-#   also-as: "1479A"
-#   code: "r700-719/r700/1480c-searching-local-minimum.kt"
-#
-# - id: "1480D1"
-#   title: "Painting the Array I"
-#   labels: "data structures, dp, greedy"
-#   also-as: "1479B1"
-#   code: "r700-719/r700/1480d1-painting-the-array-i.kt"
-#
-# - id: "1480D2"
-#   title: "Painting the Array II"
-#   labels: "data structures, dp, greedy"
-#   also-as: "1479B2"
-#   code: "r700-719/r700/1480d2-painting-the-array-ii.kt"
-#
-# - id: "1480E"
-#   title: "Continuous City"
-#   labels: "bitmasks, constructive algorithms"
-#   also-as: "1479C"
+- id: "1479D"
+  title: "Odd Mineral Resource"
+  labels: "data structures, probabilities, trees"
+
+- id: "1479E"
+  title: "School Clubs"
+  labels: "dp, fft, math, number theory, probabilities"
+
+- id: "1480A"
+  title: "Yet Another String Game"
+  labels: "games, greedy, strings"
+  code: "r700-719/r700/1480a-yet-another-string-game.kt"
+
+- id: "1480B"
+  title: "The Great Hero"
+  labels: "greedy, implementation"
+  code: "r700-719/r700/1480b-the-great-hero.kt"
+
+- id: "1480C"
+  title: "Searching Local Minimum"
+  labels: "binary search, interactive"
+  also-as: "1479A"
+  code: "r700-719/r700/1480c-searching-local-minimum.kt"
+
+- id: "1480D1"
+  title: "Painting the Array I"
+  labels: "data structures, dp, greedy"
+  also-as: "1479B1"
+  code: "r700-719/r700/1480d1-painting-the-array-i.kt"
+
+- id: "1480D2"
+  title: "Painting the Array II"
+  labels: "data structures, dp, greedy"
+  also-as: "1479B2"
+  code: "r700-719/r700/1480d2-painting-the-array-ii.kt"
+
+- id: "1480E"
+  title: "Continuous City"
+  labels: "bitmasks, constructive algorithms"
+  also-as: "1479C"
 
 # - id: "1481A"
 #   title: "Space Navigation "
