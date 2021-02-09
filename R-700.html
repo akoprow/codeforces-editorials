@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 700 (Div I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 700 (Div I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 700 (Div I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #700 (Div. 1)" />
+<meta property="og:description" content="Codeforces Round #700 (Div. 1)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 700 (Div I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 700 (Div I+II)","dateModified":"2021-02-07T00:00:00+00:00","url":"/codeforces-editorials/R-700","datePublished":"2021-02-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-700"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #700 (Div. 1)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 700 (Div I+II)</h2>
+  <time datetime="2021-02-07T00:00:00+00:00" class="by-line">07 Feb 2021</time>
+  <p><a href="https://codeforces.com/contest/1479">Codeforces Round #700 (Div. 1)</a></p>
+
+<p><a href="https://codeforces.com/contest/1480">Codeforces Round #700 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1480</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1480a/">
+    Yet Another String Game
+  </a>
+  <a href="https://codeforces.com/contest/1480/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r700/1480a-yet-another-string-game.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">games</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
+  
+  </labels>
+</div>
+
+<p>Since we’re looking at lexicographic ordering, it’s pretty clear everyone in their move should always change the most significant available letter.  Note that even if it’s Alice’s turn and the first character is “a”, so she cannot improve it from her point of view, she should still change it to “b” (next best), because if she did not Bob would next change it to “z”!</p>
+
+<p>So Alice changes all letters at odd positions and Bob at even positions.  Alice changes to “a” if possible, or “b” otherwise and Bob changes to “z” if possible and “y” otherwise.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1480</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1480b/">
+    The Great Hero
+  </a>
+  <a href="https://codeforces.com/contest/1480/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r700/1480b-the-great-hero.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Clearly we need \(\lceil \frac{b_i}{A} \rceil\) rounds to kill monster \(i\) and in the process we will sustain \(a_i \cdot \lceil \frac{b_i}{A} \rceil\) damage.  Our health needs to remain above zero for all, except perhaps the last round.  So let’s pick the largest \(a_i\), i.e. we will leave monster \(i\) as the last to fight, and check if:</p>
+
+\[B &gt; \sum_i {a_i \cdot \lceil \frac{b_i}{A} \rceil} - \max_i {a_i}\]
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1480</tiny>C / <tiny>1479</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1480c/">
+    Searching Local Minimum
+  </a>
+  <a href="https://codeforces.com/contest/1480/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r700/1480c-searching-local-minimum.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+  </labels>
+</div>
+
+<p>Binary search is the answer.  Our goal is to maintain a segment \([l, r]\) such that \(a_{l-1} &gt; a_l\) and \(a_{r+1} &gt; a_r\).  Those two boundary conditions ensure that there must be a local minimum within the segment.  We start with \([1, n]\), where those inequalities hold “in absentia” (also note that there must be a minimum in \([1, n]\) as it contains \(1\) which is a minimum).</p>
+
+<p>Now how do we perform the step in binary search?  Let’s pick \(m\) in the middle of \([l, r]\) as usual.  However, just asking for \(a_m\) is not enough, we must also ask for \(a_{m+1}\).  Now we have the following options:</p>
+
+<ul>
+  <li>\(a_{m+1} &lt; a_m\) in which case we continue with \([m+1, r]\), as it clearly fulfils our conditions,</li>
+  <li>\(a_m &gt; a_{m+1}\) and then we continue with \([l, m]\).</li>
+  <li>we cannot have \(a_m = a_{m+1}\) as all numbers are distinct in a permutation.</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1480</tiny>D1 / <tiny>1479</tiny>B1
+
+  
+  <a href="/codeforces-editorials/problems/1480d1/">
+    Painting the Array I
+  </a>
+  <a href="https://codeforces.com/contest/1480/problem/D1">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r700/1480d1-painting-the-array-i.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>The following greedy strategy works, let’s construct two optimal subsequences and their last elements (as only those matter) be \(a_l\) and \(a_r\) and we’re now looking at element \(b\).  Then:</p>
+
+<ul>
+  <li>if \(a_l = b\) and \(a_r \neq b\) then assign \(b\) to the right subsequence and we increase the score by \(1\).</li>
+  <li>similarly, if \(a_r = b\) and \(a_l \neq b\) then assign \(b\) to the left subsequence and we increase the score by \(1\).</li>
+  <li>if \(a_l = a_r = b\) then clearly it does not matter to which sequence we assign it.</li>
+  <li>finally if \(a_l \neq b\) and \(a_r \neq b\) then assign \(b\) then check whether in the remaining subsequence we will first get another \(a_l\) or another \(a_r\).  In the former case assign \(b\) to \(a_l\), in the latter to \(a_r\).</li>
+</ul>
+
+<p>Formally proving that this works is not trivial.</p>
+
+<p>I had a completely different reasoning to this which goes something likes this (and unfortunately does not generalize to <code class="language-plaintext highlighter-rouge">D2</code>):</p>
+
+<ul>
+  <li>let’s count the longest blocks of equal numbers</li>
+  <li>if the block has one element we can always score \(1\) for it.</li>
+  <li>no matter how long the block we can never score more than \(2\) for it, as at best we can start two new segments in \(a_l\) and \(a_r\).</li>
+  <li>but clearly we cannot always score \(2\) as in the sequence: \(2, 2, 1, 2, 2\).</li>
+  <li>let’s keep count of: last seen double and number of “neutral” elements, starting with no doubles and 0 neutral elements.</li>
+  <li>if we see a single number then if it’s equal to last seen double then we decrement the number of “neutral” elements, otherwise we increment it and regardless we increase score by one.</li>
+  <li>if we get two neutral elements then we can forget about the last double, it’s been neutralized by them (i.e. we know that in both \(a_l\) and \(a_r\) last element is different to it).</li>
+  <li>if we see a second number that is different than the last double then we increment the score by one, reset neutral elements and remember that this element is the new double.</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1480</tiny>D2 / <tiny>1479</tiny>B2
+
+  
+  <a href="/codeforces-editorials/problems/1480d2/">
+    Painting the Array II
+  </a>
+  <a href="https://codeforces.com/contest/1480/problem/D2">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r700/1480d2-painting-the-array-ii.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>The generic greedy solution from <code class="language-plaintext highlighter-rouge">D1</code> generalizes, only if we see an element that is different than both \(a_l\) and \(a_r\) then we assign it to the sequence whose front element comes <em>sooner</em> rather than <em>later</em>.  Showing that it works is not easy.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1480</tiny>E / <tiny>1479</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1480e/">
+    Continuous City
+  </a>
+  <a href="https://codeforces.com/contest/1480/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1479</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1479d/">
+    Odd Mineral Resource
+  </a>
+  <a href="https://codeforces.com/contest/1479/problem/D">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">probabilities</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1479</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1479e/">
+    School Clubs
+  </a>
+  <a href="https://codeforces.com/contest/1479/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">fft</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">probabilities</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-700.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
