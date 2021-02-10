@@ -304,6 +304,232 @@
       </item>
     
       <item>
+        <title>Round 699 (Div II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1481&quot;&gt;Codeforces Round #699 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1481&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1481a/&quot;&gt;
+    Space Navigation
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1481/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r699/1481a-space-navigation.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, all the talk about reordering is a distraction as the order of instructions has no impact on the final coordinate.  Further, observe that we can easily decompose this 2D problem into two 1D problems along both axis.  Let’s denote by \(\mathcal{T}_U, \mathcal{T}_D, \mathcal{T}_L, \mathcal{T}_R\) the total number of steps that we can make in the respective direction (i.e. \(U, D, L, R\)).  The minimal coordinate we can reach along \(X\) axis is \(-\mathcal{T}_L\) and that’s by keeping all \(L\) moves and deleting all \(R\) instructions.  Similarly the maximal is \(R\).  And we can reach anything in between by deleting some more instructions from those extreme configurations.  So we can reach \([-\mathcal{T}_L, \mathcal{T}_R]\) along the \(X\)-axis and \([-\mathcal{T}_U, \mathcal{T}_D]\) along the \(Y\)-axis and we just need to check if our target lies within that rectangle.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1481&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1481b/&quot;&gt;
+    New Colony
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1481/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r699/1481b-new-colony.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We just need to make a simple observation that if we reach a configuration where a boulder falls into the collection system then clearly all the subsequent ones will too.  And moreover since all heights are at most \(100\), this game will have at most \(100\cdot n\) steps before it’s over.  So we can just do the simulation of the boulder falling and even with the naive approach we end up with a \(O(100\cdot n^2)\) solution which is plenty good.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1481&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1481c/&quot;&gt;
+    Fence Painting
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1481/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r699/1481c-fence-painting.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Crucial observation here is that the last painter is the key, as whatever he paints will have to remain of color \(c_m\).  Let’s find \(i\) such that \(b_i = c_m\).  We have three options:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(a_i \neq b_i\), we prefer this option over the next one, as in this way the work of the last painter is useful and we might have to make use of that in order to get to the solution,&lt;/li&gt;
+  &lt;li&gt;\(a_i = b_i\), in which case his work wasn’t necessarily required but we end up with the right color and clearly we did not have the need for painting anything in this color (if we did, we’d have fallen into the previous case),&lt;/li&gt;
+  &lt;li&gt;there is no \(i\) such that \(b_i = c_m\), in which case clearly there is no solution as the painter has to paint and some plank will end up with that color.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If we fell into one of the first two cases then all that remains is for the remaining painters to greedily one by one:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if the painter paints in a color that we need for some plank then let’s use him there,&lt;/li&gt;
+  &lt;li&gt;otherwise let’s make him paint plank \(i\), as the last painter will repaint in anyway.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now we only need to check if we repainted all the planks that needed repainting and we’re done.&lt;/p&gt;
+
+&lt;p&gt;My solution during the live round was somewhat more complicated than that.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1481&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1481d/&quot;&gt;
+    AB Graph
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1481/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r699/1481d-ab-graph.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Nice one!  Firstly, let’s get rid of a trivial case: if we have two nodes, say \(u\) and \(v\), connected with the same letter in both directions, i.e. \(u \stackrel{a}{\leftrightarrow} v\) or \(u \stackrel{b}{\leftrightarrow} v\), then we can just follow this cycle for \(m\) steps and get a single repeated letter, which is trivially a palindrome.&lt;/p&gt;
+
+&lt;p&gt;Another easy case is when \(m\) is odd.  Then we can just pick any two nodes and go in the loop between for the required number of steps and no matter what letters on them, we’ll get a palindrome.&lt;/p&gt;
+
+&lt;p&gt;So what remains is an even \(m\) with a graph with no trivial same-letter loop.  Note that in this case we can have at most one node that is connected to everything else by \(a\) (if there were two we’d have an \(a\)-cycle between them) and at most one node that is connected to everything else by \(b\); all the other nodes must have at least one \(a\) and at least one \(b\) connection.  Let’s pick such a node.  Node that it’s impossible only if our graph has only 2 nodes  \(u \leftrightarrow v\) with two different letters, in which case clearly we cannot construct an even length palindrome.  Otherwise, we have a situation like this:&lt;/p&gt;
+
+\[x \underset{a}{\overset{b}{\leftrightarrows}} y \underset{a}{\overset{b}{\leftrightarrows}} z\]
+
+&lt;p&gt;The crucial observation is that we can always make an even length palindrome in this configuration.  The winning combo is: \(y \to^a z \to^b y \to^b x \to^a y \to \ldots\), only depending on whether \(\frac{m}{2}\) is even or odd, we need to start at second or first element, respectively.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1481&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1481e/&quot;&gt;
+    Sorting Books
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1481/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1481&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1481f/&quot;&gt;
+    AB Tree
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1481/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-699.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
+        <link>//R-699</link>
+        <link href="/R-699"/>
+        <guid isPermaLink="true">/R-699</guid>
+      </item>
+    
+      <item>
         <title>Educational Round 103</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1476&quot;&gt;Educational Codeforces Round 103 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
 
@@ -2360,208 +2586,6 @@
         <link>//R-691</link>
         <link href="/R-691"/>
         <guid isPermaLink="true">/R-691</guid>
-      </item>
-    
-      <item>
-        <title>Educational Round 100</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1463&quot;&gt;Educational Codeforces Round 100 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1463&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1463a/&quot;&gt;
-    Dungeon
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu100/1463a-dungeon.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Note that we repeatedly fire \(6\) shots at whatever we want and then the following \(3\) at all of the monsters.  That means that we can pass the dungeon beautifully if and only if:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sum of monster strengths is divisible by \(9\) and&lt;/li&gt;
-  &lt;li&gt;strength of each monster is at least \((a+b+c)/9\) (so that it does not die before we’re done)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1463&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1463b/&quot;&gt;
-    Find The Array
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu100/1463b-find-the-array.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;One option is for each \(b_i\) to take power of \(2\) that is closest to \(a_i\).  Hence at every position we’re at most by factor of \(2\) away from \(a_i\) and so are we for the whole sum.  Since all elements are powers of \(2\) we’re also satisfying the condition of divisibility.&lt;/p&gt;
-
-&lt;p&gt;Another option is to consider \((a_1, 1, a_3, 1, a_5 \ldots)\) and \((1, a_2, 1, a_4, 1 \ldots)\); one of them is guaranteed to be the right answer.  Divisibility condition is trivially satisfied for both.  Denote by \(S_{odd}\) and \(S_{even}\) the sum of elements at odd/even positions in \(a\).  \(S_{odd} + S_{even} = S\) and so either \(S_{odd} \le \frac{S}{2}\) or \(S_{even} \le \frac{S}{2}\).  Assume it’s the former.  Then we pick \((1, a_2, 1, a_4, 1 \ldots)\) for \(b\) and it’s easy to see that \(\sum_{i \in 1..n} \mid a_i - b_i \mid \le S_{odd}\) and so \(2 \sum_{i \in 1..n} \mid a_i - b_i \mid \le S\). // check&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1463&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1463c/&quot;&gt;
-    Busy Robot
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu100/1463c-busy-robot.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Fairly simple, just a matter of clean implementation.  We can keep track of: position of the robot and its target.  After moving to the next command we move the robot and if it’s done with the previous command, update it to the current one.  We additionally keep track of whether he passed the target of the previous command.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1463&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1463d/&quot;&gt;
-    Pairs
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu100/1463d-pairs.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Intuition: the set of valid \(x\) forms a contiguous segment.&lt;/p&gt;
-
-&lt;p&gt;To compute the left border we start from number \(1\), iterate upwards and calculate the number of elements in \(b\) vs not in \(b\).  We take the largest difference between the two.  More formally:&lt;/p&gt;
-
-\[l = max_{i \in 1..n} max(0, 2*\mid b_i \cap \{1, \ldots i\} \mid - i)\]
-
-&lt;p&gt;Similarly for right border except we go from \(2n\) down to \(1\).&lt;/p&gt;
-
-\[r = max_{i \in 1..n} max(0, 2*\mid b_i \cap \{n, n-1, \ldots n-i+1\} \mid - i)\]
-
-&lt;p&gt;The final answer is the length of the segment, i.e. \(r-l+1\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1463&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1463e/&quot;&gt;
-    Plan of Lectures
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dsu&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1463&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1463f/&quot;&gt;
-    Max Correct Set
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1463/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/Edu-100.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
-        <link>//Edu-100</link>
-        <link href="/Edu-100"/>
-        <guid isPermaLink="true">/Edu-100</guid>
       </item>
     
   </channel>
