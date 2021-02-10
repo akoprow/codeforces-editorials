@@ -2170,27 +2170,30 @@
   labels: "bitmasks, constructive algorithms"
   also-as: "1479C"
 
-# - id: "1481A"
-#   title: "Space Navigation "
-#   labels: "greedy, implementation, math, strings"
-#
-# - id: "1481B"
-#   title: "New Colony"
-#   labels: "brute force, greedy, implementation"
-#
-# - id: "1481C"
-#   title: "Fence Painting"
-#   labels: "brute force, constructive algorithms, greedy, implementation"
-#
-# - id: "1481D"
-#   title: "AB Graph"
-#   labels: "constructive algorithms, graphs, greedy, implementation, strings"
-#
-# - id: "1481E"
-#   title: "Sorting Books"
-#   labels: "data structures, dp"
-#
-# - id: "1481F"
-#   title: "AB Tree"
-#   labels: "dp, trees"
-#
+- id: "1481A"
+  title: "Space Navigation"
+  labels: "greedy, implementation, math, strings"
+  code: "r680-699/r699/1481a-space-navigation.kt"
+
+- id: "1481B"
+  title: "New Colony"
+  labels: "brute force, greedy, implementation"
+  code: "r680-699/r699/1481b-new-colony.kt"
+
+- id: "1481C"
+  title: "Fence Painting"
+  labels: "brute force, constructive algorithms, greedy, implementation"
+  code: "r680-699/r699/1481c-fence-painting.kt"
+
+- id: "1481D"
+  title: "AB Graph"
+  labels: "constructive algorithms, graphs, greedy, implementation, strings"
+  code: "r680-699/r699/1481d-ab-graph.kt"
+
+- id: "1481E"
+  title: "Sorting Books"
+  labels: "data structures, dp"
+
+- id: "1481F"
+  title: "AB Tree"
+  labels: "dp, trees"
