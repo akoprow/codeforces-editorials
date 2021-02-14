@@ -2087,47 +2087,56 @@
   labels: "data structures, two pointers"
   rating: 3100
 
-# - id: "1477D"
-#   title: "Nezzar and Hidden Permutations"
-#   labels: "dfs and similar, dfs and similar"
-#
-# - id: "1477E"
-#   title: "Nezzar and Tournaments"
-#   labels: "data structures, greedy"
-#
-# - id: "1477F"
-#   title: "Nezzar and Chocolate Bars"
-#   labels: "combinatorics, fft, math, probabilities"
-#
-# - id: "1478A"
-#   title: "Nezzar and Colorful Balls"
-#   labels: "brute force, greedy"
-#   code: "r680-699/r698/1478a-nezzar-and-colorful-balls.kt"
-#
-# - id: "1478B"
-#   title: "Nezzar and Lucky Number"
-#   labels: "brute force, dp, math"
-#   code: "r680-699/r698/1478b-nezzar-and-lucky-numbers.kt"
-#
-# - id: "1478C"
-#   title: "Nezzar and Symmetric Array"
-#   labels: "constructive algorithms, implementation, math, sortings"
-#   code: "r680-699/r698/1478c-nezzar-and-symetric-array.kt"
-#
-# - id: "1478D"
-#   title: "Nezzar and Board"
-#   labels: "math, number theory"
-#   also-as: "1477A"
-#
-# - id: "1478E"
-#   title: "Nezzar and Binary String"
-#   labels: "data structures, greedy, trees"
-#   also-as: "1477B"
-#
-# - id: "1478F"
-#   title: "Nezzar and Nice Beatmap"
-#   labels: "constructive algorithms, geometry"
-#   also-as: "1477C"
+- id: "1477D"
+  title: "Nezzar and Hidden Permutations"
+  labels: "dfs and similar, dfs and similar"
+  rating: 2800
+
+- id: "1477E"
+  title: "Nezzar and Tournaments"
+  labels: "data structures, greedy"
+  rating: 3300
+
+- id: "1477F"
+  title: "Nezzar and Chocolate Bars"
+  labels: "combinatorics, fft, math, probabilities"
+  rating: 3500
+
+- id: "1478A"
+  title: "Nezzar and Colorful Balls"
+  labels: "brute force, greedy"
+  rating: 800
+  code: "r680-699/r698/1478a-nezzar-and-colorful-balls.kt"
+
+- id: "1478B"
+  title: "Nezzar and Lucky Number"
+  labels: "brute force, dp, math"
+  rating: 1100
+  code: "r680-699/r698/1478b-nezzar-and-lucky-numbers.kt"
+
+- id: "1478C"
+  title: "Nezzar and Symmetric Array"
+  labels: "constructive algorithms, implementation, math, sortings"
+  rating: 1700
+  code: "r680-699/r698/1478c-nezzar-and-symetric-array.kt"
+
+- id: "1478D"
+  title: "Nezzar and Board"
+  labels: "math, number theory"
+  rating: 1800
+  also-as: "1477A"
+
+- id: "1478E"
+  title: "Nezzar and Binary String"
+  labels: "data structures, greedy, trees"
+  rating: 1900
+  also-as: "1477B"
+
+- id: "1478F"
+  title: "Nezzar and Nice Beatmap"
+  labels: "constructive algorithms, geometry"
+  rating: 2200
+  also-as: "1477C"
 
 - id: "1479D"
   title: "Odd Mineral Resource"
@@ -2173,27 +2182,68 @@
 - id: "1481A"
   title: "Space Navigation"
   labels: "greedy, implementation, math, strings"
+  rating: 800
   code: "r680-699/r699/1481a-space-navigation.kt"
 
 - id: "1481B"
   title: "New Colony"
   labels: "brute force, greedy, implementation"
+  rating: 1100
   code: "r680-699/r699/1481b-new-colony.kt"
 
 - id: "1481C"
   title: "Fence Painting"
   labels: "brute force, constructive algorithms, greedy, implementation"
+  rating: 1600
   code: "r680-699/r699/1481c-fence-painting.kt"
 
 - id: "1481D"
   title: "AB Graph"
   labels: "constructive algorithms, graphs, greedy, implementation, strings"
+  rating: 2000
   code: "r680-699/r699/1481d-ab-graph.kt"
 
 - id: "1481E"
   title: "Sorting Books"
   labels: "data structures, dp"
+  rating: 2500
 
 - id: "1481F"
   title: "AB Tree"
   labels: "dp, trees"
+  rating: 3100
+
+# - id: "1485A"
+#   title: "Add and Divide"
+#   labels: "brute force, greedy, math, ternary search"
+#   rating: 1000
+#   code: "r700-719/r701/1485a-add-and-divide.kt"
+#
+# - id: "1485B"
+#   title: "Replace and Keep Sorted"
+#   labels: "dp, implementation, math"
+#   rating: 1200
+#   code: "r700-719/r701/1485b-replace-and-keep-sorted.kt"
+#
+# - id: "1485C"
+#   title: "Floor and Mod"
+#   labels: "brute force, math, number theory"
+#   rating: 1700
+#   code: "r700-719/r701/1485c-floor-and-mod.kt"
+#
+# - id: "1485D"
+#   title: "Multiples and Power Differences"
+#   labels: "constructive algorithms, math, number theory"
+#   rating: 2200
+#   code: "r700-719/r701/1485d-multiples-and-power-differences.kt"
+#
+# - id: "1485E"
+#   title: "Move and Swap"
+#   labels: "dp, greedy, trees"
+#   rating: 2500
+#
+# - id: "1485F"
+#   title: "Copy or Prefix Sum"
+#   labels: "combinatorics, data structures, dp, sortings"
+#   rating: 2400
+#
