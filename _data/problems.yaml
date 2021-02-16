@@ -205,6 +205,40 @@
   labels: "data structures, dfs and similar, dp"
   rating: 2600
 
+- id: "1316A"
+  title: "Grade Allocation"
+  labels: "implementation"
+  rating: 800
+  code: "other/codeCraft20/1316a-grade-allocation.kt"
+
+- id: "1316B"
+  title: "String Modification"
+  labels: "brute force, constructive algorithms, implementation, sortings, strings"
+  rating: 1400
+  code: "other/codeCraft20/1316b-string-modification.kt"
+
+- id: "1316C"
+  title: "Primitive Primes"
+  labels: "constructive algorithms, math, ternary search"
+  rating: 1800
+  code: "other/codeCraft20/1316c-primitive-primes.kt"
+
+- id: "1316D"
+  title: "Nash Matrix"
+  labels: "constructive algorithms, dfs and similar, graphs, implementation"
+  rating: 2000
+  code: "other/codeCraft20/1316d-mash-matrix.kt"
+
+- id: "1316E"
+  title: "Team Building"
+  labels: "bitmasks, dp, greedy, sortings"
+  rating: 2300
+
+- id: "1316F"
+  title: "Battalion Strength"
+  labels: "data structures, divide and conquer, probabilities"
+  rating: 2800
+
 - id: "1322E"
   title: "Median Mountain Range"
   labels: "data structures"
@@ -2246,4 +2280,37 @@
 #   title: "Copy or Prefix Sum"
 #   labels: "combinatorics, data structures, dp, sortings"
 #   rating: 2400
+
+# - id: "1487A"
+#   title: "Arena"
+#   labels: "implementation, sortings"
+#   code: "edu/edu104/1487a-arena.kt"
+#
+# - id: "1487B"
+#   title: "Cat Cycle"
+#   labels: "math, number theory"
+#   code: "edu/edu104/1487b-cat-cycle.kt"
+#
+# - id: "1487C"
+#   title: "Minimum Ties"
+#   labels: "constructive algorithms, dfs and similar, graphs, greedy, implementation, math, matrices"
+#   code: "edu/edu104/1487c-minimum-ties.kt"
+#
+# - id: "1487D"
+#   title: "Pythagorean Triples"
+#   labels: "binary search, brute force, math, number theory"
+#   code: "edu/edu104/1487d-pythagorean-triples.kt"
+#
+# - id: "1487E"
+#   title: "Cheap Dinner"
+#   labels: "data structures, dp, implementation, sortings, two pointers"
+#   code: "edu/edu104/1487e-cheap-dinner.kt"
+#
+# - id: "1487F"
+#   title: "Ones"
+#   labels: "dp, greedy"
+#
+# - id: "1487G"
+#   title: "String Counting"
+#   labels: "combinatorics, dp, math"
 #
