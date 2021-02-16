@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
   <meta name="generator" content="Jekyll">
 
-  <title>AB Tree</title>
+  <title>String Modification</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>AB Tree | Codeforces editorials</title>
+<title>String Modification | Codeforces editorials</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="AB Tree" />
+<meta property="og:title" content="String Modification" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Codeforces editorials" />
 <meta property="og:description" content="Codeforces editorials" />
 <meta property="og:site_name" content="Codeforces editorials" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="AB Tree" />
+<meta property="twitter:title" content="String Modification" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"AB Tree","url":"/codeforces-editorials/problems/1481f/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"String Modification","url":"/codeforces-editorials/problems/1316b/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -83,32 +83,44 @@
       <section id="main_content">
         <div class="alert alert-primary" role="alert">
   
-  <tiny>1481</tiny>F
+  <tiny>1316</tiny>B
 
   
-  <a href="/codeforces-editorials/problems/1481f/">
-    AB Tree
+  <a href="/codeforces-editorials/problems/1316b/">
+    String Modification
   </a>
-  <a href="https://codeforces.com/contest/1481/problem/F">
+  <a href="https://codeforces.com/contest/1316/problem/B">
   [CF]
   </a>
 
-  
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/other/codeCraft20/1316b-string-modification.kt">(Code)</a>
 
-  <rating>R:3100 <meter min="800" max="3600" value="3100" /></rating>
+  <rating>R:1400 <meter min="800" max="3600" value="1400" /></rating>
 
   <labels>
   
   
-    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
   
-    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
   
   </labels>
 </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
-</code></pre></div></div>
+<p>Just by performing this operation for different \(k\) it’s easy to observe that the prefix of the result will be \(s_k s_{k+1} \ldots s_{k+(n-k+1)-1}\) and the suffix will be:</p>
+
+<ul>
+  <li>\(s_1 \ldots s_{k-1}\) if \(n\) and \(k\) have the same parity and</li>
+  <li>\(s_{k-1} \ldots s_1\) if they have different parities.</li>
+</ul>
+
+<p>From now on it’s just a matter of generating all those options and picking the one lexicographically smallest (while being careful that for ties smaller \(k\) wins).</p>
 
 
       </section>

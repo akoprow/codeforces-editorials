@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
   <meta name="generator" content="Jekyll">
 
-  <title>AB Tree</title>
+  <title>Nezzar and Lucky Number</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>AB Tree | Codeforces editorials</title>
+<title>Nezzar and Lucky Number | Codeforces editorials</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="AB Tree" />
+<meta property="og:title" content="Nezzar and Lucky Number" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Codeforces editorials" />
 <meta property="og:description" content="Codeforces editorials" />
 <meta property="og:site_name" content="Codeforces editorials" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="AB Tree" />
+<meta property="twitter:title" content="Nezzar and Lucky Number" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"AB Tree","url":"/codeforces-editorials/problems/1481f/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Nezzar and Lucky Number","url":"/codeforces-editorials/problems/1478b/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -83,32 +83,54 @@
       <section id="main_content">
         <div class="alert alert-primary" role="alert">
   
-  <tiny>1481</tiny>F
+  <tiny>1478</tiny>B
 
   
-  <a href="/codeforces-editorials/problems/1481f/">
-    AB Tree
+  <a href="/codeforces-editorials/problems/1478b/">
+    Nezzar and Lucky Number
   </a>
-  <a href="https://codeforces.com/contest/1481/problem/F">
+  <a href="https://codeforces.com/contest/1478/problem/B">
   [CF]
   </a>
 
-  
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r698/1478b-nezzar-and-lucky-numbers.kt">(Code)</a>
 
-  <rating>R:3100 <meter min="800" max="3600" value="3100" /></rating>
+  <rating>R:1100 <meter min="800" max="3600" value="1100" /></rating>
 
   <labels>
   
   
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
     <span class="badge rounded-pill bg-warning text-dark">dp</span>
   
-    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
   
   </labels>
 </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
-</code></pre></div></div>
+<p>Firstly, if given number \(v\) itself contains digit \(d\) then it itself is the answer.</p>
+
+<p>Otherwise, if \(v \ge 10\cdot d + d\) then we can always represent it as:</p>
+
+<ul>
+  <li>\(v_1 = 10 \cdot d + (l \mod 10)\) and</li>
+  <li>\(v_2 = d + (l - (l \mod 10))\) where \(l = x - 10\cdot d - d\)</li>
+</ul>
+
+<p>Note that:</p>
+
+<ul>
+  <li>\(l \ge 0\) because of our initial assumption.</li>
+  <li>\(d\) is the second least significant digit in \(v_1\), so \(v_1\) is lucky.</li>
+  <li>\(d\) is the least significant digit in \(v_2\), so \(v_2\) is lucky.</li>
+  <li>\(v_1 + v_2 = 10 \cdot d + (l \mod 10) + d + (l - (l \mod 10)) = v\).</li>
+  <li>hence \(v_1\) and \(v_2\) are a valid solution.</li>
+</ul>
+
+<p>Otherwise, our only bet is to put together a number of \(d\)s (which are obviously lucky) and see whether what remains has \(d\) as least significant digit (hence is also lucky).  Since we only care about values modulo \(d\) they will quickly start cycling so we only need to consider taking between \(1\) and \(9\) copies of \(d\).</p>
+
+<p>TODO: Prove/argue why otherwise the answer is no.</p>
 
 
       </section>

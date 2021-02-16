@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
   <meta name="generator" content="Jekyll">
 
-  <title>New Colony</title>
+  <title>Nash Matrix</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>New Colony | Codeforces editorials</title>
+<title>Nash Matrix | Codeforces editorials</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="New Colony" />
+<meta property="og:title" content="Nash Matrix" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Codeforces editorials" />
 <meta property="og:description" content="Codeforces editorials" />
 <meta property="og:site_name" content="Codeforces editorials" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="New Colony" />
+<meta property="twitter:title" content="Nash Matrix" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"New Colony","url":"/codeforces-editorials/problems/1481b/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Nash Matrix","url":"/codeforces-editorials/problems/1316d/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -83,33 +83,47 @@
       <section id="main_content">
         <div class="alert alert-primary" role="alert">
   
-  <tiny>1481</tiny>B
+  <tiny>1316</tiny>D
 
   
-  <a href="/codeforces-editorials/problems/1481b/">
-    New Colony
+  <a href="/codeforces-editorials/problems/1316d/">
+    Nash Matrix
   </a>
-  <a href="https://codeforces.com/contest/1481/problem/B">
+  <a href="https://codeforces.com/contest/1316/problem/D">
   [CF]
   </a>
 
-  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r699/1481b-new-colony.kt">(Code)</a>
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/other/codeCraft20/1316d-mash-matrix.kt">(Code)</a>
 
-  <rating>R:1100 <meter min="800" max="3600" value="1100" /></rating>
+  <rating>R:2000 <meter min="800" max="3600" value="2000" /></rating>
 
   <labels>
   
   
-    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
   
-    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
   
     <span class="badge rounded-pill bg-warning text-dark">implementation</span>
   
   </labels>
 </div>
 
-<p>We just need to make a simple observation that if we reach a configuration where a boulder falls into the collection system then clearly all the subsequent ones will too.  And moreover since all heights are at most \(100\), this game will have at most \(100\cdot n\) steps before it’s over.  So we can just do the simulation of the boulder falling and even with the naive approach we end up with a \(O(100\cdot n^2)\) solution which is plenty good.</p>
+<p>We have two types of cells: the one that have some target destination and the ones that need to be on a loop.  Let’s think about how to handle both those types.</p>
+
+<p>For the target cells we can conceptually do the following: let’s pick some target \(T = (x, y)\). Let’s color all the cells with that target black and all the other ones white.  Now we can start at cell \(T\) and do a flood fill among black cells.  We put an \(X\) in the initial cell and if we move from \(C_1\) to neighbouring \(C_2\) then we put in \(C_2\) operation that will move it to \(C_1\).  The two crucial observations for this case were that: a) we want to move from the “sink” to all the other cells and b) that DFS is good enough and there’s no need for BFS or anything more complicated.</p>
+
+<p>The loop case is even simpler. Every “looping” cell needs to point to some other “looping” cell.  If we can make such an assignment then we’re good.  We can easily prove by induction that this works and intuitively we can see that if every cell in that set directs to some other cell in that set, we can repeat this process ad infinitum and so we won’t ever stop.</p>
+
+<p>At first I made it all quite a bit more complicated with some helper structures and such which was TLE-ing.  In fact the implementation can be made very simple with a single sweep across all cells and if we encounter:</p>
+
+<ul>
+  <li>a cell with a target \(T\) and cell \(T\) has not been processed yet then we process it with a flood fill as described above.  In particular cell \(T\) itself must point to itself and obtain an \(X\).</li>
+  <li>a cell with a target \(T\) and cell \(T\) has a cross then its cluster was already processed.  If our cell has some direction assigned then we’re good.  If it hasn’t it means it wasn’t reached in the DFS of \(T\) and there is no answer.</li>
+  <li>a looping cell then we direct it at any neighbour looping cell or give up if no such neighbour exists.</li>
+</ul>
 
 
       </section>

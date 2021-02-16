@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 698 (Div I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 698 (Div I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 698 (Div I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #698 (Div. 1)" />
+<meta property="og:description" content="Codeforces Round #698 (Div. 1)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 698 (Div I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 698 (Div I+II)","dateModified":"2021-01-28T00:00:00+00:00","url":"/codeforces-editorials/R-698","datePublished":"2021-01-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-698"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #698 (Div. 1)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 698 (Div I+II)</h2>
+  <time datetime="2021-01-28T00:00:00+00:00" class="by-line">28 Jan 2021</time>
+  <p><a href="https://codeforces.com/contest/1477">Codeforces Round #698 (Div. 1)</a></p>
+
+<p><a href="https://codeforces.com/contest/1478">Codeforces Round #698 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1478</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1478a/">
+    Nezzar and Colorful Balls
+  </a>
+  <a href="https://codeforces.com/contest/1478/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r698/1478a-nezzar-and-colorful-balls.kt">(Code)</a>
+
+  <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>Clearly all the balls with the same number must get different colors so let’s look at all the numbers, count how many times they occur, and take maximum over that.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1478</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1478b/">
+    Nezzar and Lucky Number
+  </a>
+  <a href="https://codeforces.com/contest/1478/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r698/1478b-nezzar-and-lucky-numbers.kt">(Code)</a>
+
+  <rating>R:1100 <meter min="800" max="3600" value="1100" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, if given number \(v\) itself contains digit \(d\) then it itself is the answer.</p>
+
+<p>Otherwise, if \(v \ge 10\cdot d + d\) then we can always represent it as:</p>
+
+<ul>
+  <li>\(v_1 = 10 \cdot d + (l \mod 10)\) and</li>
+  <li>\(v_2 = d + (l - (l \mod 10))\) where \(l = x - 10\cdot d - d\)</li>
+</ul>
+
+<p>Note that:</p>
+
+<ul>
+  <li>\(l \ge 0\) because of our initial assumption.</li>
+  <li>\(d\) is the second least significant digit in \(v_1\), so \(v_1\) is lucky.</li>
+  <li>\(d\) is the least significant digit in \(v_2\), so \(v_2\) is lucky.</li>
+  <li>\(v_1 + v_2 = 10 \cdot d + (l \mod 10) + d + (l - (l \mod 10)) = v\).</li>
+  <li>hence \(v_1\) and \(v_2\) are a valid solution.</li>
+</ul>
+
+<p>Otherwise, our only bet is to put together a number of \(d\)s (which are obviously lucky) and see whether what remains has \(d\) as least significant digit (hence is also lucky).  Since we only care about values modulo \(d\) they will quickly start cycling so we only need to consider taking between \(1\) and \(9\) copies of \(d\).</p>
+
+<p>TODO: Prove/argue why otherwise the answer is no.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1478</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1478c/">
+    Nezzar and Symmetric Array
+  </a>
+  <a href="https://codeforces.com/contest/1478/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r698/1478c-nezzar-and-symetric-array.kt">(Code)</a>
+
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1478</tiny>D / <tiny>1477</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1478d/">
+    Nezzar and Board
+  </a>
+  <a href="https://codeforces.com/contest/1478/problem/D">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:1800 <meter min="800" max="3600" value="1800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1478</tiny>E / <tiny>1477</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1478e/">
+    Nezzar and Binary String
+  </a>
+  <a href="https://codeforces.com/contest/1478/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1478</tiny>F / <tiny>1477</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1478f/">
+    Nezzar and Nice Beatmap
+  </a>
+  <a href="https://codeforces.com/contest/1478/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2200 <meter min="800" max="3600" value="2200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">geometry</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1477</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1477d/">
+    Nezzar and Hidden Permutations
+  </a>
+  <a href="https://codeforces.com/contest/1477/problem/D">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2800 <meter min="800" max="3600" value="2800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1477</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1477e/">
+    Nezzar and Tournaments
+  </a>
+  <a href="https://codeforces.com/contest/1477/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3300 <meter min="800" max="3600" value="3300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1477</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1477f/">
+    Nezzar and Chocolate Bars
+  </a>
+  <a href="https://codeforces.com/contest/1477/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3500 <meter min="800" max="3600" value="3500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">fft</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">probabilities</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-698.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

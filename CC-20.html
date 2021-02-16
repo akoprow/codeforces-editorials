@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>CodeCraft-20 (Div II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>CodeCraft-20 (Div II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="CodeCraft-20 (Div II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="CodeCraft-20 (Div. 2)" />
+<meta property="og:description" content="CodeCraft-20 (Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CodeCraft-20 (Div II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"CodeCraft-20 (Div II)","dateModified":"2020-03-04T00:00:00+00:00","url":"/codeforces-editorials/CC-20","datePublished":"2020-03-04T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/CC-20"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"CodeCraft-20 (Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>CodeCraft-20 (Div II)</h2>
+  <time datetime="2020-03-04T00:00:00+00:00" class="by-line">04 Mar 2020</time>
+  <p><a href="https://codeforces.com/contest/1316">CodeCraft-20 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1316</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1316a/">
+    Grade Allocation
+  </a>
+  <a href="https://codeforces.com/contest/1316/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/other/codeCraft20/1316a-grade-allocation.kt">(Code)</a>
+
+  <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Since we cannot change the average we cannot change the sum of all the grades.  So if we want to bring our own grade up by \(1\) we need to decrease someone else’s grade by \(1\).  What’s the maximum grade we can achieve with this strategy?  Well, it’s \(sum_{i \in 1..n} a_i\) as we can take all the points from all the other students and assign them to ourselves (at the same time they cannot go below \(0\)).  On the other hand the maximum we can get is \(m\).  So the answer is simply \(min(m, \sum_{i \in 1..n} a_i)\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1316</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1316b/">
+    String Modification
+  </a>
+  <a href="https://codeforces.com/contest/1316/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/other/codeCraft20/1316b-string-modification.kt">(Code)</a>
+
+  <rating>R:1400 <meter min="800" max="3600" value="1400" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
+  
+  </labels>
+</div>
+
+<p>Just by performing this operation for different \(k\) it’s easy to observe that the prefix of the result will be \(s_k s_{k+1} \ldots s_{k+(n-k+1)-1}\) and the suffix will be:</p>
+
+<ul>
+  <li>\(s_1 \ldots s_{k-1}\) if \(n\) and \(k\) have the same parity and</li>
+  <li>\(s_{k-1} \ldots s_1\) if they have different parities.</li>
+</ul>
+
+<p>From now on it’s just a matter of generating all those options and picking the one lexicographically smallest (while being careful that for ties smaller \(k\) wins).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1316</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1316c/">
+    Primitive Primes
+  </a>
+  <a href="https://codeforces.com/contest/1316/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/other/codeCraft20/1316c-primitive-primes.kt">(Code)</a>
+
+  <rating>R:1800 <meter min="800" max="3600" value="1800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">ternary search</span>
+  
+  </labels>
+</div>
+
+<p>Let’s look at coefficients of \(f(x)\), i.e. \(a_0, \ldots, a_{n-1}\).  Since we know that \(gcd(a_0, \ldots, a_{n-1}\) is \(1\) that means that there is some coefficient that is co-prime with \(p\) (if there weren’t that’d mean that all coefficients are divisible by \(p\) and hence we’d have \(gcd(a_0, \ldots, a_{n-1}) \ge p\)).  Now, let \(a_i\) be first of such coefficients, i.e. the one with smallest \(i\) fulfilling this condition.</p>
+
+<p>For the same reasons we must have \(b_j\) in coefficients of \(g(x)\) that is not divisible by \(p\) with all \(b_0, \ldots b_{j-1}\) divisible by \(p\).</p>
+
+<p>Now, let’s look at \(i+j\)‘th coefficient of \(h(x)\), it is:</p>
+
+\[c_{i+j} = a_0 \cdot b_{i+j} + a_1 \cdot b_{i+j-1} + \ldots + a_{i-1} \cdot b_{j+1} + \underline{a_i \cdot b_j} + a_{i+1}\cdot b_{j-1} + \ldots + a_{i+j} \cdot b_0\]
+
+<p>The important observation is that all elements of the sum other than the underlined one are divisible by \(p\).  The ones to the left of the underlined one are because \(a_0, \ldots a_{i-1}\) are all divisible by \(p\) and the ones to the right are divisible because all of \(b_0, \ldots b_{j-1}\) are.  Since \(a_i \cdot b_j\) itself is <em>not</em> divisible by \(p\), hence the whole sum isn’t and it is our answer.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1316</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1316d/">
+    Nash Matrix
+  </a>
+  <a href="https://codeforces.com/contest/1316/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/other/codeCraft20/1316d-mash-matrix.kt">(Code)</a>
+
+  <rating>R:2000 <meter min="800" max="3600" value="2000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>We have two types of cells: the one that have some target destination and the ones that need to be on a loop.  Let’s think about how to handle both those types.</p>
+
+<p>For the target cells we can conceptually do the following: let’s pick some target \(T = (x, y)\). Let’s color all the cells with that target black and all the other ones white.  Now we can start at cell \(T\) and do a flood fill among black cells.  We put an \(X\) in the initial cell and if we move from \(C_1\) to neighbouring \(C_2\) then we put in \(C_2\) operation that will move it to \(C_1\).  The two crucial observations for this case were that: a) we want to move from the “sink” to all the other cells and b) that DFS is good enough and there’s no need for BFS or anything more complicated.</p>
+
+<p>The loop case is even simpler. Every “looping” cell needs to point to some other “looping” cell.  If we can make such an assignment then we’re good.  We can easily prove by induction that this works and intuitively we can see that if every cell in that set directs to some other cell in that set, we can repeat this process ad infinitum and so we won’t ever stop.</p>
+
+<p>At first I made it all quite a bit more complicated with some helper structures and such which was TLE-ing.  In fact the implementation can be made very simple with a single sweep across all cells and if we encounter:</p>
+
+<ul>
+  <li>a cell with a target \(T\) and cell \(T\) has not been processed yet then we process it with a flood fill as described above.  In particular cell \(T\) itself must point to itself and obtain an \(X\).</li>
+  <li>a cell with a target \(T\) and cell \(T\) has a cross then its cluster was already processed.  If our cell has some direction assigned then we’re good.  If it hasn’t it means it wasn’t reached in the DFS of \(T\) and there is no answer.</li>
+  <li>a looping cell then we direct it at any neighbour looping cell or give up if no such neighbour exists.</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1316</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1316e/">
+    Team Building
+  </a>
+  <a href="https://codeforces.com/contest/1316/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2300 <meter min="800" max="3600" value="2300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1316</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1316f/">
+    Battalion Strength
+  </a>
+  <a href="https://codeforces.com/contest/1316/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2800 <meter min="800" max="3600" value="2800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">divide and conquer</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">probabilities</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/CC-20.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

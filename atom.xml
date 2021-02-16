@@ -321,7 +321,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r699/1481a-space-navigation.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -353,7 +353,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r699/1481b-new-colony.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -383,7 +383,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r699/1481c-fence-painting.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -432,7 +432,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r699/1481d-ab-graph.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:2000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2000&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -474,7 +474,7 @@
 
   
 
-  
+  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -503,7 +503,7 @@
 
   
 
-  
+  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -798,6 +798,315 @@
         <link>//Edu-103</link>
         <link href="/Edu-103"/>
         <guid isPermaLink="true">/Edu-103</guid>
+      </item>
+    
+      <item>
+        <title>Round 698 (Div I+II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1477&quot;&gt;Codeforces Round #698 (Div. 1)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1478&quot;&gt;Codeforces Round #698 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1478&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1478a/&quot;&gt;
+    Nezzar and Colorful Balls
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1478/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r698/1478a-nezzar-and-colorful-balls.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Clearly all the balls with the same number must get different colors so let’s look at all the numbers, count how many times they occur, and take maximum over that.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1478&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1478b/&quot;&gt;
+    Nezzar and Lucky Number
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1478/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r698/1478b-nezzar-and-lucky-numbers.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, if given number \(v\) itself contains digit \(d\) then it itself is the answer.&lt;/p&gt;
+
+&lt;p&gt;Otherwise, if \(v \ge 10\cdot d + d\) then we can always represent it as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(v_1 = 10 \cdot d + (l \mod 10)\) and&lt;/li&gt;
+  &lt;li&gt;\(v_2 = d + (l - (l \mod 10))\) where \(l = x - 10\cdot d - d\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(l \ge 0\) because of our initial assumption.&lt;/li&gt;
+  &lt;li&gt;\(d\) is the second least significant digit in \(v_1\), so \(v_1\) is lucky.&lt;/li&gt;
+  &lt;li&gt;\(d\) is the least significant digit in \(v_2\), so \(v_2\) is lucky.&lt;/li&gt;
+  &lt;li&gt;\(v_1 + v_2 = 10 \cdot d + (l \mod 10) + d + (l - (l \mod 10)) = v\).&lt;/li&gt;
+  &lt;li&gt;hence \(v_1\) and \(v_2\) are a valid solution.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Otherwise, our only bet is to put together a number of \(d\)s (which are obviously lucky) and see whether what remains has \(d\) as least significant digit (hence is also lucky).  Since we only care about values modulo \(d\) they will quickly start cycling so we only need to consider taking between \(1\) and \(9\) copies of \(d\).&lt;/p&gt;
+
+&lt;p&gt;TODO: Prove/argue why otherwise the answer is no.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1478&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1478c/&quot;&gt;
+    Nezzar and Symmetric Array
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1478/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r698/1478c-nezzar-and-symetric-array.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1478&lt;/tiny&gt;D / &lt;tiny&gt;1477&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1478d/&quot;&gt;
+    Nezzar and Board
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1478/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1478&lt;/tiny&gt;E / &lt;tiny&gt;1477&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1478e/&quot;&gt;
+    Nezzar and Binary String
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1478/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1478&lt;/tiny&gt;F / &lt;tiny&gt;1477&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1478f/&quot;&gt;
+    Nezzar and Nice Beatmap
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1478/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;geometry&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1477&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1477d/&quot;&gt;
+    Nezzar and Hidden Permutations
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1477/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1477&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1477e/&quot;&gt;
+    Nezzar and Tournaments
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1477/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1477&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1477f/&quot;&gt;
+    Nezzar and Chocolate Bars
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1477/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;fft&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;probabilities&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-698.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+        <link>//R-698</link>
+        <link href="/R-698"/>
+        <guid isPermaLink="true">/R-698</guid>
       </item>
     
       <item>
@@ -2321,271 +2630,6 @@
         <link>//R-692</link>
         <link href="/R-692"/>
         <guid isPermaLink="true">/R-692</guid>
-      </item>
-    
-      <item>
-        <title>Round 691 (Div I+II)</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1458&quot;&gt;Codeforces Round #691 (Div. 1)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1459&quot;&gt;Codeforces Round #691 (Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1459&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1459a/&quot;&gt;
-    Red-Blue Shuffle
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r691/1459a-red-blue-shuffle.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;probabilities&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly, note that if both digits on a single card are the same then this card will not have any impact on the result and we may as well discard it.&lt;/p&gt;
-
-&lt;p&gt;After that all cards have different digits and so after permutation it will always be the first card that will decide the overall result.  So we simply look at all the cards and count cases where \(r_i &amp;gt; b_i\) and where \(b_i &amp;gt; r_i\) and compare those two numbers. If the former is larger than we answer “RED”, if latter “BLUE” and if they are equal then “EQUAL”.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1459&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1459b/&quot;&gt;
-    Move and Turn
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r691/1459b-move-and-turn.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1300&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Couple of observations.  Firstly, the move rules simply mean that we alternate moves between moving along X and along Y axis (starting with arbitrary).  Secondly, we can think of those two moves independently, as they affect different components of a \((x, y)\) coordinate.&lt;/p&gt;
-
-&lt;p&gt;We have two cases.  If \(n\) is even that means we’ll do \(k = n/2\) moves of each type.  Each move modifies coordinate by \(+1\) or \(-1\).  What values we can reach on the axis we’re considering?  Well: \(k, k-2, \ldots, 0, \ldots, -k+2, -k\) and there are \(k+1\) of them.  Since both axis are independent this gives an overall answer of \((k+1)^2\).&lt;/p&gt;
-
-&lt;p&gt;What if \(n\) is odd?  We’ll do \(k = \lfloor n/2 \rfloor\) moves along one axis and\(\lceil n/2 \rceil = k + 1\) along the other axis and we can pick which is which.  For each of those choices we can use similar reasoning to the one from the previous paragraph and so we end up with \((k+1)(k+2)\) moves.&lt;/p&gt;
-
-&lt;p&gt;Now, configurations that we reach in those two cases are disjoint.  Why is that?  That’s because each move changes parity of the values along each axis and so those parities cannot be the same after \(k\) and \(k+1\) moves.  That means that the total number of combinations in the odd case is: \(2(k+1)(k+2)\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1459&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1459c/&quot;&gt;
-    Row GCD
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r691/1459c-row-gcd.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Note that the difference between two numbers must be divisible by their \(gcd\).  More formally: if \(gcd(x, y) = p\) then \(abs(x-y) % p == 0\).&lt;/p&gt;
-
-&lt;p&gt;So we can sort the initial numbers, throw away the duplicates and pre-compute \(gcd\) of all the differences, let’s call that \(G\).  Now for a query of \(b_j\) we can simply compute the answer as: \(gcd(a_1+b_j, G)\).&lt;/p&gt;
-
-&lt;p&gt;Another way to reason about that is as follows.  We know that \(gcd(x, y) = gcd(x-y, y)\).  We will want to compute \(gcd(a_1 + b_j, a_2+b_j, \ldots, a_n + b_j)\).  By subtracting the \(a_1+b_j\) from all the other terms we get that that formula equals to \(gcd(a_1 + b_j, a_2 - a_1, \ldots a_n - a_1)\), which equals to: \(gcd(a_1 + b_j, gcd(a_2 - a_1, \ldots a_n - a_1))\). We an easily see that the second argument does not depend on the queries and so we can precompute it and then answering each query comes down to a single \(gcd\) of 2 arguments.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1459&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1459d/&quot;&gt;
-    Glass Half Spilled
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r691/1459d-glass-half-spilled.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:2000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2000&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Few observations at first.  Let’s say we chose some \(k\) glasses; what do we need to know about them to compute the final answer?  Two things only: total capacity and amount of water in them initially.  Why is that?  Well, the optimal pouring strategy is very simple: we keep water in those glasses and pour from all the others directly to them until reaching capacity.  Let’s say that our \(k\) glasses have \(W\) water in them and a total capacity of \(C\), whereas the total amount of water in all the glasses is \(W_{all}\).  The final answer then is: \(min(C, W + (W_{all}-W)/2)\), because we cannot go over total capacity \(C\), we initially have \(W\) water in the glasses and \(W_{all}-W\) water available that we can pour, loosing half of it.&lt;/p&gt;
-
-&lt;p&gt;Once we know that we can device DP with state \(S_{(i,k,c)}\) being initial amount of water in \(k\) glasses chosen from glasses \(1..i\) such that their overall capacity is \(c\).  Knowing that we can relatively easily come up with the transitions as we have two cases for a glass: use it as one of the chosen glasses or not.&lt;/p&gt;
-
-\[S_{(i,k,c)} = max(S_{(i-1,k,c)}, S_{(i-1,k-1,c-a_i)} + b_i)\]
-
-&lt;p&gt;Not strictly necessary but if we are careful and do the computations in the right order we can get rid of the first dimension \(i\); see code for details.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1459&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1459e/&quot;&gt;
-    Latin Square
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2700&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;matrices&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1459&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1459f/&quot;&gt;
-    Flip and Reverse
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1459/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1458&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1458e/&quot;&gt;
-    Nim Shortcuts
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1458/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1458&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1458f/&quot;&gt;
-    Range Diameter Sum
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1458/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/R-691.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-        <link>//R-691</link>
-        <link href="/R-691"/>
-        <guid isPermaLink="true">/R-691</guid>
       </item>
     
   </channel>
