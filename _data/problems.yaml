@@ -2175,43 +2175,51 @@
 - id: "1479D"
   title: "Odd Mineral Resource"
   labels: "data structures, probabilities, trees"
+  rating: 2900
 
 - id: "1479E"
   title: "School Clubs"
   labels: "dp, fft, math, number theory, probabilities"
+  rating: 3500
 
 - id: "1480A"
   title: "Yet Another String Game"
   labels: "games, greedy, strings"
+  rating: 800
   code: "r700-719/r700/1480a-yet-another-string-game.kt"
 
 - id: "1480B"
   title: "The Great Hero"
   labels: "greedy, implementation"
+  rating: 900
   code: "r700-719/r700/1480b-the-great-hero.kt"
 
 - id: "1480C"
   title: "Searching Local Minimum"
   labels: "binary search, interactive"
   also-as: "1479A"
+  rating: 1700
   code: "r700-719/r700/1480c-searching-local-minimum.kt"
 
 - id: "1480D1"
   title: "Painting the Array I"
   labels: "data structures, dp, greedy"
   also-as: "1479B1"
+  rating: 1900
   code: "r700-719/r700/1480d1-painting-the-array-i.kt"
 
 - id: "1480D2"
   title: "Painting the Array II"
   labels: "data structures, dp, greedy"
   also-as: "1479B2"
+  rating: 2100
   code: "r700-719/r700/1480d2-painting-the-array-ii.kt"
 
 - id: "1480E"
   title: "Continuous City"
   labels: "bitmasks, constructive algorithms"
   also-as: "1479C"
+  rating: 2600
 
 - id: "1481A"
   title: "Space Navigation"
@@ -2281,36 +2289,35 @@
 #   labels: "combinatorics, data structures, dp, sortings"
 #   rating: 2400
 
-# - id: "1487A"
-#   title: "Arena"
-#   labels: "implementation, sortings"
-#   code: "edu/edu104/1487a-arena.kt"
-#
-# - id: "1487B"
-#   title: "Cat Cycle"
-#   labels: "math, number theory"
-#   code: "edu/edu104/1487b-cat-cycle.kt"
-#
-# - id: "1487C"
-#   title: "Minimum Ties"
-#   labels: "constructive algorithms, dfs and similar, graphs, greedy, implementation, math, matrices"
-#   code: "edu/edu104/1487c-minimum-ties.kt"
-#
-# - id: "1487D"
-#   title: "Pythagorean Triples"
-#   labels: "binary search, brute force, math, number theory"
-#   code: "edu/edu104/1487d-pythagorean-triples.kt"
-#
-# - id: "1487E"
-#   title: "Cheap Dinner"
-#   labels: "data structures, dp, implementation, sortings, two pointers"
-#   code: "edu/edu104/1487e-cheap-dinner.kt"
-#
-# - id: "1487F"
-#   title: "Ones"
-#   labels: "dp, greedy"
-#
-# - id: "1487G"
-#   title: "String Counting"
-#   labels: "combinatorics, dp, math"
-#
+- id: "1487A"
+  title: "Arena"
+  labels: "implementation, sortings"
+  code: "edu/edu104/1487a-arena.kt"
+
+- id: "1487B"
+  title: "Cat Cycle"
+  labels: "math, number theory"
+  code: "edu/edu104/1487b-cat-cycle.kt"
+
+- id: "1487C"
+  title: "Minimum Ties"
+  labels: "constructive algorithms, dfs and similar, graphs, greedy, implementation, math, matrices"
+  code: "edu/edu104/1487c-minimum-ties.kt"
+
+- id: "1487D"
+  title: "Pythagorean Triples"
+  labels: "binary search, brute force, math, number theory"
+  code: "edu/edu104/1487d-pythagorean-triples.kt"
+
+- id: "1487E"
+  title: "Cheap Dinner"
+  labels: "data structures, dp, implementation, sortings, two pointers"
+  code: "edu/edu104/1487e-cheap-dinner.kt"
+
+- id: "1487F"
+  title: "Ones"
+  labels: "dp, greedy"
+
+- id: "1487G"
+  title: "String Counting"
+  labels: "combinatorics, dp, math"
