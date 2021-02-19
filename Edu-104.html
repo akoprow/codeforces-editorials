@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Educational Round 104</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Educational Round 104 | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Educational Round 104" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Educational Codeforces Round 104 (Rated for Div. 2)" />
+<meta property="og:description" content="Educational Codeforces Round 104 (Rated for Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Educational Round 104" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Educational Round 104","dateModified":"2021-02-15T00:00:00+00:00","url":"/codeforces-editorials/Edu-104","datePublished":"2021-02-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/Edu-104"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Educational Codeforces Round 104 (Rated for Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Educational Round 104</h2>
+  <time datetime="2021-02-15T00:00:00+00:00" class="by-line">15 Feb 2021</time>
+  <p><a href="https://codeforces.com/contest/1487">Educational Codeforces Round 104 (Rated for Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1487</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1487a/">
+    Arena
+  </a>
+  <a href="https://codeforces.com/contest/1487/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu104/1487a-arena.kt">(Code)</a>
+
+  <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<p>Notice that if we have two heroes with levels \(a_i\) and \(a_j\) such that \(a_i &gt; a_j\) then \(a_i\) can easily reach arbitrarily high level by continuing to fight with \(a_j\) over and over again.  So any hero that initially has at least one other hero who’s weaker than him can do that.  Also notice that if for any hero there is no one weaker than him initially then this will continue to be this case as the levels are only ever increasing and so such hero will forever remain at his level and won’t be able to reach \(100^{500}\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1487</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1487b/">
+    Cat Cycle
+  </a>
+  <a href="https://codeforces.com/contest/1487/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu104/1487b-cat-cycle.kt">(Code)</a>
+
+  <rating>R:1200 <meter min="800" max="3600" value="1200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>The case when \(n\) is even is each as the cats never “collide”.</p>
+
+<p>Otherwise, we can see that they’ll collide every \(\lfloor \frac{n}{2} \rfloor\) moves, so in total they’ll collide \(C = \frac{k}{n/2}\) times.  Each collision means that cat \(A\) moves by \(2\) spots rather than \(1\) (since the next one is occupied) and so he’ll eventually reach position \(((k+C) % n\) (0-based).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1487</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1487c/">
+    Minimum Ties
+  </a>
+  <a href="https://codeforces.com/contest/1487/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu104/1487c-minimum-ties.kt">(Code)</a>
+
+  <rating>R:1500 <meter min="800" max="3600" value="1500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">matrices</span>
+  
+  </labels>
+</div>
+
+<p>We have a total of \(G = \frac{n \cdot (n-1)}{2}\) games and the number of wins for each team must be equal and so each team should win \(\lfloor \frac{G}{n} \rfloor\) times and also lose that many times.  How do we construct such schedule of games?  The easiest way is for team \(i\) to win against the following teams, i.e. \(i+1, i+2, \ldots\) (everything modulo \(n\)).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1487</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1487d/">
+    Pythagorean Triples
+  </a>
+  <a href="https://codeforces.com/contest/1487/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu104/1487d-pythagorean-triples.kt">(Code)</a>
+
+  <rating>R:1500 <meter min="800" max="3600" value="1500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>We need to have \(a^2 + b^2 = c^2\) and \(a^2 - c = b\).  If we subtract the second equation from the first we get:</p>
+
+\[b^2 + c = c^2 - b \iff b(b+1) = (c-1)c \iff b = c-1\]
+
+<p>Now solving for \(a\):</p>
+
+\[a^2 - c = b \iff a^2 - (b+1)  = b \iff a^2 = 2b + 1\]
+
+<p>For this to have a solution:</p>
+
+<ul>
+  <li>\(a^2\) must be odd and so \(a\) must be odd and</li>
+  <li>\(a \neq 1\).</li>
+</ul>
+
+<p>Any \(a\) with those two constraints gives a unique solution for \(b\) and \(c\) and such that \(b &lt; c &lt; a \le n\) and so is valid.</p>
+
+<p>So we simply must compute the number of odd numbers \(a &gt; 1\) such that \(a^2 \le n\).  Naive solution should be \(O(\sqrt(n))\) which should be good enough but I did that and got TLE so instead I used binary search to find the answer.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1487</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1487e/">
+    Cheap Dinner
+  </a>
+  <a href="https://codeforces.com/contest/1487/problem/E">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu104/1487e-cheap-dinner.kt">(Code)</a>
+
+  <rating>R:2000 <meter min="800" max="3600" value="2000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">two pointers</span>
+  
+  </labels>
+</div>
+
+<p>For two courses we want to precompute cheapest valid combo of those courses for any choice of the first course.</p>
+
+<p>How do we combine it for 4 dishes?  Well, let’s start with drinks + desserts, for every drink computing the cheapest combo with a dessert. Now that we move to second courses note that we do not care any more which dessert went into the combo.  So let’s do second courses + drink/dessert combo, having best option for all three for every second course.  Finally we combine that with first courses and we’re done (the code to do it is shorter than this description…).</p>
+
+<p>So we just reduced this problem to two dishes only.  How do we solve that?  Well, let’s sort the second dish by increasing price and for every first dish let’s go though those options in order stopping at first for which the combo is not forbidden (or concluding there’s no option for the given first dish).  Note that the key here is that there are not too many forbidden combos so we know that the total work we’ll do is bounded by that, more precisely for \(n\) options for first dish, \(m\) for the second and \(f\) forbidden pairs, one pass costs us \(O(m \log{m} + max(n, f))\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1487</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1487f/">
+    Ones
+  </a>
+  <a href="https://codeforces.com/contest/1487/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2900 <meter min="800" max="3600" value="2900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1487</tiny>G
+
+  
+  <a href="/codeforces-editorials/problems/1487g/">
+    String Counting
+  </a>
+  <a href="https://codeforces.com/contest/1487/problem/G">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2700 <meter min="800" max="3600" value="2700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/Edu-104.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

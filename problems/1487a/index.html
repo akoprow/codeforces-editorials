@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
   <meta name="generator" content="Jekyll">
 
-  <title>Odd Mineral Resource</title>
+  <title>Arena</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Odd Mineral Resource | Codeforces editorials</title>
+<title>Arena | Codeforces editorials</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Odd Mineral Resource" />
+<meta property="og:title" content="Arena" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Codeforces editorials" />
 <meta property="og:description" content="Codeforces editorials" />
 <meta property="og:site_name" content="Codeforces editorials" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Odd Mineral Resource" />
+<meta property="twitter:title" content="Arena" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Odd Mineral Resource","url":"/codeforces-editorials/problems/1479d/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Arena","url":"/codeforces-editorials/problems/1487a/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -83,34 +83,31 @@
       <section id="main_content">
         <div class="alert alert-primary" role="alert">
   
-  <tiny>1479</tiny>D
+  <tiny>1487</tiny>A
 
   
-  <a href="/codeforces-editorials/problems/1479d/">
-    Odd Mineral Resource
+  <a href="/codeforces-editorials/problems/1487a/">
+    Arena
   </a>
-  <a href="https://codeforces.com/contest/1479/problem/D">
+  <a href="https://codeforces.com/contest/1487/problem/A">
   [CF]
   </a>
 
-  
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu104/1487a-arena.kt">(Code)</a>
 
-  <rating>R:2900 <meter min="800" max="3600" value="2900" /></rating>
+  <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
 
   <labels>
   
   
-    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
   
-    <span class="badge rounded-pill bg-warning text-dark">probabilities</span>
-  
-    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
   
   </labels>
 </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
-</code></pre></div></div>
+<p>Notice that if we have two heroes with levels \(a_i\) and \(a_j\) such that \(a_i &gt; a_j\) then \(a_i\) can easily reach arbitrarily high level by continuing to fight with \(a_j\) over and over again.  So any hero that initially has at least one other hero who’s weaker than him can do that.  Also notice that if for any hero there is no one weaker than him initially then this will continue to be this case as the levels are only ever increasing and so such hero will forever remain at his level and won’t be able to reach \(100^{500}\).</p>
 
 
       </section>
