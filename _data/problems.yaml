@@ -2289,35 +2289,74 @@
 #   labels: "combinatorics, data structures, dp, sortings"
 #   rating: 2400
 
+- id: "1486A"
+  title: "Shifting Stacks"
+  labels: "greedy, implementation"
+  code: "r700-719/r703/1486a-shifting-stacks.kt"
+
+- id: "1486B"
+  title: "Eastern Exhibition"
+  labels: "geometry, sortings"
+  code: "r700-719/r703/1486b-eastern-exhibition.kt"
+
+- id: "1486C1"
+  title: "Guessing the Greatest (easy version)"
+  labels: "binary search, interactive"
+  code: "r700-719/r703/1486c1-guessing-the-greatest-easy.kt"
+
+- id: "1486C2"
+  title: "Guessing the Greatest (hard version)"
+  labels: "binary search, interactive"
+  code: "r700-719/r703/1486c2-guessing-the-greatest-hard.kt"
+
+- id: "1486D"
+  title: "Max Median"
+  labels: "binary search, data structures, dp, two pointers"
+
+- id: "1486E"
+  title: "Paired Payment"
+  labels: "binary search, constructive algorithms, dp, graphs, shortest paths"
+
+- id: "1486F"
+  title: "Pairs of Paths"
+  labels: "combinatorics, data structures, trees"
+
 - id: "1487A"
   title: "Arena"
   labels: "implementation, sortings"
+  rating: 800
   code: "edu/edu104/1487a-arena.kt"
 
 - id: "1487B"
   title: "Cat Cycle"
   labels: "math, number theory"
+  rating: 1200
   code: "edu/edu104/1487b-cat-cycle.kt"
 
 - id: "1487C"
   title: "Minimum Ties"
   labels: "constructive algorithms, dfs and similar, graphs, greedy, implementation, math, matrices"
+  rating: 1500
   code: "edu/edu104/1487c-minimum-ties.kt"
 
 - id: "1487D"
   title: "Pythagorean Triples"
   labels: "binary search, brute force, math, number theory"
+  rating: 1500
   code: "edu/edu104/1487d-pythagorean-triples.kt"
 
 - id: "1487E"
   title: "Cheap Dinner"
   labels: "data structures, dp, implementation, sortings, two pointers"
+  rating: 2000
   code: "edu/edu104/1487e-cheap-dinner.kt"
 
 - id: "1487F"
   title: "Ones"
   labels: "dp, greedy"
+  rating: 2900
 
 - id: "1487G"
   title: "String Counting"
   labels: "combinatorics, dp, math"
+  rating: 2700
