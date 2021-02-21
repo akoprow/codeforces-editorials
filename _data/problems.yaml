@@ -239,6 +239,50 @@
   labels: "data structures, divide and conquer, probabilities"
   rating: 2800
 
+# - id: "1320E"
+#   title: "Treeland and Viruses"
+#   labels: "data structures, dfs and similar, dp, shortest paths, trees"
+#   rating: 3000
+#
+# - id: "1320F"
+#   title: "Blocks and Sensors"
+#   labels: "brute force"
+#   rating: 3500
+#
+# - id: "1321A"
+#   title: "Contest for Robots"
+#   labels: "greedy"
+#   rating: 900
+#
+# - id: "1321B"
+#   title: "Journey Planning"
+#   labels: "data structures, sortings"
+#   also-as: "1320A"
+#   rating: 1400
+#
+# - id: "1321C"
+#   title: "Remove Adjacent"
+#   labels: "brute force, constructive algorithms, greedy, strings"
+#   rating: 1600
+#
+# - id: "1321D"
+#   title: "Navigation System"
+#   labels: "graphs, shortest paths"
+#   also-as: "1320B"
+#   rating: 1700
+#
+# - id: "1321E"
+#   title: "World of Darkraft: Battle for Azathoth"
+#   labels: "data structures, sortings, two pointers"
+#   also-as: "1320C"
+#   rating: 2000
+#
+# - id: "1321F"
+#   title: "Reachable Strings"
+#   labels: "hashing, strings"
+#   also-as: "1320D"
+#   rating: 2500
+
 - id: "1322E"
   title: "Median Mountain Range"
   labels: "data structures"
@@ -2361,37 +2405,44 @@
   labels: "combinatorics, dp, math"
   rating: 2700
 
-# - id: "1490A"
-#   title: "Dense Array"
-#   labels: "greedy, math"
-#   rating: 800
-#
-# - id: "1490B"
-#   title: "Balanced Remainders"
-#   labels: "brute force, constructive algorithms, math"
-#   rating: 1000
-#
-# - id: "1490C"
-#   title: "Sum of Cubes"
-#   labels: "binary search, brute force, brute force, math"
-#   rating: 1100
-#
-# - id: "1490D"
-#   title: "Permutation Transformation"
-#   labels: "dfs and similar, divide and conquer, implementation"
-#   rating: 1200
-#
-# - id: "1490E"
-#   title: "Accidental Victory"
-#   labels: "binary search, data structures, greedy"
-#   rating: 1400
-#
-# - id: "1490F"
-#   title: "Equalize the Array"
-#   labels: "binary search, data structures, greedy, math, sortings"
-#   rating: 1500
-#
-# - id: "1490G"
-#   title: "Old Floppy Drive "
-#   labels: "binary search, data structures, math"
-#   rating: 1900
+- id: "1490A"
+  title: "Dense Array"
+  labels: "greedy, math"
+  rating: 800
+  code: "r700-719/r702/1490a-dense-array.kt"
+
+- id: "1490B"
+  title: "Balanced Remainders"
+  labels: "brute force, constructive algorithms, math"
+  rating: 1000
+  code: "r700-719/r702/1490b-balanced-remainders.kt"
+
+- id: "1490C"
+  title: "Sum of Cubes"
+  labels: "binary search, brute force, brute force, math"
+  rating: 1100
+  code: "r700-719/r702/1490c-sum-of-cubes.kt"
+
+- id: "1490D"
+  title: "Permutation Transformation"
+  labels: "dfs and similar, divide and conquer, implementation"
+  rating: 1200
+  code: "r700-719/r702/1490d-permutation-transformation.kt"
+
+- id: "1490E"
+  title: "Accidental Victory"
+  labels: "binary search, data structures, greedy"
+  rating: 1400
+  code: "r700-719/r702/1490e-accidental-victory.kt"
+
+- id: "1490F"
+  title: "Equalize the Array"
+  labels: "binary search, data structures, greedy, math, sortings"
+  rating: 1500
+  code: "r700-719/r702/1490f-equalize-the-array.kt"
+
+- id: "1490G"
+  title: "Old Floppy Drive "
+  labels: "binary search, data structures, math"
+  rating: 1900
+  code: "r700-719/r702/1490g-old-floppy-drive.kt"
