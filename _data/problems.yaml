@@ -2255,39 +2255,39 @@
   labels: "dp, trees"
   rating: 3100
 
-# - id: "1485A"
-#   title: "Add and Divide"
-#   labels: "brute force, greedy, math, ternary search"
-#   rating: 1000
-#   code: "r700-719/r701/1485a-add-and-divide.kt"
-#
-# - id: "1485B"
-#   title: "Replace and Keep Sorted"
-#   labels: "dp, implementation, math"
-#   rating: 1200
-#   code: "r700-719/r701/1485b-replace-and-keep-sorted.kt"
-#
-# - id: "1485C"
-#   title: "Floor and Mod"
-#   labels: "brute force, math, number theory"
-#   rating: 1700
-#   code: "r700-719/r701/1485c-floor-and-mod.kt"
-#
-# - id: "1485D"
-#   title: "Multiples and Power Differences"
-#   labels: "constructive algorithms, math, number theory"
-#   rating: 2200
-#   code: "r700-719/r701/1485d-multiples-and-power-differences.kt"
-#
-# - id: "1485E"
-#   title: "Move and Swap"
-#   labels: "dp, greedy, trees"
-#   rating: 2500
-#
-# - id: "1485F"
-#   title: "Copy or Prefix Sum"
-#   labels: "combinatorics, data structures, dp, sortings"
-#   rating: 2400
+- id: "1485A"
+  title: "Add and Divide"
+  labels: "brute force, greedy, math, ternary search"
+  rating: 1000
+  code: "r700-719/r701/1485a-add-and-divide.kt"
+
+- id: "1485B"
+  title: "Replace and Keep Sorted"
+  labels: "dp, implementation, math"
+  rating: 1200
+  code: "r700-719/r701/1485b-replace-and-keep-sorted.kt"
+
+- id: "1485C"
+  title: "Floor and Mod"
+  labels: "brute force, math, number theory"
+  rating: 1700
+  code: "r700-719/r701/1485c-floor-and-mod.kt"
+
+- id: "1485D"
+  title: "Multiples and Power Differences"
+  labels: "constructive algorithms, math, number theory"
+  rating: 2200
+  code: "r700-719/r701/1485d-multiples-and-power-differences.kt"
+
+- id: "1485E"
+  title: "Move and Swap"
+  labels: "dp, greedy, trees"
+  rating: 2500
+
+- id: "1485F"
+  title: "Copy or Prefix Sum"
+  labels: "combinatorics, data structures, dp, sortings"
+  rating: 2400
 
 - id: "1486A"
   title: "Shifting Stacks"
@@ -2360,3 +2360,38 @@
   title: "String Counting"
   labels: "combinatorics, dp, math"
   rating: 2700
+
+# - id: "1490A"
+#   title: "Dense Array"
+#   labels: "greedy, math"
+#   rating: 800
+#
+# - id: "1490B"
+#   title: "Balanced Remainders"
+#   labels: "brute force, constructive algorithms, math"
+#   rating: 1000
+#
+# - id: "1490C"
+#   title: "Sum of Cubes"
+#   labels: "binary search, brute force, brute force, math"
+#   rating: 1100
+#
+# - id: "1490D"
+#   title: "Permutation Transformation"
+#   labels: "dfs and similar, divide and conquer, implementation"
+#   rating: 1200
+#
+# - id: "1490E"
+#   title: "Accidental Victory"
+#   labels: "binary search, data structures, greedy"
+#   rating: 1400
+#
+# - id: "1490F"
+#   title: "Equalize the Array"
+#   labels: "binary search, data structures, greedy, math, sortings"
+#   rating: 1500
+#
+# - id: "1490G"
+#   title: "Old Floppy Drive "
+#   labels: "binary search, data structures, math"
+#   rating: 1900
