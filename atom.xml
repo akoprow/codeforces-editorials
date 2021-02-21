@@ -500,6 +500,245 @@
       </item>
     
       <item>
+        <title>Round 701 (Div II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1485&quot;&gt;Codeforces Round #701 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1485&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1485a/&quot;&gt;
+    Add and Divide
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485a-add-and-divide.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1000&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;ternary search&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It’s fairly easy to realize that we want to increase \(b\) as much as possible before starting to divide by it (by looking at those two operations next to each other it’s obvious).  So just make sure that \(b\) isn’t \(1\) (if it is increase it once) and then keep on increasing \(b\) and for each one check what the score is by doing repeated division.  What’s the stop condition?  Once a given \(b\) gives us score worse than what we’ve got as a best one so far.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1485&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1485b/&quot;&gt;
+    Replace and Keep Sorted
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485b-replace-and-keep-sorted.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that to make array \(k\)-similar we pick a position, say \(i\), and replace the value at that position to \(a_{i-1} &amp;lt; v &amp;lt; a_{i+1}\) and \(v \neq a_i\).&lt;/p&gt;
+
+&lt;p&gt;It’s possible to compute things directly but the simplest solution (I think) is to use prefix sums.  Compute on each position how many \(k\)-similar arrays we can make by changing value at this position, which is trivial given the observation above.  Now for each query just take the sum over the segment, only be careful with segment boundaries as for them we now get more solutions as we loose part of the constraints.  So for a segment \([l, r]\) at position \(l\) we can put anything smaller than \(a_{l+1}\) and different than \(a_l\) so we have \(a_{l+1}-2\) options.  Similarly at position \(r\) we can put anything greater than \(a_{r-1}\) and different than \(a_r\) so we have \(k - a_{r-1} - 1\) options.  For the rest of the segment just take the sum using precomputed prefix sums.  Be careful for the case where \(l = r\) in which case any single number other than \(a_l\) is a solution.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1485&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1485c/&quot;&gt;
+    Floor and Mod
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485c-floor-and-mod.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s say that \(\lfloor \frac{a}{b} \rfloor = a \mod b = k\).  How do those pairs look like for \(k=1\)?  We must have \((v+1, v)\) as then \(\lfloor \frac{v+1}{v} \rfloor = 1 = (v+1) \mod v\).  Then for \(2\) we get: \((2v+2, v)\) with \(\lfloor \frac{2v+2}{v} \rfloor = 2 = 2v+2 \mod v\) etc.&lt;/p&gt;
+
+&lt;p&gt;So let’s iterate over \(k\).  For a given \(k\) we have:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(a = kb + k\),&lt;/li&gt;
+  &lt;li&gt;\(b &amp;gt; k\),&lt;/li&gt;
+  &lt;li&gt;\(1 \le b \le y\),&lt;/li&gt;
+  &lt;li&gt;\(a \le x\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Substituting \(a\) in the last equation we get: \(kb + k \le x\) so we end up with the following constraints on \(b\):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(b \le \frac{x}{k}-1\) and&lt;/li&gt;
+  &lt;li&gt;\(k &amp;lt; b \le y\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So the number of solutions for a given \(k\) is: \(max(0, min(y, \frac{x}{k}-1) - k)\).  And from the fact that smallest \(a\) is \(k(k+1) + k\) and \(a \le x\), we easily get an upper bound of the number of iterations to be \(\sqrt{x}\).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: I used a somewhat different reasoning in the live contest and never validated the above via a submission.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1485&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1485d/&quot;&gt;
+    Multiples and Power Differences
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485d-multiples-and-power-differences.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The trick is to realize that there are relatively few solutions and rather than looking for them we must find a trick that “always works”.  The idea is to divide the board into 2-colors so that we always have adjacent cells of different colors and then write into them \(p+q\) and \(p\).  From the problem we have the following constraints:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(p, q \ge 1\),&lt;/li&gt;
+  &lt;li&gt;\(p\) is a multiple of the value in one of the cells,&lt;/li&gt;
+  &lt;li&gt;\(p+q\) is a multiple of the value in the other cell,&lt;/li&gt;
+  &lt;li&gt;\(q\) is equal to \(k^4\) for some \(k\),&lt;/li&gt;
+  &lt;li&gt;\(p + q \le 10^6\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Can we find a \((p, q)\) pair that satisfies those constraints?  Turns out we can.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(p\) must be a multiple of a number in given cell (any cell) so our best bet is \(lcm(1, 2, \ldots 16) = 720720\).&lt;/li&gt;
+  &lt;li&gt;\(q\) must be a multiple of a number in a given cell &lt;em&gt;and&lt;/em&gt; a \(4\)‘th power of some number so we can just take \(v^4\) where \(v\) is the value in the cell.&lt;/li&gt;
+  &lt;li&gt;\(p + q = 720720 + v^4 \le 720720 + 16^4 = 786256 \le 10^6\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1485&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1485e/&quot;&gt;
+    Move and Swap
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1485&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1485f/&quot;&gt;
+    Copy or Prefix Sum
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-701.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
+        <link>//R-701</link>
+        <link href="/R-701"/>
+        <guid isPermaLink="true">/R-701</guid>
+      </item>
+    
+      <item>
         <title>Round 700 (Div I+II)</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1479&quot;&gt;Codeforces Round #700 (Div. 1)&lt;/a&gt;&lt;/p&gt;
 
@@ -2286,342 +2525,6 @@
         <link>//R-695</link>
         <link href="/R-695"/>
         <guid isPermaLink="true">/R-695</guid>
-      </item>
-    
-      <item>
-        <title>Round 694 (Div I+II)</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1470&quot;&gt;Codeforces Round #694 (Div. 1)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1471&quot;&gt;Codeforces Round #694 (Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1471&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1471a/&quot;&gt;
-    Strange Partition
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1471/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471a-strange-partition.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If all numbers are divisible by \(x\) then it doesn’t matter how many operations we will perform, they will never affect the result.  Otherwise they could and it is not too difficult to see that if we want to minimize the result then it’s best to collapse everything into a single number in which case the answer is:&lt;/p&gt;
-
-\[\lceil \frac{\sum_i a_i}{x} \rceil\]
-
-&lt;p&gt;and to maximize it it’s best not too do any operations for the result of:&lt;/p&gt;
-
-\[\sum_i \lceil \frac{a_i}{x} \rceil\]
-
-&lt;p&gt;The reason for that is because for any \(a, b, x\) we have:&lt;/p&gt;
-
-\[\lceil \frac{a+b}{x} \rceil \le \lceil \frac{a}{x} \rceil + \lceil \frac{b}{x} \rceil\]
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1471&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1471b/&quot;&gt;
-    Strange List
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1471/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471b-strange-list.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We essentially simulate what the robot does by passing through the array, only instead of adding new elements to the array we keep a total sum of its elements and we keep track of the divisor which is \(x\) initially and gets multiplied by \(x\) after each iteration.  If we process an element we add it to the total result (even though it’ll be added in several chunks they will all sum up to its original value).  And once we reach an element that stops being divisible we stop.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1471&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1471c/&quot;&gt;
-    Strange Birthday Party
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1471/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471c-strange-birthday-party.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1300&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We solve it greedily by observing that it’s best to give cheapest gifts to people later in the array.  To prove that let’s say that we have two people \(k_i\) and \(k_j\) where \(j &amp;gt; i\), and so \(k_j \ge k_i\), who got gifts \(x\) and \(y\), respectively, with \(x \gt y\) for a total cost of \(x + y\).  Now let’s swap those gifts so that \(k_i\) gets \(y\) (if it was ok to give him \(x\) then it must also be ok to give him smaller \(y\)) and \(k_j\) gets \(min(x, C_j)\) (if it was OK to give \(x\) to \(k_i\) then it must be ok to give it to \(k_j\) as \(k_j \ge k_i\)).  The total cost now becomes \(min(x, C_j) + y\) which is less than or equal than what we had before.&lt;/p&gt;
-
-&lt;p&gt;Now it’s just a matter of starting with giving money to everyone and then going from cheapest to more expensive gifts and handle them to people from right to left for as long as we can.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1471&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1471d/&quot;&gt;
-    Strange Definition
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1471/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471d-strange-definition.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;hashing&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;First, let’s try to see what the adjacency condition means.  Let’s take:&lt;/p&gt;
-
-\[x = p_1^{\alpha_1} \cdot \ldots \cdot p_n^{\alpha_n}\]
-
-\[y = p_1^{\beta_1} \cdot \ldots \cdot p_n^{\beta_n}\]
-
-&lt;p&gt;(some \(\alpha_i, \beta_i\) might be \(0\)). Then we can see that:&lt;/p&gt;
-
-\[gcd(x, y) = p_1^{\min(\alpha_1, \beta_1)} \cdot \ldots \cdot p_n^{min(\alpha_n, \beta_n)}\]
-
-\[lcm(x, y) = p_1^{\max(\alpha_1, \beta_1)} \cdot \ldots \cdot p_n^{max(\alpha_n, \beta_n)}\]
-
-\[\frac{lcm(x, y)}{gcd(x, y)} = p_1^{max(\alpha_1, \beta_1) - min(\alpha_1, \beta_1)} \cdot \ldots = p_1^{\mid \alpha_1 - \beta_1 \mid} \cdot \ldots \cdot p_n^{\mid \alpha_n - \beta_n \mid}\]
-
-&lt;p&gt;Now for a number to be a perfect square, all its exponents must be even as then:&lt;/p&gt;
-
-\[\sqrt{p_1^{2\alpha_1} \cdot \ldots \cdot p_n^{2\alpha_n}} = p_1^{\alpha_1} \cdot \ldots \cdot p_n^{\alpha_n}\]
-
-&lt;p&gt;Going back to the previous formula we therefore conclude that two numbers are adjacent if all their exponents have the same parity.  That means that we don’t care about the exponent, only about their parities so we can normalize all numbers by:&lt;/p&gt;
-
-\[\mathcal{N}(p_1^{\alpha_1} \cdot \ldots \cdot p_n^{\alpha_n}) = p_1^{\alpha_1 \mod 2} \cdot \ldots \cdot p_n^{\alpha_n \mod 2}\]
-
-&lt;p&gt;and then we also have that \(x\) is adjacent to \(y\) iff \(\mathcal{N}(x) = \mathcal{N}(y)\).&lt;/p&gt;
-
-&lt;p&gt;So let’s normalize the input numbers and count frequencies for them (how many copies of each number we have).  The highest frequency count is our initial beauty.&lt;/p&gt;
-
-&lt;p&gt;Now what happens when we start replacing?  If any number occurs with an even frequency then it will be immediately collapsed to \(1\) (as after multiplication all the exponents will be even), otherwise it will remain unchanged.  Which means that after the first step everything will stabilize and will not change any more.&lt;/p&gt;
-
-&lt;p&gt;So we can just compute the initial beauty and the beauty after single step and then use those two numbers to answer queries \(w = 0\) and \(w &amp;gt; 0\), respectively.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1471&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1471e/&quot;&gt;
-    Strange Shuffle
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1471/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r694/1471e-strange-shuffle.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Let’s first see the number of card changes after a couple of turns (underlined number is the impostor)&lt;/p&gt;
-
-\[\ldots, 4, 4, 4, \mathbf{\underline{4}}, 4, 4, 4, \ldots\]
-
-\[\ldots, 4, 4, \mathbf{3, \underline{4}, 5}, 4, 4, \ldots\]
-
-\[\ldots, 4, \mathbf{3, 3, \underline{4}, 5, 5}, 4, \ldots\]
-
-\[\ldots, \mathbf{3, 3, 3, \underline{4}, 5, 5, 5}, \ldots\]
-
-&lt;p&gt;Crucial observations are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;impostor will continue holding \(k\) cards,&lt;/li&gt;
-  &lt;li&gt;affected people to the left of him will have less than \(k\) cards and to the right of him more than \(k\) cards,&lt;/li&gt;
-  &lt;li&gt;number of affected people (to left and right) increases by one after each move.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The idea is to first try to find a block of affected people and, once we have that, we can zone in on the impostor using binary search.&lt;/p&gt;
-
-&lt;p&gt;How do find the block?  In the first moves the number of affected people is so small that it’s hopeless. However, we can wait, say 500 turns, by which point the block will grow to \(500+1+500\).  We need to be careful with hitting impostor so to avoid that we will always query for two consecutive positions in every block.  Even for the maximal \(n = 10^5\) we only have \(100\) blocks and so we will identify a block in at most \(200\) queries.&lt;/p&gt;
-
-&lt;p&gt;Let’s say we found an affected person at position \(i\).  We know whether the affected person is to the left or right of the impostor.  If he’s to the left then we know that impostor is somewhere in the segment of \([i, i+700]\) (or however many turns into the game we are); similarly for the other case, when the person is to the right of impostor.  For such a small segment we can find an impostor in \(\log s\) queries, where \(s\) is the size of the segment, so in this case we need at most \(10\) additional queries.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1471&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1471f/&quot;&gt;
-    Strange Housing
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1471/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1470&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1470e/&quot;&gt;
-    Strange Permutation
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1470/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1470&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1470f/&quot;&gt;
-    Strange Covering
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1470/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;divide and conquer&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/R-694.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
-        <link>//R-694</link>
-        <link href="/R-694"/>
-        <guid isPermaLink="true">/R-694</guid>
       </item>
     
   </channel>

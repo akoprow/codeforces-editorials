@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 701 (Div II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 701 (Div II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 701 (Div II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #701 (Div. 2)" />
+<meta property="og:description" content="Codeforces Round #701 (Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 701 (Div II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 701 (Div II)","dateModified":"2021-02-12T00:00:00+00:00","url":"/codeforces-editorials/R-701","datePublished":"2021-02-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-701"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #701 (Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 701 (Div II)</h2>
+  <time datetime="2021-02-12T00:00:00+00:00" class="by-line">12 Feb 2021</time>
+  <p><a href="https://codeforces.com/contest/1485">Codeforces Round #701 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1485</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1485a/">
+    Add and Divide
+  </a>
+  <a href="https://codeforces.com/contest/1485/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485a-add-and-divide.kt">(Code)</a>
+
+  <rating>R:1000 <meter min="800" max="3600" value="1000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">ternary search</span>
+  
+  </labels>
+</div>
+
+<p>It’s fairly easy to realize that we want to increase \(b\) as much as possible before starting to divide by it (by looking at those two operations next to each other it’s obvious).  So just make sure that \(b\) isn’t \(1\) (if it is increase it once) and then keep on increasing \(b\) and for each one check what the score is by doing repeated division.  What’s the stop condition?  Once a given \(b\) gives us score worse than what we’ve got as a best one so far.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1485</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1485b/">
+    Replace and Keep Sorted
+  </a>
+  <a href="https://codeforces.com/contest/1485/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485b-replace-and-keep-sorted.kt">(Code)</a>
+
+  <rating>R:1200 <meter min="800" max="3600" value="1200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Note that to make array \(k\)-similar we pick a position, say \(i\), and replace the value at that position to \(a_{i-1} &lt; v &lt; a_{i+1}\) and \(v \neq a_i\).</p>
+
+<p>It’s possible to compute things directly but the simplest solution (I think) is to use prefix sums.  Compute on each position how many \(k\)-similar arrays we can make by changing value at this position, which is trivial given the observation above.  Now for each query just take the sum over the segment, only be careful with segment boundaries as for them we now get more solutions as we loose part of the constraints.  So for a segment \([l, r]\) at position \(l\) we can put anything smaller than \(a_{l+1}\) and different than \(a_l\) so we have \(a_{l+1}-2\) options.  Similarly at position \(r\) we can put anything greater than \(a_{r-1}\) and different than \(a_r\) so we have \(k - a_{r-1} - 1\) options.  For the rest of the segment just take the sum using precomputed prefix sums.  Be careful for the case where \(l = r\) in which case any single number other than \(a_l\) is a solution.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1485</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1485c/">
+    Floor and Mod
+  </a>
+  <a href="https://codeforces.com/contest/1485/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485c-floor-and-mod.kt">(Code)</a>
+
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>Let’s say that \(\lfloor \frac{a}{b} \rfloor = a \mod b = k\).  How do those pairs look like for \(k=1\)?  We must have \((v+1, v)\) as then \(\lfloor \frac{v+1}{v} \rfloor = 1 = (v+1) \mod v\).  Then for \(2\) we get: \((2v+2, v)\) with \(\lfloor \frac{2v+2}{v} \rfloor = 2 = 2v+2 \mod v\) etc.</p>
+
+<p>So let’s iterate over \(k\).  For a given \(k\) we have:</p>
+
+<ul>
+  <li>\(a = kb + k\),</li>
+  <li>\(b &gt; k\),</li>
+  <li>\(1 \le b \le y\),</li>
+  <li>\(a \le x\).</li>
+</ul>
+
+<p>Substituting \(a\) in the last equation we get: \(kb + k \le x\) so we end up with the following constraints on \(b\):</p>
+
+<ul>
+  <li>\(b \le \frac{x}{k}-1\) and</li>
+  <li>\(k &lt; b \le y\).</li>
+</ul>
+
+<p>So the number of solutions for a given \(k\) is: \(max(0, min(y, \frac{x}{k}-1) - k)\).  And from the fact that smallest \(a\) is \(k(k+1) + k\) and \(a \le x\), we easily get an upper bound of the number of iterations to be \(\sqrt{x}\).</p>
+
+<p><em>Note</em>: I used a somewhat different reasoning in the live contest and never validated the above via a submission.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1485</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1485d/">
+    Multiples and Power Differences
+  </a>
+  <a href="https://codeforces.com/contest/1485/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485d-multiples-and-power-differences.kt">(Code)</a>
+
+  <rating>R:2200 <meter min="800" max="3600" value="2200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>The trick is to realize that there are relatively few solutions and rather than looking for them we must find a trick that “always works”.  The idea is to divide the board into 2-colors so that we always have adjacent cells of different colors and then write into them \(p+q\) and \(p\).  From the problem we have the following constraints:</p>
+
+<ul>
+  <li>\(p, q \ge 1\),</li>
+  <li>\(p\) is a multiple of the value in one of the cells,</li>
+  <li>\(p+q\) is a multiple of the value in the other cell,</li>
+  <li>\(q\) is equal to \(k^4\) for some \(k\),</li>
+  <li>\(p + q \le 10^6\).</li>
+</ul>
+
+<p>Can we find a \((p, q)\) pair that satisfies those constraints?  Turns out we can.</p>
+
+<ul>
+  <li>\(p\) must be a multiple of a number in given cell (any cell) so our best bet is \(lcm(1, 2, \ldots 16) = 720720\).</li>
+  <li>\(q\) must be a multiple of a number in a given cell <em>and</em> a \(4\)‘th power of some number so we can just take \(v^4\) where \(v\) is the value in the cell.</li>
+  <li>\(p + q = 720720 + v^4 \le 720720 + 16^4 = 786256 \le 10^6\).</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1485</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1485e/">
+    Move and Swap
+  </a>
+  <a href="https://codeforces.com/contest/1485/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2500 <meter min="800" max="3600" value="2500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1485</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1485f/">
+    Copy or Prefix Sum
+  </a>
+  <a href="https://codeforces.com/contest/1485/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2400 <meter min="800" max="3600" value="2400" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-701.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
