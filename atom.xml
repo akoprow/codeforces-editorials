@@ -242,6 +242,258 @@
       </item>
     
       <item>
+        <title>Round 702 (Div III)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1490&quot;&gt;Codeforces Round #702 (Div. 3)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1490&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1490a/&quot;&gt;
+    Dense Array
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1490/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490a-dense-array.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Clearly, whatever we insert between any two elements will not affect any other pair so we can solve each pair independently.  For a given pair \(a_i, a_{i+1}\) let’s take \(x = min(a_i, a_{i+1})\) and \(y = max(a_i, a_{i+1})\).  If \(2*x \ge y\) then we’re good.  Otherwise, we want to insert \(2x, 4x, 8x, \ldots\) and we can figure out how many of those elements we need with a simple loop.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1490&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1490b/&quot;&gt;
+    Balanced Remainders
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1490/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490b-balanced-remainders.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1000&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Numbers don’t matter, only their remainder modulo \(3\).  Let’s count \(c_0, c_1, c_2\) being the number of elements with respective remainders.  In a single move we can decrement \(c_i\) and increment \(c_{(i+1) \mod 3}\).  One greedy approach that we can take is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;as long as there’s \(c_i\) that is too large, take it and move it to “the next slot” (\(\mod 3\)).&lt;/li&gt;
+  &lt;li&gt;it can be shown that at most two rounds through all \(c_i\) will do.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1490&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1490c/&quot;&gt;
+    Sum of Cubes
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1490/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490c-sum-of-cubes.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that \(\sqrt[3]{10^{12}} = 10^4\), so in other words the largest number that is useful to use is \(10000\), so for all numbers up to that limit we can precompute their cubes and store in a set.  Then if we want to see if \(x\) can be represented as sum of cubes, iterate over stored cubes smaller than \(x\) and for each \(v^3\), check if \(x - v^3\) is in our precomputed set (i.e. is a cube of some number).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1490&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1490d/&quot;&gt;
+    Permutation Transformation
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1490/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490d-permutation-transformation.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;divide and conquer&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We pretty much just do what the problem describes, via a recursion with three arguments: \((l, r, d)\) being the segment we still operate on \([l, r]\) and current depth \(d\).  We start with \((1, n, 0)\).  At a recursion step we find maximum in \(a_l, \ldots, a_r\) at position \(p\).  We denote \(d\) as the answer for \(a_p\) and we recursively descend into \((l, p-1, d+1)\) and \((p+1, r, d+1)\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1490&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1490e/&quot;&gt;
+    Accidental Victory
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1490/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490e-accidental-victory.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s sort players by the number of tokens they have.  Note that problem speaks about possibility of winning so if we just find one scenario where we win that’s good enough for there to be a non-zero probability that this will actually happen, so that’s good enough.&lt;/p&gt;
+
+&lt;p&gt;Firstly note that we can win with all the players that have not more tokens than we do and by doing so collect their tokens.  So we want to find the number of tokens that we need to have to win.  One option is by doing binary search.  Another is a more direct approach, which is linear after sorting and that’s what I did; see code for details.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1490&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1490f/&quot;&gt;
+    Equalize the Array
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1490/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490f-equalize-the-array.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The crucial observation is that the winning \(C\) must be a frequency of some element in the array.  And we can have at most \(\sqrt{n}\) different candidates for \(C\) (elements with counts \(1, 2, 3, \ldots\) has a quadratic growth).  So let’s just compute frequencies of all elements to get our candidates.&lt;/p&gt;
+
+&lt;p&gt;Now for a given \(C\) computing the cost to make array \(C\)-beautiful is easy, as for a given element with \(x\) occurrences we have to pay:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(x\) if \(x &amp;lt; C\) as we need to remove all \(x\) copies.&lt;/li&gt;
+  &lt;li&gt;\(0\) if \(x = C\),&lt;/li&gt;
+  &lt;li&gt;\(x-C\) if \(x &amp;gt; C\) as we need to remove extra copies.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then we simply pick the best option over all candidate \(C\)s.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1490&lt;/tiny&gt;G
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1490g/&quot;&gt;
+    Old Floppy Drive 
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1490/problem/G&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490g-old-floppy-drive.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s start by computing all the points where the disk might stop in a single round, i.e. pairs \((p_i, v_i)\) point on disk \(1 \le p \le n\) and \(v_i = \sum_{i \le p} a_i\).  Note that those points will form an increasing sequence as if we had \(x\) followed by \(y\) and \(y &amp;lt; x\) then it we were to stop at \(y\) we’d have stopped instead at \(x\) before.  Once we have that for a single query we have few cases&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(x \le v_t\) assuming we have \(t\) pairs of possible stopping points.  In this case the disk will stop within the first spin and we can find the point where it stops with binary search.&lt;/li&gt;
+  &lt;li&gt;\(x &amp;gt; v_t\) and \(\sum_{i \in 1..n} a_i \le 0\), which means we won’t reach the right point within the first spin and with every spin \(x\) is not increasing so it will never stop.&lt;/li&gt;
+  &lt;li&gt;Otherwise, we compute how many full spins we need to get to \(x \le v_t\) (i.e. first case above).  So we know by how much we need to decrease \(x\) and hence how many full spins are required.  After that we’re back in the first case above.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-702.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+        <link>//R-702</link>
+        <link href="/R-702"/>
+        <guid isPermaLink="true">/R-702</guid>
+      </item>
+    
+      <item>
         <title>Educational Round 104</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1487&quot;&gt;Educational Codeforces Round 104 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
 
@@ -2340,191 +2592,6 @@
         <link>//R-696</link>
         <link href="/R-696"/>
         <guid isPermaLink="true">/R-696</guid>
-      </item>
-    
-      <item>
-        <title>Round 695 (Div II)</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1467&quot;&gt;Codeforces Round #695 (Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1467&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1467a/&quot;&gt;
-    Wizard of Orz
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1467/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r695/1467a-wizard-of-orz.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;With just a single panel we clearly pause it so that it shows \(9\).  Otherwise we pause the second panel when it shows \(8\), so that we get a prefix of \(9890123456\ldots\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1467&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1467b/&quot;&gt;
-    Hills And Valleys
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1467/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r695/1467b-hills-and-valleys.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;First observation is that changes are very local, changing \(a_i\) might change hill/valley status of elements at positions \(i-1, i, i+1\) only.&lt;/p&gt;
-
-&lt;p&gt;Secondly, it’s always optimal to change \(a_i\) to either \(a_{i-1}\) or \(a_{i+1}\). To see that assume that we picked \(x\) to minimize the number of hills/valleys in \(a_{i-1}, x, a_{i+1}\).  We have two options:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;if \(x &amp;lt; max(a_{i-1}, a_{i+1})\) then we can change \(x\) to be \(min(a_{i-1}, a_{i+1})\), which ensures that there’s no peak/valley at that position.&lt;/li&gt;
-  &lt;li&gt;or \(x &amp;gt; min(a_{i-1}, a_{i+1})\) in which case we change it to \(max(a_{i-1}, a_{i+1})\), again ensuring it does not form a peak/valley.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Once we know all that it’s enough to compute the number of peaks/valleys in the original configuration and then try all those local modifications, efficiently compute updated score and pick the minimal one.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1467&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1467c/&quot;&gt;
-    Three Bags
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1467/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r695/1467c-three-bags.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Think of the operations as a rooted tree.  Nodes are the numbers in the bags. The root is the final number.  A directed edge from one number to the other indicates that we merge those numbers.  Each edge must necessarily connect nodes from different bags.&lt;/p&gt;
-
-&lt;p&gt;What’s the total score?  With each layer of the tree we subtract numbers, so we actually end up switch between subtracting/adding them layer by layer.  That means that the final score is the sum of all elements at odd layers minus the sum of all layers at even layers.  So our goal is to put as little as possible into odd layers.&lt;/p&gt;
-
-&lt;p&gt;A picture is worth a thousand words and the notes have two pictures of the optimal configurations but it comes down to either of those two options, where we manage to pack everything into odd layers except for:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;one element from one bag and one element from a &lt;em&gt;different&lt;/em&gt; bag or&lt;/li&gt;
-  &lt;li&gt;all elements from a single bag (split between two layers)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Once we know all that it’s very easy to compute those options and pick a better one.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1467&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1467d/&quot;&gt;
-    Sum of Paths
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1467/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1467&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1467e/&quot;&gt;
-    Distinctive Roots in a Tree
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1467/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/R-695.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-        <link>//R-695</link>
-        <link href="/R-695"/>
-        <guid isPermaLink="true">/R-695</guid>
       </item>
     
   </channel>

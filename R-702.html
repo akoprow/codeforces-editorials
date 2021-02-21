@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 702 (Div III)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 702 (Div III) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 702 (Div III)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #702 (Div. 3)" />
+<meta property="og:description" content="Codeforces Round #702 (Div. 3)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 702 (Div III)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 702 (Div III)","dateModified":"2021-02-16T00:00:00+00:00","url":"/codeforces-editorials/R-702","datePublished":"2021-02-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-702"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #702 (Div. 3)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 702 (Div III)</h2>
+  <time datetime="2021-02-16T00:00:00+00:00" class="by-line">16 Feb 2021</time>
+  <p><a href="https://codeforces.com/contest/1490">Codeforces Round #702 (Div. 3)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1490</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1490a/">
+    Dense Array
+  </a>
+  <a href="https://codeforces.com/contest/1490/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490a-dense-array.kt">(Code)</a>
+
+  <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Clearly, whatever we insert between any two elements will not affect any other pair so we can solve each pair independently.  For a given pair \(a_i, a_{i+1}\) let’s take \(x = min(a_i, a_{i+1})\) and \(y = max(a_i, a_{i+1})\).  If \(2*x \ge y\) then we’re good.  Otherwise, we want to insert \(2x, 4x, 8x, \ldots\) and we can figure out how many of those elements we need with a simple loop.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1490</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1490b/">
+    Balanced Remainders
+  </a>
+  <a href="https://codeforces.com/contest/1490/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490b-balanced-remainders.kt">(Code)</a>
+
+  <rating>R:1000 <meter min="800" max="3600" value="1000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Numbers don’t matter, only their remainder modulo \(3\).  Let’s count \(c_0, c_1, c_2\) being the number of elements with respective remainders.  In a single move we can decrement \(c_i\) and increment \(c_{(i+1) \mod 3}\).  One greedy approach that we can take is:</p>
+
+<ul>
+  <li>as long as there’s \(c_i\) that is too large, take it and move it to “the next slot” (\(\mod 3\)).</li>
+  <li>it can be shown that at most two rounds through all \(c_i\) will do.</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1490</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1490c/">
+    Sum of Cubes
+  </a>
+  <a href="https://codeforces.com/contest/1490/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490c-sum-of-cubes.kt">(Code)</a>
+
+  <rating>R:1100 <meter min="800" max="3600" value="1100" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Note that \(\sqrt[3]{10^{12}} = 10^4\), so in other words the largest number that is useful to use is \(10000\), so for all numbers up to that limit we can precompute their cubes and store in a set.  Then if we want to see if \(x\) can be represented as sum of cubes, iterate over stored cubes smaller than \(x\) and for each \(v^3\), check if \(x - v^3\) is in our precomputed set (i.e. is a cube of some number).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1490</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1490d/">
+    Permutation Transformation
+  </a>
+  <a href="https://codeforces.com/contest/1490/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490d-permutation-transformation.kt">(Code)</a>
+
+  <rating>R:1200 <meter min="800" max="3600" value="1200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">divide and conquer</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>We pretty much just do what the problem describes, via a recursion with three arguments: \((l, r, d)\) being the segment we still operate on \([l, r]\) and current depth \(d\).  We start with \((1, n, 0)\).  At a recursion step we find maximum in \(a_l, \ldots, a_r\) at position \(p\).  We denote \(d\) as the answer for \(a_p\) and we recursively descend into \((l, p-1, d+1)\) and \((p+1, r, d+1)\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1490</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1490e/">
+    Accidental Victory
+  </a>
+  <a href="https://codeforces.com/contest/1490/problem/E">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490e-accidental-victory.kt">(Code)</a>
+
+  <rating>R:1400 <meter min="800" max="3600" value="1400" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>Let’s sort players by the number of tokens they have.  Note that problem speaks about possibility of winning so if we just find one scenario where we win that’s good enough for there to be a non-zero probability that this will actually happen, so that’s good enough.</p>
+
+<p>Firstly note that we can win with all the players that have not more tokens than we do and by doing so collect their tokens.  So we want to find the number of tokens that we need to have to win.  One option is by doing binary search.  Another is a more direct approach, which is linear after sorting and that’s what I did; see code for details.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1490</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1490f/">
+    Equalize the Array
+  </a>
+  <a href="https://codeforces.com/contest/1490/problem/F">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490f-equalize-the-array.kt">(Code)</a>
+
+  <rating>R:1500 <meter min="800" max="3600" value="1500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<p>The crucial observation is that the winning \(C\) must be a frequency of some element in the array.  And we can have at most \(\sqrt{n}\) different candidates for \(C\) (elements with counts \(1, 2, 3, \ldots\) has a quadratic growth).  So let’s just compute frequencies of all elements to get our candidates.</p>
+
+<p>Now for a given \(C\) computing the cost to make array \(C\)-beautiful is easy, as for a given element with \(x\) occurrences we have to pay:</p>
+
+<ul>
+  <li>\(x\) if \(x &lt; C\) as we need to remove all \(x\) copies.</li>
+  <li>\(0\) if \(x = C\),</li>
+  <li>\(x-C\) if \(x &gt; C\) as we need to remove extra copies.</li>
+</ul>
+
+<p>Then we simply pick the best option over all candidate \(C\)s.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1490</tiny>G
+
+  
+  <a href="/codeforces-editorials/problems/1490g/">
+    Old Floppy Drive 
+  </a>
+  <a href="https://codeforces.com/contest/1490/problem/G">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r702/1490g-old-floppy-drive.kt">(Code)</a>
+
+  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Let’s start by computing all the points where the disk might stop in a single round, i.e. pairs \((p_i, v_i)\) point on disk \(1 \le p \le n\) and \(v_i = \sum_{i \le p} a_i\).  Note that those points will form an increasing sequence as if we had \(x\) followed by \(y\) and \(y &lt; x\) then it we were to stop at \(y\) we’d have stopped instead at \(x\) before.  Once we have that for a single query we have few cases</p>
+
+<ul>
+  <li>\(x \le v_t\) assuming we have \(t\) pairs of possible stopping points.  In this case the disk will stop within the first spin and we can find the point where it stops with binary search.</li>
+  <li>\(x &gt; v_t\) and \(\sum_{i \in 1..n} a_i \le 0\), which means we won’t reach the right point within the first spin and with every spin \(x\) is not increasing so it will never stop.</li>
+  <li>Otherwise, we compute how many full spins we need to get to \(x \le v_t\) (i.e. first case above).  So we know by how much we need to decrease \(x\) and hence how many full spins are required.  After that we’re back in the first case above.</li>
+</ul>
+
+<hr />
+
+<object data="notes/R-702.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
