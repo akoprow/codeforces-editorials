@@ -239,49 +239,53 @@
   labels: "data structures, divide and conquer, probabilities"
   rating: 2800
 
-# - id: "1320E"
-#   title: "Treeland and Viruses"
-#   labels: "data structures, dfs and similar, dp, shortest paths, trees"
-#   rating: 3000
-#
-# - id: "1320F"
-#   title: "Blocks and Sensors"
-#   labels: "brute force"
-#   rating: 3500
-#
-# - id: "1321A"
-#   title: "Contest for Robots"
-#   labels: "greedy"
-#   rating: 900
-#
-# - id: "1321B"
-#   title: "Journey Planning"
-#   labels: "data structures, sortings"
-#   also-as: "1320A"
-#   rating: 1400
-#
-# - id: "1321C"
-#   title: "Remove Adjacent"
-#   labels: "brute force, constructive algorithms, greedy, strings"
-#   rating: 1600
-#
-# - id: "1321D"
-#   title: "Navigation System"
-#   labels: "graphs, shortest paths"
-#   also-as: "1320B"
-#   rating: 1700
-#
-# - id: "1321E"
-#   title: "World of Darkraft: Battle for Azathoth"
-#   labels: "data structures, sortings, two pointers"
-#   also-as: "1320C"
-#   rating: 2000
-#
-# - id: "1321F"
-#   title: "Reachable Strings"
-#   labels: "hashing, strings"
-#   also-as: "1320D"
-#   rating: 2500
+- id: "1320E"
+  title: "Treeland and Viruses"
+  labels: "data structures, dfs and similar, dp, shortest paths, trees"
+  rating: 3000
+
+- id: "1320F"
+  title: "Blocks and Sensors"
+  labels: "brute force"
+  rating: 3500
+
+- id: "1321A"
+  title: "Contest for Robots"
+  labels: "greedy"
+  rating: 900
+  code: "r620-639/r625/1321a-contest-for-robots.kt"
+
+- id: "1321B"
+  title: "Journey Planning"
+  labels: "data structures, sortings"
+  also-as: "1320A"
+  rating: 1400
+  code: "r620-639/r625/1321b-journey-planning.kt"
+
+- id: "1321C"
+  title: "Remove Adjacent"
+  labels: "brute force, constructive algorithms, greedy, strings"
+  rating: 1600
+  code: "r620-639/r625/1321c-remove-adjacent.kt"
+
+- id: "1321D"
+  title: "Navigation System"
+  labels: "graphs, shortest paths"
+  also-as: "1320B"
+  rating: 1700
+  code: "r620-639/r625/1321d-navigation-system.kt"
+
+- id: "1321E"
+  title: "World of Darkraft: Battle for Azathoth"
+  labels: "data structures, sortings, two pointers"
+  also-as: "1320C"
+  rating: 2000
+
+- id: "1321F"
+  title: "Reachable Strings"
+  labels: "hashing, strings"
+  also-as: "1320D"
+  rating: 2500
 
 - id: "1322E"
   title: "Median Mountain Range"

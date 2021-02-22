@@ -7,7 +7,7 @@ from datetime import datetime
 from tqdm import tqdm
 
 def main():
-    url = f'https://codeforces.com/api/user.ratedList'
+    url = f'https://codeforces.com/api/user.ratedList?activeOnly=true'
     r = requests.get(url)
     users = r.json()['result']
 
