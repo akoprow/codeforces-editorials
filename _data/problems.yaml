@@ -2450,3 +2450,26 @@
   labels: "binary search, data structures, math"
   rating: 1900
   code: "r700-719/r702/1490g-old-floppy-drive.kt"
+
+- id: "1492A"
+  title: "Three swimmers"
+  labels: "math"
+  code: "r700-719/r704/1492a-three-swimmers.kt"
+
+- id: "1492B"
+  title: "Card Deck"
+  labels: "data structures, greedy, math"
+  code: "r700-719/r704/1492b-card-deck.kt"
+
+- id: "1492C"
+  title: "Maximum width"
+  labels: "data structures, dp, greedy, two pointers"
+  code: "r700-719/r704/1492c-maximum-width.kt"
+
+- id: "1492D"
+  title: "Genius's Gambit"
+  labels: "constructive algorithms, math"
+
+- id: "1492E"
+  title: "Almost Fault-Tolerant Database"
+  labels: "brute force, constructive algorithms, dfs and similar, greedy, implementation"
