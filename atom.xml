@@ -12,6 +12,175 @@
     </author>
     
       <item>
+        <title>Round 704 (Div II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1492&quot;&gt;Codeforces Round #704 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1492&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1492a/&quot;&gt;
+    Three swimmers
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1492/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r704/1492a-three-swimmers.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Clearly the answer is the minimum over answers per lane.  For swimmer who does laps in \(a\) how long will we have to wait for him after arriving at time \(p\)?  Let’s look at \(a \mod p\).  If \(a \mod p = 0\) then he arrives just at the point when we do so the answer is \(0\); otherwise it’s \(a - a \mod p\) as we’ll need to wait for him to complete his lap.  Now take a minimum over answers for \(a, b, c\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1492&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1492b/&quot;&gt;
+    Card Deck
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1492/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r704/1492b-card-deck.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Clearly at each point we want to split the deck so that we get the largest card first.  So at each point we need to find the index of the remaining max.  One way to do it is to have a sorted map from values to their indices.  We always operate on a segment of the deck of the form \([1, r]\) (\(1\)-based indexing for indices) with initially \(r = n\).  After finding that maximum is at index \(p\) we go from \(p\) to \(r\), add those cards to the answer and remove from our map with indices.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1492&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1492c/&quot;&gt;
+    Maximum width
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1492/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r704/1492c-maximum-width.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The problem can be seen as having to map all letters in \(t\) to equal letters in \(s\) (in the same order), in such a way that the gap between some two letters in \(s\) is as large as possible.  Firstly, for every \(i\) let’s compute \(mx_i\) and \(mn_i\) which are maximal and minimal, respectively, indices in \(s\) that we can match it with.  Once we have that then clearly the answer is just \(max_{i \in 1..m-1} mn_{i+1}-mn_i\).&lt;/p&gt;
+
+&lt;p&gt;How do we compute them?  For \(mn_i\) a simple greedy approach works where we iterate over \(t\) and move a pointer over \(s\), matching it as soon as we can.  \(mx_i\) can be done in the same way, except matching greedily from the back.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1492&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1492d/&quot;&gt;
+    Genius's Gambit
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1492/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1492&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1492e/&quot;&gt;
+    Almost Fault-Tolerant Database
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1492/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-704.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
+        <link>//R-704</link>
+        <link href="/R-704"/>
+        <guid isPermaLink="true">/R-704</guid>
+      </item>
+    
+      <item>
         <title>Round 703 (Div II)</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1486&quot;&gt;Codeforces Round #703 (Div. 2)&lt;/a&gt;&lt;/p&gt;
 
@@ -2382,216 +2551,6 @@
         <link>//R-697</link>
         <link href="/R-697"/>
         <guid isPermaLink="true">/R-697</guid>
-      </item>
-    
-      <item>
-        <title>Round 696 (Div II)</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1474&quot;&gt;Codeforces Round #696 (Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1474&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1474a/&quot;&gt;
-    Puzzle From the Future
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1474/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r696/1474a-puzzle-from-the-future.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly note that we always have a choice for every position in \(a\) (\(0\) or \(1\)), which in turn will always lead to a choice for a digit in \(d\).  That means we can make all the digits in \(d\) different and hence make \(d\) of maximum possible length \(n\).  So now it comes down to greedily making digits in \(d\) as large as possible from left to right which we can do by choosing \(1\) for a digit of \(a\) if possible and \(0\) otherwise.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1474&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1474b/&quot;&gt;
-    Different Divisors
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1474/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r696/1474b-different-divisors.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1000&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;To have at least four divisors \(a\) must be either a product of two primes \(d = p \cdot q\), giving four divisors: \(1, p, q, p \cdot q\), or \(d = p^3\) with divisors: \(1, p, p^2, p^3\).&lt;/p&gt;
-
-&lt;p&gt;For the first case all those divisors need to be at least \(d\) apart, the simplest way to find them is for \(p\) to start from \(d+1\) and pick for it the first prime encountered and, similarly, for \(q\) to pick the first prime greater than or equal to \(p+d\).&lt;/p&gt;
-
-&lt;p&gt;We can prove that it’s enough to consider only the first case as the second one would lead to a larger \(d\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1474&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1474c/&quot;&gt;
-    Array Destruction
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1474/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r696/1474c-array-destruction.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Observe that \(x\) strictly decreases after each operation.  We should greedily in each step handle the largest element in the array.  Why?  Suppose at some step we did not.  That means we have \(a_i \le a_j \lt a_k\) and we decide to throw \(a_i + a_j = x\).  After that operation new \(x\) becomes \(a_j \lt a_k\) and so we’ll never be able to get rid of \(a_k\).&lt;/p&gt;
-
-&lt;p&gt;So we sort numbers and process them from the right. In the first step what do we process the largest element with?  Well, let’s try all elements one by one.&lt;/p&gt;
-
-&lt;p&gt;Once we know what’s the pairing we remove it, know what the next \(x\) becomes and continue.  This requires an ordered multiset and leads to \(O(n^2 \log n)\) complexity which was TLE-ing for me.&lt;/p&gt;
-
-&lt;p&gt;Another approach is to start from the largest element and keep track of a multiset \(\mathcal{M}\) of paired elements that we haven’t processed yet.  In each step, looking at \(a_i\), we have two options:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;either the current element is in the multiset, in which case we remove it from it (essentially completing a past pairing or&lt;/li&gt;
-  &lt;li&gt;it is not, in which case&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1474&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1474d/&quot;&gt;
-    Cleaning
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1474/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r696/1474d-cleaning.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Let’s first solve it without using the superability. Since piles that were not neighbours do not get connected when removing another pile, the only way to get rid of the first pile is by removing it together with the second pile, which is only possible if \(a_1 \le a_2\), in which case we’re left with \(a_2-a_1, a_3, \ldots, a_n\) and we can repeat that reasoning.  By repeating this process for every position \(i\) we can compute \(l_i\) which is the number of stones left on that position after removing all the piles to the left (or undefined is it’s not possible to remove them).  We can do a similar process from right to left and compute \(r_i\).  Now, if \(l_n = 0\) then we’re done without having to use superability.&lt;/p&gt;
-
-&lt;p&gt;Otherwise, we need to see if it can help us.  To do that for all adjacent indices we can consider swapping them.  That means that we’re looking at: \(l_i, a_{i+1}, a_{i+2}, r_{i+3}\) (provided \(l_i\) and \(r_{i+3}\) are defined) and we swap them into: \(l_i, a_{i+2}, a_{i+1}, r_{i+3}\).  Now it’s just a simple simulation to see whether we can solve that configuration.&lt;/p&gt;
-
-&lt;p&gt;If for all indices we cannot then the final answer is NO.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1474&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1474e/&quot;&gt;
-    What Is It?
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1474/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1474&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1474f/&quot;&gt;
-    1 2 3 4 ...
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1474/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3000&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;matrices&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/R-696.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
-        <link>//R-696</link>
-        <link href="/R-696"/>
-        <guid isPermaLink="true">/R-696</guid>
       </item>
     
   </channel>

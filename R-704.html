@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 704 (Div II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 704 (Div II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 704 (Div II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #704 (Div. 2)" />
+<meta property="og:description" content="Codeforces Round #704 (Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 704 (Div II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 704 (Div II)","dateModified":"2021-02-23T00:00:00+00:00","url":"/codeforces-editorials/R-704","datePublished":"2021-02-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-704"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #704 (Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 704 (Div II)</h2>
+  <time datetime="2021-02-23T00:00:00+00:00" class="by-line">23 Feb 2021</time>
+  <p><a href="https://codeforces.com/contest/1492">Codeforces Round #704 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1492</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1492a/">
+    Three swimmers
+  </a>
+  <a href="https://codeforces.com/contest/1492/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r704/1492a-three-swimmers.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Clearly the answer is the minimum over answers per lane.  For swimmer who does laps in \(a\) how long will we have to wait for him after arriving at time \(p\)?  Let’s look at \(a \mod p\).  If \(a \mod p = 0\) then he arrives just at the point when we do so the answer is \(0\); otherwise it’s \(a - a \mod p\) as we’ll need to wait for him to complete his lap.  Now take a minimum over answers for \(a, b, c\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1492</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1492b/">
+    Card Deck
+  </a>
+  <a href="https://codeforces.com/contest/1492/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r704/1492b-card-deck.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Clearly at each point we want to split the deck so that we get the largest card first.  So at each point we need to find the index of the remaining max.  One way to do it is to have a sorted map from values to their indices.  We always operate on a segment of the deck of the form \([1, r]\) (\(1\)-based indexing for indices) with initially \(r = n\).  After finding that maximum is at index \(p\) we go from \(p\) to \(r\), add those cards to the answer and remove from our map with indices.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1492</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1492c/">
+    Maximum width
+  </a>
+  <a href="https://codeforces.com/contest/1492/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r704/1492c-maximum-width.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">two pointers</span>
+  
+  </labels>
+</div>
+
+<p>The problem can be seen as having to map all letters in \(t\) to equal letters in \(s\) (in the same order), in such a way that the gap between some two letters in \(s\) is as large as possible.  Firstly, for every \(i\) let’s compute \(mx_i\) and \(mn_i\) which are maximal and minimal, respectively, indices in \(s\) that we can match it with.  Once we have that then clearly the answer is just \(max_{i \in 1..m-1} mn_{i+1}-mn_i\).</p>
+
+<p>How do we compute them?  For \(mn_i\) a simple greedy approach works where we iterate over \(t\) and move a pointer over \(s\), matching it as soon as we can.  \(mx_i\) can be done in the same way, except matching greedily from the back.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1492</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1492d/">
+    Genius's Gambit
+  </a>
+  <a href="https://codeforces.com/contest/1492/problem/D">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1492</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1492e/">
+    Almost Fault-Tolerant Database
+  </a>
+  <a href="https://codeforces.com/contest/1492/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-704.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

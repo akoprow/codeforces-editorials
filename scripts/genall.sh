@@ -79,3 +79,4 @@
 ./gen.py 1486 R-703 "Round 703 (Div II)"
 ./gen.py 1487 Edu-104 "Educational Round 104"
 ./gen.py 1490 R-702 "Round 702 (Div III)"
+./gen.py 1492 R-704 "Round 704 (Div II)"
