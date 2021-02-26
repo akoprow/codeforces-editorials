@@ -188,6 +188,7 @@
   labels: "combinatorics, math"
   rating: 1700
   code: "edu/edu83/1312d-count-the-arrays.kt"
+  #! Nice problem for tutorial
 
 - id: "1312E"
   title: "Array Shrinking"
@@ -1974,46 +1975,48 @@
   labels: "constructive algorithms, dfs and similar, graphs, greedy"
   rating: 2200
 
-# - id: "1472A"
-#   title: "Cards for Friends"
-#   labels: "greedy, math"
-#   rating: 800
-#   code: "r680-699/r693/1472a-cards-for-friends.kt"
-#
-# - id: "1472B"
-#   title: "Fair Division"
-#   labels: "dp, greedy, math"
-#   rating: 800
-#   code: "r680-699/r693/1472b-fair-division.kt"
-#
-# - id: "1472C"
-#   title: "Long Jumps"
-#   labels: "dp, graphs"
-#   rating: 1100
-#   code: "r680-699/r693/1472c-long-jumps.kt"
-#
-# - id: "1472D"
-#   title: "Even-Odd Game"
-#   labels: "dp, games, greedy, sortings"
-#   rating: 1200
-#   code: "r680-699/r693/1472d-even-odd-game.kt"
-#
-# - id: "1472E"
-#   title: "Correct Placement"
-#   labels: "binary search, data structures, dp, sortings, two pointers"
-#   rating: 1700
-#   code: "r680-699/r693/1472e-correct-placement.kt"
-#
-# - id: "1472F"
-#   title: "New Year's Puzzle"
-#   labels: "brute force, dp, graph matchings, greedy, sortings"
-#   rating: 2100
-#   code: "r680-699/r693/1472f-new-years-puzzle.kt"
-#
-# - id: "1472G"
-#   title: "Moving to the Capital"
-#   labels: "dfs and similar, dp, graphs, shortest paths"
-#   rating: 2100
+- id: "1472A"
+  title: "Cards for Friends"
+  labels: "greedy, math"
+  rating: 800
+  code: "r680-699/r693/1472a-cards-for-friends.kt"
+
+- id: "1472B"
+  title: "Fair Division"
+  labels: "dp, greedy, math"
+  rating: 800
+  code: "r680-699/r693/1472b-fair-division.kt"
+
+- id: "1472C"
+  title: "Long Jumps"
+  labels: "dp, graphs"
+  rating: 1100
+  code: "r680-699/r693/1472c-long-jumps.kt"
+
+- id: "1472D"
+  title: "Even-Odd Game"
+  labels: "dp, games, greedy, sortings"
+  rating: 1200
+  code: "r680-699/r693/1472d-even-odd-game.kt"
+  #! Great very easy DP for tutorial
+
+- id: "1472E"
+  title: "Correct Placement"
+  labels: "binary search, data structures, dp, sortings, two pointers"
+  rating: 1700
+  code: "r680-699/r693/1472e-correct-placement.kt"
+  #! Good for difficulties in implementation of two pointers
+
+- id: "1472F"
+  title: "New Year's Puzzle"
+  labels: "brute force, dp, graph matchings, greedy, sortings"
+  rating: 2100
+  code: "r680-699/r693/1472f-new-years-puzzle.kt"
+
+- id: "1472G"
+  title: "Moving to the Capital"
+  labels: "dfs and similar, dp, graphs, shortest paths"
+  rating: 2100
 
 # - id: "1473A"
 #   title: "Replacing Elements"
