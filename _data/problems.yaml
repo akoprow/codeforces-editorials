@@ -2343,34 +2343,41 @@
 - id: "1486A"
   title: "Shifting Stacks"
   labels: "greedy, implementation"
+  rating: 900
   code: "r700-719/r703/1486a-shifting-stacks.kt"
 
 - id: "1486B"
   title: "Eastern Exhibition"
   labels: "geometry, sortings"
+  rating: 1500
   code: "r700-719/r703/1486b-eastern-exhibition.kt"
 
 - id: "1486C1"
   title: "Guessing the Greatest (easy version)"
   labels: "binary search, interactive"
+  rating: 1600
   code: "r700-719/r703/1486c1-guessing-the-greatest-easy.kt"
 
 - id: "1486C2"
   title: "Guessing the Greatest (hard version)"
   labels: "binary search, interactive"
+  rating: 1900
   code: "r700-719/r703/1486c2-guessing-the-greatest-hard.kt"
 
 - id: "1486D"
   title: "Max Median"
   labels: "binary search, data structures, dp, two pointers"
+  rating: 2100
 
 - id: "1486E"
   title: "Paired Payment"
   labels: "binary search, constructive algorithms, dp, graphs, shortest paths"
+  rating: 2200
 
 - id: "1486F"
   title: "Pairs of Paths"
   labels: "combinatorics, data structures, trees"
+  rating: 2600
 
 - id: "1487A"
   title: "Arena"
@@ -2458,21 +2465,26 @@
   title: "Three swimmers"
   labels: "math"
   code: "r700-719/r704/1492a-three-swimmers.kt"
+  rating: 800
 
 - id: "1492B"
   title: "Card Deck"
   labels: "data structures, greedy, math"
+  rating: 1100
   code: "r700-719/r704/1492b-card-deck.kt"
 
 - id: "1492C"
   title: "Maximum width"
   labels: "data structures, dp, greedy, two pointers"
+  rating: 1500
   code: "r700-719/r704/1492c-maximum-width.kt"
 
 - id: "1492D"
   title: "Genius's Gambit"
+  rating: 1900
   labels: "constructive algorithms, math"
 
 - id: "1492E"
   title: "Almost Fault-Tolerant Database"
+  rating: 2500
   labels: "brute force, constructive algorithms, dfs and similar, greedy, implementation"
