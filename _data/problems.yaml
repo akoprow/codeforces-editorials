@@ -206,6 +206,41 @@
   labels: "data structures, dfs and similar, dp"
   rating: 2600
 
+- id: "1313A"
+  title: "Fast Food Restaurant"
+  labels: "brute force, greedy, implementation"
+  rating: 900
+  code: "r620-639/r622/1313a-fast-food-restaurant.kt"
+
+- id: "1313B"
+  title: "Different Rules"
+  labels: "constructive algorithms, greedy, implementation, math"
+  rating: 1700
+  code: "r620-639/r622/1313b-different-rules.kt"
+  # MISSING
+
+- id: "1313C1"
+  title: "Skyscrapers (easy version)"
+  labels: "brute force, data structures, dp, greedy"
+  rating: 1500
+  code: "r620-639/r622/1313c1-skyscrapers-easy.kt"
+
+- id: "1313C2"
+  title: "Skyscrapers (hard version)"
+  labels: "data structures, dp, greedy"
+  rating: 1900
+  code: "r620-639/r622/1313c2-skyscrapers-hard.kt"
+
+- id: "1313D"
+  title: "Happy New Year"
+  labels: "bitmasks, dp, implementation"
+  rating: 2500
+
+- id: "1313E"
+  title: "Concatenation with intersection"
+  labels: "data structures, hashing, strings, two pointers"
+  rating: 2700
+
 - id: "1316A"
   title: "Grade Allocation"
   labels: "implementation"
@@ -2204,6 +2239,7 @@
   labels: "constructive algorithms, implementation, math, sortings"
   rating: 1700
   code: "r680-699/r698/1478c-nezzar-and-symetric-array.kt"
+  # MISSING
 
 - id: "1478D"
   title: "Nezzar and Board"
