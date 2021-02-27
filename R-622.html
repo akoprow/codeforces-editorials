@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 622 (Div II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 622 (Div II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 622 (Div II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #622 (Div. 2)" />
+<meta property="og:description" content="Codeforces Round #622 (Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-23T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 622 (Div II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 622 (Div II)","dateModified":"2020-02-23T00:00:00+00:00","url":"/codeforces-editorials/R-622","datePublished":"2020-02-23T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-622"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #622 (Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 622 (Div II)</h2>
+  <time datetime="2020-02-23T00:00:00+00:00" class="by-line">23 Feb 2020</time>
+  <p><a href="https://codeforces.com/contest/1313">Codeforces Round #622 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1313</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1313a/">
+    Fast Food Restaurant
+  </a>
+  <a href="https://codeforces.com/contest/1313/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r620-639/r622/1313a-fast-food-restaurant.kt">(Code)</a>
+
+  <rating>R:900 <meter min="800" max="3600" value="900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>First important observation is that there are only 7 possible dish combos, if we call dishes \(A\), \(B\), \(C\) we can have:</p>
+
+<ul>
+  <li>\(A\), \(B\), \(C\),</li>
+  <li>\(A+B\), \(A+C\), \(B+C\) and</li>
+  <li>\(A+B+C\).</li>
+</ul>
+
+<p>It’s also clear that the groups are in order of preferences, i.e. we should never start serving from a later group unless we already served all the dishes from all the previous groups.</p>
+
+<p>The only tricky part is the second group, as we have to be careful here, if we have \(2A\), \(B\) and \(C\) then we can pair them into \(A+B\) and \(A+C\), which means we cannot start by pairing \(B+C\).  But we can easily solve that by considering \(A, B, C\) in the order of abundance, starting from the one whose most copies we have.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1313</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1313b/">
+    Different Rules
+  </a>
+  <a href="https://codeforces.com/contest/1313/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r620-639/r622/1313b-different-rules.kt">(Code)</a>
+
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Tricky and surprisingly complex for a <code class="language-plaintext highlighter-rouge">B</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">TODO</code></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1313</tiny>C1
+
+  
+  <a href="/codeforces-editorials/problems/1313c1/">
+    Skyscrapers (easy version)
+  </a>
+  <a href="https://codeforces.com/contest/1313/problem/C1">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r620-639/r622/1313c1-skyscrapers-easy.kt">(Code)</a>
+
+  <rating>R:1500 <meter min="800" max="3600" value="1500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>Firstly observe that the skyscrapers will have to form a “house roof” shape: they will be going up in a non-decreasing way up to a point and then will be going down in a non-increasing way from there on.   Let’s call the point in the middle “peak”.</p>
+
+<p>What if we knew where the pick is?  Then it’s fairly easy, we just do a greedy approach going from the peak first to the left having two constraints, as each element has to be:</p>
+
+<ul>
+  <li>at most \(a_i\) and</li>
+  <li>smaller or equal than whatever we decided to build immediately to the right of it.</li>
+</ul>
+
+<p>Similarly, we go from the peak to the right.</p>
+
+<p>Since \(n\) is small we can just check all the possible placements for the peak and choose best.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1313</tiny>C2
+
+  
+  <a href="/codeforces-editorials/problems/1313c2/">
+    Skyscrapers (hard version)
+  </a>
+  <a href="https://codeforces.com/contest/1313/problem/C2">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r620-639/r622/1313c2-skyscrapers-hard.kt">(Code)</a>
+
+  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>Now \(n\) is too big to check all options for the peak.  How can we do better?</p>
+
+<p>Let’s compute the best score for everything being non-decreasing, call it \(\mathcal{S}_i\) for score at position \(i\).  To do we go from left to right.  If we’re looking at spot \(i\) it’s clear the building there should have height \(a_i\).  If it’s the <em>smallest</em> element so far then clearly we can make all the previous buildings of heights \(a_i\) as well, getting \(\mathcal{S}_{i} = a_i \cdot i\).</p>
+
+<p>Otherwise, note that our greedy approach has the invariant that a sequence ending at \(i\) has at that position a building of height \(a_i\), although it might be “made smaller” later on, if needed.  So let’s find the closest element \(j\) where \(a_j &lt; a_i\).  We can then use the solution we computed until spot \(j\), as they’ll only reach height \(a_j &lt; a_i\) and from that point on our element is the smallest, so all those buildings can be made to be \(a_i\) tall.  In the end we get \(\mathcal{S}_{i} = \mathcal{S}_{j} + (j-i) \cdot a_i\).</p>
+
+<p>How do we find the closest smallest element?  There’s a linear solution involving a stack which always holds an increasing/decreasing sequence, see <a href="https://www.geeksforgeeks.org/next-smaller-element/">here</a>. Alternatively we can do that with a segment tree in \(O(n \log n)\).</p>
+
+<p>Now, in a similar way let’s compute the answer for the “decreasing” part, \(\mathcal{S^{rev}}\) (simplest way to do it is to flip the array and just apply what we did above).</p>
+
+<p>Once we have both we can now check each peak in constant time by simply looking at \(S_i + S^{rev}_{i+1}\) and again pick the best.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1313</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1313d/">
+    Happy New Year
+  </a>
+  <a href="https://codeforces.com/contest/1313/problem/D">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2500 <meter min="800" max="3600" value="2500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1313</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1313e/">
+    Concatenation with intersection
+  </a>
+  <a href="https://codeforces.com/contest/1313/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2700 <meter min="800" max="3600" value="2700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">hashing</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">two pointers</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-622.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

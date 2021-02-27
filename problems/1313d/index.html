@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
   <meta name="generator" content="Jekyll">
 
-  <title>Journey</title>
+  <title>Happy New Year</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Journey | Codeforces editorials</title>
+<title>Happy New Year | Codeforces editorials</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Journey" />
+<meta property="og:title" content="Happy New Year" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Codeforces editorials" />
 <meta property="og:description" content="Codeforces editorials" />
 <meta property="og:site_name" content="Codeforces editorials" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Journey" />
+<meta property="twitter:title" content="Happy New Year" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Journey","url":"/codeforces-editorials/problems/1476d/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Happy New Year","url":"/codeforces-editorials/problems/1313d/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -83,37 +83,34 @@
       <section id="main_content">
         <div class="alert alert-primary" role="alert">
   
-  <tiny>1476</tiny>D
+  <tiny>1313</tiny>D
 
   
-  <a href="/codeforces-editorials/problems/1476d/">
-    Journey
+  <a href="/codeforces-editorials/problems/1313d/">
+    Happy New Year
   </a>
-  <a href="https://codeforces.com/contest/1476/problem/D">
+  <a href="https://codeforces.com/contest/1313/problem/D">
   [CF]
   </a>
 
-  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu103/1476d-journey.kt">(Code)</a>
+  
 
-  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+  <rating>R:2500 <meter min="800" max="3600" value="2500" /></rating>
 
   <labels>
   
   
-    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
   
     <span class="badge rounded-pill bg-warning text-dark">dp</span>
   
-    <span class="badge rounded-pill bg-warning text-dark">dsu</span>
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
   
   </labels>
 </div>
 
-<p>The crucial observation is that if we start at city \(i\) and move to other city \(j\), we can always come back to \(i\).  We can easily see that that’s possible after one step and we can prove it for arbitrary number of steps by induction (or just convince ourselves that it works by observing \(2\) or \(3\) steps).</p>
-
-<p>So now for each city we compute \(L(i)\) and \(L_{rev}(i)\) denoting how many steps to the left can we move from city \(i\) in initial/reversed setup (all arrows reversed), respectively.  We have \(L(i) = L_{rev}(i-1)+1\) if \(s_{i-1} = "L"\) and \(0\) otherwise.  Similarly \(L_{rev}(i) = L(i-1) + 1\) if \(s_{i-1} = "R"\) and \(0\) otherwise.</p>
-
-<p>Now, we do the same for \(R(i)\) and \(R_rev(i)\) to compute our moves to the right.  And we combine it for each city by seeing how far we can go to the left and right, plus the city itself, giving us the final answer for city \(i\) of: \(L_i + R_i + 1\).</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
 
 
       </section>
