@@ -835,6 +835,48 @@
   labels: "data structures, dfs and similar, graphs, greedy"
   rating: 2600
 
+# - id: "1352A"
+#   title: "Sum of Round Numbers"
+#   labels: "implementation, math"
+#   rating: 800
+#   code: "r640-659/r640/1352a-sum-of-round-numbers.kt"
+#
+# - id: "1352B"
+#   title: "Same Parity Summands"
+#   labels: "constructive algorithms, math"
+#   rating: 1200
+#   code: "r640-659/r640/1352b-same-parity-summands.kt"
+#
+# - id: "1352C"
+#   title: "K-th Not Divisible by n"
+#   labels: "binary search, math"
+#   rating: 1200
+#   code: "r640-659/r640/1352c-kth-not-divisible-by-n.kt"
+#
+# - id: "1352D"
+#   title: "Alice, Bob and Candies"
+#   labels: "implementation"
+#   rating: 1300
+#   code: "r640-659/r640/1352d-alice-bob-and-candies.kt"
+#
+# - id: "1352E"
+#   title: "Special Elements"
+#   labels: "brute force, implementation, two pointers"
+#   rating: 1500
+#   code: "r640-659/r640/1352e-special-elements.kt"
+#
+# - id: "1352F"
+#   title: "Binary String Reconstruction"
+#   labels: "constructive algorithms, dfs and similar, math"
+#   rating: 1500
+#   code: "r640-659/r640/1352f-binary-string-reconstruction.kt"
+#
+# - id: "1352G"
+#   title: "Special Permutation"
+#   labels: "constructive algorithms"
+#   rating: 1600
+#   code: "r640-659/r640/1352g-special-permutation.kt"
+
 - id: "1353A"
   title: "Most Unstable Array"
   labels: "constructive algorithms, greedy, math"
@@ -2496,6 +2538,46 @@
   labels: "binary search, data structures, math"
   rating: 1900
   code: "r700-719/r702/1490g-old-floppy-drive.kt"
+
+- id: "1491A"
+  title: "K-th Largest Value"
+  labels: "brute force, greedy, implementation"
+  code: "gr/gr13/1491a-kth-largest-value.kt"
+
+- id: "1491B"
+  title: "Minimal Cost"
+  labels: "brute force, greedy, implementation, math"
+  code: "gr/gr13/1491b-minimal-cost.kt"
+
+- id: "1491C"
+  title: "Pekora and Trampoline"
+  labels: "brute force, dp, graphs, greedy, implementation"
+  code: "gr/gr13/1491c-pekora-and-trampoline.kt"
+
+- id: "1491D"
+  title: "Zookeeper and The Infinite Zoo"
+  labels: "bitmasks, constructive algorithms"
+  code: "gr/gr13/1491d-zookeeper-and-the-infinite-zoo.kt"
+
+- id: "1491E"
+  title: "Fib-tree"
+  labels: "brute force, divide and conquer, trees"
+
+- id: "1491F"
+  title: "Magnets"
+  labels: "binary search, constructive algorithms, interactive"
+
+- id: "1491G"
+  title: "Switch and Flip"
+  labels: "constructive algorithms"
+
+- id: "1491H"
+  title: "Yuezheng Ling and Dynamic Tree"
+  labels: "data structures"
+
+- id: "1491I"
+  title: "Ruler Of The Zoo"
+  labels: "brute force"
 
 - id: "1492A"
   title: "Three swimmers"
