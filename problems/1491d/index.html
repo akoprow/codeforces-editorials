@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Zookeeper and The Infinite Zoo</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Zookeeper and The Infinite Zoo | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Zookeeper and The Infinite Zoo" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces editorials" />
+<meta property="og:description" content="Codeforces editorials" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Zookeeper and The Infinite Zoo" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"Zookeeper and The Infinite Zoo","url":"/codeforces-editorials/problems/1491d/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1491d/">
+    Zookeeper and The Infinite Zoo
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491d-zookeeper-and-the-infinite-zoo.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+  </labels>
+</div>
+
+<p>Ok, firstly let’s try to understand what kind of moves can we do, exactly.  We can transition \(u \to u + v\) iff \(u \&amp; v = u\).  In other words, we’re in \(u\) we can pick a sub-mask of \(u\) and add it to \(u\).</p>
+
+<p>Can we simplify this?  Note that if the sub-mask we pick has only one bit set then we have a transition \(u \to u + 2^i\) which will <em>not</em> affect bits \(j &lt; i\).  That in turns mean we can decompose a move \(u \to u + (2^{i_1} + 2^{i_2} + \ldots 2^{i_n})\) into \(n\) moves with single bit masks: \(u \to u + 2^{i_1} \to \ldots \to u + (2^{i_1} + 2^{i_2} + \ldots 2^{i_n})\) (\(i_1 &gt; i_2 &gt; \ldots i_n\)).</p>
+
+<p>So we can restrict our thinking to moves of the shape \(u \to u + 2^i\) and we know that bit \(i\) is set in \(u\).  How do such moves look like?</p>
+
+<p>If bit \(i+1\) in \(u\) is not set then what happens on those two bits is: \(01 + 01 = 10\), i.e. we shifted the bit to the left.  Let’s call this move <code class="language-plaintext highlighter-rouge">A</code>.</p>
+
+<p>If a number of higher bits in \(u\) is set then instead it looks like this: \(11\ldots11 + 01 = 100\ldots00\), i.e. we also shifted the highest bit to the left but also zeroed in a number of following \(1\)s.  Let’s call this type of move <code class="language-plaintext highlighter-rouge">B</code>.</p>
+
+<p>Those are the only two types of moves we can make so in particular:</p>
+
+<ul>
+  <li>we can never move a bit to the right and</li>
+  <li>we can decrease but never increase the number of bits.</li>
+</ul>
+
+<p>This starts looking like a skeleton of an algorithm.  Look at \(u\) and \(v\), if \(v &gt; u\) the answer is clearly “NO”.  Same if \(v\) has more bits than \(u\).  Otherwise we will try to match bits in \(u\) to bits in \(v\), from least significant positions and for every match of bit \(i\) in \(u\) with bit \(j\) in \(v\) we want \(i \le j\) (remember, we can only shift to the left).</p>
+
+<p>Now the claim is that if such matching exists then the answer is “YES”.  This is not completely obvious as remember that \(u\) might have more bits than \(v\)!  However, we can always get rid of those bits with moves <code class="language-plaintext highlighter-rouge">B</code>.  Formal argument follows (implicitly by induction on number of bits).</p>
+
+<p>We’re matching \(u\) with \(v\) and \(u \le v\).  First let’s assume that they both have the same highest bit set, so we have a match at that position and we can move to lower bits.</p>
+
+<p>If instead \(u = 0\ldots1_1\) and \(v = 1\ldots\) and \(u\) has \(p\) bits more set than \(u\) then we get rid of spurious \(1\)s with move <code class="language-plaintext highlighter-rouge">B</code> as follows (we index \(1\)s):</p>
+
+<p>\(u = 0 \ldots 1_1 \ldots 1_2 \ldots 1_3 \ldots 1_p \to 0 1_1 1_2 \ldots 1_p \to 10\ldots0\) so \(u\) and \(v\) now agree on the highest bits <em>and</em> have the same number of \(1\)s so from now on we can finish the problem with moves <code class="language-plaintext highlighter-rouge">A</code> only.</p>
+
+
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Global Round 13</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Global Round 13 | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Global Round 13" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Global Round 13" />
+<meta property="og:description" content="Codeforces Global Round 13" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Global Round 13" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Global Round 13","dateModified":"2021-02-28T00:00:00+00:00","url":"/codeforces-editorials/GR-13","datePublished":"2021-02-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/GR-13"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Global Round 13","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Global Round 13</h2>
+  <time datetime="2021-02-28T00:00:00+00:00" class="by-line">28 Feb 2021</time>
+  <p><a href="https://codeforces.com/contest/1491">Codeforces Global Round 13</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1491a/">
+    K-th Largest Value
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491a-kth-largest-value.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Since we have \(n\) elements that are only \(0\) or \(1\) knowing how many \(1\)s (or \(0\)s) there are is enough to know what the \(k\)-th largest element will be (i.e. it will be \(1\) if we have at least \(k\) ones).  So it’s enough to keep track of the number of ones and update it appropriately when flipping some element.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1491b/">
+    Minimal Cost
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491b-minimal-cost.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Let’s think about it geometrically , i.e. as if the obstacles where drawing a line (a pixelated one :).  To block us that line will need to:</p>
+
+<ul>
+  <li>be uninterrupted (i.e. continuous) and</li>
+  <li>it can either go to the left border of the board (cutting us off) or to the bottom border (splitting the board into two).</li>
+</ul>
+
+<p>What does it mean for the line to be uninterrupted?  It means that for consecutive rows the difference in columns is at most \(1\); otherwise we can “slip through”.</p>
+
+<p>When does it reach the left border?  When (uninterrupted) it reaches column \(0\).</p>
+
+<p>When does it reach the bottom border?  When (uninterrupted) it extends to the last row.</p>
+
+<p>Now, if neither condition is true, we can pass without any changes.</p>
+
+<p>If the line is a straight vertical line.  In this case we have two make two moves to move one obstacle out of the way: the first one to left/right and the second one either left/right or top/down, whichever is cheaper.</p>
+
+<p>In the remaining cases it’s always enough to move only one obstacle either up/down or left/right.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1491c/">
+    Pekora and Trampoline
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491c-pekora-and-trampoline.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, if we start jumping at trampoline \(i\), this will not affect any trampolines to the left of it.  Imagine there is an “unfinished” (value other than \(1\)) trampoline to the left.  We will have to jump starting from it, so we might as well start there, as jumping from \(i\) and then from \(j\) is at least as good, and potentially better!,  as jumping from \(j\) and then from \(i\) (\(j &gt; i\)).</p>
+
+<p>So a greedy approach works: always start from the leftmost “unfinished” trampoline.</p>
+
+<p>How do we simulate it?  For each trampoline keep track of how many times it was reached previously (starting with all \(0\)); let’s call it \(d_i\).  When we consider position \(i\):</p>
+
+<ul>
+  <li>we need to start afresh on it \(max(0, a_i - 1 - d_i)\) times and we need to add that value to the final result.</li>
+  <li>we will jump on it when it has values: \(a_i, a_i-1, \ldots, 2\) which means we need to increment \(d_{i+2}, \ldots d_{i + a_i}\) (as long as they are within bounds)</li>
+  <li>we will jump on it \(min(0, d_i - (a_i -1))\) with it having value \(1\), which is by how much we should increment \(d_{i+1}\).</li>
+</ul>
+
+<p>Amazingly, the source code to this problem is at most half the size of this text…</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1491d/">
+    Zookeeper and The Infinite Zoo
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491d-zookeeper-and-the-infinite-zoo.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+  </labels>
+</div>
+
+<p>Ok, firstly let’s try to understand what kind of moves can we do, exactly.  We can transition \(u \to u + v\) iff \(u \&amp; v = u\).  In other words, we’re in \(u\) we can pick a sub-mask of \(u\) and add it to \(u\).</p>
+
+<p>Can we simplify this?  Note that if the sub-mask we pick has only one bit set then we have a transition \(u \to u + 2^i\) which will <em>not</em> affect bits \(j &lt; i\).  That in turns mean we can decompose a move \(u \to u + (2^{i_1} + 2^{i_2} + \ldots 2^{i_n})\) into \(n\) moves with single bit masks: \(u \to u + 2^{i_1} \to \ldots \to u + (2^{i_1} + 2^{i_2} + \ldots 2^{i_n})\) (\(i_1 &gt; i_2 &gt; \ldots i_n\)).</p>
+
+<p>So we can restrict our thinking to moves of the shape \(u \to u + 2^i\) and we know that bit \(i\) is set in \(u\).  How do such moves look like?</p>
+
+<p>If bit \(i+1\) in \(u\) is not set then what happens on those two bits is: \(01 + 01 = 10\), i.e. we shifted the bit to the left.  Let’s call this move <code class="language-plaintext highlighter-rouge">A</code>.</p>
+
+<p>If a number of higher bits in \(u\) is set then instead it looks like this: \(11\ldots11 + 01 = 100\ldots00\), i.e. we also shifted the highest bit to the left but also zeroed in a number of following \(1\)s.  Let’s call this type of move <code class="language-plaintext highlighter-rouge">B</code>.</p>
+
+<p>Those are the only two types of moves we can make so in particular:</p>
+
+<ul>
+  <li>we can never move a bit to the right and</li>
+  <li>we can decrease but never increase the number of bits.</li>
+</ul>
+
+<p>This starts looking like a skeleton of an algorithm.  Look at \(u\) and \(v\), if \(v &gt; u\) the answer is clearly “NO”.  Same if \(v\) has more bits than \(u\).  Otherwise we will try to match bits in \(u\) to bits in \(v\), from least significant positions and for every match of bit \(i\) in \(u\) with bit \(j\) in \(v\) we want \(i \le j\) (remember, we can only shift to the left).</p>
+
+<p>Now the claim is that if such matching exists then the answer is “YES”.  This is not completely obvious as remember that \(u\) might have more bits than \(v\)!  However, we can always get rid of those bits with moves <code class="language-plaintext highlighter-rouge">B</code>.  Formal argument follows (implicitly by induction on number of bits).</p>
+
+<p>We’re matching \(u\) with \(v\) and \(u \le v\).  First let’s assume that they both have the same highest bit set, so we have a match at that position and we can move to lower bits.</p>
+
+<p>If instead \(u = 0\ldots1_1\) and \(v = 1\ldots\) and \(u\) has \(p\) bits more set than \(u\) then we get rid of spurious \(1\)s with move <code class="language-plaintext highlighter-rouge">B</code> as follows (we index \(1\)s):</p>
+
+<p>\(u = 0 \ldots 1_1 \ldots 1_2 \ldots 1_3 \ldots 1_p \to 0 1_1 1_2 \ldots 1_p \to 10\ldots0\) so \(u\) and \(v\) now agree on the highest bits <em>and</em> have the same number of \(1\)s so from now on we can finish the problem with moves <code class="language-plaintext highlighter-rouge">A</code> only.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1491e/">
+    Fib-tree
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">divide and conquer</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1491f/">
+    Magnets
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/F">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>G
+
+  
+  <a href="/codeforces-editorials/problems/1491g/">
+    Switch and Flip
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/G">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>H
+
+  
+  <a href="/codeforces-editorials/problems/1491h/">
+    Yuezheng Ling and Dynamic Tree
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/H">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1491</tiny>I
+
+  
+  <a href="/codeforces-editorials/problems/1491i/">
+    Ruler Of The Zoo
+  </a>
+  <a href="https://codeforces.com/contest/1491/problem/I">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/GR-13.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

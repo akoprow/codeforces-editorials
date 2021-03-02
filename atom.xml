@@ -12,6 +12,342 @@
     </author>
     
       <item>
+        <title>Global Round 13</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1491&quot;&gt;Codeforces Global Round 13&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1491&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1491a/&quot;&gt;
+    K-th Largest Value
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491a-kth-largest-value.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Since we have \(n\) elements that are only \(0\) or \(1\) knowing how many \(1\)s (or \(0\)s) there are is enough to know what the \(k\)-th largest element will be (i.e. it will be \(1\) if we have at least \(k\) ones).  So it’s enough to keep track of the number of ones and update it appropriately when flipping some element.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1491&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1491b/&quot;&gt;
+    Minimal Cost
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491b-minimal-cost.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s think about it geometrically , i.e. as if the obstacles where drawing a line (a pixelated one :).  To block us that line will need to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;be uninterrupted (i.e. continuous) and&lt;/li&gt;
+  &lt;li&gt;it can either go to the left border of the board (cutting us off) or to the bottom border (splitting the board into two).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What does it mean for the line to be uninterrupted?  It means that for consecutive rows the difference in columns is at most \(1\); otherwise we can “slip through”.&lt;/p&gt;
+
+&lt;p&gt;When does it reach the left border?  When (uninterrupted) it reaches column \(0\).&lt;/p&gt;
+
+&lt;p&gt;When does it reach the bottom border?  When (uninterrupted) it extends to the last row.&lt;/p&gt;
+
+&lt;p&gt;Now, if neither condition is true, we can pass without any changes.&lt;/p&gt;
+
+&lt;p&gt;If the line is a straight vertical line.  In this case we have two make two moves to move one obstacle out of the way: the first one to left/right and the second one either left/right or top/down, whichever is cheaper.&lt;/p&gt;
+
+&lt;p&gt;In the remaining cases it’s always enough to move only one obstacle either up/down or left/right.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1491&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1491c/&quot;&gt;
+    Pekora and Trampoline
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491c-pekora-and-trampoline.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, if we start jumping at trampoline \(i\), this will not affect any trampolines to the left of it.  Imagine there is an “unfinished” (value other than \(1\)) trampoline to the left.  We will have to jump starting from it, so we might as well start there, as jumping from \(i\) and then from \(j\) is at least as good, and potentially better!,  as jumping from \(j\) and then from \(i\) (\(j &amp;gt; i\)).&lt;/p&gt;
+
+&lt;p&gt;So a greedy approach works: always start from the leftmost “unfinished” trampoline.&lt;/p&gt;
+
+&lt;p&gt;How do we simulate it?  For each trampoline keep track of how many times it was reached previously (starting with all \(0\)); let’s call it \(d_i\).  When we consider position \(i\):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we need to start afresh on it \(max(0, a_i - 1 - d_i)\) times and we need to add that value to the final result.&lt;/li&gt;
+  &lt;li&gt;we will jump on it when it has values: \(a_i, a_i-1, \ldots, 2\) which means we need to increment \(d_{i+2}, \ldots d_{i + a_i}\) (as long as they are within bounds)&lt;/li&gt;
+  &lt;li&gt;we will jump on it \(min(0, d_i - (a_i -1))\) with it having value \(1\), which is by how much we should increment \(d_{i+1}\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Amazingly, the source code to this problem is at most half the size of this text…&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1491&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1491d/&quot;&gt;
+    Zookeeper and The Infinite Zoo
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491d-zookeeper-and-the-infinite-zoo.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ok, firstly let’s try to understand what kind of moves can we do, exactly.  We can transition \(u \to u + v\) iff \(u \&amp;amp; v = u\).  In other words, we’re in \(u\) we can pick a sub-mask of \(u\) and add it to \(u\).&lt;/p&gt;
+
+&lt;p&gt;Can we simplify this?  Note that if the sub-mask we pick has only one bit set then we have a transition \(u \to u + 2^i\) which will &lt;em&gt;not&lt;/em&gt; affect bits \(j &amp;lt; i\).  That in turns mean we can decompose a move \(u \to u + (2^{i_1} + 2^{i_2} + \ldots 2^{i_n})\) into \(n\) moves with single bit masks: \(u \to u + 2^{i_1} \to \ldots \to u + (2^{i_1} + 2^{i_2} + \ldots 2^{i_n})\) (\(i_1 &amp;gt; i_2 &amp;gt; \ldots i_n\)).&lt;/p&gt;
+
+&lt;p&gt;So we can restrict our thinking to moves of the shape \(u \to u + 2^i\) and we know that bit \(i\) is set in \(u\).  How do such moves look like?&lt;/p&gt;
+
+&lt;p&gt;If bit \(i+1\) in \(u\) is not set then what happens on those two bits is: \(01 + 01 = 10\), i.e. we shifted the bit to the left.  Let’s call this move &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If a number of higher bits in \(u\) is set then instead it looks like this: \(11\ldots11 + 01 = 100\ldots00\), i.e. we also shifted the highest bit to the left but also zeroed in a number of following \(1\)s.  Let’s call this type of move &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Those are the only two types of moves we can make so in particular:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we can never move a bit to the right and&lt;/li&gt;
+  &lt;li&gt;we can decrease but never increase the number of bits.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This starts looking like a skeleton of an algorithm.  Look at \(u\) and \(v\), if \(v &amp;gt; u\) the answer is clearly “NO”.  Same if \(v\) has more bits than \(u\).  Otherwise we will try to match bits in \(u\) to bits in \(v\), from least significant positions and for every match of bit \(i\) in \(u\) with bit \(j\) in \(v\) we want \(i \le j\) (remember, we can only shift to the left).&lt;/p&gt;
+
+&lt;p&gt;Now the claim is that if such matching exists then the answer is “YES”.  This is not completely obvious as remember that \(u\) might have more bits than \(v\)!  However, we can always get rid of those bits with moves &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;.  Formal argument follows (implicitly by induction on number of bits).&lt;/p&gt;
+
+&lt;p&gt;We’re matching \(u\) with \(v\) and \(u \le v\).  First let’s assume that they both have the same highest bit set, so we have a match at that position and we can move to lower bits.&lt;/p&gt;
+
+&lt;p&gt;If instead \(u = 0\ldots1_1\) and \(v = 1\ldots\) and \(u\) has \(p\) bits more set than \(u\) then we get rid of spurious \(1\)s with move &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; as follows (we index \(1\)s):&lt;/p&gt;
+
+&lt;p&gt;\(u = 0 \ldots 1_1 \ldots 1_2 \ldots 1_3 \ldots 1_p \to 0 1_1 1_2 \ldots 1_p \to 10\ldots0\) so \(u\) and \(v\) now agree on the highest bits &lt;em&gt;and&lt;/em&gt; have the same number of \(1\)s so from now on we can finish the problem with moves &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; only.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1491&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1491e/&quot;&gt;
+    Fib-tree
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;divide and conquer&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1491&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1491f/&quot;&gt;
+    Magnets
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1491&lt;/tiny&gt;G
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1491g/&quot;&gt;
+    Switch and Flip
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/G&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1491&lt;/tiny&gt;H
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1491h/&quot;&gt;
+    Yuezheng Ling and Dynamic Tree
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/H&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1491&lt;/tiny&gt;I
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1491i/&quot;&gt;
+    Ruler Of The Zoo
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/I&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/GR-13.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
+        <link>//GR-13</link>
+        <link href="/GR-13"/>
+        <guid isPermaLink="true">/GR-13</guid>
+      </item>
+    
+      <item>
         <title>Round 704 (Div II)</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1492&quot;&gt;Codeforces Round #704 (Div. 2)&lt;/a&gt;&lt;/p&gt;
 
@@ -2254,302 +2590,6 @@
         <link>//R-698</link>
         <link href="/R-698"/>
         <guid isPermaLink="true">/R-698</guid>
-      </item>
-    
-      <item>
-        <title>Round 697 (Div III)</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1475&quot;&gt;Codeforces Round #697 (Div. 3)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1475&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1475a/&quot;&gt;
-    Odd Divisor
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1475/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r697/1475a-odd-divisor.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Surprisingly difficult for Div III A, me thinks!&lt;/p&gt;
-
-&lt;p&gt;Problem limits are too large to check all divisors of numbers.  So we need to do better than that.  Let’s think about factorization of a given number \(x\):&lt;/p&gt;
-
-\[x = p_1^{\alpha_1} \cdot \ldots p_n^{\alpha_n}\]
-
-&lt;p&gt;If any of the factors is odd then clearly \(x\) is divisible by an odd factor.  Now, the only prime number that isn’t odd is \(2\) itself.  So the only number \(x\) that does not have an odd divisor is if \(x = 2^i\) for some \(i\).&lt;/p&gt;
-
-&lt;p&gt;So we only need to check if \(x\) is a power of \(2\); either naively, or, if we want to be fancy, by checking if \(x \&amp;amp; (x-1) = 0\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1475&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1475b/&quot;&gt;
-    New Year's Number
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1475/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r697/1475b-new-years-numer.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Suppose that there is \(x\) and \(y\) such that:&lt;/p&gt;
-
-\[n = 2020 \cdot x + 2021 \cdot y = 2020 \cdot (x + y) + y\]
-
-&lt;p&gt;We can see that \(n - y\) is divisible by \(2020\).  Take \(y = n \mod 2020\) and we get that \(x = \frac{n-y}{2020} - y\) and we only need to check that \(x \ge 0\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1475&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1475c/&quot;&gt;
-    Ball in Berland
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1475/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r697/1475c-ball-in-berland.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;hashing&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We can iterate over pairs \((a_i, b_i)\) and for each one we can add:&lt;/p&gt;
-
-\[k - F_a(a_i) - F_b(b_i) - 1\]
-
-&lt;p&gt;where \(F_v(x)\) is the number of \(x\) within vector \(v\).  In other words:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we take \((a_i, b_i)\) as the first pair,&lt;/li&gt;
-  &lt;li&gt;out of the k-1 remaining pairs how many are there that &lt;em&gt;cannot&lt;/em&gt; complement the first pair?  Well, all the ones with boy \(a_i\) in it (as he’s taken) and all the ones with girl \(b_i\) (she’s also taken).  Note that there is only one pair \((a_i, b_i)\) so all the other pairs excluded because of the girl and because of the boy are disjoint, which is why the formula works.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1475&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1475d/&quot;&gt;
-    Cleaning the Phone
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1475/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r697/1475d-cleaning-the-phone.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Let’s split applications into two groups: one with \(b_i = 1\) (normal) and the other with \(b_i = 2\) (important).  For each group let’s take the application size in decreasing order and compute prefix sums.&lt;/p&gt;
-
-&lt;p&gt;We will iterate over \(x\), indicating how many elements we take from the normal group, from \(0\) up to all the elements in the group.  We compute how much size will that free us up which is the sum of the first \(x\) elements.  Based on that we compute how much more space we need to free up with important applications.  We find the number of important applications we need to remove, \(y\), using binary search.&lt;/p&gt;
-
-&lt;p&gt;Having those two we know that we will loose \(2y+x\) convenience points and we pick the minimum one.&lt;/p&gt;
-
-&lt;p&gt;Actually, instead of binary search we can use two pointers as as we take more and more of normal applications, we will always be decreasing the number of important applications.  So we don’t even need prefix sums, just two pointers over those two arrays.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1475&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1475e/&quot;&gt;
-    Advertising Agency
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1475/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r697/1475e-advertising-agency.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Clearly we must pick the bloggers with most followers.  So we can sort by the number of followers and choose the first \(k\) of them.&lt;/p&gt;
-
-&lt;p&gt;The only leeway we have is when the last chosen blogger has \(x\) followers and some not chosen bloggers also have \(x\) followers; we can swap them and still have the maximum number of followers.  In other words all bloggers with \(x\) followers are interchangeable for us.  Suppose there are \(k\) such bloggers in the prefix we picked and \(n\) in total in our pool of bloggers.  Well clearly the number of ways in which we can choose them is \({n}\choose{k}\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1475&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1475f/&quot;&gt;
-    Unusual Matrix
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1475/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r697/1475f-unusual-matrix.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Few observations.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Order of operations does not matter (because xor is commutative)&lt;/li&gt;
-  &lt;li&gt;It does not make sense to apply the same operation twice (as it then will cancel itself out)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One way to think about it is that going from \(a\) to \(b\) is equivalent to going to a matrix of all zeroes from a matrix \(c\) where \(c_{i,j} = [a_{i,j} \neq b_{i,j}]\) (i.e. \(1\) if given cells in both matrices are different, \(0$ otherwise).  So matrix\)c$$ essentially tells us which cells we need to flip (to zero them).&lt;/p&gt;
-
-&lt;p&gt;Now, we will now say that columns \(i\) and \(j\) are compatible if either:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;for each row \(p\), \(c_{p,i} = c_{p,i}\) or&lt;/li&gt;
-  &lt;li&gt;for each row \(p\), \(a_{p,i} \neq c_{p,i}\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the first case those columns are already equal, in the second case we can make them equal by applying xor to either of the columns.&lt;/p&gt;
-
-&lt;p&gt;Now, let’s check if all columns are compatible with the first one.  If they are we can make all rows identical.  And if we have all rows identical it’s a win, we just flip all those column which are all \(1\) and get a matrix full of zeroes.&lt;/p&gt;
-
-&lt;p&gt;Otherwise, we cannot make all rows equal by applying row operations and so column operations will not help us because there will always be at least one column with some \(0\) and some \(1\) and then that will remain so after applying an operation to it.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1475&lt;/tiny&gt;G
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1475g/&quot;&gt;
-    Strange Beauty
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1475/problem/G&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r680-699/r697/1475g-strange-beauty.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly, let’s sort the input array.  Now for each number \(x\) we will want to see how many numbers smaller than \(x\) we can put together with \(x\) to form a beautiful array.  We keep track of a mapping from a number to that value, let’s call that \(f\), and when seeing \(x\) update mapping for \(x\) to:&lt;/p&gt;
-
-\[\max_{d \in \mathcal{D}(x)} f(d)+1\]
-
-&lt;p&gt;where \(\mathcal{D}{x}\) is a set of all divisors of \(x\).  In other words we go through all divisors of \(d\) (those are all numbers that can be with \(x\) in a beautiful array) and pick the best one, adding \(1\) because we extend the sequence with \(x\).&lt;/p&gt;
-
-&lt;p&gt;To do that we need to efficiently iterate through all divisors of any number and we do that by precomputing all divisors of all numbers up to \(2 \cdot 10^5\) using the sieve of Eratosthenes.&lt;/p&gt;
-
-&lt;p&gt;I actually had a lot of problems avoiding TLE on this problem with Kotlin.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/R-697.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
-        <link>//R-697</link>
-        <link href="/R-697"/>
-        <guid isPermaLink="true">/R-697</guid>
       </item>
     
   </channel>
