@@ -165,6 +165,45 @@
   labels: "dfs and similar, graphs, implementation, shortest paths"
   rating: 2600
 
+- id: "1303A"
+  title: "Erasing Zeroes"
+  labels: "implementation, strings"
+  rating: 800
+  code: "edu/edu82/1303a-erasing-zeroes.kt"
+
+- id: "1303B"
+  title: "National Project"
+  labels: "math"
+  rating: 1400
+  code: "edu/edu82/1303b-national-project.kt"
+
+- id: "1303C"
+  title: "Perfect Keyboard"
+  labels: "dfs and similar, greedy, implementation"
+  rating: 1600
+  code: "edu/edu82/1303c-perfect-keyboard.kt"
+
+- id: "1303D"
+  title: "Fill The Bag"
+  labels: "bitmasks, greedy"
+  rating: 1900
+  code: "edu/edu82/1303d-fill-the-bag.kt"
+
+- id: "1303E"
+  title: "Erase Subsequences"
+  labels: "dp, strings"
+  rating: 2200
+
+- id: "1303F"
+  title: "Number of Components"
+  labels: "dsu, implementation"
+  rating: 2800
+
+- id: "1303G"
+  title: "Sum of Prefix Sums"
+  labels: "data structures, divide and conquer, geometry, trees"
+  rating: 2700
+
 - id: "1312A"
   title: "Two Regular Polygons"
   labels: "geometry, greedy, math, number theory"
@@ -2619,30 +2658,36 @@
 - id: "1493A"
   title: "Anti-knapsack"
   labels: "constructive algorithms"
+  rating: 800
   code: "r700-719/r705/1493a-anti-knapsack.kt"
 
 - id: "1493B"
   title: "Planet Lapituletti"
   labels: "brute force, implementation"
+  rating: 1300
   code: "r700-719/r705/1493b-planet-lapituletti.kt"
 
 - id: "1493C"
   title: "K-beautiful Strings"
   labels: "binary search, brute force, greedy, implementation, strings"
+  rating: 2000
   code: "r700-719/r705/1493c-k-beautiful-strings.kt"
 
 - id: "1493D"
   title: "GCD of an Array"
   labels: "brute force, data structures, math, number theory"
+  rating: 2100
   code: "r700-719/r705/1493d-gcd-of-an-array.kt"
 
 - id: "1493E"
   title: "Enormous XOR"
   labels: "bitmasks, greedy, strings"
+  rating: 2600
 
 - id: "1493F"
   title: "Enchanted Matrix"
   labels: "bitmasks, interactive, number theory"
+  rating: 2600
 
 - id: "1494A"
   title: "ABC String"
@@ -2676,42 +2721,3 @@
   title: "Delete The Edges"
   labels: "graphs"
   rating: 2900
-
-- id: "1303A"
-  title: "Erasing Zeroes"
-  labels: "implementation, strings"
-  rating: 800
-  code: "edu/edu82/1303a-erasing-zeroes.kt"
-
-- id: "1303B"
-  title: "National Project"
-  labels: "math"
-  rating: 1400
-  code: "edu/edu82/1303b-national-project.kt"
-
-- id: "1303C"
-  title: "Perfect Keyboard"
-  labels: "dfs and similar, greedy, implementation"
-  rating: 1600
-  code: "edu/edu82/1303c-perfect-keyboard.kt"
-
-- id: "1303D"
-  title: "Fill The Bag"
-  labels: "bitmasks, greedy"
-  rating: 1900
-  code: "edu/edu82/1303d-fill-the-bag.kt"
-
-- id: "1303E"
-  title: "Erase Subsequences"
-  labels: "dp, strings"
-  rating: 2200
-
-- id: "1303F"
-  title: "Number of Components"
-  labels: "dsu, implementation"
-  rating: 2800
-
-- id: "1303G"
-  title: "Sum of Prefix Sums"
-  labels: "data structures, divide and conquer, geometry, trees"
-  rating: 2700
