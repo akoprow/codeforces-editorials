@@ -2542,42 +2542,51 @@
 - id: "1491A"
   title: "K-th Largest Value"
   labels: "brute force, greedy, implementation"
+  rating: 800
   code: "gr/gr13/1491a-kth-largest-value.kt"
 
 - id: "1491B"
   title: "Minimal Cost"
   labels: "brute force, greedy, implementation, math"
+  rating: 1200
   code: "gr/gr13/1491b-minimal-cost.kt"
 
 - id: "1491C"
   title: "Pekora and Trampoline"
   labels: "brute force, dp, graphs, greedy, implementation"
+  rating: 1700
   code: "gr/gr13/1491c-pekora-and-trampoline.kt"
 
 - id: "1491D"
   title: "Zookeeper and The Infinite Zoo"
   labels: "bitmasks, constructive algorithms"
+  rating: 1800
   code: "gr/gr13/1491d-zookeeper-and-the-infinite-zoo.kt"
 
 - id: "1491E"
   title: "Fib-tree"
   labels: "brute force, divide and conquer, trees"
+  rating: 2400
 
 - id: "1491F"
   title: "Magnets"
   labels: "binary search, constructive algorithms, interactive"
+  rating: 2700
 
 - id: "1491G"
   title: "Switch and Flip"
   labels: "constructive algorithms"
+  rating: 2800
 
 - id: "1491H"
   title: "Yuezheng Ling and Dynamic Tree"
   labels: "data structures"
+  rating: 3400
 
 - id: "1491I"
   title: "Ruler Of The Zoo"
   labels: "brute force"
+  rating: 3500
 
 - id: "1492A"
   title: "Three swimmers"
@@ -2606,3 +2615,64 @@
   title: "Almost Fault-Tolerant Database"
   rating: 2500
   labels: "brute force, constructive algorithms, dfs and similar, greedy, implementation"
+
+- id: "1493A"
+  title: "Anti-knapsack"
+  labels: "constructive algorithms"
+  code: "r700-719/r705/1493a-anti-knapsack.kt"
+
+- id: "1493B"
+  title: "Planet Lapituletti"
+  labels: "brute force, implementation"
+  code: "r700-719/r705/1493b-planet-lapituletti.kt"
+
+- id: "1493C"
+  title: "K-beautiful Strings"
+  labels: "binary search, brute force, greedy, implementation, strings"
+  code: "r700-719/r705/1493c-k-beautiful-strings.kt"
+
+- id: "1493D"
+  title: "GCD of an Array"
+  labels: "brute force, data structures, math, number theory"
+  code: "r700-719/r705/1493d-gcd-of-an-array.kt"
+
+- id: "1493E"
+  title: "Enormous XOR"
+  labels: "bitmasks, greedy, strings"
+
+- id: "1493F"
+  title: "Enchanted Matrix"
+  labels: "bitmasks, interactive, number theory"
+
+- id: "1494A"
+  title: "ABC String"
+  labels: "bitmasks, brute force, implementation"
+  rating: 900
+  code: "edu/edu105/1494a-abc-string.kt"
+
+- id: "1494B"
+  title: "Berland Crossword"
+  labels: "binary search, bitmasks, brute force, implementation"
+  rating: 1400
+  code: "edu105/1494b-berland-crossword.kt"
+
+- id: "1494C"
+  title: "1D Sokoban"
+  labels: "binary search, implementation, two pointers"
+  rating: 1900
+  code: "edu105/1494c-1d-sokoban.kt"
+
+- id: "1494D"
+  title: "Dogeforces"
+  labels: "constructive algorithms, dsu, greedy, implementation, trees"
+  rating: 2300
+
+- id: "1494E"
+  title: "A-Z Graph"
+  labels: "constructive algorithms, data structures, graphs"
+  rating: 2400
+
+- id: "1494F"
+  title: "Delete The Edges"
+  labels: "graphs"
+  rating: 2900
