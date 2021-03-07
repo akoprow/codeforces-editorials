@@ -1,0 +1,40 @@
+---
+layout: page
+title: TODO
+---
+
+{% assign numProblems = 0 %}
+{% for problem in site.data.problems %}
+{% unless problem.code %}
+{% assign numProblems = numProblems | plus: 1 %}
+{% endunless %}
+{% endfor %}
+
+Total number of problems: {{numProblems}}
+
+<ul>
+
+{% assign problemsByRating = site.data.problems | sort: 'rating' %}
+{% for problem in problemsByRating %}
+{% unless problem.code %}
+<li>
+  <tiny>{{problem.id | slice:0,4}}</tiny>{{problem.id | slice:4,2}}{% if problem.also-as %} / <tiny>{{problem.also-as | slice:0,4}}</tiny>{{problem.also-as | slice:4,2}}{% endif %}
+
+  {% capture link %}problems/{{problem.id | slugify }}{% endcapture %}
+  <a href="{{ link | relative_url }}">
+    {{problem.title}}
+  </a>
+
+  {% if problem.rating %}<rating>R:{{problem.rating}} <meter min=800 max=3600 value="{{problem.rating}}"/></rating>{% endif %}
+
+  <labels>
+  {% assign labels = problem.labels | split: ", " %}
+  {% for label in labels %}
+    <span class="badge tiny rounded-pill bg-warning text-dark">{{label}}</span>
+  {% endfor %}
+  </labels>
+</li>
+{% endunless %}
+{% endfor %}
+
+</ul>
