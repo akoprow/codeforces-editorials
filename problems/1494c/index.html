@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>1D Sokoban</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>1D Sokoban | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="1D Sokoban" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces editorials" />
+<meta property="og:description" content="Codeforces editorials" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="1D Sokoban" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"1D Sokoban","url":"/codeforces-editorials/problems/1494c/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <div class="alert alert-primary" role="alert">
+  
+  <tiny>1494</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1494c/">
+    1D Sokoban
+  </a>
+  <a href="https://codeforces.com/contest/1494/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu105/1494c-1d-sokoban.kt">(Code)</a>
+
+  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">two pointers</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, note that our position relative to the blocks cannot change.  Which means that the final solution can always be expressed as:</p>
+
+<ul>
+  <li>going \(x\) steps to the right,</li>
+  <li>coming back to the origin.</li>
+  <li>going \(y\) steps to the left.</li>
+</ul>
+
+<p>Since the first step is only concerned with blocks/targets on the positive part of the axis and last step only with those on the negative part we can split this problem into two.</p>
+
+<p>So now we only have blocks/targets to the right of us and the question is: how many steps to the right should we make?</p>
+
+<p>Next observation is that the only configurations that we should consider are:</p>
+
+<ol>
+  <li>don’t do anything and</li>
+  <li>stop just before <em>some</em> target, i.e. at positions \(b_i-1\) for some \(i\).</li>
+</ol>
+
+<p>Why is it enough to only consider configurations where we stop right before some target?  Imagine instead we stopped at position \(p\) such that position \(p+1\) is not special.  By moving there we will be pushing a number of boxes, let’s say \(t\) of them.  In this scenario the boxes are covering the segment \([p+1, p+t]\).  Let’s say that the closest special position is at \(p+q\) (\(q &gt; 1\)).  If instead we moved to \(p+q-1\) (right before that special position) the boxes would cover \([p+q, p+q+v-1]\).  Comparing that with the original segment we lost some positions on the left, but none of them was special and we added some positions on the right, some of which might, so we end up with a not worse (and possibly better) outcome.</p>
+
+<p>Ok, so let’s start by computing how many boxes initially are at special positions.  That’s our initial score and it covers the first option above (don’t do anything).</p>
+
+<p>Now, let’s iterate over special positions.  We will be keeping track of how many boxes we’re pushing, \(t\), initially \(t=0\). Let’s call it our “train”.  Once we move to position \(b_i\) all the boxes to the left, i.e. all \(a_j &lt; b_i\) will join our train.  But our train sits on \([b_i, b_i+t]\) so all the boxes in <em>that</em> segment also join the train, so we need to be careful there when updating \(t\).</p>
+
+<p>Moreover, for every box that joins the train and was initially on a special position we must make sure to decrease our score by \(1\) (we removed a box from a special position).  However, we can add to the score the number of special positions in the segment \([b_i, b_it+t]\), which is where our train sits.  To efficiently compute that we can either use an appropriate data structure or do two binary searches to find left-most and right-most special position that falls in the range.</p>
+
+
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

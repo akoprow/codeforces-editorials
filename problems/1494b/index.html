@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
   <meta name="generator" content="Jekyll">
 
-  <title>Fib-tree</title>
+  <title>Berland Crossword</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Fib-tree | Codeforces editorials</title>
+<title>Berland Crossword | Codeforces editorials</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Fib-tree" />
+<meta property="og:title" content="Berland Crossword" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Codeforces editorials" />
 <meta property="og:description" content="Codeforces editorials" />
 <meta property="og:site_name" content="Codeforces editorials" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Fib-tree" />
+<meta property="twitter:title" content="Berland Crossword" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Fib-tree","url":"/codeforces-editorials/problems/1491e/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Berland Crossword","url":"/codeforces-editorials/problems/1494b/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -83,34 +83,37 @@
       <section id="main_content">
         <div class="alert alert-primary" role="alert">
   
-  <tiny>1491</tiny>E
+  <tiny>1494</tiny>B
 
   
-  <a href="/codeforces-editorials/problems/1491e/">
-    Fib-tree
+  <a href="/codeforces-editorials/problems/1494b/">
+    Berland Crossword
   </a>
-  <a href="https://codeforces.com/contest/1491/problem/E">
+  <a href="https://codeforces.com/contest/1494/problem/B">
   [CF]
   </a>
 
-  
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu105/1494b-berland-crossword.kt">(Code)</a>
 
-  <rating>R:2400 <meter min="800" max="3600" value="2400" /></rating>
+  <rating>R:1400 <meter min="800" max="3600" value="1400" /></rating>
 
   <labels>
   
   
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
     <span class="badge rounded-pill bg-warning text-dark">brute force</span>
   
-    <span class="badge rounded-pill bg-warning text-dark">divide and conquer</span>
-  
-    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
   
   </labels>
 </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
-</code></pre></div></div>
+<p>Note that the tricky bit is the corners.  Imagine we knew what’s in every corner.  Then the problem is easy as for every border we have \(n-2\) slots excluding corners and so the number of blocks we need to place there \(v\), which is the original constrain from the problem minus \(0\), \(1\), or \(2\) depending how many blocks are already in the two relevant corners, must be \(0 \le v \le n-2\).</p>
+
+<p>So now we can just try all the combinations for corners (filled/unfilled) since there are only \(2^4 = 16\) and apply the reasoning from above and clearly we have an answer overall if we have an answer for any of the configurations.</p>
 
 
       </section>

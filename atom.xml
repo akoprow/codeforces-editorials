@@ -12,18 +12,198 @@
     </author>
     
       <item>
-        <title>Educational Round 105</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1494&quot;&gt;Educational Codeforces Round 105 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
+        <title>Round 705 (Div II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1493&quot;&gt;Codeforces Round #705 (Div. 2)&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
   
-  &lt;tiny&gt;1494&lt;/tiny&gt;A
+  &lt;tiny&gt;1493&lt;/tiny&gt;A
 
   
-  &lt;a href=&quot;/codeforces-editorials/problems/1494a/&quot;&gt;
-    
+  &lt;a href=&quot;/codeforces-editorials/problems/1493a/&quot;&gt;
+    Anti-knapsack
   &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1494/problem/A&quot;&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1493/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r705/1493a-anti-knapsack.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, we clearly cannot add \(k\) itself and we can add anything larger than \(k\) as by the virtue of being larger it can never help form a sum up to \(k\).&lt;/p&gt;
+
+&lt;p&gt;The rest is greedy in spirit: we take decreasing number from \(k-1\) for as long as we can and it turns out that we can go down to \(\lceil \frac{k}{2} \rceil\) without getting a pair of numbers (and due to numbers being relatively large, hence, also more than two numbers) that adds to \(k\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1493&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1493b/&quot;&gt;
+    Planet Lapituletti
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1493/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r705/1493b-planet-lapituletti.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Simple on the surface but the devil is in the (implementation) details.  Let’s say the given time is \(H:M\).&lt;/p&gt;
+
+&lt;p&gt;There are two possible approaches: brute-force by going through all possible hour/time combinations and from the correct ones choose the one that happens soonest after \(H:M\).  Hour/time is correct if:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;it only contains symmetrical digits (\(0, 1, 2, 5, 8\)),&lt;/li&gt;
+  &lt;li&gt;mirrored image is a valid time, i.e. its hour and minute are within the given bounds.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Another option was to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Iterate minutes from \(M+1\) to the last valid minute (\(m-1\)) and if that together with the original hour is valid then clearly that’s the answer (we stay within the same hour).&lt;/li&gt;
+  &lt;li&gt;If there is no solution above then that means there is no solution within the given hour.  But then it’s easy to see that minutes will be \(00\) as it’s always valid and it’s the smallest value for minutes.  So let’s iterate &lt;em&gt;hours&lt;/em&gt; from \(H+1\) to the last valid hour (\(h-1\)) and if that paired with \(00\) for minutes is valid then that’s our answer (we stay within the same day).&lt;/li&gt;
+  &lt;li&gt;Otherwise, we need to go to the following day and then \(00:00\) is the answer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1493&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1493c/&quot;&gt;
+    K-beautiful Strings
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1493/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r705/1493c-k-beautiful-strings.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So we are given string \(s\) and are trying to find \(t\) such that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(t\) is beautiful and&lt;/li&gt;
+  &lt;li&gt;\(t \ge s\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The definition of lexicographic order is spelled out for us in the exercise but note that we do not need to worry about the first case, as \(s\) and \(t\) have the same length.  Since \(t \ge s\), let’s first get the equal part out of the way: if \(s\) is beautiful then \(t = s\).&lt;/p&gt;
+
+&lt;p&gt;Ok, so now we know that \(t &amp;gt; s\).  Firstly, if \(n\) is not divisible by \(k\) then the answer clearly does not exist as there are no beautiful strings.  Interestingly, if it is then the answer does exist because the string consisting of all “z”s is then beautiful and larger or equal to \(s\).&lt;/p&gt;
+
+&lt;p&gt;The idea now is to find the position where \(s\) and \(t\) differ, let’s say it’s \(p\).  By definition of lexicographic comparison we then have:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(t_i = s_i\) for \(i &amp;lt; p\) [prefix],&lt;/li&gt;
+  &lt;li&gt;on position \(p\) we try to pick the smallest character \(c &amp;gt; s_p\),&lt;/li&gt;
+  &lt;li&gt;on positions larger than \(p\) we are trying to find the smallest possible string [suffix].&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that the larger the \(p\) the better, so let’s consider its possible values by going from right to left in \(s\).  We keep track of the frequency of all letter on the prefix before \(p\).  We also consider all options for character \(c\) at position \(p\), such that \(c &amp;gt; s_p\) (which we include in the frequency counts).  Now we go through frequency counts and if any letter occurs a number of times not divisible by \(k\) then we know how many extra copies of it we will have to add to make it so.  If by the end of this process the number of letters we have to add is not larger than the number of spaces we have available in the suffix then we found a solution.&lt;/p&gt;
+
+&lt;p&gt;To construct the solution we have the set of letter that we need to place in the suffix.  If that set is smaller than the number of positions on the suffix then we fill the remaining “slots” with “a” (as we’re trying to minimize the suffix).  Now all that remains to be done is to sort all those letters (again, we’re trying to minimize the suffix).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1493&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1493d/&quot;&gt;
+    GCD of an Array
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1493/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r705/1493d-gcd-of-an-array.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Remember that to compute \(gcd\) of a list of numbers we first find all the factors in those numbers and then for each factor pick the minimal power of that factor across all those numbers&lt;/p&gt;
+
+\[a_1 = p_1^{\alpha_{1,1}}\cdot \ldots \cdot p_f^{\alpha_{1,f}},\ \ \ \ \ldots \ \ \ \ a_n = p_1^{\alpha_{n,1}}\cdot \ldots \cdot p_f^{\alpha_{n,f}}\]
+
+\[gcd(a_1, \ldots a_n) = p_1^{min(\alpha_{1,1}, \ldots \alpha_{n,1})} \cdot \ldots \cdot p_f^{min(\alpha_{1,f}, \ldots \alpha_{n,f})}\]
+
+&lt;p&gt;So now we want to keep track of two things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;for every position in the array a map of all the factors and their powers of the element at that position and&lt;/li&gt;
+  &lt;li&gt;globally, for every factor, a multiset of their powers across all elements in the array.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It’s easy to initialize it at the beginning and it’s also easy to compute initial \(gcd\) based on the above formula.&lt;/p&gt;
+
+&lt;p&gt;Now for every query we do the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;factorize given \(x = p_1^{\alpha_1} \cdot \ldots \cdot p_v^{\alpha_v}\).&lt;/li&gt;
+  &lt;li&gt;for every factor \(p_i\) replacing mapping \(p_i \to \beta_i\) with \(p_i \to \beta_i + \alpha_i\), i.e. increase the respective power for that factor, for the \(i\)‘th element in the array.&lt;/li&gt;
+  &lt;li&gt;in global multisets, for \(p_i\), remove the old value of \(\beta_i\) and instead add \(\beta_i + \alpha_i\).&lt;/li&gt;
+  &lt;li&gt;if by doing so (in the last step) the minimal element in the multiset changed from \(mn_{old}\) to \(mn_{new}\), update the global \(gcd\) by multiplying it by \(p_i^{mn_{new} - mn_{old}}\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1493&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1493e/&quot;&gt;
+    Enormous XOR
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1493/problem/E&quot;&gt;
   [CF]
   &lt;/a&gt;
 
@@ -33,6 +213,89 @@
 
   &lt;labels&gt;
   
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1493&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1493f/&quot;&gt;
+    Enchanted Matrix
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1493/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-705.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
+        <link>//R-705</link>
+        <link href="/R-705"/>
+        <guid isPermaLink="true">/R-705</guid>
+      </item>
+    
+      <item>
+        <title>Educational Round 105</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1494&quot;&gt;Educational Codeforces Round 105 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1494&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1494a/&quot;&gt;
+    ABC String
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1494/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu105/1494a-abc-string.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
   
   &lt;/labels&gt;
 &lt;/div&gt;
@@ -52,18 +315,26 @@
 
   
   &lt;a href=&quot;/codeforces-editorials/problems/1494b/&quot;&gt;
-    
+    Berland Crossword
   &lt;/a&gt;
   &lt;a href=&quot;https://codeforces.com/contest/1494/problem/B&quot;&gt;
   [CF]
   &lt;/a&gt;
 
-  
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu105/1494b-berland-crossword.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
   
   &lt;/labels&gt;
 &lt;/div&gt;
@@ -78,18 +349,24 @@
 
   
   &lt;a href=&quot;/codeforces-editorials/problems/1494c/&quot;&gt;
-    
+    1D Sokoban
   &lt;/a&gt;
   &lt;a href=&quot;https://codeforces.com/contest/1494/problem/C&quot;&gt;
   [CF]
   &lt;/a&gt;
 
-  
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu105/1494c-1d-sokoban.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
   
   &lt;/labels&gt;
 &lt;/div&gt;
@@ -127,7 +404,7 @@
 
   
   &lt;a href=&quot;/codeforces-editorials/problems/1494d/&quot;&gt;
-    
+    Dogeforces
   &lt;/a&gt;
   &lt;a href=&quot;https://codeforces.com/contest/1494/problem/D&quot;&gt;
   [CF]
@@ -135,10 +412,20 @@
 
   
 
-  
+  &lt;rating&gt;R:2300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2300&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dsu&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
   
   &lt;/labels&gt;
 &lt;/div&gt;
@@ -152,7 +439,7 @@
 
   
   &lt;a href=&quot;/codeforces-editorials/problems/1494e/&quot;&gt;
-    
+    A-Z Graph
   &lt;/a&gt;
   &lt;a href=&quot;https://codeforces.com/contest/1494/problem/E&quot;&gt;
   [CF]
@@ -160,10 +447,16 @@
 
   
 
-  
+  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
   
   &lt;/labels&gt;
 &lt;/div&gt;
@@ -177,7 +470,7 @@
 
   
   &lt;a href=&quot;/codeforces-editorials/problems/1494f/&quot;&gt;
-    
+    Delete The Edges
   &lt;/a&gt;
   &lt;a href=&quot;https://codeforces.com/contest/1494/problem/F&quot;&gt;
   [CF]
@@ -185,10 +478,12 @@
 
   
 
-  
+  &lt;rating&gt;R:2900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2900&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
   
   &lt;/labels&gt;
 &lt;/div&gt;
@@ -225,7 +520,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491a-kth-largest-value.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -255,7 +550,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491b-minimal-cost.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -304,7 +599,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491c-pekora-and-trampoline.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -350,7 +645,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491d-zookeeper-and-the-infinite-zoo.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -403,7 +698,7 @@
 
   
 
-  
+  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -434,7 +729,7 @@
 
   
 
-  
+  &lt;rating&gt;R:2700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2700&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -465,7 +760,7 @@
 
   
 
-  
+  &lt;rating&gt;R:2800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2800&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -492,7 +787,7 @@
 
   
 
-  
+  &lt;rating&gt;R:3400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3400&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -519,7 +814,7 @@
 
   
 
-  
+  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -2207,277 +2502,6 @@
         <link>//R-699</link>
         <link href="/R-699"/>
         <guid isPermaLink="true">/R-699</guid>
-      </item>
-    
-      <item>
-        <title>Educational Round 103</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1476&quot;&gt;Educational Codeforces Round 103 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1476&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1476a/&quot;&gt;
-    K-divisible Sum
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1476/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu103/1476a-k-divisible-sum.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1000&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We essentially have three cases:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;\(n \ge k\) and \(n\) is divisible by \(k\) then the answer is \(1\) as all elements equal to \(1\) are a correct solution&lt;/li&gt;
-  &lt;li&gt;\(n \ge k\) but \(n\) not divisible by \(k\) then the answer is \(2\) as all \(1\) is not divisible by \(k\) and we need to bump up some elements to \(2\).&lt;/li&gt;
-  &lt;li&gt;\(k &amp;lt; n\) the answer is \(\lceil \frac{k}{n} \rceil\) as we are aiming for the total sum to be \(k\) in this case and that’s the maximum we will need to put in a single element.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1476&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1476b/&quot;&gt;
-    Inflation
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1476/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu103/1476b-inflation.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1300&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We want:&lt;/p&gt;
-
-\[\frac{p_i}{p_0 + \ldots + p_{i-1}} \le \frac{k}{100}\]
-
-&lt;p&gt;or, equivalently:&lt;/p&gt;
-
-\[100 \cdot p_i \le k \cdot (p_0 + \ldots + p_{i-1})\]
-
-&lt;p&gt;We compute that by keeping track of the running sum.  If at any point the equation does not hold we compute the delta by which we need to increase the running sum, i.e.:&lt;/p&gt;
-
-\[\lceil \frac{100 \cdot p_i - k \cdot (p_0 + \ldots + p_{i-1}}{k} \rceil\]
-
-&lt;p&gt;we update the running sum and continue further.  The sum of all the deltas is our answer.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1476&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1476c/&quot;&gt;
-    Longest Simple Cycle
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1476/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu103/1476c-longest-simple-cycle.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;It’s clear that the cycle’s right side will be one of the chains.  So we’ll iterate over that chain, \(i\), and will keep track of the current longest cycle that we can built to the left of \(i\), let’s call that \(q_i\).  To simplify things, notice that we can swap \(a_i\) and \(b_i\) without influencing the result, so let’s normalize it so that always \(a_i &amp;lt; b_i\).&lt;/p&gt;
-
-&lt;p&gt;We have two cases.  If \(a_i = b_i\) then the current chain is connected to the same vertex so \(q_i = 2\) as we can only use the two links to that vertex.&lt;/p&gt;
-
-&lt;p&gt;Otherwise we have two options (a picture is worth a thousand words so see notes for a diagram)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;either we follow the links to the previous chain and then follow that chain, that gives us \(2 + b_i - a_i\) or&lt;/li&gt;
-  &lt;li&gt;we follow the links and then combine it with the longest cycle so far for \(2 + q_{i-1} + (a_i - 1) + (c_{i-1} - b_i)\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We combine those two options for the final formula:&lt;/p&gt;
-
-\[q_i = 2 + max(b_i - a_i, q_{i-1} + (a_i - 1) + (c_{i-1} - b_i))\]
-
-&lt;p&gt;Now at each position we close the cycle so need to add the path traversed along the last chain so the final answer is \(max_i (q_i + c_i - 1)\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1476&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1476d/&quot;&gt;
-    Journey
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1476/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu103/1476d-journey.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dsu&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The crucial observation is that if we start at city \(i\) and move to other city \(j\), we can always come back to \(i\).  We can easily see that that’s possible after one step and we can prove it for arbitrary number of steps by induction (or just convince ourselves that it works by observing \(2\) or \(3\) steps).&lt;/p&gt;
-
-&lt;p&gt;So now for each city we compute \(L(i)\) and \(L_{rev}(i)\) denoting how many steps to the left can we move from city \(i\) in initial/reversed setup (all arrows reversed), respectively.  We have \(L(i) = L_{rev}(i-1)+1\) if \(s_{i-1} = &quot;L&quot;\) and \(0\) otherwise.  Similarly \(L_{rev}(i) = L(i-1) + 1\) if \(s_{i-1} = &quot;R&quot;\) and \(0\) otherwise.&lt;/p&gt;
-
-&lt;p&gt;Now, we do the same for \(R(i)\) and \(R_rev(i)\) to compute our moves to the right.  And we combine it for each city by seeing how far we can go to the left and right, plus the city itself, giving us the final answer for city \(i\) of: \(L_i + R_i + 1\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1476&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1476e/&quot;&gt;
-    Pattern Matching
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1476/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2300&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1476&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1476f/&quot;&gt;
-    Lanterns
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1476/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3000&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1476&lt;/tiny&gt;G
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1476g/&quot;&gt;
-    Minimum Difference
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1476/problem/G&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/Edu-103.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
-        <link>//Edu-103</link>
-        <link href="/Edu-103"/>
-        <guid isPermaLink="true">/Edu-103</guid>
       </item>
     
   </channel>
