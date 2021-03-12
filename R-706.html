@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 706 (Div I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 706 (Div I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 706 (Div I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #706 (Div. 1)" />
+<meta property="og:description" content="Codeforces Round #706 (Div. 1)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 706 (Div I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 706 (Div I+II)","dateModified":"2021-03-10T00:00:00+00:00","url":"/codeforces-editorials/R-706","datePublished":"2021-03-10T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-706"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #706 (Div. 1)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 706 (Div I+II)</h2>
+  <time datetime="2021-03-10T00:00:00+00:00" class="by-line">10 Mar 2021</time>
+  <p><a href="https://codeforces.com/contest/1495">Codeforces Round #706 (Div. 1)</a></p>
+
+<p><a href="https://codeforces.com/contest/1496">Codeforces Round #706 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1496</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1496a/">
+    Split it!
+  </a>
+  <a href="https://codeforces.com/contest/1496/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r706/1496a-split-it.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
+  
+  </labels>
+</div>
+
+<p>Note that the part in the middle, \(a_{k+1}\), has no constraints and is arbitrary so we want to make all \(a_1, \ldots, a_k\) as short as possible. Notice also that if any \(a_i = s \cdot t\) then it can be split into two: \(s\) and \(t\).  Which means all \(a_i\) are single letters.  Which means we need to have:</p>
+
+<ul>
+  <li>first \(k\) letters concatenated with last \(k\) letters must be a palindrome and</li>
+  <li>\(n &gt; 2k\) (so that we have at least one letter left for \(a_{k+1}\)).</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1496</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1496b/">
+    Max and Mex
+  </a>
+  <a href="https://codeforces.com/contest/1496/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r706/1496b-max-and-mex.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Let \(x = mex(S)\) and \(y = max(S)\).</p>
+
+<p>If \(x &gt; y\) then \(x = y+1\) and \(\lceil \frac{x+y}{2} \rceil = \lceil \frac{2y+1}{2} \rceil = y+2\), which means from now on we’ll always be adding a new element in every step, so just bump the result by however many steps are left and we’re done.</p>
+
+<p>If \(x &lt; y\) then just compute \(\lceil \frac{x+y}{2} \rceil\), add it to the set and continue simulating.  This cannot go on for more than \(n\) steps at which point we’ll start hitting the previous case, so the complexity is good enough.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1496</tiny>C / <tiny>1495</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1496c/">
+    Diamond Miner
+  </a>
+  <a href="https://codeforces.com/contest/1496/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r706/1496c-diamond-miner.kt">(Code)</a>
+
+  <rating>R:1200 <meter min="800" max="3600" value="1200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, observe that we can transform each \((x, y)\) point to \((\mid x \mid, \mid y \mid)\) without affecting the answer.  So now we’re playing on a single positive quadrant of the coordinate system and it’s easy to see (or prove from triangle inequality) that the optimal solution is to avoid lines intersecting and so to greedily sort all \(x\) and \(y\) coordinates and match them in that order.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1496</tiny>D / <tiny>1495</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1496d/">
+    Let's Go Hiking
+  </a>
+  <a href="https://codeforces.com/contest/1496/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r706/1496d-lets-go-hiking.kt">(Code)</a>
+
+  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">games</span>
+  
+  </labels>
+</div>
+
+<p>Firstly note that all the numbers don’t matter only for each pair of numbers which one is bigger.  Visualize this as a game on “hills” created from the numbers; first player can only be descending while the second player can only be ascending.</p>
+
+<p>Observations:</p>
+
+<ol>
+  <li>the first player must start on a hill; if he did not then there’s only one possible move for him to do and the second player can block him and win.</li>
+  <li>the number of steps he can do to left and right must be equal; if it is not then the second player can place himself appropriately on the longest of the branches and win.</li>
+  <li>both left and right branch must have even lengths; for odd lengths the second player places himself on the bottom of one of the branches and wins, regardless if the first player goes along the same branch or chooses the other one.</li>
+  <li>there cannot be another monotone sequence of equal or longer length than the ones at the starting point we’re considering, as then the second player just starts there and have at least as many steps as we do and win.</li>
+</ol>
+
+<p>This last observation in particular means that the answer will always be \(0\) or \(1\).  It’s fairly easy to find the unique winning starting point (if it exists).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1496</tiny>E / <tiny>1495</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1496e/">
+    Garden of the Sun
+  </a>
+  <a href="https://codeforces.com/contest/1496/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2300 <meter min="800" max="3600" value="2300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+  </labels>
+</div>
+
+<p>Firstly let’s unpack all the fluff from the description: we have a number of \(X\)s and we want to connect all of them, by adding new \(X\)s, in such a way that we cannot create any cycles.</p>
+
+<p>We can do that by fully filling every third column.  If we have any \(X\)s on the remaining two columns they will automatically be connected to their closer column.  So what remains to be done is just to extend any of them into a full connection between said columns (or just add a “bridge” if no \(X\)s exist in the two columns under consideration).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1496</tiny>F / <tiny>1495</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1496f/">
+    BFS Trees
+  </a>
+  <a href="https://codeforces.com/contest/1496/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2600 <meter min="800" max="3600" value="2600" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">shortest paths</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1495</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1495e/">
+    Qingshan and Daniel
+  </a>
+  <a href="https://codeforces.com/contest/1495/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3200 <meter min="800" max="3600" value="3200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1495</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1495f/">
+    Squares
+  </a>
+  <a href="https://codeforces.com/contest/1495/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3300 <meter min="800" max="3600" value="3300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-706.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
