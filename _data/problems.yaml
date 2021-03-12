@@ -2721,3 +2721,50 @@
   title: "Delete The Edges"
   labels: "graphs"
   rating: 2900
+
+- id: "1495E"
+  title: "Qingshan and Daniel"
+  labels: "data structures"
+  rating: 3200
+
+- id: "1495F"
+  title: "Squares"
+  labels: "constructive algorithms, data structures, graphs"
+  rating: 3300
+
+- id: "1496A"
+  title: "Split it!"
+  labels: "constructive algorithms, greedy, strings"
+  code: "r700-719/r706/1496a-split-it.kt"
+  rating:
+
+- id: "1496B"
+  title: "Max and Mex"
+  labels: "math"
+  code: "r700-719/r706/1496b-max-and-mex.kt"
+
+- id: "1496C"
+  title: "Diamond Miner"
+  labels: "greedy, sortings"
+  also-as: "1495A"
+  code: "r700-719/r706/1496c-diamond-miner.kt"
+  rating: 1200
+
+- id: "1496D"
+  title: "Let's Go Hiking"
+  labels: "games"
+  also-as: "1495B"
+  code: "r700-719/r706/1496d-lets-go-hiking.kt"
+  rating: 1900
+
+- id: "1496E"
+  title: "Garden of the Sun"
+  labels: "constructive algorithms, graphs"
+  also-as: "1495C"
+  rating: 2300
+
+- id: "1496F"
+  title: "BFS Trees"
+  labels: "dfs and similar, graphs, math, shortest paths"
+  also-as: "1495D"
+  rating: 2600
