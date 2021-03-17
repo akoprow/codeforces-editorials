@@ -130,6 +130,39 @@
   labels: "graphs, interactive"
   rating: 2800
 
+- id: "1295A"
+  title: "Display The Number"
+  labels: "greedy"
+  rating: 900
+  code: "edu/edu81/1295a-display-the-number.kt"
+
+- id: "1295B"
+  title: "Infinite Prefixes"
+  labels: "math, strings"
+  rating: 1700
+  code: "edu/edu81/1295b-infinite-prefixes.kt"
+
+- id: "1295C"
+  title: "Obtain The String"
+  labels: "dp, greedy, strings"
+  rating: 1600
+  code: "edu/edu81/1295c-obtain-the-string.kt"
+
+- id: "1295D"
+  title: "Same GCDs"
+  labels: "math, number theory"
+  rating: 1800
+
+- id: "1295E"
+  title: "Permutation Separation"
+  labels: "data structures, divide and conquer"
+  rating: 2200
+
+- id: "1295F"
+  title: "Good Contest"
+  labels: "combinatorics, dp, probabilities"
+  rating: 2700
+
 - id: "1301A"
   title: "Three Strings"
   labels: "implementation, strings"
@@ -795,6 +828,40 @@
   title: "Make It Ascending"
   labels: "bitmasks, brute force, dp"
   rating: 3000
+
+# - id: "1343A"
+#   title: "Candies"
+#   labels: "brute force, math"
+#   rating: 900
+#   code: "r620-639/r636/1343a-candies.kt"
+#
+# - id: "1343B"
+#   title: "Balanced Array"
+#   labels: "constructive algorithms, math"
+#   rating: 800
+#   code: "r620-639/r636/1343b-balanced-array.kt"
+#
+# - id: "1343C"
+#   title: "Alternating Subsequence"
+#   labels: "dp, greedy, two pointers"
+#   rating: 1200
+#   code: "r620-639/r636/1343c-alternating-subsequence.kt"
+#
+# - id: "1343D"
+#   title: "Constant Palindrome Sum"
+#   labels: "brute force, data structures, greedy, two pointers"
+#   rating: 1700
+#   code: "r620-639/r636/1343d-constant-palindrome-sum.kt"
+#
+# - id: "1343E"
+#   title: "Weights Distributing"
+#   labels: "brute force, graphs, greedy, shortest paths, sortings"
+#   rating: 2100
+#
+# - id: "1343F"
+#   title: "Restore the Permutation by Sorted Segments"
+#   labels: "brute force, constructive algorithms, data structures, greedy, implementation"
+#   rating: 2400
 
 - id: "1344E"
   title: "Train Tracks"
@@ -2735,12 +2802,13 @@
 - id: "1496A"
   title: "Split it!"
   labels: "constructive algorithms, greedy, strings"
+  rating: "900"
   code: "r700-719/r706/1496a-split-it.kt"
-  rating:
 
 - id: "1496B"
   title: "Max and Mex"
   labels: "math"
+  rating: "1100"
   code: "r700-719/r706/1496b-max-and-mex.kt"
 
 - id: "1496C"
