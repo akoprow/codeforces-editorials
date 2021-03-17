@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
   <meta name="generator" content="Jekyll">
 
-  <title>Split it!</title>
+  <title>Infinite Prefixes</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Split it! | Codeforces editorials</title>
+<title>Infinite Prefixes | Codeforces editorials</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Split it!" />
+<meta property="og:title" content="Infinite Prefixes" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Codeforces editorials" />
 <meta property="og:description" content="Codeforces editorials" />
 <meta property="og:site_name" content="Codeforces editorials" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Split it!" />
+<meta property="twitter:title" content="Infinite Prefixes" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Split it!","url":"/codeforces-editorials/problems/1496a/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Infinite Prefixes","url":"/codeforces-editorials/problems/1295b/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -84,38 +84,40 @@
       <section id="main_content">
         <div class="alert alert-primary" role="alert">
   
-  <tiny>1496</tiny>A
+  <tiny>1295</tiny>B
 
   
-  <a href="/codeforces-editorials/problems/1496a/">
-    Split it!
+  <a href="/codeforces-editorials/problems/1295b/">
+    Infinite Prefixes
   </a>
-  <a href="https://codeforces.com/contest/1496/problem/A">
+  <a href="https://codeforces.com/contest/1295/problem/B">
   [CF]
   </a>
 
-  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r706/1496a-split-it.kt">(Code)</a>
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu81/1295b-infinite-prefixes.kt">(Code)</a>
 
-  <rating>R:900 <meter min="800" max="3600" value="900" /></rating>
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
 
   <labels>
   
   
-    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
-  
-    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
   
     <span class="badge rounded-pill bg-warning text-dark">strings</span>
   
   </labels>
 </div>
 
-<p>Note that the part in the middle, \(a_{k+1}\), has no constraints and is arbitrary so we want to make all \(a_1, \ldots, a_k\) as short as possible. Notice also that if any \(a_i = s \cdot t\) then it can be split into two: \(s\) and \(t\).  Which means all \(a_i\) are single letters.  Which means we need to have:</p>
+<p>Tricky! Firstly let’s dispose of the easy case: if the total balance on the string, \(\mathcal{T}\) is \(0\) that means that in every iteration the values will not be changing and so either the answer is \(-1\) (if we hit \(x\) in a single iteration) or \(0\) (if we do not).</p>
+
+<p>If it’s not \(0\) then the key observation is that on every position we might hit \(x\) at most once.  It helps to visualize this as a discreet function on \([1, n]\); in every iteration we move this function by \(\mathcal{T}\) so clearly if we hit \(x\) on a position we only do it once.  Now what’s left is to figure out if we hit it for every position.  To do that we take \(v\) as the balance on the string up to the given position and check if:</p>
 
 <ul>
-  <li>first \(k\) letters concatenated with last \(k\) letters must be a palindrome and</li>
-  <li>\(n &gt; 2k\) (so that we have at least one letter left for \(a_{k+1}\)).</li>
+  <li>\((x-v) \mod \mathcal{T} = 0\) and</li>
+  <li>\((x-v) / \mathcal{T} \ge 0\).</li>
 </ul>
+
+<p>The former is that there’s a “round” in which we’ll hit \(x\); the latter is to make sure that it’s “in the right direction” (think of us wanting to hit \(-5\) by getting \(+1\) added after every cycle).</p>
 
 
       </section>

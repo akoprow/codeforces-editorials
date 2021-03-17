@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Educational Round 81</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Educational Round 81 | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Educational Round 81" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Educational Codeforces Round 81 (Rated for Div. 2)" />
+<meta property="og:description" content="Educational Codeforces Round 81 (Rated for Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Educational Round 81" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Educational Round 81","dateModified":"2020-01-29T00:00:00+00:00","url":"/codeforces-editorials/Edu-81","datePublished":"2020-01-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/Edu-81"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Educational Codeforces Round 81 (Rated for Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Educational Round 81</h2>
+  <time datetime="2020-01-29T00:00:00+00:00" class="by-line">29 Jan 2020</time>
+  <p><a href="https://codeforces.com/contest/1295">Educational Codeforces Round 81 (Rated for Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1295</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1295a/">
+    Display The Number
+  </a>
+  <a href="https://codeforces.com/contest/1295/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu81/1295a-display-the-number.kt">(Code)</a>
+
+  <rating>R:900 <meter min="800" max="3600" value="900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>First observation is that digit \(1\) is the only one using only two segments.  Since we want as many digits as possible we should just construct a stream of \(1\)s.  The only exception is if we start with an odd number of segment as this process would leave us with one segment unused but instead we can use it to change the leading \(1\) into a \(7\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1295</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1295b/">
+    Infinite Prefixes
+  </a>
+  <a href="https://codeforces.com/contest/1295/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu81/1295b-infinite-prefixes.kt">(Code)</a>
+
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
+  
+  </labels>
+</div>
+
+<p>Tricky! Firstly let’s dispose of the easy case: if the total balance on the string, \(\mathcal{T}\) is \(0\) that means that in every iteration the values will not be changing and so either the answer is \(-1\) (if we hit \(x\) in a single iteration) or \(0\) (if we do not).</p>
+
+<p>If it’s not \(0\) then the key observation is that on every position we might hit \(x\) at most once.  It helps to visualize this as a discreet function on \([1, n]\); in every iteration we move this function by \(\mathcal{T}\) so clearly if we hit \(x\) on a position we only do it once.  Now what’s left is to figure out if we hit it for every position.  To do that we take \(v\) as the balance on the string up to the given position and check if:</p>
+
+<ul>
+  <li>\((x-v) \mod \mathcal{T} = 0\) and</li>
+  <li>\((x-v) / \mathcal{T} \ge 0\).</li>
+</ul>
+
+<p>The former is that there’s a “round” in which we’ll hit \(x\); the latter is to make sure that it’s “in the right direction” (think of us wanting to hit \(-5\) by getting \(+1\) added after every cycle).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1295</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1295c/">
+    Obtain The String
+  </a>
+  <a href="https://codeforces.com/contest/1295/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu81/1295c-obtain-the-string.kt">(Code)</a>
+
+  <rating>R:1600 <meter min="800" max="3600" value="1600" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
+  
+  </labels>
+</div>
+
+<p>Greedy.  We keep track of our position in \(s\) and the string and also for every letter keep a sorted set of positions where it occurs.  Then we do a sweep through \(t\).  Once moving to the next letter we find its next occurrence in \(s\) at a larger position than the current one and if that does not exist we increment the result by \(1\) and move to the beginning of \(s\).  If (and only if) some letter from \(t\) does not occur at all in \(s\) then it’s impossible and we output \(-1\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1295</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1295d/">
+    Same GCDs
+  </a>
+  <a href="https://codeforces.com/contest/1295/problem/D">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:1800 <meter min="800" max="3600" value="1800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1295</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1295e/">
+    Permutation Separation
+  </a>
+  <a href="https://codeforces.com/contest/1295/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2200 <meter min="800" max="3600" value="2200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">divide and conquer</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1295</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1295f/">
+    Good Contest
+  </a>
+  <a href="https://codeforces.com/contest/1295/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2700 <meter min="800" max="3600" value="2700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">probabilities</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/Edu-81.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
