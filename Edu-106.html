@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Educational Round 106</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Educational Round 106 | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Educational Round 106" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Educational Codeforces Round 106 (Rated for Div. 2)" />
+<meta property="og:description" content="Educational Codeforces Round 106 (Rated for Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Educational Round 106" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Educational Round 106","dateModified":"2021-03-18T00:00:00+00:00","url":"/codeforces-editorials/Edu-106","datePublished":"2021-03-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/Edu-106"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Educational Codeforces Round 106 (Rated for Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Educational Round 106</h2>
+  <time datetime="2021-03-18T00:00:00+00:00" class="by-line">18 Mar 2021</time>
+  <p><a href="https://codeforces.com/contest/1499">Educational Codeforces Round 106 (Rated for Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1499</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1499a/">
+    Domino on Windowsill
+  </a>
+  <a href="https://codeforces.com/contest/1499/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu106/1499a-domino-on-windowsill.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Fairly simple; we can place \(min(k_1, k_2)\) dominoes vertically and then we’re left with \(max(k_1, k_2) - min(k_1, k_2)\) consecutive cells where we can put half as many horizontal dominoes.  The case for white dominoes is analogous (and it’s easy to compute \(k_1\) and \(k_2\) for that case).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1499</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1499b/">
+    Binary Removals
+  </a>
+  <a href="https://codeforces.com/contest/1499/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu106/1499b-binary-removals.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Eventually we want to have all \(0\)s on some prefix and all \(1\)s from then on.  What’s the longest prefix where we can make all \(0\)s?  Well, until we hit two \(1\)s next to each other.  From that point onwards we can make all \(1\)s until we hit two \(0\)s next to each other.  If by doing those two steps we processed the whole string we’re good; otherwise the answer is clearly “NO”.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1499</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1499c/">
+    Minimum Grid Path
+  </a>
+  <a href="https://codeforces.com/contest/1499/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu106/1499c-minimum-grid-path.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, clearly both axis are independent (and controlled by even/odd \(c_i\)) so we can kinda decompose into two subproblems.</p>
+
+<p>If we had to use all \(c_i\) then the optimal strategy is fairly clear:</p>
+
+<ul>
+  <li>make minimal number of steps possible, i.e. \(1\), for all “turns” but the one with minimal \(c_i\),</li>
+  <li>and then make all the remaining steps for the cheapest (applicable) \(c_i\).</li>
+</ul>
+
+<p>However, we do not have to use all \(c_i\); we might do with just a prefix.  It’s fairly easy to scan from \(2\) to \(n\) and at each point compute in constant time what the cost would be if we were to use only that many \(c_i\).  Then just pick the best option.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1499</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1499d/">
+    The Number of Pairs
+  </a>
+  <a href="https://codeforces.com/contest/1499/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu106/1499d-the-number-of-pairs.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, let’s look at \(a\) and \(b\) in such a way that it is easy to reason about \(gcd\) and \(lcm\), namely, say \(a = g \cdot p\) and \(b = g \cdot q\) such that \(gcd(p, q) = 1\), i.e. they are co-prime.  It’s then easy to see that \(gcd(a, b) = g\) and \(lcm(a, b) = g \cdot p \cdot q\).  Let’s now look again at the original equation:</p>
+
+\[c \cdot lcm(a, b) - d \cdot gcd(a, b) = x\]
+
+\[c \cdot g \cdot p \cdot q - d \cdot g = x\]
+
+\[g \cdot (c \cdot p \cdot q - d) = x\]
+
+<p>Since \(g\) is a factor on the left hand side we conclude that \(x\) must be divisible by \(x\), so firstly let’s iterate through all divisors of \(x\) as candidates for \(g\).</p>
+
+<p>Once we have a fixed \(g\):</p>
+
+\[c \cdot p \cdot q = \frac{x}{g} + d\]
+
+<p>and so again we see that \(\frac{x}{g} + d\) must be divisible by \(c\); if it’s not we can skip such a candidate.</p>
+
+<p>Now finally we get:</p>
+
+\[p \cdot q = \frac{\frac{x}{g} + d}{c}\]
+
+<p>In other words we know what the product of \(p \cdot q\) should be equal to.  Recall that we can choose \(p\) and \(q\) any way we want provided that they are co-prime.  This means that any prime factor of \(p \cdot q\) must go to either \(p\) or \(q\), but not both.  In other words there are \(2^s\) ways to choose \(p\) and \(q\) where \(s\) is the number of prime factors of \(p \cdot q\).</p>
+
+<p>The tricky bit is that if we naively use Eratosthenes sieve we have \(\sqrt{x}\) factors for \(x\) and for each we need \(log x\) time for a total of \(O(\sqrt{x}\ \log{x})\), which is not fast enough.</p>
+
+<p>What we need to do is to precompute the number of prime factors for all numbers in the range we care about (i.e. up to \(2 \cdot 10^7\)).  Sieve gives us a smaller prime factor for every number.  Suppose we are looking at \(x\) with its smaller prime being \(p\).  We have two cases:</p>
+
+<ul>
+  <li>smaller prime of \(\frac{x}{p}\) is also \(p\), in which case \(x\) has as many prime factors as \(\frac{x}{p}\),</li>
+  <li>or it has one more, if they are different.</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1499</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1499e/">
+    Chaotic Merge
+  </a>
+  <a href="https://codeforces.com/contest/1499/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1499</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1499f/">
+    Diameter Cuts
+  </a>
+  <a href="https://codeforces.com/contest/1499/problem/F">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1499</tiny>G
+
+  
+  <a href="/codeforces-editorials/problems/1499g/">
+    Graph Coloring
+  </a>
+  <a href="https://codeforces.com/contest/1499/problem/G">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/Edu-106.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
