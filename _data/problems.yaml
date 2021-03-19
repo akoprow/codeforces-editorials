@@ -2836,3 +2836,35 @@
   labels: "dfs and similar, graphs, math, shortest paths"
   also-as: "1495D"
   rating: 2600
+
+- id: "1499A"
+  title: "Domino on Windowsill"
+  labels: "constructive algorithms, math"
+  code: "edu/edu106/1499a-domino-on-windowsill.kt"
+
+- id: "1499B"
+  title: "Binary Removals"
+  labels: "dp, greedy, implementation"
+  code: "edu/edu106/1499b-binary-removals.kt"
+
+- id: "1499C"
+  title: "Minimum Grid Path"
+  labels: "dp, greedy, implementation"
+  code: "edu/edu106/1499c-minimum-grid-path.kt"
+
+- id: "1499D"
+  title: "The Number of Pairs"
+  labels: "math, number theory"
+  code: "edu/edu106/1499d-the-number-of-pairs.kt"
+
+- id: "1499E"
+  title: "Chaotic Merge"
+  labels: "combinatorics, dp"
+
+- id: "1499F"
+  title: "Diameter Cuts"
+  labels: "dfs and similar, dp, trees"
+
+- id: "1499G"
+  title: "Graph Coloring"
+  labels: "data structures, graphs, interactive"
