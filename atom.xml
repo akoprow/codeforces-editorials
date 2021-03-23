@@ -272,6 +272,260 @@
       </item>
     
       <item>
+        <title>Round 708 (Div II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1497&quot;&gt;Codeforces Round #708 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1497&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1497a/&quot;&gt;
+    Meximization
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1497/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r708/1497a-meximization.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Greedy: put all distinct elements in ascending order, as that will maximize the series of MEXes; then all duplicates follow in any order as they won’t affect the MEX.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1497&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1497b/&quot;&gt;
+    M-arrays
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1497/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r708/1497b-m-arrays.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Count all elements by their remainder modulo \(m\).  All elements with remainder \(0\) must go to a group on their own.  Then we can group together \(i\) and \(m-i\), interleaving those two groups but be careful because:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;we can use one more from one group than the other,&lt;/li&gt;
+  &lt;li&gt;when \(i\) and \(m-i\) are the same we can put them all in one group.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1497&lt;/tiny&gt;C1
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1497c1/&quot;&gt;
+    k-LCM (easy version)
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1497/problem/C1&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r708/1497c1-k-lcm-easy.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Few cases:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if \(n \mod 2 = 1\) then take \((1, \lfloor \frac{n}{2} \rfloor, \lfloor \frac{n}{2} \rfloor)\) with an \(lcm\) of \(\lfloor \frac{n}{2} \rfloor\).&lt;/li&gt;
+  &lt;li&gt;if \(n \mod 3 = 0\) then take \((\frac{n}{3}, \frac{n}{3}, \frac{n}{3})\) with an \(lcm\) of \(\frac{n}{3}\) (turns out this case is actually not needed).&lt;/li&gt;
+  &lt;li&gt;if \(n \mod 4 = 0\) then take \((\frac{n}{2}, \frac{n}{4}, \frac{n}{4})\) with an \(lcm\) of \(\frac{n}{2}\).&lt;/li&gt;
+  &lt;li&gt;otherwise \(n\) is even but is not a multiple of \(4\) (i.e. \(\frac{n}{2}\) is odd) and take \((\frac{n}{2}-1, \frac{n}{2}-1, 2)\) with an \(lcm\) of \(\frac{n}{2}-1\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1497&lt;/tiny&gt;C2
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1497c2/&quot;&gt;
+    k-LCM (hard version)
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1497/problem/C2&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r708/1497c2-k-lcm-hard.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Actually just take \(1\) for all but \(3\) values and for the remaining three values use the solution for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1497&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1497d/&quot;&gt;
+    Genius
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1497/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;shortest paths&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1497&lt;/tiny&gt;E1
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1497e1/&quot;&gt;
+    Square-free division (easy version)
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1497/problem/E1&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r708/1497e1-square-free-division-easy.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1497&lt;/tiny&gt;E2
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1497e2/&quot;&gt;
+    Square-free division (hard version)
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1497/problem/E2&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r708/1497e2-square-free-division-hard.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;hashing&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-708.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+        <link>//R-708</link>
+        <link href="/R-708"/>
+        <guid isPermaLink="true">/R-708</guid>
+      </item>
+    
+      <item>
         <title>Round 706 (Div I+II)</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1495&quot;&gt;Codeforces Round #706 (Div. 1)&lt;/a&gt;&lt;/p&gt;
 
@@ -2273,245 +2527,6 @@
         <link>//Edu-104</link>
         <link href="/Edu-104"/>
         <guid isPermaLink="true">/Edu-104</guid>
-      </item>
-    
-      <item>
-        <title>Round 701 (Div II)</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1485&quot;&gt;Codeforces Round #701 (Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1485&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1485a/&quot;&gt;
-    Add and Divide
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485a-add-and-divide.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1000&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;ternary search&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;It’s fairly easy to realize that we want to increase \(b\) as much as possible before starting to divide by it (by looking at those two operations next to each other it’s obvious).  So just make sure that \(b\) isn’t \(1\) (if it is increase it once) and then keep on increasing \(b\) and for each one check what the score is by doing repeated division.  What’s the stop condition?  Once a given \(b\) gives us score worse than what we’ve got as a best one so far.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1485&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1485b/&quot;&gt;
-    Replace and Keep Sorted
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485b-replace-and-keep-sorted.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Note that to make array \(k\)-similar we pick a position, say \(i\), and replace the value at that position to \(a_{i-1} &amp;lt; v &amp;lt; a_{i+1}\) and \(v \neq a_i\).&lt;/p&gt;
-
-&lt;p&gt;It’s possible to compute things directly but the simplest solution (I think) is to use prefix sums.  Compute on each position how many \(k\)-similar arrays we can make by changing value at this position, which is trivial given the observation above.  Now for each query just take the sum over the segment, only be careful with segment boundaries as for them we now get more solutions as we loose part of the constraints.  So for a segment \([l, r]\) at position \(l\) we can put anything smaller than \(a_{l+1}\) and different than \(a_l\) so we have \(a_{l+1}-2\) options.  Similarly at position \(r\) we can put anything greater than \(a_{r-1}\) and different than \(a_r\) so we have \(k - a_{r-1} - 1\) options.  For the rest of the segment just take the sum using precomputed prefix sums.  Be careful for the case where \(l = r\) in which case any single number other than \(a_l\) is a solution.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1485&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1485c/&quot;&gt;
-    Floor and Mod
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485c-floor-and-mod.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Let’s say that \(\lfloor \frac{a}{b} \rfloor = a \mod b = k\).  How do those pairs look like for \(k=1\)?  We must have \((v+1, v)\) as then \(\lfloor \frac{v+1}{v} \rfloor = 1 = (v+1) \mod v\).  Then for \(2\) we get: \((2v+2, v)\) with \(\lfloor \frac{2v+2}{v} \rfloor = 2 = 2v+2 \mod v\) etc.&lt;/p&gt;
-
-&lt;p&gt;So let’s iterate over \(k\).  For a given \(k\) we have:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;\(a = kb + k\),&lt;/li&gt;
-  &lt;li&gt;\(b &amp;gt; k\),&lt;/li&gt;
-  &lt;li&gt;\(1 \le b \le y\),&lt;/li&gt;
-  &lt;li&gt;\(a \le x\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Substituting \(a\) in the last equation we get: \(kb + k \le x\) so we end up with the following constraints on \(b\):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;\(b \le \frac{x}{k}-1\) and&lt;/li&gt;
-  &lt;li&gt;\(k &amp;lt; b \le y\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;So the number of solutions for a given \(k\) is: \(max(0, min(y, \frac{x}{k}-1) - k)\).  And from the fact that smallest \(a\) is \(k(k+1) + k\) and \(a \le x\), we easily get an upper bound of the number of iterations to be \(\sqrt{x}\).&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: I used a somewhat different reasoning in the live contest and never validated the above via a submission.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1485&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1485d/&quot;&gt;
-    Multiples and Power Differences
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r701/1485d-multiples-and-power-differences.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The trick is to realize that there are relatively few solutions and rather than looking for them we must find a trick that “always works”.  The idea is to divide the board into 2-colors so that we always have adjacent cells of different colors and then write into them \(p+q\) and \(p\).  From the problem we have the following constraints:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;\(p, q \ge 1\),&lt;/li&gt;
-  &lt;li&gt;\(p\) is a multiple of the value in one of the cells,&lt;/li&gt;
-  &lt;li&gt;\(p+q\) is a multiple of the value in the other cell,&lt;/li&gt;
-  &lt;li&gt;\(q\) is equal to \(k^4\) for some \(k\),&lt;/li&gt;
-  &lt;li&gt;\(p + q \le 10^6\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Can we find a \((p, q)\) pair that satisfies those constraints?  Turns out we can.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;\(p\) must be a multiple of a number in given cell (any cell) so our best bet is \(lcm(1, 2, \ldots 16) = 720720\).&lt;/li&gt;
-  &lt;li&gt;\(q\) must be a multiple of a number in a given cell &lt;em&gt;and&lt;/em&gt; a \(4\)‘th power of some number so we can just take \(v^4\) where \(v\) is the value in the cell.&lt;/li&gt;
-  &lt;li&gt;\(p + q = 720720 + v^4 \le 720720 + 16^4 = 786256 \le 10^6\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1485&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1485e/&quot;&gt;
-    Move and Swap
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1485&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1485f/&quot;&gt;
-    Copy or Prefix Sum
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1485/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/R-701.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
-        <link>//R-701</link>
-        <link href="/R-701"/>
-        <guid isPermaLink="true">/R-701</guid>
       </item>
     
   </channel>
