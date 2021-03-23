@@ -2490,6 +2490,46 @@
   labels: "dp, trees"
   rating: 3100
 
+# - id: "1483E"
+#   title: "Vabank"
+#   labels: "binary search, interactive"
+#
+# - id: "1483F"
+#   title: "Exam"
+#   labels: "data structures, dfs and similar, dsu, string suffix structures, trees"
+#
+# - id: "1484A"
+#   title: "Prison Break"
+#   labels: "constructive algorithms"
+#   code: "r700-719/r709/1484a-prison-break.kt"
+#
+# - id: "1484B"
+#   title: "Restore Modulo"
+#   labels: "implementation, math"
+#   code: "r700-719/r709/1484b-restore-modulo.kt"
+#
+# - id: "1484C"
+#   title: "Basic Diplomacy"
+#   labels: "combinatorics, flows, greedy, implementation"
+#   also-as: "1483A"
+#   code: "r700-719/r709/1484c-basic-diplomacy.kt"
+#
+# - id: "1484D"
+#   title: "Playlist"
+#   labels: "data structures, dsu, implementation"
+#   also-as: "1483B"
+#   code: "r700-719/r709/1484d-playlist.kt"
+#
+# - id: "1484E"
+#   title: "Skyline Photo"
+#   labels: "data structures, dp"
+#   also-as: "1483C"
+#
+# - id: "1484F"
+#   title: "Useful Edges"
+#   labels: "brute force, graphs, shortest paths"
+#   also-as: "1483D"
+
 - id: "1485A"
   title: "Add and Divide"
   labels: "brute force, greedy, math, ternary search"
@@ -2836,6 +2876,47 @@
   labels: "dfs and similar, graphs, math, shortest paths"
   also-as: "1495D"
   rating: 2600
+
+- id: "1497A"
+  title: "Meximization"
+  labels: "brute force, data structures, greedy, sortings"
+  rating: 800
+  code: "r700-719/r708/1497a-meximization.kt"
+
+- id: "1497B"
+  title: "M-arrays"
+  labels: "constructive algorithms, greedy, math"
+  rating: 1200
+  code: "r700-719/r708/1497b-m-arrays.kt"
+
+- id: "1497C1"
+  title: "k-LCM (easy version)"
+  labels: "constructive algorithms, math"
+  rating: 1200
+  code: "r700-719/r708/1497c1-k-lcm-easy.kt"
+
+- id: "1497C2"
+  title: "k-LCM (hard version)"
+  labels: "constructive algorithms, math"
+  rating: 1600
+  code: "r700-719/r708/1497c2-k-lcm-hard.kt"
+
+- id: "1497D"
+  title: "Genius"
+  labels: "bitmasks, dp, graphs, shortest paths"
+  rating: 2500
+
+- id: "1497E1"
+  title: "Square-free division (easy version)"
+  labels: "data structures, dp, greedy, math, number theory, two pointers"
+  rating: 1700
+  code: "r700-719/r708/1497e1-square-free-division-easy.kt"
+
+- id: "1497E2"
+  title: "Square-free division (hard version)"
+  labels: "data structures, dp, greedy, hashing, math, number theory, two pointers"
+  rating: 2500
+  code: "r700-719/r708/1497e2-square-free-division-hard.kt"
 
 - id: "1499A"
   title: "Domino on Windowsill"
