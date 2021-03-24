@@ -2490,45 +2490,45 @@
   labels: "dp, trees"
   rating: 3100
 
-# - id: "1483E"
-#   title: "Vabank"
-#   labels: "binary search, interactive"
-#
-# - id: "1483F"
-#   title: "Exam"
-#   labels: "data structures, dfs and similar, dsu, string suffix structures, trees"
-#
-# - id: "1484A"
-#   title: "Prison Break"
-#   labels: "constructive algorithms"
-#   code: "r700-719/r709/1484a-prison-break.kt"
-#
-# - id: "1484B"
-#   title: "Restore Modulo"
-#   labels: "implementation, math"
-#   code: "r700-719/r709/1484b-restore-modulo.kt"
-#
-# - id: "1484C"
-#   title: "Basic Diplomacy"
-#   labels: "combinatorics, flows, greedy, implementation"
-#   also-as: "1483A"
-#   code: "r700-719/r709/1484c-basic-diplomacy.kt"
-#
-# - id: "1484D"
-#   title: "Playlist"
-#   labels: "data structures, dsu, implementation"
-#   also-as: "1483B"
-#   code: "r700-719/r709/1484d-playlist.kt"
-#
-# - id: "1484E"
-#   title: "Skyline Photo"
-#   labels: "data structures, dp"
-#   also-as: "1483C"
-#
-# - id: "1484F"
-#   title: "Useful Edges"
-#   labels: "brute force, graphs, shortest paths"
-#   also-as: "1483D"
+- id: "1483E"
+  title: "Vabank"
+  labels: "binary search, interactive"
+
+- id: "1483F"
+  title: "Exam"
+  labels: "data structures, dfs and similar, dsu, string suffix structures, trees"
+
+- id: "1484A"
+  title: "Prison Break"
+  labels: "constructive algorithms"
+  code: "r700-719/r709/1484a-prison-break.kt"
+
+- id: "1484B"
+  title: "Restore Modulo"
+  labels: "implementation, math"
+  code: "r700-719/r709/1484b-restore-modulo.kt"
+
+- id: "1484C"
+  title: "Basic Diplomacy"
+  labels: "combinatorics, flows, greedy, implementation"
+  also-as: "1483A"
+  code: "r700-719/r709/1484c-basic-diplomacy.kt"
+
+- id: "1484D"
+  title: "Playlist"
+  labels: "data structures, dsu, implementation"
+  also-as: "1483B"
+  code: "r700-719/r709/1484d-playlist.kt"
+
+- id: "1484E"
+  title: "Skyline Photo"
+  labels: "data structures, dp"
+  also-as: "1483C"
+
+- id: "1484F"
+  title: "Useful Edges"
+  labels: "brute force, graphs, shortest paths"
+  also-as: "1483D"
 
 - id: "1485A"
   title: "Add and Divide"
@@ -2922,30 +2922,37 @@
   title: "Domino on Windowsill"
   labels: "constructive algorithms, math"
   code: "edu/edu106/1499a-domino-on-windowsill.kt"
+  rating: 800
 
 - id: "1499B"
   title: "Binary Removals"
   labels: "dp, greedy, implementation"
   code: "edu/edu106/1499b-binary-removals.kt"
+  rating: 1000
 
 - id: "1499C"
   title: "Minimum Grid Path"
   labels: "dp, greedy, implementation"
   code: "edu/edu106/1499c-minimum-grid-path.kt"
+  rating: 1500
 
 - id: "1499D"
   title: "The Number of Pairs"
   labels: "math, number theory"
   code: "edu/edu106/1499d-the-number-of-pairs.kt"
+  rating: 2100
 
 - id: "1499E"
   title: "Chaotic Merge"
   labels: "combinatorics, dp"
+  rating: 2400
 
 - id: "1499F"
   title: "Diameter Cuts"
   labels: "dfs and similar, dp, trees"
+  rating: 2400
 
 - id: "1499G"
   title: "Graph Coloring"
   labels: "data structures, graphs, interactive"
+  rating: 3100
