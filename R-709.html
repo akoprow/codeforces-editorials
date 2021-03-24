@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 709 (Div I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 709 (Div I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 709 (Div I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #709 (Div. 1, based on Technocup 2021 Final Round)" />
+<meta property="og:description" content="Codeforces Round #709 (Div. 1, based on Technocup 2021 Final Round)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 709 (Div I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 709 (Div I+II)","dateModified":"2021-03-21T00:00:00+00:00","url":"/codeforces-editorials/R-709","datePublished":"2021-03-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-709"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #709 (Div. 1, based on Technocup 2021 Final Round)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 709 (Div I+II)</h2>
+  <time datetime="2021-03-21T00:00:00+00:00" class="by-line">21 Mar 2021</time>
+  <p><a href="https://codeforces.com/contest/1483">Codeforces Round #709 (Div. 1, based on Technocup 2021 Final Round)</a></p>
+
+<p><a href="https://codeforces.com/contest/1484">Codeforces Round #709 (Div. 2, based on Technocup 2021 Final Round)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1484</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1484a/">
+    Prison Break
+  </a>
+  <a href="https://codeforces.com/contest/1484/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r709/1484a-prison-break.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+  </labels>
+</div>
+
+<p>It’s fairly easy to find a solution with \(n \cdot m\), for instance doing a snake like pattern from top-left to bottom, going row by row.  An argument why that’s optimal is: if we think about it as a graph we start with \(n \cdot m\) components and with one move we connect at most two into ones, so we need \(n \cdot m - 1\) move to make the graph connected, plus one to connect with the outside world.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1484</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1484b/">
+    Restore Modulo
+  </a>
+  <a href="https://codeforces.com/contest/1484/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r709/1484b-restore-modulo.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Let’s look at all the differences of consecutive elements.  We have few cases:</p>
+
+<ul>
+  <li>if there’s just one distinct value we can choose infinitely many large \(m\)s.</li>
+  <li>if there are more than two distinct values then there is no answer.</li>
+  <li>why can we have two values?  Because one (positive) might be a “regular” one bumping up by \(c\) and the other one (negative) might be once we “wrap up” modulo \(m\).  In this case the positive one is \(c\) and \(m\) is the difference between the two.  What remains to be done is to check whether this is indeed a valid solution.</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1484</tiny>C / <tiny>1483</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1484c/">
+    Basic Diplomacy
+  </a>
+  <a href="https://codeforces.com/contest/1484/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r709/1484c-basic-diplomacy.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">flows</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>Greedy.  If there are days with \(0\) candidates there is no answer.  For days with \(1\) candidate let’s choose him.  From then one we have a choice and let’s greedily choose a friend that was used least times so far.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1484</tiny>D / <tiny>1483</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1484d/">
+    Playlist
+  </a>
+  <a href="https://codeforces.com/contest/1484/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r709/1484d-playlist.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dsu</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>It helps to first think how we would naively simulate it.  We need to remove entries so let’s keep everything on a doubly linked circular list.</p>
+
+<p>Why simple simulation is not good enough?  Because we can have an input like lots of \(2\)s followed by lots of \(3\) and we only do one deletion per “round” so this is going to be too slow.</p>
+
+<p>One way to speed it up is to in addition to regular pointers in the list add “shortcut” links.  If we go through a block \(a_1, \ldots a_n\) without doing any deletions and then finally do a deletion from \(a_n\) to \(b\) then we add shortcuts from \(a_1, \ldots a_{n-1}\) to \(a_n\) as those numbers (on their own) will never be reduced.</p>
+
+<p>From here on it’s just a matter of careful implementation; when done properly this is actually short and sweet.  What helps a lot is that we have a fixed initial size of the input so instead of doing any pointers we just store appropriate indices in static arrays.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1484</tiny>E / <tiny>1483</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1484e/">
+    Skyline Photo
+  </a>
+  <a href="https://codeforces.com/contest/1484/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1484</tiny>F / <tiny>1483</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1484f/">
+    Useful Edges
+  </a>
+  <a href="https://codeforces.com/contest/1484/problem/F">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">shortest paths</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1483</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1483e/">
+    Vabank
+  </a>
+  <a href="https://codeforces.com/contest/1483/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1483</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1483f/">
+    Exam
+  </a>
+  <a href="https://codeforces.com/contest/1483/problem/F">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dsu</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">string suffix structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-709.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
