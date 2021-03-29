@@ -2493,42 +2493,50 @@
 - id: "1483E"
   title: "Vabank"
   labels: "binary search, interactive"
+  rating: 3200
 
 - id: "1483F"
   title: "Exam"
   labels: "data structures, dfs and similar, dsu, string suffix structures, trees"
+  rating: 3400
 
 - id: "1484A"
   title: "Prison Break"
   labels: "constructive algorithms"
+  rating: 800
   code: "r700-719/r709/1484a-prison-break.kt"
 
 - id: "1484B"
   title: "Restore Modulo"
   labels: "implementation, math"
+  rating: 1500
   code: "r700-719/r709/1484b-restore-modulo.kt"
 
 - id: "1484C"
   title: "Basic Diplomacy"
   labels: "combinatorics, flows, greedy, implementation"
   also-as: "1483A"
+  rating: 1600
   code: "r700-719/r709/1484c-basic-diplomacy.kt"
 
 - id: "1484D"
   title: "Playlist"
   labels: "data structures, dsu, implementation"
   also-as: "1483B"
+  rating: 1900
   code: "r700-719/r709/1484d-playlist.kt"
 
 - id: "1484E"
   title: "Skyline Photo"
   labels: "data structures, dp"
   also-as: "1483C"
+  rating: 2100
 
 - id: "1484F"
   title: "Useful Edges"
   labels: "brute force, graphs, shortest paths"
   also-as: "1483D"
+  rating: 2400
 
 - id: "1485A"
   title: "Add and Divide"
@@ -2918,6 +2926,33 @@
   rating: 2500
   code: "r700-719/r708/1497e2-square-free-division-hard.kt"
 
+- id: "1498A"
+  title: "GCD Sum"
+  labels: "brute force, math"
+  code: "r700-719/r711/1498a-gcd-sum.kt"
+
+- id: "1498B"
+  title: "Box Fitting"
+  labels: "binary search, bitmasks, data structures, greedy"
+  code: "r700-719/r711/1498b-box-fitting.kt"
+
+- id: "1498C"
+  title: "Planar Reflections"
+  labels: "data structures, dp"
+  code: "r700-719/r711/1498c-planar-reflections.kt"
+
+- id: "1498D"
+  title: "Bananas in a Microwave"
+  labels: "dfs and similar, dp, greedy"
+
+- id: "1498E"
+  title: "Two Houses"
+  labels: "brute force, graphs, interactive, probabilities, sortings"
+
+- id: "1498F"
+  title: "Christmas Game"
+  labels: "dfs and similar, dp, games, math, trees"
+
 - id: "1499A"
   title: "Domino on Windowsill"
   labels: "constructive algorithms, math"
@@ -2956,3 +2991,45 @@
   title: "Graph Coloring"
   labels: "data structures, graphs, interactive"
   rating: 3100
+
+# - id: "1506A"
+#   title: "Strange Table"
+#   labels: "math"
+#   rating: 800
+#   code: "r700-719/r710/1506a-strange-table.kt"
+#
+# - id: "1506B"
+#   title: "Partial Replacement"
+#   labels: "greedy, implementation"
+#   rating: 1100
+#   code: "r700-719/r710/1506b-partial-replacement.kt"
+#
+# - id: "1506C"
+#   title: "Double-ended Strings"
+#   labels: "brute force, dp, hashing, strings"
+#   rating: 1000
+#   code: "r700-719/r710/1506c-double-ended-strings.kt"
+#
+# - id: "1506D"
+#   title: "Epic Transformation"
+#   labels: "constructive algorithms, data structures, greedy"
+#   rating: 1400
+#   code: "r700-719/r710/1506d-epic-transformation.kt"
+#
+# - id: "1506E"
+#   title: "Restoring the Permutation"
+#   labels: "constructive algorithms, implementation"
+#   rating: 1500
+#   code: "r700-719/r710/1506e-restoring-the-permutation.kt"
+#
+# - id: "1506F"
+#   title: "Triangular Paths"
+#   labels: "constructive algorithms, graphs, math, shortest paths, sortings"
+#   rating: 2000
+#   code: "r700-719/r710/1506f-triangular-paths.kt"
+#
+# - id: "1506G"
+#   title: "Maximize the Remaining String"
+#   labels: "brute force, data structures, dp, greedy, strings"
+#   rating: 2000
+#   code: "r700-719/r710/1506g-maximize-the-remaining-string.kt"
