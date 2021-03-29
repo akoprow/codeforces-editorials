@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
   <meta name="generator" content="Jekyll">
 
-  <title>Playlist</title>
+  <title>Planar Reflections</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Playlist | Codeforces editorials</title>
+<title>Planar Reflections | Codeforces editorials</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Playlist" />
+<meta property="og:title" content="Planar Reflections" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Codeforces editorials" />
 <meta property="og:description" content="Codeforces editorials" />
 <meta property="og:site_name" content="Codeforces editorials" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Playlist" />
+<meta property="twitter:title" content="Planar Reflections" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Playlist","url":"/codeforces-editorials/problems/1484d/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+{"@type":"WebPage","headline":"Planar Reflections","url":"/codeforces-editorials/problems/1498c/","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -84,39 +84,42 @@
       <section id="main_content">
         <div class="alert alert-primary" role="alert">
   
-  <tiny>1484</tiny>D / <tiny>1483</tiny>B
+  <tiny>1498</tiny>C
 
   
-  <a href="/codeforces-editorials/problems/1484d/">
-    Playlist
+  <a href="/codeforces-editorials/problems/1498c/">
+    Planar Reflections
   </a>
-  <a href="https://codeforces.com/contest/1484/problem/D">
+  <a href="https://codeforces.com/contest/1498/problem/C">
   [CF]
   </a>
 
-  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r709/1484d-playlist.kt">(Code)</a>
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r711/1498c-planar-reflections.kt">(Code)</a>
 
-  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+  
 
   <labels>
   
   
     <span class="badge rounded-pill bg-warning text-dark">data structures</span>
   
-    <span class="badge rounded-pill bg-warning text-dark">dsu</span>
-  
-    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
   
   </labels>
 </div>
 
-<p>It helps to first think how we would naively simulate it.  We need to remove entries so let’s keep everything on a doubly linked circular list.</p>
+<p>This screams DP.  Let’s call by \(\mathcal{D}_{i, j}\) the number of particles we finally get after a single one hits a plane so that it will \(i\) planes to go through going right and it has power \(j\).</p>
 
-<p>Why simple simulation is not good enough?  Because we can have an input like lots of \(2\)s followed by lots of \(3\) and we only do one deletion per “round” so this is going to be too slow.</p>
+<p>For boundary conditions clearly if power is \(1\) then answer is \(1\) as it won’t get cloned.</p>
 
-<p>One way to speed it up is to in addition to regular pointers in the list add “shortcut” links.  If we go through a block \(a_1, \ldots a_n\) without doing any deletions and then finally do a deletion from \(a_n\) to \(b\) then we add shortcuts from \(a_1, \ldots a_{n-1}\) to \(a_n\) as those numbers (on their own) will never be reduced.</p>
+<p>Otherwise we will get:</p>
 
-<p>From here on it’s just a matter of careful implementation; when done properly this is actually short and sweet.  What helps a lot is that we have a fixed initial size of the input so instead of doing any pointers we just store appropriate indices in static arrays.</p>
+<ul>
+  <li>\(\mathcal{D}_{i-1, j}\) particles after moving right, i.e. we have one fewer planes to go through and our power does not change and</li>
+  <li>\(\mathcal{D}_{n-i, j-1}\) particles after moving left, i.e. our power goes down by one and going to the left is the same as going through the right in the mirror image, so we appropriately adjust the number of planes on our way.</li>
+</ul>
+
+<p>Another option was to have another dimension of the DP indicating direction of travel and it’s quite possible that this was easier to code quickly and correctly.</p>
 
 
       </section>

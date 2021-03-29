@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 711 (Div II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 711 (Div II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 711 (Div II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="CodeCraft-21 and Codeforces Round #711 (Div. 2)" />
+<meta property="og:description" content="CodeCraft-21 and Codeforces Round #711 (Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-29T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 711 (Div II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Round 711 (Div II)","dateModified":"2021-03-29T00:00:00+01:00","url":"/codeforces-editorials/R-711","datePublished":"2021-03-29T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-711"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"CodeCraft-21 and Codeforces Round #711 (Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 711 (Div II)</h2>
+  <time datetime="2021-03-29T00:00:00+01:00" class="by-line">29 Mar 2021</time>
+  <p><a href="https://codeforces.com/contest/1498">CodeCraft-21 and Codeforces Round #711 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1498</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1498a/">
+    GCD Sum
+  </a>
+  <a href="https://codeforces.com/contest/1498/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r711/1498a-gcd-sum.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Simply try consecutive numbers until hitting one that fulfils the requirements.  We won’t have to try for long as numbers divisible by \(3\) have sum of their digits divisible by \(3\) and so at least every third number works.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1498</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1498b/">
+    Box Fitting
+  </a>
+  <a href="https://codeforces.com/contest/1498/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r711/1498b-box-fitting.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>Simple greedy strategy works:</p>
+
+<ul>
+  <li>continue packing largest box that still fits,</li>
+  <li>when nothing fits any more take a new box of size \(w\).</li>
+</ul>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1498</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1498c/">
+    Planar Reflections
+  </a>
+  <a href="https://codeforces.com/contest/1498/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r711/1498c-planar-reflections.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+  </labels>
+</div>
+
+<p>This screams DP.  Let’s call by \(\mathcal{D}_{i, j}\) the number of particles we finally get after a single one hits a plane so that it will \(i\) planes to go through going right and it has power \(j\).</p>
+
+<p>For boundary conditions clearly if power is \(1\) then answer is \(1\) as it won’t get cloned.</p>
+
+<p>Otherwise we will get:</p>
+
+<ul>
+  <li>\(\mathcal{D}_{i-1, j}\) particles after moving right, i.e. we have one fewer planes to go through and our power does not change and</li>
+  <li>\(\mathcal{D}_{n-i, j-1}\) particles after moving left, i.e. our power goes down by one and going to the left is the same as going through the right in the mirror image, so we appropriately adjust the number of planes on our way.</li>
+</ul>
+
+<p>Another option was to have another dimension of the DP indicating direction of travel and it’s quite possible that this was easier to code quickly and correctly.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1498</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1498d/">
+    Bananas in a Microwave
+  </a>
+  <a href="https://codeforces.com/contest/1498/problem/D">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1498</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1498e/">
+    Two Houses
+  </a>
+  <a href="https://codeforces.com/contest/1498/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">probabilities</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1498</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1498f/">
+    Christmas Game
+  </a>
+  <a href="https://codeforces.com/contest/1498/problem/F">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">games</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-711.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
