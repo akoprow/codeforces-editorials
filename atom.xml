@@ -961,9 +961,6 @@
   &lt;/labels&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
   
   &lt;tiny&gt;1497&lt;/tiny&gt;E2
@@ -1012,6 +1009,302 @@
         <link>//R-708</link>
         <link href="/R-708"/>
         <guid isPermaLink="true">/R-708</guid>
+      </item>
+    
+      <item>
+        <title>Round 707 (Div I+II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1500&quot;&gt;Codeforces Round #707 (Div. 1, based on Moscow Open Olympiad in Informatics)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1501&quot;&gt;Codeforces Round #707 (Div. 2, based on Moscow Open Olympiad in Informatics)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1501&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1501a/&quot;&gt;
+    Alexey and Train
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1501/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r707/1501a-alexey-and-train.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This essentially just requires following the instructions in the problem.  Let’s note by \(\mathcal{A}_i\) the arrival time at station \(i\) and by \(\mathcal{D}_i\) departure time.  Then we have:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(\mathcal{A}_i = \mathcal{D}_{i-1} + a_i - b_{i-1} + tm_i\) and&lt;/li&gt;
+  &lt;li&gt;\(\mathcal{D}_i = max(b_i, \mathcal{A}_i  + \lceil \frac{b_i - a_i}{2} \rceil)\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We need to report \(\mathcal{A}_n\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1501&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1501b/&quot;&gt;
+    Napoleon Cake
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1501/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r707/1501b-napoleon-cake.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It was possible to do it with some observations and simple operations, however an easy way out was just to use a Fenwick tree and directly simulate the process:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;start with all layers being \(0\),&lt;/li&gt;
+  &lt;li&gt;every time cream is poured on some lawyers just increase the respective range by \(1\),&lt;/li&gt;
+  &lt;li&gt;at the end every layer which is greater than \(0\) has some cream on it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1501&lt;/tiny&gt;C / &lt;tiny&gt;1500&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1501c/&quot;&gt;
+    Going Home
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1501/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r707/1501c-going-home.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The key observation here was that a brute-force looking like \(O(n^2)\) is actually good enough.&lt;/p&gt;
+
+&lt;p&gt;The solution is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;see if there are \(4\) copies of any element, if so they clearly form a solution; if not, ignore duplicates.&lt;/li&gt;
+  &lt;li&gt;keep a map from value to two indices whose elements sum up to that value.&lt;/li&gt;
+  &lt;li&gt;we’re ignoring duplicates so if we find another pair we clearly found a solution.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Actually, this does NOT work… but passed all the tests… interesting ;)&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1501&lt;/tiny&gt;D / &lt;tiny&gt;1500&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1501d/&quot;&gt;
+    Two chandeliers
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1501/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r707/1501d-two-chandeliers.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;chinese remainder theorem&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Apparently this is a canonical problem for the Chinese remainder theorem, however, I have solve it without any notion of it.&lt;/p&gt;
+
+&lt;p&gt;Without loss of generality, let’s assume \(n \ge m\), i.e. the first chandeliers’ configuration is at least as long as the one of the second one (if not, swap them).&lt;/p&gt;
+
+&lt;p&gt;Clearly, at time \(t\) the chandeliers will be in configuration: \((t \mod n, t \mod m)\).  The first one has a cycle of length \(n\) and the of length \(m\) and so altogether they have a cycle of \(n \cdot m\) (or less, but we just care about a cycle, not a smallest one so that will do).&lt;/p&gt;
+
+&lt;p&gt;So now think about this as an \(n \times m\) matrix, where:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the columns are indexed by the configurations of the first chandelier&lt;/li&gt;
+  &lt;li&gt;the rows are indexed by the &lt;em&gt;initial&lt;/em&gt; configuration of the second chandeliers (i.e. in the first row it will be: \(0, 1 \mod m, 2 \mod m, \ldots\) and in the i’th \(i, (i+1) \mod m, \ldots\) etc.)&lt;/li&gt;
+  &lt;li&gt;each cell has \(1\) if chandeliers’ configurations match or \(0\) if they don’t.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This matrix is clearly too big to construct but we don’t need to do that, it will just help us visualize what’s going on.  Notice that if we were to simulate this process we would go through the first row of this matrix, then jump to row \(n \mod m\) (0-based) and go through it, then row \(2n \mod m\) and so on.&lt;/p&gt;
+
+&lt;p&gt;Notice further that numbers in the columns are all different and so for any number of the second chandelier (rows) there is at most \(1\) matching column.  So let’s now compute sums for all \(m\) rows of this matrix by iterating through numbers of the second chandelier.  Let’s say that it’s \(v\) at index \(i\).  Let’s then find \(v\) in the first chandelier, let’s say it’s at position \(j\) (if it’s not there we get \(0\) matches and move on).  That means that the row in which they will match is \((i-j) \mod m\) (careful with negative arguments to modulo) so we increment its sum by \(1\) and go on.&lt;/p&gt;
+
+&lt;p&gt;So now that we have all the sums in all rows let’s compute the number of matches in full \(n \cdot m\) cycles.  We do that by iterating from \(0\) to \(m\) and at every \(i\)‘th iteration taking the sum from row \(n \cdot i \mod m\).&lt;/p&gt;
+
+&lt;p&gt;Now we are ready to compute the final answer in three steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How many full \(n \cdot m\) iterations do we need?  Calculate that by dividing \(k\) by the number of mismatches in \(n \cdot m\) cycles.&lt;/li&gt;
+  &lt;li&gt;After that, how many full rows do we still need to traverse?  Let’s iterate through rows until what’s left of \(k\) falls below what’s in the current row.  Note that because of the previous step we will do at most \(m\) iterations here.&lt;/li&gt;
+  &lt;li&gt;Finally for the remainder just do it step by step until \(k\) goes to zero.  Again, thanks to previous steps that won’t take more than \(n\) steps.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So essentially we’re simulating the game, it’s just that we start by doing \(n \cdot m\) steps at once, then fall back to \(n\) steps at once and only for the last few steps do it step by step.&lt;/p&gt;
+
+&lt;p&gt;The final complexity is \(O(max(n, m))\), which, interestingly, is better than the canonical solution from the editorial.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1501&lt;/tiny&gt;E / &lt;tiny&gt;1500&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1501e/&quot;&gt;
+    Matrix Sorting
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1501/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2600&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1501&lt;/tiny&gt;F / &lt;tiny&gt;1500&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1501f/&quot;&gt;
+    Tiles for Bathroom
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1501/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1500&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1500e/&quot;&gt;
+    Subset Trick
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1500/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1500&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1500f/&quot;&gt;
+    Cupboards Jumps
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1500/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-707.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+        <link>//R-707</link>
+        <link href="/R-707"/>
+        <guid isPermaLink="true">/R-707</guid>
       </item>
     
       <item>
@@ -2276,236 +2569,6 @@
         <link>//R-704</link>
         <link href="/R-704"/>
         <guid isPermaLink="true">/R-704</guid>
-      </item>
-    
-      <item>
-        <title>Round 703 (Div II)</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1486&quot;&gt;Codeforces Round #703 (Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1486&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1486a/&quot;&gt;
-    Shifting Stacks
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1486/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r703/1486a-shifting-stacks.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Let’s think what’s the minimal happy configuration.  Clearly it’s stacks with \(1, 2, 3, \ldots\), so if we don’t have that many blocks in total we won’t be able to make a right sequence.  Also, blocks can only move to the right and so the aforementioned condition needs to hold for every index.  If it does then we win as we can clearly send all the surplus above what’s required to the right.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1486&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1486b/&quot;&gt;
-    Eastern Exhibition
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1486/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r703/1486b-eastern-exhibition.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;geometry&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Clearly we can decompose this 2D problem into two 1D problems and then just multiply the results.  How do we solve a 1D problem?  Well, the optimal location is always at the median and if there there is an even number of elements than any position between two medians will do.  The intuition for that is clear: there are as many houses to the left as there are to the right so moving left increases the distance by \(1\) and at the same time, for the equal number of houses, decreases by \(1\), not changing it overall.  So if two median houses are at locations \(x_1\) and \(x_2\) (\(x_2 \ge x_1\))we just return the number of points between them, their locations included, that is \(x_2-x_1+1\).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1486&lt;/tiny&gt;C1
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1486c1/&quot;&gt;
-    Guessing the Greatest (easy version)
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1486/problem/C1&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r703/1486c1-guessing-the-greatest-easy.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;It’s fairly easy to see that binary search is the way to go.  \(log_2 10^5 &amp;lt; 17\), so we can do \(2\) queries at every step.  How do we decide if the max is in the left or the right part?  Well, firstly let’s ask for the whole interval, i.e. \([l, r]\).  Assume that the answer, \(x\), is in the left part (other case is symmetrical), i.e. \(x \in [l, m]\) (\(m = \frac{l+r}{2}\)).  In that case let’s ask for that interval \([l, m]\).  If the answer is \(x\) again then that means that globally second element is there and it’s also a second element in the left part so max must be there as well; otherwise we go to the right part.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1486&lt;/tiny&gt;C2
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1486c2/&quot;&gt;
-    Guessing the Greatest (hard version)
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1486/problem/C2&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r703/1486c2-guessing-the-greatest-hard.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Now we need to be more efficient as \(2\) queries per move will not do anymore.&lt;/p&gt;
-
-&lt;p&gt;Note how we were wasting some queries in our strategy?  I.e. if both answers were the same, so we asked for \([l, r]\) and \([l, m]\) (or \([m, r]\)) and got the same answer then we continue with the \([l, m]\) range (\([m, r]\)) and &lt;em&gt;don’t have to ask for it again&lt;/em&gt;.  The same is not true for the other case, but I thought that we can take advantage of this asymmetry: rather than making both intervals the same, let’s make them unequal so that the case where we have to ask twice gains us more.  Unfortunately a) the math does not work out (we still need more than \(20\) queries) and b) this reasoning is flawed as we &lt;em&gt;cannot&lt;/em&gt; pick which part the answer will be in and so don’t know which segment to make smaller/larger.&lt;/p&gt;
-
-&lt;p&gt;Instead the solution is quite simple really.  Let’s get the global answer for \([1, n]\), say it’s \(x\).  Now let’s figure out whether our answer is to the left or to the right of \(x\), just as we did in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C1&lt;/code&gt;.  Let’s say that it’s to the right of \(x\) (the other case being symmetrical).  Note that our answer is simply the &lt;em&gt;smallest&lt;/em&gt; \(p \in [x+1, n]\) such that the answer for \([x, p]\) is \(x\).  That’s simply because if the global max is not in our range then the globally second element will &lt;em&gt;not&lt;/em&gt; be the second largest element in the range.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1486&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1486d/&quot;&gt;
-    Max Median
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1486/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1486&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1486e/&quot;&gt;
-    Paired Payment
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1486/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;shortest paths&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1486&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1486f/&quot;&gt;
-    Pairs of Paths
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1486/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2600&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/R-703.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
-        <link>//R-703</link>
-        <link href="/R-703"/>
-        <guid isPermaLink="true">/R-703</guid>
       </item>
     
   </channel>
