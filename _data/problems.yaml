@@ -3033,3 +3033,51 @@
 #   labels: "brute force, data structures, dp, greedy, strings"
 #   rating: 2000
 #   code: "r700-719/r710/1506g-maximize-the-remaining-string.kt"
+
+- id: "1500E"
+  title: "Subset Trick"
+  labels: "binary search, data structures"
+  rating: 3300
+
+- id: "1500F"
+  title: "Cupboards Jumps"
+  labels: "dp"
+  rating: 3500
+
+- id: "1501A"
+  title: "Alexey and Train"
+  labels: "implementation"
+  rating: 800
+  code: "r700-719/r707/1501a-alexey-and-train.kt"
+
+- id: "1501B"
+  title: "Napoleon Cake"
+  labels: "dp, implementation, sortings"
+  rating: 900
+  code: "r700-719/r707/1501b-napoleon-cake.kt"
+
+- id: "1501C"
+  title: "Going Home"
+  labels: "brute force, implementation, math"
+  also-as: "1500A"
+  rating: 1800
+  code: "r700-719/r707/1501c-going-home.kt"
+
+- id: "1501D"
+  title: "Two chandeliers"
+  labels: "binary search, brute force, chinese remainder theorem, math"
+  also-as: "1500B"
+  rating: 2200
+  code: "r700-719/r707/1501d-two-chandeliers.kt"
+
+- id: "1501E"
+  title: "Matrix Sorting"
+  labels: ""
+  also-as: "1500C"
+  rating: 2600
+
+- id: "1501F"
+  title: "Tiles for Bathroom"
+  labels: "two pointers"
+  also-as: "1500D"
+  rating: 2900
