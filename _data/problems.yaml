@@ -2992,47 +2992,47 @@
   labels: "data structures, graphs, interactive"
   rating: 3100
 
-# - id: "1506A"
-#   title: "Strange Table"
-#   labels: "math"
-#   rating: 800
-#   code: "r700-719/r710/1506a-strange-table.kt"
-#
-# - id: "1506B"
-#   title: "Partial Replacement"
-#   labels: "greedy, implementation"
-#   rating: 1100
-#   code: "r700-719/r710/1506b-partial-replacement.kt"
-#
-# - id: "1506C"
-#   title: "Double-ended Strings"
-#   labels: "brute force, dp, hashing, strings"
-#   rating: 1000
-#   code: "r700-719/r710/1506c-double-ended-strings.kt"
-#
-# - id: "1506D"
-#   title: "Epic Transformation"
-#   labels: "constructive algorithms, data structures, greedy"
-#   rating: 1400
-#   code: "r700-719/r710/1506d-epic-transformation.kt"
-#
-# - id: "1506E"
-#   title: "Restoring the Permutation"
-#   labels: "constructive algorithms, implementation"
-#   rating: 1500
-#   code: "r700-719/r710/1506e-restoring-the-permutation.kt"
-#
-# - id: "1506F"
-#   title: "Triangular Paths"
-#   labels: "constructive algorithms, graphs, math, shortest paths, sortings"
-#   rating: 2000
-#   code: "r700-719/r710/1506f-triangular-paths.kt"
-#
-# - id: "1506G"
-#   title: "Maximize the Remaining String"
-#   labels: "brute force, data structures, dp, greedy, strings"
-#   rating: 2000
-#   code: "r700-719/r710/1506g-maximize-the-remaining-string.kt"
+- id: "1506A"
+  title: "Strange Table"
+  labels: "math"
+  rating: 800
+  code: "r700-719/r710/1506a-strange-table.kt"
+
+- id: "1506B"
+  title: "Partial Replacement"
+  labels: "greedy, implementation"
+  rating: 1100
+  code: "r700-719/r710/1506b-partial-replacement.kt"
+
+- id: "1506C"
+  title: "Double-ended Strings"
+  labels: "brute force, dp, hashing, strings"
+  rating: 1000
+  code: "r700-719/r710/1506c-double-ended-strings.kt"
+
+- id: "1506D"
+  title: "Epic Transformation"
+  labels: "constructive algorithms, data structures, greedy"
+  rating: 1400
+  code: "r700-719/r710/1506d-epic-transformation.kt"
+
+- id: "1506E"
+  title: "Restoring the Permutation"
+  labels: "constructive algorithms, implementation"
+  rating: 1500
+  code: "r700-719/r710/1506e-restoring-the-permutation.kt"
+
+- id: "1506F"
+  title: "Triangular Paths"
+  labels: "constructive algorithms, graphs, math, shortest paths, sortings"
+  rating: 2000
+  code: "r700-719/r710/1506f-triangular-paths.kt"
+
+- id: "1506G"
+  title: "Maximize the Remaining String"
+  labels: "brute force, data structures, dp, greedy, strings"
+  rating: 2000
+  code: "r700-719/r710/1506g-maximize-the-remaining-string.kt"
 
 - id: "1500E"
   title: "Subset Trick"
