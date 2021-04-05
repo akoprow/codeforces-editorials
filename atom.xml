@@ -12,6 +12,308 @@
     </author>
     
       <item>
+        <title>Round 712 (Div I+II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1503&quot;&gt;Codeforces Round #712 (Div. 1)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1504&quot;&gt;Codeforces Round #712 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1504&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1504a/&quot;&gt;
+     Déjà Vu
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1504/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r712/1504a-deja-vu.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We cannot just try inserting “a” at every position and checking if we get a palindrome as that will TLE.  However, note that we can just try inserting at the beginning and at the end.  If neither works then there’s no solution.  Why?   Since \(a\vec{x}\) is a palindrome and \(\vec{x}a\) is a palindrome then clearly \(\vec{v}\) starts and ends with an \(a\) and in fact is just a sequence of \(a\) so clearly inserting \(a\) anything into it will not give us a palindrome.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1504&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1504b/&quot;&gt;
+    Flip the Bits
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1504/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r712/1504b-flip-the-bits.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We should start fixing from the end, as if some suffix is good we don’t need to touch it ever again.  So we go from the end of the string and keep track of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a flag indicating whether we flipped the prefix and&lt;/li&gt;
+  &lt;li&gt;number of \(0\)s and \(1\)s in the prefix.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If at current position we get something else than what we need (after taking into account that prefix might have been flipped) then we need to flip that prefix.  So if number of \(0\)s and \(1\)s is different then there’s no solution.  Otherwise we flip the “prefix-flipped” flag and continue.  Regardless of whether the current position matches or not we also update number of \(0/1\) in the prefix.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1504&lt;/tiny&gt;C / &lt;tiny&gt;1503&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1504c/&quot;&gt;
+    Balance the Bits
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1504/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r712/1504c-balance-the-bits.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Think of the usual way to check for correctness of such an expression where we count \(+1/-1\) for “(“ / “)” and need to never go below zero and end up with zero.  Note that for both \(a\) and \(b\) we will have some values contributed by the common substring, say \(x\), and some contributed by the parts where they must differ, call it \(y_a\) and \(y_b\).  Then we have that:&lt;/p&gt;
+
+&lt;p&gt;\(x + y_a = 0\) and \(x + y_b = 0\)&lt;/p&gt;
+
+&lt;p&gt;Hence \(y_a = y_b\) but we also know that \(y_a = -y_b\) as those two parts are complementary (i.e. if one has an opening bracket the other one has a closing one and vice versa).  Hence we conclude that \(x = y_a = y_b = 0\).  That means that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;number of positions on which \(a\) and \(b\) agree must be even and will be split evenly between opening and closing brackets.&lt;/li&gt;
+  &lt;li&gt;number of positions on which they differ must be even and we will alternate between opening and closing bracket for it.&lt;/li&gt;
+  &lt;li&gt;to minimize the chance that we go below zero at some point (i.e. produce unmatched closing bracket) let’s start with the half of opening brackets and finish with all closing brackets for the common part.&lt;/li&gt;
+  &lt;li&gt;all that’s left at this point is to construct \(a\) and \(b\) in the unique way prescribed above and check whether they both are valid expressions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1504&lt;/tiny&gt;D / &lt;tiny&gt;1503&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1504d/&quot;&gt;
+    3-Coloring
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1504/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r712/1504d-3-coloring.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s think of the grid as a chessboard with alternating black and white squares.  Firstly let’s fill one black and one white square with any, but different, numbers.  We can always do that as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;in the first move, for the black square, we have two numbers to choose from and either works; say we end up with \(x\)&lt;/li&gt;
+  &lt;li&gt;in the second move, for the white square, one number is forbidden, one we potentially cannot use because we used it on black but one number remains; say it’s \(y\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;From there on we just continue filling black with \(x\) and white squares with \(y\).  At some point we will have filled all black (or white) squares but at this point we can put any number on white (black) other than \(x\) (\(y\)).  Again we can always do that as we cannot use \(x\) and we cannot use whatever Alice forbids us to, but one option always remains.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1504&lt;/tiny&gt;E / &lt;tiny&gt;1503&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1504e/&quot;&gt;
+    Travelling Salesman Problem
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1504/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;shortest paths&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1504&lt;/tiny&gt;F / &lt;tiny&gt;1503&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1504f/&quot;&gt;
+    Flip the Cards
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1504/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2600&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;2-sat&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1503&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1503e/&quot;&gt;
+    2-Coloring
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1503/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1503&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1503f/&quot;&gt;
+    Balance the Cards
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1503/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;divide and conquer&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;geometry&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-712.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Sat, 03 Apr 2021 00:00:00 +0100</pubDate>
+        <link>//R-712</link>
+        <link href="/R-712"/>
+        <guid isPermaLink="true">/R-712</guid>
+      </item>
+    
+      <item>
         <title>Round 711 (Div II)</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1498&quot;&gt;CodeCraft-21 and Codeforces Round #711 (Div. 2)&lt;/a&gt;&lt;/p&gt;
 
@@ -29,7 +331,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r711/1498a-gcd-sum.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -57,7 +359,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r711/1498b-box-fitting.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:1300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1300&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -94,7 +396,7 @@
 
   &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r711/1498c-planar-reflections.kt&quot;&gt;(Code)&lt;/a&gt;
 
-  
+  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -133,7 +435,7 @@
 
   
 
-  
+  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -164,7 +466,7 @@
 
   
 
-  
+  &lt;rating&gt;R:2200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2200&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -199,7 +501,7 @@
 
   
 
-  
+  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
 
   &lt;labels&gt;
   
@@ -2302,342 +2604,6 @@
         <link>//Edu-105</link>
         <link href="/Edu-105"/>
         <guid isPermaLink="true">/Edu-105</guid>
-      </item>
-    
-      <item>
-        <title>Global Round 13</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1491&quot;&gt;Codeforces Global Round 13&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1491&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1491a/&quot;&gt;
-    K-th Largest Value
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491a-kth-largest-value.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Since we have \(n\) elements that are only \(0\) or \(1\) knowing how many \(1\)s (or \(0\)s) there are is enough to know what the \(k\)-th largest element will be (i.e. it will be \(1\) if we have at least \(k\) ones).  So it’s enough to keep track of the number of ones and update it appropriately when flipping some element.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1491&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1491b/&quot;&gt;
-    Minimal Cost
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491b-minimal-cost.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Let’s think about it geometrically , i.e. as if the obstacles where drawing a line (a pixelated one :).  To block us that line will need to:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;be uninterrupted (i.e. continuous) and&lt;/li&gt;
-  &lt;li&gt;it can either go to the left border of the board (cutting us off) or to the bottom border (splitting the board into two).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What does it mean for the line to be uninterrupted?  It means that for consecutive rows the difference in columns is at most \(1\); otherwise we can “slip through”.&lt;/p&gt;
-
-&lt;p&gt;When does it reach the left border?  When (uninterrupted) it reaches column \(0\).&lt;/p&gt;
-
-&lt;p&gt;When does it reach the bottom border?  When (uninterrupted) it extends to the last row.&lt;/p&gt;
-
-&lt;p&gt;Now, if neither condition is true, we can pass without any changes.&lt;/p&gt;
-
-&lt;p&gt;If the line is a straight vertical line.  In this case we have two make two moves to move one obstacle out of the way: the first one to left/right and the second one either left/right or top/down, whichever is cheaper.&lt;/p&gt;
-
-&lt;p&gt;In the remaining cases it’s always enough to move only one obstacle either up/down or left/right.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1491&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1491c/&quot;&gt;
-    Pekora and Trampoline
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491c-pekora-and-trampoline.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly, if we start jumping at trampoline \(i\), this will not affect any trampolines to the left of it.  Imagine there is an “unfinished” (value other than \(1\)) trampoline to the left.  We will have to jump starting from it, so we might as well start there, as jumping from \(i\) and then from \(j\) is at least as good, and potentially better!,  as jumping from \(j\) and then from \(i\) (\(j &amp;gt; i\)).&lt;/p&gt;
-
-&lt;p&gt;So a greedy approach works: always start from the leftmost “unfinished” trampoline.&lt;/p&gt;
-
-&lt;p&gt;How do we simulate it?  For each trampoline keep track of how many times it was reached previously (starting with all \(0\)); let’s call it \(d_i\).  When we consider position \(i\):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we need to start afresh on it \(max(0, a_i - 1 - d_i)\) times and we need to add that value to the final result.&lt;/li&gt;
-  &lt;li&gt;we will jump on it when it has values: \(a_i, a_i-1, \ldots, 2\) which means we need to increment \(d_{i+2}, \ldots d_{i + a_i}\) (as long as they are within bounds)&lt;/li&gt;
-  &lt;li&gt;we will jump on it \(min(0, d_i - (a_i -1))\) with it having value \(1\), which is by how much we should increment \(d_{i+1}\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Amazingly, the source code to this problem is at most half the size of this text…&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1491&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1491d/&quot;&gt;
-    Zookeeper and The Infinite Zoo
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr13/1491d-zookeeper-and-the-infinite-zoo.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Ok, firstly let’s try to understand what kind of moves can we do, exactly.  We can transition \(u \to u + v\) iff \(u \&amp;amp; v = u\).  In other words, we’re in \(u\) we can pick a sub-mask of \(u\) and add it to \(u\).&lt;/p&gt;
-
-&lt;p&gt;Can we simplify this?  Note that if the sub-mask we pick has only one bit set then we have a transition \(u \to u + 2^i\) which will &lt;em&gt;not&lt;/em&gt; affect bits \(j &amp;lt; i\).  That in turns mean we can decompose a move \(u \to u + (2^{i_1} + 2^{i_2} + \ldots 2^{i_n})\) into \(n\) moves with single bit masks: \(u \to u + 2^{i_1} \to \ldots \to u + (2^{i_1} + 2^{i_2} + \ldots 2^{i_n})\) (\(i_1 &amp;gt; i_2 &amp;gt; \ldots i_n\)).&lt;/p&gt;
-
-&lt;p&gt;So we can restrict our thinking to moves of the shape \(u \to u + 2^i\) and we know that bit \(i\) is set in \(u\).  How do such moves look like?&lt;/p&gt;
-
-&lt;p&gt;If bit \(i+1\) in \(u\) is not set then what happens on those two bits is: \(01 + 01 = 10\), i.e. we shifted the bit to the left.  Let’s call this move &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If a number of higher bits in \(u\) is set then instead it looks like this: \(11\ldots11 + 01 = 100\ldots00\), i.e. we also shifted the highest bit to the left but also zeroed in a number of following \(1\)s.  Let’s call this type of move &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Those are the only two types of moves we can make so in particular:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we can never move a bit to the right and&lt;/li&gt;
-  &lt;li&gt;we can decrease but never increase the number of bits.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This starts looking like a skeleton of an algorithm.  Look at \(u\) and \(v\), if \(v &amp;gt; u\) the answer is clearly “NO”.  Same if \(v\) has more bits than \(u\).  Otherwise we will try to match bits in \(u\) to bits in \(v\), from least significant positions and for every match of bit \(i\) in \(u\) with bit \(j\) in \(v\) we want \(i \le j\) (remember, we can only shift to the left).&lt;/p&gt;
-
-&lt;p&gt;Now the claim is that if such matching exists then the answer is “YES”.  This is not completely obvious as remember that \(u\) might have more bits than \(v\)!  However, we can always get rid of those bits with moves &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;.  Formal argument follows (implicitly by induction on number of bits).&lt;/p&gt;
-
-&lt;p&gt;We’re matching \(u\) with \(v\) and \(u \le v\).  First let’s assume that they both have the same highest bit set, so we have a match at that position and we can move to lower bits.&lt;/p&gt;
-
-&lt;p&gt;If instead \(u = 0\ldots1_1\) and \(v = 1\ldots\) and \(u\) has \(p\) bits more set than \(u\) then we get rid of spurious \(1\)s with move &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; as follows (we index \(1\)s):&lt;/p&gt;
-
-&lt;p&gt;\(u = 0 \ldots 1_1 \ldots 1_2 \ldots 1_3 \ldots 1_p \to 0 1_1 1_2 \ldots 1_p \to 10\ldots0\) so \(u\) and \(v\) now agree on the highest bits &lt;em&gt;and&lt;/em&gt; have the same number of \(1\)s so from now on we can finish the problem with moves &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; only.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1491&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1491e/&quot;&gt;
-    Fib-tree
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;divide and conquer&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1491&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1491f/&quot;&gt;
-    Magnets
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2700&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1491&lt;/tiny&gt;G
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1491g/&quot;&gt;
-    Switch and Flip
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/G&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1491&lt;/tiny&gt;H
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1491h/&quot;&gt;
-    Yuezheng Ling and Dynamic Tree
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/H&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1491&lt;/tiny&gt;I
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1491i/&quot;&gt;
-    Ruler Of The Zoo
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1491/problem/I&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/GR-13.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-        <link>//GR-13</link>
-        <link href="/GR-13"/>
-        <guid isPermaLink="true">/GR-13</guid>
       </item>
     
   </channel>
