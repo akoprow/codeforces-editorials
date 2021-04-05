@@ -130,6 +130,54 @@
   labels: "graphs, interactive"
   rating: 2800
 
+- id: "1292E"
+  title: "Rin and The Unknown Flower"
+  labels: "constructive algorithms, greedy, interactive, math"
+  rating: 3500
+
+- id: "1292F"
+  title: "Nora's Toy Boxes"
+  labels: "bitmasks, combinatorics, dp"
+  rating: 3500
+
+- id: "1293A"
+  title: "ConneR and the A.R.C. Markland-N"
+  labels: "binary search, brute force, implementation"
+  rating: 1100
+  code: "r600-619/r614/1293a-conneR-and-the-arc-markland-n.kt"
+
+- id: "1293B"
+  title: "JOE is on TV!"
+  labels: "combinatorics, greedy, math"
+  rating: 1000
+  code: "r600-619/r614/1293b-joe-is-on-tv.kt"
+
+- id: "1293C"
+  title: "NEKO's Maze Game"
+  labels: "constructive algorithms, implementation"
+  rating: 1400
+  also-as: "1292A"
+  code: "r600-619/r614/1293c-nekos-maze-game.kt"
+
+- id: "1293D"
+  title: "Aroma's Search"
+  labels: "brute force, constructive algorithms, implementation"
+  rating: 1700
+  also-as: "1292B"
+  code: "r600-619/r614/1293d-aromas-search.kt"
+
+- id: "1293E"
+  title: "Xenon's Attack on the Gangs"
+  labels: "combinatorics, dp, greedy, trees"
+  rating: 2300
+  also-as: "1292C"
+
+- id: "1293F"
+  title: "Chaotic V."
+  labels: "dp, graphs, math, number theory, trees"
+  rating: 2700
+  also-as: "1292D"
+
 - id: "1295A"
   title: "Display The Number"
   labels: "greedy"
