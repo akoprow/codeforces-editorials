@@ -303,15 +303,67 @@
   rating: 1900
   code: "r620-639/r622/1313c2-skyscrapers-hard.kt"
 
-- id: "1313D"
-  title: "Happy New Year"
-  labels: "bitmasks, dp, implementation"
-  rating: 2500
-
-- id: "1313E"
-  title: "Concatenation with intersection"
-  labels: "data structures, hashing, strings, two pointers"
-  rating: 2700
+# - id: "1313D"
+#   title: "Happy New Year"
+#   labels: "bitmasks, dp, implementation"
+#   rating: 2500
+#
+# - id: "1313E"
+#   title: "Concatenation with intersection"
+#   labels: "data structures, hashing, strings, two pointers"
+#   rating: 2700
+#
+# - id: "1314D"
+#   title: "Tourism"
+#   labels: "brute force, dp, graphs, probabilities"
+#   rating: 2300
+#
+# - id: "1314E"
+#   title: "Strange Function"
+#   labels: "brute force, dp"
+#   rating: 2900
+#
+# - id: "1314F"
+#   title: "Bad Cryptography"
+#   labels: "math, number theory"
+#   rating: 3400
+#
+# - id: "1315A"
+#   title: "Dead Pixel"
+#   labels: "implementation"
+#   rating: 800
+#   code: "r620-639/r623/1315a-dead-pixel.kt"
+#
+# - id: "1315B"
+#   title: "Homecoming"
+#   labels: "binary search, dp, greedy, strings"
+#   rating: 1300
+#   code: "r620-639/r623/1315b-homecoming.kt"
+#
+# - id: "1315C"
+#   title: "Restoring Permutation"
+#   labels: "greedy"
+#   rating: 1200
+#   code: "r620-639/r623/1315c-restoring-permutation.kt"
+#
+# - id: "1315D"
+#   title: "Recommendations"
+#   labels: "data structures, greedy, sortings"
+#   rating: 1700
+#   also-as: "1314A"
+#   code: "r620-639/r623/1315d-recommendations.kt"
+#
+# - id: "1315E"
+#   title: "Double Elimination"
+#   labels: ""
+#   rating: 2500
+#   also-as: "1314B"
+#
+# - id: "1315F"
+#   title: "Au Pont Rouge"
+#   labels: "strings"
+#   rating: 2800
+#   also-as: "1314C"
 
 - id: "1316A"
   title: "Grade Allocation"
@@ -2929,29 +2981,35 @@
 - id: "1498A"
   title: "GCD Sum"
   labels: "brute force, math"
+  rating: 800
   code: "r700-719/r711/1498a-gcd-sum.kt"
 
 - id: "1498B"
   title: "Box Fitting"
   labels: "binary search, bitmasks, data structures, greedy"
+  rating: 1300
   code: "r700-719/r711/1498b-box-fitting.kt"
 
 - id: "1498C"
   title: "Planar Reflections"
   labels: "data structures, dp"
+  rating: 1600
   code: "r700-719/r711/1498c-planar-reflections.kt"
 
 - id: "1498D"
   title: "Bananas in a Microwave"
   labels: "dfs and similar, dp, greedy"
+  rating: 2200
 
 - id: "1498E"
   title: "Two Houses"
   labels: "brute force, graphs, interactive, probabilities, sortings"
+  rating: 2200
 
 - id: "1498F"
   title: "Christmas Game"
   labels: "dfs and similar, dp, games, math, trees"
+  rating: 2500
 
 - id: "1499A"
   title: "Domino on Windowsill"
@@ -3081,3 +3139,51 @@
   labels: "two pointers"
   also-as: "1500D"
   rating: 2900
+
+- id: "1503E"
+  title: "2-Coloring"
+  labels: "combinatorics, dp, math"
+  rating: 3100
+
+- id: "1503F"
+  title: "Balance the Cards"
+  labels: "constructive algorithms, data structures, divide and conquer, geometry, graphs, implementation"
+  rating: 3500
+
+- id: "1504A"
+  title: " Déjà Vu"
+  labels: "constructive algorithms, strings"
+  rating: 800
+  code: "r700-719/r712/1504a-deja-vu.kt"
+
+- id: "1504B"
+  title: "Flip the Bits"
+  labels: "constructive algorithms, greedy, implementation, math"
+  rating: 1200
+  code: "r700-719/r712/1504b-flip-the-bits.kt"
+
+- id: "1504C"
+  title: "Balance the Bits"
+  labels: "constructive algorithms, greedy"
+  rating: 1600
+  also-as: "1503A"
+  code: "r700-719/r712/1504c-balance-the-bits.kt"
+
+- id: "1504D"
+  title: "3-Coloring"
+  labels: "constructive algorithms, games, graphs, interactive"
+  rating: 1700
+  also-as: "1503B"
+  code: "r700-719/r712/1504d-3-coloring.kt"
+
+- id: "1504E"
+  title: "Travelling Salesman Problem"
+  labels: "binary search, data structures, dp, greedy, shortest paths, sortings"
+  rating: 2200
+  also-as: "1503C"
+
+- id: "1504F"
+  title: "Flip the Cards"
+  labels: "2-sat, constructive algorithms, data structures, greedy, sortings"
+  rating: 2600
+  also-as: "1503D"
