@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Educational Round 107</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Educational Round 107 | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Educational Round 107" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Educational Codeforces Round 107 (Rated for Div. 2)" />
+<meta property="og:description" content="Educational Codeforces Round 107 (Rated for Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-12T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Educational Round 107" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Educational Round 107","dateModified":"2021-04-12T00:00:00+01:00","url":"/codeforces-editorials/Edu-107","datePublished":"2021-04-12T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/Edu-107"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Educational Codeforces Round 107 (Rated for Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Educational Round 107</h2>
+  <time datetime="2021-04-12T00:00:00+01:00" class="by-line">12 Apr 2021</time>
+  <p><a href="https://codeforces.com/contest/1511">Educational Codeforces Round 107 (Rated for Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1511</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1511a/">
+    Review Site
+  </a>
+  <a href="https://codeforces.com/contest/1511/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu107/1511a-review-site.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>The basic idea is to send all the nay-sayers to the second server and all the positive ones to the first ones, hence ensuring that everyone who’s undecided says yes.  Helpfully draws are in our favour so the answer is simply the total number of reviewers of types \(1\) and \(3\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1511</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1511b/">
+    GCD Length
+  </a>
+  <a href="https://codeforces.com/contest/1511/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu107/1511b-GCD-length.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Since \(10 = 2 \cdot 5\) we have that \(10^i = 2^i \cdot 5^i\).  So let’s take \(x = 100\ldots 0 \cdot 10^{c-1}\) and \(y = 111\ldots 1 \cdot 10^{c-1}\). We have \(gcd(x, y) = 10^{c-1}\) since \(10^i\) and \(11\ldots1\) are relatively prime.  So we can prepend the prefix of required length to both \(x\) and \(y\) and we’re done.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1511</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1511c/">
+    Yet Another Card Deck
+  </a>
+  <a href="https://codeforces.com/contest/1511/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu107/1511c-yet-another-card-deck.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, clearly we only need to keep track of the top card of each color.  Secondly, when we move card from position \(p\) to the top then the index of all the cards which previously had an index less than \(p\) increases by \(1\).  So this easily leads to a simulation of the process with \(O(nk)\) complexity.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1511</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1511d/">
+    Min Cost String
+  </a>
+  <a href="https://codeforces.com/contest/1511/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu107/1511d-min-cost-string.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>It was fairly easy to solve it (greedily) but much harder to prove that that (greedy) solution works.  The main observation is that we have \(k^2\) pairs of letters and we want to use them “uniformly”, i.e. if the generated string is short enough then just use as many of those pairs as we can, as that will give us a \(0\) cost.  Otherwise, try to repeat each pair as few times as possible.  We essentially do it by keeping track of unused pairs and being careful not to get into a letter from which we cannot move forward (i.e. do not follow \(x\) with \(y\) if there are no moves from \(y\)).  Once we use all the pairs recreate them again and start from scratch.</p>
+
+<p>There’s a nice interpretation of this problem where we are basically looking for an Eulerian cycle in a graph (a clique actually) of letters.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1511</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1511e/">
+    Colorings and Dominoes
+  </a>
+  <a href="https://codeforces.com/contest/1511/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1511</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1511f/">
+    Chainword
+  </a>
+  <a href="https://codeforces.com/contest/1511/problem/F">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">matrices</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">strings</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1511</tiny>G
+
+  
+  <a href="/codeforces-editorials/problems/1511g/">
+    Chips on a Board
+  </a>
+  <a href="https://codeforces.com/contest/1511/problem/G">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">games</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/Edu-107.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

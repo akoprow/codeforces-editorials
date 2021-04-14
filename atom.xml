@@ -12,6 +12,238 @@
     </author>
     
       <item>
+        <title>Educational Round 107</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1511&quot;&gt;Educational Codeforces Round 107 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1511&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1511a/&quot;&gt;
+    Review Site
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1511/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu107/1511a-review-site.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The basic idea is to send all the nay-sayers to the second server and all the positive ones to the first ones, hence ensuring that everyone who’s undecided says yes.  Helpfully draws are in our favour so the answer is simply the total number of reviewers of types \(1\) and \(3\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1511&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1511b/&quot;&gt;
+    GCD Length
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1511/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu107/1511b-GCD-length.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Since \(10 = 2 \cdot 5\) we have that \(10^i = 2^i \cdot 5^i\).  So let’s take \(x = 100\ldots 0 \cdot 10^{c-1}\) and \(y = 111\ldots 1 \cdot 10^{c-1}\). We have \(gcd(x, y) = 10^{c-1}\) since \(10^i\) and \(11\ldots1\) are relatively prime.  So we can prepend the prefix of required length to both \(x\) and \(y\) and we’re done.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1511&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1511c/&quot;&gt;
+    Yet Another Card Deck
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1511/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu107/1511c-yet-another-card-deck.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, clearly we only need to keep track of the top card of each color.  Secondly, when we move card from position \(p\) to the top then the index of all the cards which previously had an index less than \(p\) increases by \(1\).  So this easily leads to a simulation of the process with \(O(nk)\) complexity.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1511&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1511d/&quot;&gt;
+    Min Cost String
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1511/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu107/1511d-min-cost-string.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It was fairly easy to solve it (greedily) but much harder to prove that that (greedy) solution works.  The main observation is that we have \(k^2\) pairs of letters and we want to use them “uniformly”, i.e. if the generated string is short enough then just use as many of those pairs as we can, as that will give us a \(0\) cost.  Otherwise, try to repeat each pair as few times as possible.  We essentially do it by keeping track of unused pairs and being careful not to get into a letter from which we cannot move forward (i.e. do not follow \(x\) with \(y\) if there are no moves from \(y\)).  Once we use all the pairs recreate them again and start from scratch.&lt;/p&gt;
+
+&lt;p&gt;There’s a nice interpretation of this problem where we are basically looking for an Eulerian cycle in a graph (a clique actually) of letters.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1511&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1511e/&quot;&gt;
+    Colorings and Dominoes
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1511/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1511&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1511f/&quot;&gt;
+    Chainword
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1511/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;matrices&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1511&lt;/tiny&gt;G
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1511g/&quot;&gt;
+    Chips on a Board
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1511/problem/G&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/Edu-107.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Mon, 12 Apr 2021 00:00:00 +0100</pubDate>
+        <link>//Edu-107</link>
+        <link href="/Edu-107"/>
+        <guid isPermaLink="true">/Edu-107</guid>
+      </item>
+    
+      <item>
         <title>Round 712 (Div I+II)</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1503&quot;&gt;Codeforces Round #712 (Div. 1)&lt;/a&gt;&lt;/p&gt;
 
@@ -2370,240 +2602,6 @@
         <link>//R-705</link>
         <link href="/R-705"/>
         <guid isPermaLink="true">/R-705</guid>
-      </item>
-    
-      <item>
-        <title>Educational Round 105</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1494&quot;&gt;Educational Codeforces Round 105 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1494&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1494a/&quot;&gt;
-    ABC String
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1494/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu105/1494a-abc-string.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Probably the easiest solution is just to brute force it and try all combinations of parenthesis for all of \(A, B, C\), since there are only \(2^3 = 8\) combinations.  Alternatively, we can observe that the sequence must start with opening and must end with a closing parenthesis.&lt;/p&gt;
-
-&lt;p&gt;Once we have a fixed meaning for every letter it’s just a matter of applying the classical algorithm of counting \(+1\) for opening and \(-1\) for closing parenthesis and the sequence is valid if:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;we never go below \(0\) (closing parenthesis that is unmatched) and&lt;/li&gt;
-  &lt;li&gt;at the end we reach \(0\) (everything balanced out in the end)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1494&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1494b/&quot;&gt;
-    Berland Crossword
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1494/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu105/1494b-berland-crossword.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Note that the tricky bit is the corners.  Imagine we knew what’s in every corner.  Then the problem is easy as for every border we have \(n-2\) slots excluding corners and so the number of blocks we need to place there \(v\), which is the original constrain from the problem minus \(0\), \(1\), or \(2\) depending how many blocks are already in the two relevant corners, must be \(0 \le v \le n-2\).&lt;/p&gt;
-
-&lt;p&gt;So now we can just try all the combinations for corners (filled/unfilled) since there are only \(2^4 = 16\) and apply the reasoning from above and clearly we have an answer overall if we have an answer for any of the configurations.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1494&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1494c/&quot;&gt;
-    1D Sokoban
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1494/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu105/1494c-1d-sokoban.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;two pointers&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly, note that our position relative to the blocks cannot change.  Which means that the final solution can always be expressed as:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;going \(x\) steps to the right,&lt;/li&gt;
-  &lt;li&gt;coming back to the origin.&lt;/li&gt;
-  &lt;li&gt;going \(y\) steps to the left.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Since the first step is only concerned with blocks/targets on the positive part of the axis and last step only with those on the negative part we can split this problem into two.&lt;/p&gt;
-
-&lt;p&gt;So now we only have blocks/targets to the right of us and the question is: how many steps to the right should we make?&lt;/p&gt;
-
-&lt;p&gt;Next observation is that the only configurations that we should consider are:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;don’t do anything and&lt;/li&gt;
-  &lt;li&gt;stop just before &lt;em&gt;some&lt;/em&gt; target, i.e. at positions \(b_i-1\) for some \(i\).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Why is it enough to only consider configurations where we stop right before some target?  Imagine instead we stopped at position \(p\) such that position \(p+1\) is not special.  By moving there we will be pushing a number of boxes, let’s say \(t\) of them.  In this scenario the boxes are covering the segment \([p+1, p+t]\).  Let’s say that the closest special position is at \(p+q\) (\(q &amp;gt; 1\)).  If instead we moved to \(p+q-1\) (right before that special position) the boxes would cover \([p+q, p+q+v-1]\).  Comparing that with the original segment we lost some positions on the left, but none of them was special and we added some positions on the right, some of which might, so we end up with a not worse (and possibly better) outcome.&lt;/p&gt;
-
-&lt;p&gt;Ok, so let’s start by computing how many boxes initially are at special positions.  That’s our initial score and it covers the first option above (don’t do anything).&lt;/p&gt;
-
-&lt;p&gt;Now, let’s iterate over special positions.  We will be keeping track of how many boxes we’re pushing, \(t\), initially \(t=0\). Let’s call it our “train”.  Once we move to position \(b_i\) all the boxes to the left, i.e. all \(a_j &amp;lt; b_i\) will join our train.  But our train sits on \([b_i, b_i+t]\) so all the boxes in &lt;em&gt;that&lt;/em&gt; segment also join the train, so we need to be careful there when updating \(t\).&lt;/p&gt;
-
-&lt;p&gt;Moreover, for every box that joins the train and was initially on a special position we must make sure to decrease our score by \(1\) (we removed a box from a special position).  However, we can add to the score the number of special positions in the segment \([b_i, b_it+t]\), which is where our train sits.  To efficiently compute that we can either use an appropriate data structure or do two binary searches to find left-most and right-most special position that falls in the range.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1494&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1494d/&quot;&gt;
-    Dogeforces
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1494/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2300&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dsu&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1494&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1494e/&quot;&gt;
-    A-Z Graph
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1494/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1494&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1494f/&quot;&gt;
-    Delete The Edges
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1494/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/Edu-105.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
-        <link>//Edu-105</link>
-        <link href="/Edu-105"/>
-        <guid isPermaLink="true">/Edu-105</guid>
       </item>
     
   </channel>
