@@ -3235,3 +3235,98 @@
   labels: "2-sat, constructive algorithms, data structures, greedy, sortings"
   rating: 2600
   also-as: "1503D"
+
+- id: "1511A"
+  title: "Review Site"
+  labels: "greedy"
+  code: "edu/edu107/1511a-review-site.kt"
+
+- id: "1511B"
+  title: "GCD Length"
+  labels: "constructive algorithms, math"
+  code: "edu/edu107/1511b-GCD-length.kt"
+
+- id: "1511C"
+  title: "Yet Another Card Deck"
+  labels: "data structures, implementation, trees"
+  code: "edu/edu107/1511c-yet-another-card-deck.kt"
+
+- id: "1511D"
+  title: "Min Cost String"
+  labels: "brute force, constructive algorithms, dfs and similar, graphs, greedy"
+  code: "edu/edu107/1511d-min-cost-string.kt"
+
+- id: "1511E"
+  title: "Colorings and Dominoes"
+  labels: "combinatorics, dp, math"
+
+- id: "1511F"
+  title: "Chainword"
+  labels: "data structures, matrices, strings"
+
+- id: "1511G"
+  title: "Chips on a Board"
+  labels: "bitmasks, brute force, data structures, games, sortings"
+
+# - id: "1512A"
+#   title: "Spy Detected!"
+#   labels: "brute force, implementation"
+#   code: "r700-719/r713/1512a-spy-detected.kt"
+#
+# - id: "1512B"
+#   title: "Almost Rectangle"
+#   labels: "implementation"
+#   code: "r700-719/r713/1512b-almost-rectangle.kt"
+#
+# - id: "1512C"
+#   title: "A-B Palindrome"
+#   labels: "constructive algorithms, implementation, strings"
+#   code: "r700-719/r713/1512c-a-b-palindrome.kt"
+#
+# - id: "1512D"
+#   title: "Corrupted Array"
+#   labels: "constructive algorithms, data structures, greedy"
+#   code: "r700-719/r713/1512d-corrupted-array.kt"
+#
+# - id: "1512E"
+#   title: "Permutation by Sum"
+#   labels: "brute force, greedy, math"
+#   code: "r700-719/r713/1512e-permutation-by-sum.kt"
+#
+# - id: "1512F"
+#   title: "Education"
+#   labels: "brute force, dp, greedy, implementation"
+#   code: "r700-719/r713/1512f-education.kt"
+#
+# - id: "1512G"
+#   title: "Short Task"
+#   labels: "brute force, dp, math, number theory"
+#
+# - id: "1513A"
+#   title: "Array and Peaks"
+#   labels: "constructive algorithms, implementation"
+#   code: "r700-719/r714/1513a-array-and-peaks.kt"
+#
+# - id: "1513B"
+#   title: "AND Sequences"
+#   labels: "bitmasks, combinatorics, constructive algorithms"
+#   code: "r700-719/r714/1513b-AND-sequences.kt"
+#
+# - id: "1513C"
+#   title: "Add One"
+#   labels: "dp, matrices"
+#   code: "r700-719/r714/1513c-add-one.kt"
+#
+# - id: "1513D"
+#   title: "GCD and MST"
+#   labels: "binary search, constructive algorithms, dsu, graphs, implementation, number theory, sortings"
+#   code: "r700-719/r714/1513d-GCD-and-MST.kt"
+#
+# - id: "1513E"
+#   title: "Cost Equilibrium"
+#   labels: "combinatorics, constructive algorithms, math, sortings"
+#   code: "r700-719/r714/1513e-cost-equilibrium.kt"
+#
+# - id: "1513F"
+#   title: "Swapping Problem"
+#   labels: "constructive algorithms, data structures, sortings"

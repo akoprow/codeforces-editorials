@@ -104,3 +104,6 @@
 ./gen.py 1503 R-712   "Round 712 (Div I+II)"
 ./gen.py 1504 R-712   "Round 712 (Div I+II)"
 ./gen.py 1506 R-710   "Round 710 (Div III)"
+./gen.py 1512 Edu-107 "Educational Round 107"
+./gen.py 1512 R-713   "Round 713 (Div III)"
+./gen.py 1513 R-714   "Round 714 (Div II)"
