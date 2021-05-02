@@ -3236,37 +3236,97 @@
   rating: 2600
   also-as: "1503D"
 
+# - id: "1508D"
+#   title: "Swap Pass"
+#   labels: "constructive algorithms, geometry, sortings"
+#   rating: 3000
+#
+# - id: "1508E"
+#   title: "Tree Calendar"
+#   labels: "brute force, constructive algorithms, data structures, dfs and similar, sortings, trees"
+#   rating: 3100
+#
+# - id: "1508F"
+#   title: "Optimal Encoding"
+#   labels: "brute force, data structures"
+#   rating: 3500
+#
+# - id: "1509A"
+#   title: "Average Height"
+#   labels: "constructive algorithms"
+#   rating: 800
+#   code: "r700-719/r715/1509a-average-height.kt"
+#
+# - id: "1509B"
+#   title: "TMT Document"
+#   labels: "greedy"
+#   rating: 1100
+#   code: "r700-719/r715/1509b-tmt-document.kt"
+#
+# - id: "1509C"
+#   title: "The Sports Festival"
+#   labels: "dp, greedy"
+#   rating: 1800
+#   code: "r700-719/r715/1509c-the-sports-festival.kt"
+#
+# - id: "1509D"
+#   title: "Binary Literature"
+#   labels: "constructive algorithms, greedy, strings, two pointers"
+#   also-as: "1508A"
+#   rating: 1900
+#   code: "r700-719/r715/1509d-binary-literature.kt"
+#
+# - id: "1509E"
+#   title: "Almost Sorted"
+#   labels: "brute force, constructive algorithms, math"
+#   also-as: "1508B"
+#   rating: 1800
+#   code: "r700-719/r715/1509e-almost-sorted.kt"
+#
+# - id: "1509F"
+#   title: "Complete the MST"
+#   labels: "data structures, dfs and similar, dsu, graphs, greedy, trees"
+#   also-as: "1508C"
+#   rating: 2500
+
 - id: "1511A"
   title: "Review Site"
   labels: "greedy"
+  rating: 800
   code: "edu/edu107/1511a-review-site.kt"
 
 - id: "1511B"
   title: "GCD Length"
   labels: "constructive algorithms, math"
+  rating: 1100
   code: "edu/edu107/1511b-GCD-length.kt"
 
 - id: "1511C"
   title: "Yet Another Card Deck"
   labels: "data structures, implementation, trees"
+  rating: 1100
   code: "edu/edu107/1511c-yet-another-card-deck.kt"
 
 - id: "1511D"
   title: "Min Cost String"
   labels: "brute force, constructive algorithms, dfs and similar, graphs, greedy"
+  rating: 1600
   code: "edu/edu107/1511d-min-cost-string.kt"
 
 - id: "1511E"
   title: "Colorings and Dominoes"
   labels: "combinatorics, dp, math"
+  rating: 2100
 
 - id: "1511F"
   title: "Chainword"
   labels: "data structures, matrices, strings"
+  rating: 2700
 
 - id: "1511G"
   title: "Chips on a Board"
   labels: "bitmasks, brute force, data structures, games, sortings"
+  rating: 2700
 
 # - id: "1512A"
 #   title: "Spy Detected!"
@@ -3330,3 +3390,164 @@
 # - id: "1513F"
 #   title: "Swapping Problem"
 #   labels: "constructive algorithms, data structures, sortings"
+
+# - id: "1514A"
+#   title: "Perfectly Imperfect Array"
+#   labels: "math, number theory"
+#   rating: 800
+#   code: "r700-719/r716/1514a-perfectly-imperfect-array.kt"
+#
+# - id: "1514B"
+#   title: "AND 0, Sum Big"
+#   labels: "bitmasks, combinatorics, math"
+#   rating: 1200
+#   code: "r700-719/r716/1514b-and-0-sum-big.kt"
+#
+# - id: "1514C"
+#   title: "Product 1 Modulo N"
+#   labels: "greedy, number theory"
+#   rating: 1600
+#   code: "r700-719/r716/1514c-product-1-modulo-n.kt"
+#
+# - id: "1514D"
+#   title: "Cut and Stick"
+#   labels: "binary search, data structures, greedy, probabilities, sortings"
+#   rating: 2000
+#   code: "r700-719/r716/1514d-cut-and-stick.kt"
+#
+# - id: "1514E"
+#   title: "Baby Ehab's Hyper Apartment"
+#   labels: "binary search, graphs, interactive, sortings, two pointers"
+#   rating: 2700
+
+- id: "1515A"
+  title: "Phoenix and Gold"
+  labels: "constructive algorithms, math"
+  code: "gr/gr14/1515a-phoenix-and-gold.kt"
+
+- id: "1515B"
+  title: "Phoenix and Puzzle"
+  labels: "geometry, math"
+  code: "gr/gr14/1515b-phoenix-and-puzzle.kt"
+
+- id: "1515C"
+  title: "Phoenix and Towers"
+  labels: "constructive algorithms, data structures, greedy, sortings"
+  code: "gr/gr14/1515c-phoenix-and-towers.kt"
+
+- id: "1515D"
+  title: "Phoenix and Socks"
+  labels: "greedy, sortings, two pointers"
+  code: "gr/gr14/1515d-phoenix-and-socks.kt"
+
+- id: "1515E"
+  title: "Phoenix and Computers"
+  labels: "combinatorics, dp, math"
+
+- id: "1515F"
+  title: "Phoenix and Earthquake"
+  labels: "constructive algorithms, constructive algorithms, dfs and similar, dsu, graphs, greedy, greedy, trees"
+
+- id: "1515G"
+  title: "Phoenix and Odometers"
+  labels: "dfs and similar, dfs and similar, graphs, graphs, math, number theory"
+
+- id: "1515H"
+  title: "Phoenix and Bits"
+  labels: "bitmasks, data structures"
+
+- id: "1515I"
+  title: "Phoenix and Diamonds"
+  labels: "data structures"
+
+# - id: "1516A"
+#   title: "Tit for Tat"
+#   labels: "greedy"
+#   rating: 800
+#   code: "r700-719/r717/1516a-tit-for-tat.kt"
+#
+# - id: "1516B"
+#   title: "AGAGA XOOORRR"
+#   labels: "bitmasks, brute force, dp, greedy"
+#   rating: 1500
+#   code: "r700-719/r717/1516b-agaga-xooorrr.kt"
+#
+# - id: "1516C"
+#   title: "Baby Ehab Partitions Again"
+#   labels: "bitmasks, constructive algorithms, dp, math"
+#   rating: 1700
+#   code: "r700-719/r717/1516c-baby-ehab-partitions-again.kt"
+#
+# - id: "1516D"
+#   title: "Cut"
+#   labels: "binary search, data structures, dp, graphs, number theory"
+#   rating: 2100
+#
+# - id: "1516E"
+#   title: "Baby Ehab Plays with Permutations"
+#   labels: "combinatorics, dp, math"
+#   rating: 2500
+
+# - id: "1517A"
+#   title: "Sum of 2050"
+#   labels: "greedy, math"
+#   code: "r700-719/r718/1517a-sum-of-2050.kt"
+#
+# - id: "1517B"
+#   title: "Morning Jogging"
+#   labels: "constructive algorithms, greedy, sortings"
+#   code: "r700-719/r718/1517b-morning-jogging.kt"
+#
+# - id: "1517C"
+#   title: "Fillomino 2"
+#   labels: "constructive algorithms, greedy, implementation"
+#   code: "r700-719/r718/1517c-fillomino2.kt"
+#
+# - id: "1517D"
+#   title: "Explorer Space"
+#   labels: "dp, graphs, shortest paths"
+#   code: "r700-719/r718/1517d-explorer-space.kt"
+#
+# - id: "1517E"
+#   title: "Group Photo"
+#   labels: "binary search, combinatorics, implementation, two pointers"
+#
+# - id: "1517F"
+#   title: "Reunion"
+#   labels: "dp, dp, dp"
+#
+# - id: "1517G"
+#   title: "Starry Night Camping"
+#   labels: "flows, flows, flows, graphs, graphs, graphs"
+#
+# - id: "1517H"
+#   title: "Fly Around the World"
+#   labels: "dp, dp, dp, dp, geometry, geometry"
+
+# - id: "1519A"
+#   title: "Red and Blue Beans"
+#   labels: "math"
+#   code: "edu/edu108/1519a-red-and-blue-beans.kt"
+#
+# - id: "1519B"
+#   title: "The Cake Is a Lie"
+#   labels: "dp, math"
+#   code: "edu/edu108/1519b-the-cake-is-a-lie.kt"
+#
+# - id: "1519C"
+#   title: "Berland Regional"
+#   labels: "brute force, greedy, sortings, two pointers"
+#   code: "edu/edu108/1519c-berland-regional.kt"
+#
+# - id: "1519D"
+#   title: "Maximum Sum of Products"
+#   labels: "brute force, dp, implementation, math"
+#   code: "edu/edu108/1519d-maximum-sum-of-products.kt"
+#
+# - id: "1519E"
+#   title: "Off by One"
+#   labels: "constructive algorithms, dfs and similar, geometry, graphs, sortings"
+#
+# - id: "1519F"
+#   title: "Chests and Keys"
+#   labels: "dp, flows"
