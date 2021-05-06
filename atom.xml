@@ -12,6 +12,292 @@
     </author>
     
       <item>
+        <title>Round 719 (Div III)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1520&quot;&gt;Codeforces Round #719 (Div. 3)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1520&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1520a/&quot;&gt;
+    Do Not Be Distracted!
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1520/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520a-do-not-be-distracted.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We can do it in one pass: consider all blocks of problems (i.e. ignore a problem if it’s the same as the previous one, meaning it belongs to the same block).  Now if any problem has at least \(2\) groups then the teacher can be suspicious.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, for every problem find its first and last occurrence.  All the positions in between must also belong to that problem or else the teacher can be suspicious.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1520&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1520b/&quot;&gt;
+    Ordinary Numbers
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1520/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520b-ordinary-numbers.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Simply iterate through all the digits from \(1\) to \(9\) and for each digit keep constructing ordinary numbers with increasing number of digits (i.e. \(d, dd, ddd, \ldots\)) until they exceed \(n\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1520&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1520c/&quot;&gt;
+    Not Adjacent Matrix
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1520/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520c-not-adjacent-matrix.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As it turns out \(n = 2\) is the only case where there is no answer.  For all the other numbers we can do a simple construction of dividing the board into black and white cells, like a chessboard.  First fill black cells row by row from \(1\) going up and then continue, similarly, with higher numbers for white cells, so that for instance for \(n = 3\) we get:&lt;/p&gt;
+
+\[\begin{pmatrix}1 &amp;amp; 6 &amp;amp; 2 \\ 7 &amp;amp; 3 &amp;amp; 8 \\ 4 &amp;amp; 9 &amp;amp; 5 \end{pmatrix}\]
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1520&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1520d/&quot;&gt;
+    Same Differences
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1520/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520d-same-differences.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;hashing&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So \(a_j − a_i = j − i\) can be represented equivalently as:  \(a_j - j = a_i - a_i\).  So we can transform each number \(a_i\) into \(a_i - i\) and now the problem can be reduced to finding the number of equal values in such transformed array.  We do that simply by doing frequency counts and each value occurring \(x\) times gives us \(\frac{x \cdot (x-1)}{2}\) such pairs.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1520&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1520e/&quot;&gt;
+    Arranging The Sheep
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1520/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520e-arranging-the-sheep.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I solved it by considering all sheeps one by one and assuming that a given sheep is stationary.  Then with a DP it’s possible for every prefix to compute the cost of moving all the sheep up until that position to form a line ending at that position (i.e. going from \(*.*.* \to ..***\)) and similarly for every suffix.&lt;/p&gt;
+
+&lt;p&gt;But actually there’s a much simpler solution hinging on the fact that if there are \(k\) sheeps then in the optimal solution sheep \(\lceil \frac{k}{2} \rceil\) should remain stationary and then it’s just a simple single sweep calculation.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1520&lt;/tiny&gt;F1
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1520f1/&quot;&gt;
+    Guess the K-th Zero (Easy version)
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1520/problem/F1&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520f1-guess-the-kth-zero-easy.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is just a simple binary search.  We will maintain a segment in which the \(k\)‘th zero must be, starting with the full \([0, n-1]\) segment.&lt;/p&gt;
+
+&lt;p&gt;Let’s say we are looking for the \(k\)‘th zero and we know it is within \([l, r]\).  Pick \(m = \lfloor \frac{l+r}{2} \rfloor\), ask for segment \([l, m]\).  Let’s say the answer is \(s\).  Than means that there are \(z = m-l+1-s\) zeros in that segment and so:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if \(z \ge k\) then we continue searching for \(k\) zeros in \([l, m]\)&lt;/li&gt;
+  &lt;li&gt;if \(z &amp;lt; k\) then we continue searching for \(k-z\) zeros in \([m+1, r]\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We end up asking at most \(\log n\) queries, which is fine.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1520&lt;/tiny&gt;F2
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1520f2/&quot;&gt;
+    Guess the K-th Zero (Hard version)
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1520/problem/F2&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520f2-guess-the-kth-zero-hard.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is similar to the easy problem except we need to be smarter and remember responses and re-use answers rather than asking again.&lt;/p&gt;
+
+&lt;p&gt;When doing so we need to be careful to account for the changes in the array by remembering that the zeroes we guessed so far were changed into ones.  The easiest way to do it is to store answers pertaining to the original array and then when re-using an answer for segment \([l, r]\), add to it the number of guessed zeros we’ve made so far in that range (by using an OST).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1520&lt;/tiny&gt;G
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1520g/&quot;&gt;
+    To Go Or Not To Go?
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1520/problem/G&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520g-to-go-or-not-to-go.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;shortest paths&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, observe that there is no point to using portal more than once.  If we have a solution that uses portal multiple times then we can always jump from the first portal immediately to the last, removing the part in the middle and reducing the cost.  So the answer can have one of the two forms:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;go from start to end without any use of portals.&lt;/li&gt;
+  &lt;li&gt;go from start to portal \(A\), teleport to \(B\) and go from there to the end.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We can compute costs of those options by doing a flood algorithm from start and keeping track of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the cheapest direct route to the end (if any) and&lt;/li&gt;
+  &lt;li&gt;the cheapest way to some portal + cost of taking that portal.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then we do flood from the end to compute:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the cheapest way from end to some portal + cost of taking it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Combining the two we get the answers for the original two options and we’re done.&lt;/p&gt;
+
+&lt;p&gt;Careful that both start and end can be portals (I failed during the contest because of that).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-719.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Wed, 05 May 2021 00:00:00 +0100</pubDate>
+        <link>//R-719</link>
+        <link href="/R-719"/>
+        <guid isPermaLink="true">/R-719</guid>
+      </item>
+    
+      <item>
         <title>Global Round 14</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1515&quot;&gt;Codeforces Global Round 14&lt;/a&gt;&lt;/p&gt;
 
@@ -2385,274 +2671,6 @@
         <link>//R-707</link>
         <link href="/R-707"/>
         <guid isPermaLink="true">/R-707</guid>
-      </item>
-    
-      <item>
-        <title>Round 706 (Div I+II)</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1495&quot;&gt;Codeforces Round #706 (Div. 1)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1496&quot;&gt;Codeforces Round #706 (Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1496&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1496a/&quot;&gt;
-    Split it!
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1496/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r706/1496a-split-it.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;strings&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Note that the part in the middle, \(a_{k+1}\), has no constraints and is arbitrary so we want to make all \(a_1, \ldots, a_k\) as short as possible. Notice also that if any \(a_i = s \cdot t\) then it can be split into two: \(s\) and \(t\).  Which means all \(a_i\) are single letters.  Which means we need to have:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;first \(k\) letters concatenated with last \(k\) letters must be a palindrome and&lt;/li&gt;
-  &lt;li&gt;\(n &amp;gt; 2k\) (so that we have at least one letter left for \(a_{k+1}\)).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1496&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1496b/&quot;&gt;
-    Max and Mex
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1496/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r706/1496b-max-and-mex.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Let \(x = mex(S)\) and \(y = max(S)\).&lt;/p&gt;
-
-&lt;p&gt;If \(x &amp;gt; y\) then \(x = y+1\) and \(\lceil \frac{x+y}{2} \rceil = \lceil \frac{2y+1}{2} \rceil = y+2\), which means from now on we’ll always be adding a new element in every step, so just bump the result by however many steps are left and we’re done.&lt;/p&gt;
-
-&lt;p&gt;If \(x &amp;lt; y\) then just compute \(\lceil \frac{x+y}{2} \rceil\), add it to the set and continue simulating.  This cannot go on for more than \(n\) steps at which point we’ll start hitting the previous case, so the complexity is good enough.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1496&lt;/tiny&gt;C / &lt;tiny&gt;1495&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1496c/&quot;&gt;
-    Diamond Miner
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1496/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r706/1496c-diamond-miner.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly, observe that we can transform each \((x, y)\) point to \((\mid x \mid, \mid y \mid)\) without affecting the answer.  So now we’re playing on a single positive quadrant of the coordinate system and it’s easy to see (or prove from triangle inequality) that the optimal solution is to avoid lines intersecting and so to greedily sort all \(x\) and \(y\) coordinates and match them in that order.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1496&lt;/tiny&gt;D / &lt;tiny&gt;1495&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1496d/&quot;&gt;
-    Let's Go Hiking
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1496/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r706/1496d-lets-go-hiking.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;games&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly note that all the numbers don’t matter only for each pair of numbers which one is bigger.  Visualize this as a game on “hills” created from the numbers; first player can only be descending while the second player can only be ascending.&lt;/p&gt;
-
-&lt;p&gt;Observations:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;the first player must start on a hill; if he did not then there’s only one possible move for him to do and the second player can block him and win.&lt;/li&gt;
-  &lt;li&gt;the number of steps he can do to left and right must be equal; if it is not then the second player can place himself appropriately on the longest of the branches and win.&lt;/li&gt;
-  &lt;li&gt;both left and right branch must have even lengths; for odd lengths the second player places himself on the bottom of one of the branches and wins, regardless if the first player goes along the same branch or chooses the other one.&lt;/li&gt;
-  &lt;li&gt;there cannot be another monotone sequence of equal or longer length than the ones at the starting point we’re considering, as then the second player just starts there and have at least as many steps as we do and win.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This last observation in particular means that the answer will always be \(0\) or \(1\).  It’s fairly easy to find the unique winning starting point (if it exists).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1496&lt;/tiny&gt;E / &lt;tiny&gt;1495&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1496e/&quot;&gt;
-    Garden of the Sun
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1496/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2300&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly let’s unpack all the fluff from the description: we have a number of \(X\)s and we want to connect all of them, by adding new \(X\)s, in such a way that we cannot create any cycles.&lt;/p&gt;
-
-&lt;p&gt;We can do that by fully filling every third column.  If we have any \(X\)s on the remaining two columns they will automatically be connected to their closer column.  So what remains to be done is just to extend any of them into a full connection between said columns (or just add a “bridge” if no \(X\)s exist in the two columns under consideration).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1496&lt;/tiny&gt;F / &lt;tiny&gt;1495&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1496f/&quot;&gt;
-    BFS Trees
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1496/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2600&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;shortest paths&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1495&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1495e/&quot;&gt;
-    Qingshan and Daniel
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1495/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1495&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1495f/&quot;&gt;
-    Squares
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1495/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3300&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/R-706.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
-        <link>//R-706</link>
-        <link href="/R-706"/>
-        <guid isPermaLink="true">/R-706</guid>
       </item>
     
   </channel>

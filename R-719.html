@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 719 (Div III)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 719 (Div III) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 719 (Div III)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #719 (Div. 3)" />
+<meta property="og:description" content="Codeforces Round #719 (Div. 3)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-05T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 719 (Div III)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/codeforces-editorials/R-719","headline":"Round 719 (Div III)","dateModified":"2021-05-05T00:00:00+01:00","datePublished":"2021-05-05T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-719"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #719 (Div. 3)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 719 (Div III)</h2>
+  <time datetime="2021-05-05T00:00:00+01:00" class="by-line">05 May 2021</time>
+  <p><a href="https://codeforces.com/contest/1520">Codeforces Round #719 (Div. 3)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1520</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1520a/">
+    Do Not Be Distracted!
+  </a>
+  <a href="https://codeforces.com/contest/1520/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520a-do-not-be-distracted.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+  </labels>
+</div>
+
+<p>We can do it in one pass: consider all blocks of problems (i.e. ignore a problem if it’s the same as the previous one, meaning it belongs to the same block).  Now if any problem has at least \(2\) groups then the teacher can be suspicious.</p>
+
+<p>Alternatively, for every problem find its first and last occurrence.  All the positions in between must also belong to that problem or else the teacher can be suspicious.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1520</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1520b/">
+    Ordinary Numbers
+  </a>
+  <a href="https://codeforces.com/contest/1520/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520b-ordinary-numbers.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>Simply iterate through all the digits from \(1\) to \(9\) and for each digit keep constructing ordinary numbers with increasing number of digits (i.e. \(d, dd, ddd, \ldots\)) until they exceed \(n\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1520</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1520c/">
+    Not Adjacent Matrix
+  </a>
+  <a href="https://codeforces.com/contest/1520/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520c-not-adjacent-matrix.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+  </labels>
+</div>
+
+<p>As it turns out \(n = 2\) is the only case where there is no answer.  For all the other numbers we can do a simple construction of dividing the board into black and white cells, like a chessboard.  First fill black cells row by row from \(1\) going up and then continue, similarly, with higher numbers for white cells, so that for instance for \(n = 3\) we get:</p>
+
+\[\begin{pmatrix}1 &amp; 6 &amp; 2 \\ 7 &amp; 3 &amp; 8 \\ 4 &amp; 9 &amp; 5 \end{pmatrix}\]
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1520</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1520d/">
+    Same Differences
+  </a>
+  <a href="https://codeforces.com/contest/1520/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520d-same-differences.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">hashing</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>So \(a_j − a_i = j − i\) can be represented equivalently as:  \(a_j - j = a_i - a_i\).  So we can transform each number \(a_i\) into \(a_i - i\) and now the problem can be reduced to finding the number of equal values in such transformed array.  We do that simply by doing frequency counts and each value occurring \(x\) times gives us \(\frac{x \cdot (x-1)}{2}\) such pairs.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1520</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1520e/">
+    Arranging The Sheep
+  </a>
+  <a href="https://codeforces.com/contest/1520/problem/E">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520e-arranging-the-sheep.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>I solved it by considering all sheeps one by one and assuming that a given sheep is stationary.  Then with a DP it’s possible for every prefix to compute the cost of moving all the sheep up until that position to form a line ending at that position (i.e. going from \(*.*.* \to ..***\)) and similarly for every suffix.</p>
+
+<p>But actually there’s a much simpler solution hinging on the fact that if there are \(k\) sheeps then in the optimal solution sheep \(\lceil \frac{k}{2} \rceil\) should remain stationary and then it’s just a simple single sweep calculation.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1520</tiny>F1
+
+  
+  <a href="/codeforces-editorials/problems/1520f1/">
+    Guess the K-th Zero (Easy version)
+  </a>
+  <a href="https://codeforces.com/contest/1520/problem/F1">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520f1-guess-the-kth-zero-easy.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+  </labels>
+</div>
+
+<p>This is just a simple binary search.  We will maintain a segment in which the \(k\)‘th zero must be, starting with the full \([0, n-1]\) segment.</p>
+
+<p>Let’s say we are looking for the \(k\)‘th zero and we know it is within \([l, r]\).  Pick \(m = \lfloor \frac{l+r}{2} \rfloor\), ask for segment \([l, m]\).  Let’s say the answer is \(s\).  Than means that there are \(z = m-l+1-s\) zeros in that segment and so:</p>
+
+<ul>
+  <li>if \(z \ge k\) then we continue searching for \(k\) zeros in \([l, m]\)</li>
+  <li>if \(z &lt; k\) then we continue searching for \(k-z\) zeros in \([m+1, r]\).</li>
+</ul>
+
+<p>We end up asking at most \(\log n\) queries, which is fine.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1520</tiny>F2
+
+  
+  <a href="/codeforces-editorials/problems/1520f2/">
+    Guess the K-th Zero (Hard version)
+  </a>
+  <a href="https://codeforces.com/contest/1520/problem/F2">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520f2-guess-the-kth-zero-hard.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">binary search</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+  </labels>
+</div>
+
+<p>This is similar to the easy problem except we need to be smarter and remember responses and re-use answers rather than asking again.</p>
+
+<p>When doing so we need to be careful to account for the changes in the array by remembering that the zeroes we guessed so far were changed into ones.  The easiest way to do it is to store answers pertaining to the original array and then when re-using an answer for segment \([l, r]\), add to it the number of guessed zeros we’ve made so far in that range (by using an OST).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1520</tiny>G
+
+  
+  <a href="/codeforces-editorials/problems/1520g/">
+    To Go Or Not To Go?
+  </a>
+  <a href="https://codeforces.com/contest/1520/problem/G">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r719/1520g-to-go-or-not-to-go.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">shortest paths</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, observe that there is no point to using portal more than once.  If we have a solution that uses portal multiple times then we can always jump from the first portal immediately to the last, removing the part in the middle and reducing the cost.  So the answer can have one of the two forms:</p>
+
+<ul>
+  <li>go from start to end without any use of portals.</li>
+  <li>go from start to portal \(A\), teleport to \(B\) and go from there to the end.</li>
+</ul>
+
+<p>We can compute costs of those options by doing a flood algorithm from start and keeping track of:</p>
+
+<ul>
+  <li>the cheapest direct route to the end (if any) and</li>
+  <li>the cheapest way to some portal + cost of taking that portal.</li>
+</ul>
+
+<p>Then we do flood from the end to compute:</p>
+
+<ul>
+  <li>the cheapest way from end to some portal + cost of taking it.</li>
+</ul>
+
+<p>Combining the two we get the answers for the original two options and we’re done.</p>
+
+<p>Careful that both start and end can be portals (I failed during the contest because of that).</p>
+
+<hr />
+
+<object data="notes/R-719.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
