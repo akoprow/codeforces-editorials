@@ -3551,3 +3551,43 @@
 # - id: "1519F"
 #   title: "Chests and Keys"
 #   labels: "dp, flows"
+
+- id: "1520A"
+  title: "Do Not Be Distracted!"
+  labels: "brute force, implementation"
+  code: "r700-719/r719/1520a-do-not-be-distracted.kt"
+
+- id: "1520B"
+  title: "Ordinary Numbers"
+  labels: "brute force, math, number theory"
+  code: "r700-719/r719/1520b-ordinary-numbers.kt"
+
+- id: "1520C"
+  title: "Not Adjacent Matrix"
+  labels: "constructive algorithms"
+  code: "r700-719/r719/1520c-not-adjacent-matrix.kt"
+
+- id: "1520D"
+  title: "Same Differences"
+  labels: "data structures, hashing, math"
+  code: "r700-719/r719/1520d-same-differences.kt"
+
+- id: "1520E"
+  title: "Arranging The Sheep"
+  labels: "greedy, math"
+  code: "r700-719/r719/1520e-arranging-the-sheep.kt"
+
+- id: "1520F1"
+  title: "Guess the K-th Zero (Easy version)"
+  labels: "binary search, interactive"
+  code: "r700-719/r719/1520f1-guess-the-kth-zero-easy.kt"
+
+- id: "1520F2"
+  title: "Guess the K-th Zero (Hard version)"
+  labels: "binary search, data structures, interactive"
+  code: "r700-719/r719/1520f2-guess-the-kth-zero-hard.kt"
+
+- id: "1520G"
+  title: "To Go Or Not To Go?"
+  labels: "dfs and similar, graphs, greedy, shortest paths"
+  code: "r700-719/r719/1520g-to-go-or-not-to-go.kt"
