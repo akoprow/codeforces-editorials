@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
   <meta name="generator" content="Jekyll">
 
-  <title>Phoenix and Gold</title>
+  <title>Omkar and Bad Story</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -14,18 +14,18 @@
   <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
 
   <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Phoenix and Gold | Codeforces editorials</title>
+<title>Omkar and Bad Story | Codeforces editorials</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Phoenix and Gold" />
+<meta property="og:title" content="Omkar and Bad Story" />
 <meta name="author" content="Adam Koprowski" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Codeforces editorials" />
 <meta property="og:description" content="Codeforces editorials" />
 <meta property="og:site_name" content="Codeforces editorials" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Phoenix and Gold" />
+<meta property="twitter:title" content="Omkar and Bad Story" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"/codeforces-editorials/problems/1515a/","headline":"Phoenix and Gold","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"/codeforces-editorials/problems/1536a/","headline":"Omkar and Bad Story","author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces editorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -84,33 +84,36 @@
       <section id="main_content">
         <div class="alert alert-primary" role="alert">
   
-  <tiny>1515</tiny>A
+  <tiny>1536</tiny>A
 
   
-  <a href="/codeforces-editorials/problems/1515a/">
-    Phoenix and Gold
+  <a href="/codeforces-editorials/problems/1536a/">
+    Omkar and Bad Story
   </a>
-  <a href="https://codeforces.com/contest/1515/problem/A">
+  <a href="https://codeforces.com/contest/1536/problem/A">
   [CF]
   </a>
 
-  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/gr/gr14/1515a-phoenix-and-gold.kt">(Code)</a>
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r724/1536a-omkar-and-bad-story.kt">(Code)</a>
 
   <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
 
   <labels>
   
   
-    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
   
-    <span class="badge rounded-pill bg-warning text-dark">math</span>
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
   
   </labels>
 </div>
 
-<p>If the overall sum is \(x\) then whatever we do in the last step we’ll get \(x\) and so there’s no answer.</p>
+<p>Tricky until you realize that:</p>
 
-<p>Otherwise, we can just keep on adding weights in arbitrary order and if the next one would cause the running sum to be exactly \(x\) then we can just swap it with the following element.  Since all elements are distinct this is bound to lead to a solution.</p>
+<ul>
+  <li>If any number is negative then the answer is “NO”.  This is because: take that negative number and the largest other number \(p\) (there must be at least one).  The difference between them will be larger than \(p\) and we’d have to repeat this process ad infinitum adding new numbers so no dice.</li>
+  <li>Otherwise all the numbers are between \(0\) and \(100\) so \(0, 1, \ldots, 100\) is always a valid answer.</li>
+</ul>
 
 
       </section>
