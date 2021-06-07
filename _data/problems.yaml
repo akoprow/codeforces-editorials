@@ -3533,33 +3533,33 @@
 #   title: "Fly Around the World"
 #   labels: "dp, dp, dp, dp, geometry, geometry"
 
-- id: "1519A"
-  title: "Red and Blue Beans"
-  labels: "math"
-  code: "edu/edu108/1519a-red-and-blue-beans.kt"
-
-- id: "1519B"
-  title: "The Cake Is a Lie"
-  labels: "dp, math"
-  code: "edu/edu108/1519b-the-cake-is-a-lie.kt"
-
-- id: "1519C"
-  title: "Berland Regional"
-  labels: "brute force, greedy, sortings, two pointers"
-  code: "edu/edu108/1519c-berland-regional.kt"
-
-- id: "1519D"
-  title: "Maximum Sum of Products"
-  labels: "brute force, dp, implementation, math"
-  code: "edu/edu108/1519d-maximum-sum-of-products.kt"
-
-- id: "1519E"
-  title: "Off by One"
-  labels: "constructive algorithms, dfs and similar, geometry, graphs, sortings"
-
-- id: "1519F"
-  title: "Chests and Keys"
-  labels: "dp, flows"
+# - id: "1519A"
+#   title: "Red and Blue Beans"
+#   labels: "math"
+#   code: "edu/edu108/1519a-red-and-blue-beans.kt"
+#
+# - id: "1519B"
+#   title: "The Cake Is a Lie"
+#   labels: "dp, math"
+#   code: "edu/edu108/1519b-the-cake-is-a-lie.kt"
+#
+# - id: "1519C"
+#   title: "Berland Regional"
+#   labels: "brute force, greedy, sortings, two pointers"
+#   code: "edu/edu108/1519c-berland-regional.kt"
+#
+# - id: "1519D"
+#   title: "Maximum Sum of Products"
+#   labels: "brute force, dp, implementation, math"
+#   code: "edu/edu108/1519d-maximum-sum-of-products.kt"
+#
+# - id: "1519E"
+#   title: "Off by One"
+#   labels: "constructive algorithms, dfs and similar, geometry, graphs, sortings"
+#
+# - id: "1519F"
+#   title: "Chests and Keys"
+#   labels: "dp, flows"
 
 - id: "1520A"
   title: "Do Not Be Distracted!"
