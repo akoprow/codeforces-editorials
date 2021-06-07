@@ -3423,42 +3423,51 @@
 - id: "1515A"
   title: "Phoenix and Gold"
   labels: "constructive algorithms, math"
+  rating: 800
   code: "gr/gr14/1515a-phoenix-and-gold.kt"
 
 - id: "1515B"
   title: "Phoenix and Puzzle"
   labels: "geometry, math"
+  rating: 1000
   code: "gr/gr14/1515b-phoenix-and-puzzle.kt"
 
 - id: "1515C"
   title: "Phoenix and Towers"
   labels: "constructive algorithms, data structures, greedy, sortings"
+  rating: 1400
   code: "gr/gr14/1515c-phoenix-and-towers.kt"
 
 - id: "1515D"
   title: "Phoenix and Socks"
   labels: "greedy, sortings, two pointers"
+  rating: 1500
   code: "gr/gr14/1515d-phoenix-and-socks.kt"
 
 - id: "1515E"
   title: "Phoenix and Computers"
   labels: "combinatorics, dp, math"
+  rating: 2200
 
 - id: "1515F"
   title: "Phoenix and Earthquake"
   labels: "constructive algorithms, constructive algorithms, dfs and similar, dsu, graphs, greedy, greedy, trees"
+  rating: 2600
 
 - id: "1515G"
   title: "Phoenix and Odometers"
   labels: "dfs and similar, dfs and similar, graphs, graphs, math, number theory"
+  rating: 2700
 
 - id: "1515H"
   title: "Phoenix and Bits"
   labels: "bitmasks, data structures"
+  rating: 3500
 
 - id: "1515I"
   title: "Phoenix and Diamonds"
   labels: "data structures"
+  rating: 3400
 
 # - id: "1516A"
 #   title: "Tit for Tat"
@@ -3524,70 +3533,241 @@
 #   title: "Fly Around the World"
 #   labels: "dp, dp, dp, dp, geometry, geometry"
 
-# - id: "1519A"
-#   title: "Red and Blue Beans"
-#   labels: "math"
-#   code: "edu/edu108/1519a-red-and-blue-beans.kt"
-#
-# - id: "1519B"
-#   title: "The Cake Is a Lie"
-#   labels: "dp, math"
-#   code: "edu/edu108/1519b-the-cake-is-a-lie.kt"
-#
-# - id: "1519C"
-#   title: "Berland Regional"
-#   labels: "brute force, greedy, sortings, two pointers"
-#   code: "edu/edu108/1519c-berland-regional.kt"
-#
-# - id: "1519D"
-#   title: "Maximum Sum of Products"
-#   labels: "brute force, dp, implementation, math"
-#   code: "edu/edu108/1519d-maximum-sum-of-products.kt"
-#
-# - id: "1519E"
-#   title: "Off by One"
-#   labels: "constructive algorithms, dfs and similar, geometry, graphs, sortings"
-#
-# - id: "1519F"
-#   title: "Chests and Keys"
-#   labels: "dp, flows"
+- id: "1519A"
+  title: "Red and Blue Beans"
+  labels: "math"
+  code: "edu/edu108/1519a-red-and-blue-beans.kt"
+
+- id: "1519B"
+  title: "The Cake Is a Lie"
+  labels: "dp, math"
+  code: "edu/edu108/1519b-the-cake-is-a-lie.kt"
+
+- id: "1519C"
+  title: "Berland Regional"
+  labels: "brute force, greedy, sortings, two pointers"
+  code: "edu/edu108/1519c-berland-regional.kt"
+
+- id: "1519D"
+  title: "Maximum Sum of Products"
+  labels: "brute force, dp, implementation, math"
+  code: "edu/edu108/1519d-maximum-sum-of-products.kt"
+
+- id: "1519E"
+  title: "Off by One"
+  labels: "constructive algorithms, dfs and similar, geometry, graphs, sortings"
+
+- id: "1519F"
+  title: "Chests and Keys"
+  labels: "dp, flows"
 
 - id: "1520A"
   title: "Do Not Be Distracted!"
   labels: "brute force, implementation"
+  rating: 800
   code: "r700-719/r719/1520a-do-not-be-distracted.kt"
 
 - id: "1520B"
   title: "Ordinary Numbers"
   labels: "brute force, math, number theory"
+  rating: 800
   code: "r700-719/r719/1520b-ordinary-numbers.kt"
 
 - id: "1520C"
   title: "Not Adjacent Matrix"
   labels: "constructive algorithms"
+  rating: 1000
   code: "r700-719/r719/1520c-not-adjacent-matrix.kt"
 
 - id: "1520D"
   title: "Same Differences"
   labels: "data structures, hashing, math"
+  rating: 1200
   code: "r700-719/r719/1520d-same-differences.kt"
 
 - id: "1520E"
   title: "Arranging The Sheep"
   labels: "greedy, math"
+  rating: 1400
   code: "r700-719/r719/1520e-arranging-the-sheep.kt"
 
 - id: "1520F1"
   title: "Guess the K-th Zero (Easy version)"
   labels: "binary search, interactive"
+  rating: 1600
   code: "r700-719/r719/1520f1-guess-the-kth-zero-easy.kt"
 
 - id: "1520F2"
   title: "Guess the K-th Zero (Hard version)"
   labels: "binary search, data structures, interactive"
+  rating: 2200
   code: "r700-719/r719/1520f2-guess-the-kth-zero-hard.kt"
 
 - id: "1520G"
   title: "To Go Or Not To Go?"
   labels: "dfs and similar, graphs, greedy, shortest paths"
+  rating: 2200
   code: "r700-719/r719/1520g-to-go-or-not-to-go.kt"
+
+# - id: "1521A"
+#   title: "Nastia and Nearly Good Numbers"
+#   labels: "constructive algorithms, math"
+#   code: "r720-739/r720/1521a-nastia-and-nearly-good-numbers.kt"
+#
+# - id: "1521B"
+#   title: "Nastia and a Good Array"
+#   labels: "constructive algorithms, math"
+#   code: "r720-739/r720/1521b-nastia-and-a-good-array.kt"
+#
+# - id: "1521C"
+#   title: "Nastia and a Hidden Permutation"
+#   labels: "brute force, constructive algorithms, implementation, interactive, meet-in-the-middle"
+#   code: "r720-739/r720/1521c-nastia-and-a-hidden-permutation.kt"
+#
+# - id: "1521D"
+#   title: "Nastia Plays with a Tree"
+#   labels: "constructive algorithms, data structures, dfs and similar, dp, graphs, greedy, implementation, trees"
+#
+# - id: "1521E"
+#   title: "Nastia and a Beautiful Matrix"
+#   labels: "constructive algorithms"
+
+# - id: "1523A"
+#   title: "Game of Life"
+#   labels: "implementation"
+#   rating: 800
+#   code: "other/deltix2021/1523a-game-of-life.kt"
+#
+# - id: "1523B"
+#   title: "Lord of the Values"
+#   labels: "constructive algorithms"
+#   rating: 1100
+#   code: "other/deltix2021/1523b-lord-of-the-values.kt"
+#
+# - id: "1523C"
+#   title: "Compression and Expansion"
+#   labels: "brute force, data structures, greedy, implementation, trees"
+#   rating: 1600
+#   code: "other/deltix2021/1523c-compression-and-expansion.kt"
+#
+# - id: "1523D"
+#   title: "Love-Hate"
+#   labels: "bitmasks, brute force, dp, probabilities"
+#   rating: 2400
+#   code: "other/deltix2021/1523d-love-hate.kt"
+#
+# - id: "1523E"
+#   title: "Crypto Lights"
+#   labels: "combinatorics, dp, math, probabilities"
+#   rating: 2600
+#
+# - id: "1523F"
+#   title: "Favorite Game"
+#   labels: "bitmasks, dp"
+#   rating: 3300
+#
+# - id: "1523G"
+#   title: "Try Booking"
+#   labels: "data structures, divide and conquer"
+#   rating: 3200
+#
+# - id: "1523H"
+#   title: "Hopping Around the Array "
+#   labels: "data structures, dp"
+#   rating: 3500
+
+# - id: "1525A"
+#   title: "Potion-making"
+#   labels: "math, number theory"
+#   rating: 800
+#   code: "edu/edu109/1525a-potion-making.kt"
+#
+# - id: "1525B"
+#   title: "Permutation Sort"
+#   labels: "constructive algorithms, greedy"
+#   rating: 900
+#   code: "edu/edu109/1525b-permutation-sort.kt"
+#
+# - id: "1525C"
+#   title: "Robot Collisions"
+#   labels: "data structures, greedy, implementation, sortings"
+#   rating: 2000
+#
+# - id: "1525D"
+#   title: "Armchairs"
+#   labels: "dp, flows, graph matchings, greedy"
+#   rating: 1800
+#   code: "edu/edu109/1525d-armchairs.kt"
+#
+# - id: "1525E"
+#   title: "Assimilation IV"
+#   labels: "combinatorics, dp, math, probabilities, two pointers"
+#   rating: 2100
+#
+# - id: "1525F"
+#   title: "Goblins And Gnomes"
+#   labels: "brute force, dp, flows, graph matchings"
+#   rating: 2800
+
+# - id: "1535A"
+#   title: "Fair Playoff"
+#   labels: "brute force, implementation, math"
+#   code: "edu/edu110/1535a-fair-playoff.kt"
+#
+# - id: "1535B"
+#   title: "Array Reodering"
+#   labels: "brute force, greedy, math, number theory, sortings"
+#   code: "edu/edu110/1535b-array-reordering.kt"
+#
+# - id: "1535C"
+#   title: "Unstable String"
+#   labels: "dp, strings, two pointers"
+#   code: "edu/edu110/1535c-unstable-string.kt"
+#
+# - id: "1535D"
+#   title: "Playoff Tournament"
+#   labels: "data structures, implementation, trees"
+#   code: "edu/edu110/1535d-playoff-tournament.kt"
+#
+# - id: "1535E"
+#   title: "Gold Transfer"
+#   labels: "binary search, data structures, greedy, interactive, trees"
+#
+# - id: "1535F"
+#   title: "String Distance"
+#   labels: "binary search, hashing, strings"
+
+- id: "1536A"
+  title: "Omkar and Bad Story"
+  labels: "brute force, constructive algorithms"
+  code: "r720-739/r724/1536a-omkar-and-bad-story.kt"
+  rating: 800
+
+- id: "1536B"
+  title: "Prinzessin der Verurteilung"
+  labels: "brute force, constructive algorithms, strings"
+  code: "r720-739/r724/1536b-prinzessin-der-verurteilung.kt"
+  rating: 1200
+
+- id: "1536C"
+  title: "Diluc and Kaeya"
+  labels: "dp, hashing, number theory"
+  code: "r720-739/r724/1536c-diluc-and-kaeya.kt"
+  rating: 1500
+
+- id: "1536D"
+  title: "Omkar and Medians"
+  labels: "data structures, greedy, implementation"
+  code: "r720-739/r724/1536d-omkar-and-medians.kt"
+  rating: 2000
+
+- id: "1536E"
+  title: "Omkar and Forest"
+  labels: "combinatorics, graphs, math, shortest paths"
+  code: "r720-739/r724/1536e-omkar-and-forest.kt"
+  rating: 2300
+
+- id: "1536F"
+  title: "Omkar and Akmar"
+  labels: "combinatorics, games, math"
+  rating: 2600
