@@ -3709,33 +3709,33 @@
 #   labels: "brute force, dp, flows, graph matchings"
 #   rating: 2800
 
-# - id: "1535A"
-#   title: "Fair Playoff"
-#   labels: "brute force, implementation, math"
-#   code: "edu/edu110/1535a-fair-playoff.kt"
-#
-# - id: "1535B"
-#   title: "Array Reodering"
-#   labels: "brute force, greedy, math, number theory, sortings"
-#   code: "edu/edu110/1535b-array-reordering.kt"
-#
-# - id: "1535C"
-#   title: "Unstable String"
-#   labels: "dp, strings, two pointers"
-#   code: "edu/edu110/1535c-unstable-string.kt"
-#
-# - id: "1535D"
-#   title: "Playoff Tournament"
-#   labels: "data structures, implementation, trees"
-#   code: "edu/edu110/1535d-playoff-tournament.kt"
-#
-# - id: "1535E"
-#   title: "Gold Transfer"
-#   labels: "binary search, data structures, greedy, interactive, trees"
-#
-# - id: "1535F"
-#   title: "String Distance"
-#   labels: "binary search, hashing, strings"
+- id: "1535A"
+  title: "Fair Playoff"
+  labels: "brute force, implementation, math"
+  code: "edu/edu110/1535a-fair-playoff.kt"
+
+- id: "1535B"
+  title: "Array Reodering"
+  labels: "brute force, greedy, math, number theory, sortings"
+  code: "edu/edu110/1535b-array-reordering.kt"
+
+- id: "1535C"
+  title: "Unstable String"
+  labels: "dp, strings, two pointers"
+  code: "edu/edu110/1535c-unstable-string.kt"
+
+- id: "1535D"
+  title: "Playoff Tournament"
+  labels: "data structures, implementation, trees"
+  code: "edu/edu110/1535d-playoff-tournament.kt"
+
+- id: "1535E"
+  title: "Gold Transfer"
+  labels: "binary search, data structures, greedy, interactive, trees"
+
+- id: "1535F"
+  title: "String Distance"
+  labels: "binary search, hashing, strings"
 
 - id: "1536A"
   title: "Omkar and Bad Story"
