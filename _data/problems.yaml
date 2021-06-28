@@ -3709,6 +3709,88 @@
 #   labels: "brute force, dp, flows, graph matchings"
 #   rating: 2800
 
+- id: "1527A"
+  title: "And Then There Were K"
+  labels: "bitmasks"
+  rating: 800
+  code: "r720-739/r721/1527a-and-then-there-were-k.kt"
+
+- id: "1527B1"
+  title: "Palindrome Game (easy version)"
+  labels: "constructive algorithms, games"
+  rating: 1200
+  code: "codeforces/r720-739/r721/1527b1-palindrome-game-easy.kt"
+
+- id: "1527B2"
+  title: "Palindrome Game (hard version)"
+  labels: "constructive algorithms, games"
+  rating: 1900
+  code: "r720-739/r721/1527b2-palindrome-game-hard.kt"
+
+- id: "1527C"
+  title: "Sequence Pair Weight"
+  labels: "hashing, implementation, math"
+  rating: 1600
+  code: "r720-739/r721/1527c-sequence-pair-weight.kt"
+
+- id: "1527D"
+  title: "MEX Tree"
+  labels: "combinatorics, dfs and similar, implementation, math, trees"
+  rating: 2400
+
+- id: "1527E"
+  title: "Partition Game"
+  labels: "binary search, data structures, divide and conquer, dp"
+  rating: 2500
+
+# - id: "1534A"
+#   title: "Colour the Flag"
+#   labels: "brute force, implementation"
+#   rating: 800
+#   code: "other/latokenR1/1534-colour-the-flag.kt"
+#
+# - id: "1534B"
+#   title: "Histogram Ugliness"
+#   labels: "greedy, implementation, math"
+#   code: "other/latokenR1/1534b-histogram-ugliness.kt"
+#   rating: 1100
+#
+# - id: "1534C"
+#   title: "Little Alawn's Puzzle"
+#   labels: "combinatorics, dp, dsu, graphs, math"
+#   code: "other/latokenR1/1534c-little-alawns-puzzle.kt"
+#   rating: 1300
+#
+# - id: "1534D"
+#   title: "Lost Tree"
+#   labels: "constructive algorithms, interactive, trees"
+#   rating: 1800
+#
+# - id: "1534E"
+#   title: "Lost Array"
+#   labels: "graphs, greedy, interactive, shortest paths"
+#   rating: 2300
+#
+# - id: "1534F1"
+#   title: "Falling Sand (Easy Version)"
+#   labels: "dfs and similar, graphs, greedy"
+#   rating: 2500
+#
+# - id: "1534F2"
+#   title: "Falling Sand (Hard Version)"
+#   labels: "dfs and similar, dp, graphs, greedy"
+#   rating: 3000
+#
+# - id: "1534G"
+#   title: "A New Beginning"
+#   labels: "data structures, dp, geometry, sortings"
+#   rating: 3300
+#
+# - id: "1534H"
+#   title: "Lost Nodes"
+#   labels: "constructive algorithms, dp, graphs, interactive, sortings, trees"
+#   rating: 3500
+
 - id: "1535A"
   title: "Fair Playoff"
   labels: "brute force, implementation, math"
@@ -3771,3 +3853,111 @@
   title: "Omkar and Akmar"
   labels: "combinatorics, games, math"
   rating: 2600
+
+# - id: "1537A"
+#   title: "Arithmetic Array"
+#   labels: "greedy, math"
+#   code: "r720-739/r726/1537a-arithmetic-array.kt"
+#   rating: 800
+#
+# - id: "1537B"
+#   title: "Bad Boy"
+#   labels: "constructive algorithms, greedy, math"
+#   code: "r720-739/r726/1537b-bad-boy.kt"
+#   rating: 900
+#
+# - id: "1537C"
+#   title: "Challenging Cliffs"
+#   labels: "constructive algorithms, greedy, implementation, math"
+#   code: "r720-739/r726/1537c-challenging-cliffs.kt"
+#   rating: 1200
+#
+# - id: "1537D"
+#   title: "Deleting Divisors"
+#   labels: "games, math, number theory"
+#   code: "r720-739/r726/1537d-deleting-divisors.kt"
+#   rating: 1700
+#
+# - id: "1537E1"
+#   title: "Erase and Extend (Easy Version)"
+#   labels: "binary search, brute force, dp, greedy, hashing, string suffix structures, strings, two pointers"
+#   code: "r720-739/r726/1537e1-erase-and-extend-easy.kt"
+#   rating: 1600
+#
+# - id: "1537E2"
+#   title: "Erase and Extend (Hard Version)"
+#   labels: "binary search, data structures, greedy, hashing, string suffix structures, strings, two pointers"
+#   rating: 2200
+#
+# - id: "1537F"
+#   title: "Figure Fixing"
+#   labels: "constructive algorithms, dfs and similar, dsu, graphs, math"
+#   rating: 2200
+
+# - id: "1538A"
+#   title: "Stone Game"
+#   labels: "brute force, dp, greedy"
+#   code: "r720-739/r725/1538a-stone-game.kt"
+#   rating: 800
+#
+# - id: "1538B"
+#   title: "Friends and Candies"
+#   labels: "greedy, math"
+#   code: "r720-739/r725/1538b-friends-and-candies.kt"
+#   rating: 800
+#
+# - id: "1538C"
+#   title: "Number of Pairs"
+#   labels: "binary search, data structures, math, two pointers"
+#   code: "r720-739/r725/1538c-number-of-pairs.kt"
+#   rating: 1300
+#
+# - id: "1538D"
+#   title: "Another Problem About Dividing Numbers"
+#   labels: "constructive algorithms, math, number theory"
+#   code: "r720-739/r725/1538d-another-problem-about-dividing-numbers.kt"
+#   rating: 1700
+#
+# - id: "1538E"
+#   title: "Funny Substrings"
+#   labels: "data structures, hashing, implementation, matrices, strings"
+#   code: "r720-739/r725/1538e-funny-substrings.kt"
+#   rating: 2100
+#
+# - id: "1538F"
+#   title: "Interesting Function"
+#   labels: "binary search, dp, math, number theory"
+#   rating: 1500
+#
+# - id: "1538G"
+#   title: "Gift Set"
+#   labels: "binary search, greedy, math, ternary search"
+#   rating: 2100
+
+# - id: "1539A"
+#   title: "Contest Start"
+#   labels: "combinatorics, math"
+#   code: "r720-739/r727/1539a-contest-start.kt"
+#
+# - id: "1539B"
+#   title: "Love Song"
+#   labels: "data structures, dp, strings"
+#   code: "r720-739/r727/1539b-love-song.kt"
+#
+# - id: "1539C"
+#   title: "Stable Groups"
+#   labels: "greedy, sortings"
+#   code: "r720-739/r727/1539c-stable-groups.kt"
+#
+# - id: "1539D"
+#   title: "PriceFixed"
+#   labels: "greedy, sortings, two pointers"
+#   code: "r720-739/r727/1539d-price-fixed.kt"
+#
+# - id: "1539E"
+#   title: "Game with Cards"
+#   labels: "constructive algorithms, dp, implementation"
+#
+# - id: "1539F"
+#   title: "Strange Array"
+#   labels: "data structures, dp, greedy"
