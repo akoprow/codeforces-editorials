@@ -470,6 +470,294 @@
       </item>
     
       <item>
+        <title>Round 722 (Div. I+II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1528&quot;&gt;Codeforces Round #722 (Div. 1)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1529&quot;&gt;Codeforces Round #722 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1529&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1529a/&quot;&gt;
+    Eshag Loves Big Arrays
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1529/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r722/1529a-Eshag-loves-big-arrays.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, it’s easy to see that we will never be able to remove the minimal element(s).  To do so we would need the average of picked numbers to be strictly less than the minimum, but this is impossible as the minimum is the smallest number we can pick.&lt;/p&gt;
+
+&lt;p&gt;Secondly, we can remove all the other elements: just pick the minimum and the element to be removed.&lt;/p&gt;
+
+&lt;p&gt;So, overall, we just check what’s the minimum, count how many such elements there are and everything else can be removed.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1529&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1529b/&quot;&gt;
+    Sifid and Strange Subsequences
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1529/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r722/1529b-Sifid-and-strange-subsequences.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1100&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;sortings&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;First, observe that we can always add all non-positive elements.  For them \(\mid x - y \mid \ge 0\) and the maximum is at most \(0\) so we’re good.&lt;/p&gt;
+
+&lt;p&gt;Can we add more?  It’s easy to see that we cannot add more than one positive elements.  Suppose we tried to add \(x, y &amp;gt; 0\), but then we have \(\mid x - y \mid &amp;lt; x\) and so necessarily also less than maximum.&lt;/p&gt;
+
+&lt;p&gt;So now we now we can add at most one positive number.  Clearly the smallest one is the best as it puts least constraints.  So just take it and see if it works by checking all consecutive pairs in sorted order.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1529&lt;/tiny&gt;C / &lt;tiny&gt;1528&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1529c/&quot;&gt;
+    Parsa's Humongous Tree
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1529/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r722/1529c-Parsa's-humongous-tree.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Exercise says \(a_i \in [l_i, r_i]\) but the intuition suggests that in the optimal solution we can always pick either \(l_i\) or \(r_i\).  How can we convince ourselves that’s true?  Say we have \(a_i \in (l_i, r_i)\).  Let’s then count how many of the neighbours have values smaller/larger than \(a_i\).  If there are more smaller neighbours then we’ll get a better result by increasing \(a_i\) so we might as well increase it all the way to \(r_i\) (note that by doing so we might increase that imbalance even more).  Similarly for the symmetrical case when there are more larger neighbours, in which case \(l_i\) is better.  What if those two sets are equal?  Moving to \(l_i\) or \(r_i\) will at either not make a difference (if we don’t “cross” any of the other numbers by making this move) or improve the result (if we do cross at least one).&lt;/p&gt;
+
+&lt;p&gt;Now that we know that we only need to consider \(l_i\) and \(r_i\) let’s root the tree at an arbitrary node and for all nodes \(u\) we can calculate \(\mathcal{D}_{u,\leftarrow}\) and \(\mathcal{D}_{u,\rightarrow}\) which are the best results we can get for the subtree at \(u\) picking \(l_i\), respectively, \(r_i\), for its value.  Then we do a DFS and calculate those values from leaves up to the root.  The respective equations are rather straightforward.  Clearly, the final answer is
+\(max(\mathcal{D}_{r,\leftarrow}, \mathcal{D}_{r,\rightarrow})\) where \(r\) is the root we picked.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1529&lt;/tiny&gt;D / &lt;tiny&gt;1528&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1529d/&quot;&gt;
+    Kavi on Pairing Duty
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1529/problem/D&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r722/1529d-Kavi-on-pairing-duty.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  &lt;rating&gt;R:1700 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1700&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Let’s denote the number of combinations for \(n\) pairs of points by \(f(n)\).  So let’s say we have \(n\) pairs of points, how can we connect them?&lt;/p&gt;
+
+&lt;p&gt;Firstly, we can connect the first and last points, everything else will be inside that arc so we can put there any solution for \(n-1\) pairs of points.  Similarly we can connect first and last but one and second and last points; the arcs will intersect but will have the same length and we have \(n-2\) points left that we can use arbitrarily as they’ll be inside those two initial arcs.  And so on.&lt;/p&gt;
+
+&lt;p&gt;Secondly, we can make all the arcs have equal lengths, which will trivially satisfy correctness constraints. For instance for 6 points we can connect them as: \((1, 2), (3, 4), (5, 6)\) or \((1, 4), (2, 5), (3, 6)\) with arc lengths of \(1\) and \(3\) respectively.  Notice that the number of points being divisible by the arc lengths is the only requirement here.&lt;/p&gt;
+
+&lt;p&gt;Putting those two together we get the final formula as:&lt;/p&gt;
+
+\[f(n) = \mathcal{D}(n) + \sum_{i \in {1 \ldots n-1}} f(i)\]
+
+&lt;p&gt;where \(\mathcal{D}(n)\) is the number of divisors of \(n\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1529&lt;/tiny&gt;E / &lt;tiny&gt;1528&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1529e/&quot;&gt;
+    Trees of Tranquillity
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1529/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1529&lt;/tiny&gt;F / &lt;tiny&gt;1528&lt;/tiny&gt;D
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1529f/&quot;&gt;
+    It's a bird! No, it's a plane! No, it's AaParsa!
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1529/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2500&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;shortest paths&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1528&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1528e/&quot;&gt;
+    Mashtali and Hagh Trees
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1528/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:2900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2900&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1528&lt;/tiny&gt;F
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1528f/&quot;&gt;
+    AmShZ Farm
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1528/problem/F&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  &lt;rating&gt;R:3300 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3300&quot; /&gt;&lt;/rating&gt;
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;fft&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-722.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Mon, 24 May 2021 00:00:00 +0100</pubDate>
+        <link>//R-722</link>
+        <link href="/R-722"/>
+        <guid isPermaLink="true">/R-722</guid>
+      </item>
+    
+      <item>
         <title>Round 721 (Div. I+II)</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1527&quot;&gt;Codeforces Round #721 (Div. 2)&lt;/a&gt;&lt;/p&gt;
 
@@ -2236,266 +2524,6 @@
         <link>//R-709</link>
         <link href="/R-709"/>
         <guid isPermaLink="true">/R-709</guid>
-      </item>
-    
-      <item>
-        <title>Educational Round 106</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1499&quot;&gt;Educational Codeforces Round 106 (Rated for Div. 2)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1499&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1499a/&quot;&gt;
-    Domino on Windowsill
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1499/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu106/1499a-domino-on-windowsill.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Fairly simple; we can place \(min(k_1, k_2)\) dominoes vertically and then we’re left with \(max(k_1, k_2) - min(k_1, k_2)\) consecutive cells where we can put half as many horizontal dominoes.  The case for white dominoes is analogous (and it’s easy to compute \(k_1\) and \(k_2\) for that case).&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1499&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1499b/&quot;&gt;
-    Binary Removals
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1499/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu106/1499b-binary-removals.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1000 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1000&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Eventually we want to have all \(0\)s on some prefix and all \(1\)s from then on.  What’s the longest prefix where we can make all \(0\)s?  Well, until we hit two \(1\)s next to each other.  From that point onwards we can make all \(1\)s until we hit two \(0\)s next to each other.  If by doing those two steps we processed the whole string we’re good; otherwise the answer is clearly “NO”.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1499&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1499c/&quot;&gt;
-    Minimum Grid Path
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1499/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu106/1499c-minimum-grid-path.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly, clearly both axis are independent (and controlled by even/odd \(c_i\)) so we can kinda decompose into two subproblems.&lt;/p&gt;
-
-&lt;p&gt;If we had to use all \(c_i\) then the optimal strategy is fairly clear:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;make minimal number of steps possible, i.e. \(1\), for all “turns” but the one with minimal \(c_i\),&lt;/li&gt;
-  &lt;li&gt;and then make all the remaining steps for the cheapest (applicable) \(c_i\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;However, we do not have to use all \(c_i\); we might do with just a prefix.  It’s fairly easy to scan from \(2\) to \(n\) and at each point compute in constant time what the cost would be if we were to use only that many \(c_i\).  Then just pick the best option.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1499&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1499d/&quot;&gt;
-    The Number of Pairs
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1499/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/edu/edu106/1499d-the-number-of-pairs.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:2100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Firstly, let’s look at \(a\) and \(b\) in such a way that it is easy to reason about \(gcd\) and \(lcm\), namely, say \(a = g \cdot p\) and \(b = g \cdot q\) such that \(gcd(p, q) = 1\), i.e. they are co-prime.  It’s then easy to see that \(gcd(a, b) = g\) and \(lcm(a, b) = g \cdot p \cdot q\).  Let’s now look again at the original equation:&lt;/p&gt;
-
-\[c \cdot lcm(a, b) - d \cdot gcd(a, b) = x\]
-
-\[c \cdot g \cdot p \cdot q - d \cdot g = x\]
-
-\[g \cdot (c \cdot p \cdot q - d) = x\]
-
-&lt;p&gt;Since \(g\) is a factor on the left hand side we conclude that \(x\) must be divisible by \(x\), so firstly let’s iterate through all divisors of \(x\) as candidates for \(g\).&lt;/p&gt;
-
-&lt;p&gt;Once we have a fixed \(g\):&lt;/p&gt;
-
-\[c \cdot p \cdot q = \frac{x}{g} + d\]
-
-&lt;p&gt;and so again we see that \(\frac{x}{g} + d\) must be divisible by \(c\); if it’s not we can skip such a candidate.&lt;/p&gt;
-
-&lt;p&gt;Now finally we get:&lt;/p&gt;
-
-\[p \cdot q = \frac{\frac{x}{g} + d}{c}\]
-
-&lt;p&gt;In other words we know what the product of \(p \cdot q\) should be equal to.  Recall that we can choose \(p\) and \(q\) any way we want provided that they are co-prime.  This means that any prime factor of \(p \cdot q\) must go to either \(p\) or \(q\), but not both.  In other words there are \(2^s\) ways to choose \(p\) and \(q\) where \(s\) is the number of prime factors of \(p \cdot q\).&lt;/p&gt;
-
-&lt;p&gt;The tricky bit is that if we naively use Eratosthenes sieve we have \(\sqrt{x}\) factors for \(x\) and for each we need \(log x\) time for a total of \(O(\sqrt{x}\ \log{x})\), which is not fast enough.&lt;/p&gt;
-
-&lt;p&gt;What we need to do is to precompute the number of prime factors for all numbers in the range we care about (i.e. up to \(2 \cdot 10^7\)).  Sieve gives us a smaller prime factor for every number.  Suppose we are looking at \(x\) with its smaller prime being \(p\).  We have two cases:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;smaller prime of \(\frac{x}{p}\) is also \(p\), in which case \(x\) has as many prime factors as \(\frac{x}{p}\),&lt;/li&gt;
-  &lt;li&gt;or it has one more, if they are different.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1499&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1499e/&quot;&gt;
-    Chaotic Merge
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1499/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1499&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1499f/&quot;&gt;
-    Diameter Cuts
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1499/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1499&lt;/tiny&gt;G
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1499g/&quot;&gt;
-    Graph Coloring
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1499/problem/G&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/Edu-106.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
-        <link>//Edu-106</link>
-        <link href="/Edu-106"/>
-        <guid isPermaLink="true">/Edu-106</guid>
       </item>
     
   </channel>

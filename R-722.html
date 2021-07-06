@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 722 (Div. I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 722 (Div. I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 722 (Div. I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #722 (Div. 1)" />
+<meta property="og:description" content="Codeforces Round #722 (Div. 1)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-24T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 722 (Div. I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/codeforces-editorials/R-722","headline":"Round 722 (Div. I+II)","dateModified":"2021-05-24T00:00:00+01:00","datePublished":"2021-05-24T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-722"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #722 (Div. 1)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 722 (Div. I+II)</h2>
+  <time datetime="2021-05-24T00:00:00+01:00" class="by-line">24 May 2021</time>
+  <p><a href="https://codeforces.com/contest/1528">Codeforces Round #722 (Div. 1)</a></p>
+
+<p><a href="https://codeforces.com/contest/1529">Codeforces Round #722 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1529</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1529a/">
+    Eshag Loves Big Arrays
+  </a>
+  <a href="https://codeforces.com/contest/1529/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r722/1529a-Eshag-loves-big-arrays.kt">(Code)</a>
+
+  <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, it’s easy to see that we will never be able to remove the minimal element(s).  To do so we would need the average of picked numbers to be strictly less than the minimum, but this is impossible as the minimum is the smallest number we can pick.</p>
+
+<p>Secondly, we can remove all the other elements: just pick the minimum and the element to be removed.</p>
+
+<p>So, overall, we just check what’s the minimum, count how many such elements there are and everything else can be removed.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1529</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1529b/">
+    Sifid and Strange Subsequences
+  </a>
+  <a href="https://codeforces.com/contest/1529/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r722/1529b-Sifid-and-strange-subsequences.kt">(Code)</a>
+
+  <rating>R:1100 <meter min="800" max="3600" value="1100" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<p>First, observe that we can always add all non-positive elements.  For them \(\mid x - y \mid \ge 0\) and the maximum is at most \(0\) so we’re good.</p>
+
+<p>Can we add more?  It’s easy to see that we cannot add more than one positive elements.  Suppose we tried to add \(x, y &gt; 0\), but then we have \(\mid x - y \mid &lt; x\) and so necessarily also less than maximum.</p>
+
+<p>So now we now we can add at most one positive number.  Clearly the smallest one is the best as it puts least constraints.  So just take it and see if it works by checking all consecutive pairs in sorted order.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1529</tiny>C / <tiny>1528</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1529c/">
+    Parsa's Humongous Tree
+  </a>
+  <a href="https://codeforces.com/contest/1529/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r722/1529c-Parsa's-humongous-tree.kt">(Code)</a>
+
+  <rating>R:1600 <meter min="800" max="3600" value="1600" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<p>Exercise says \(a_i \in [l_i, r_i]\) but the intuition suggests that in the optimal solution we can always pick either \(l_i\) or \(r_i\).  How can we convince ourselves that’s true?  Say we have \(a_i \in (l_i, r_i)\).  Let’s then count how many of the neighbours have values smaller/larger than \(a_i\).  If there are more smaller neighbours then we’ll get a better result by increasing \(a_i\) so we might as well increase it all the way to \(r_i\) (note that by doing so we might increase that imbalance even more).  Similarly for the symmetrical case when there are more larger neighbours, in which case \(l_i\) is better.  What if those two sets are equal?  Moving to \(l_i\) or \(r_i\) will at either not make a difference (if we don’t “cross” any of the other numbers by making this move) or improve the result (if we do cross at least one).</p>
+
+<p>Now that we know that we only need to consider \(l_i\) and \(r_i\) let’s root the tree at an arbitrary node and for all nodes \(u\) we can calculate \(\mathcal{D}_{u,\leftarrow}\) and \(\mathcal{D}_{u,\rightarrow}\) which are the best results we can get for the subtree at \(u\) picking \(l_i\), respectively, \(r_i\), for its value.  Then we do a DFS and calculate those values from leaves up to the root.  The respective equations are rather straightforward.  Clearly, the final answer is
+\(max(\mathcal{D}_{r,\leftarrow}, \mathcal{D}_{r,\rightarrow})\) where \(r\) is the root we picked.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1529</tiny>D / <tiny>1528</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1529d/">
+    Kavi on Pairing Duty
+  </a>
+  <a href="https://codeforces.com/contest/1529/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r722/1529d-Kavi-on-pairing-duty.kt">(Code)</a>
+
+  <rating>R:1700 <meter min="800" max="3600" value="1700" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>Let’s denote the number of combinations for \(n\) pairs of points by \(f(n)\).  So let’s say we have \(n\) pairs of points, how can we connect them?</p>
+
+<p>Firstly, we can connect the first and last points, everything else will be inside that arc so we can put there any solution for \(n-1\) pairs of points.  Similarly we can connect first and last but one and second and last points; the arcs will intersect but will have the same length and we have \(n-2\) points left that we can use arbitrarily as they’ll be inside those two initial arcs.  And so on.</p>
+
+<p>Secondly, we can make all the arcs have equal lengths, which will trivially satisfy correctness constraints. For instance for 6 points we can connect them as: \((1, 2), (3, 4), (5, 6)\) or \((1, 4), (2, 5), (3, 6)\) with arc lengths of \(1\) and \(3\) respectively.  Notice that the number of points being divisible by the arc lengths is the only requirement here.</p>
+
+<p>Putting those two together we get the final formula as:</p>
+
+\[f(n) = \mathcal{D}(n) + \sum_{i \in {1 \ldots n-1}} f(i)\]
+
+<p>where \(\mathcal{D}(n)\) is the number of divisors of \(n\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1529</tiny>E / <tiny>1528</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1529e/">
+    Trees of Tranquillity
+  </a>
+  <a href="https://codeforces.com/contest/1529/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2300 <meter min="800" max="3600" value="2300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1529</tiny>F / <tiny>1528</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1529f/">
+    It's a bird! No, it's a plane! No, it's AaParsa!
+  </a>
+  <a href="https://codeforces.com/contest/1529/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2500 <meter min="800" max="3600" value="2500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">shortest paths</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1528</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1528e/">
+    Mashtali and Hagh Trees
+  </a>
+  <a href="https://codeforces.com/contest/1528/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2900 <meter min="800" max="3600" value="2900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">trees</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1528</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1528f/">
+    AmShZ Farm
+  </a>
+  <a href="https://codeforces.com/contest/1528/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3300 <meter min="800" max="3600" value="3300" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">fft</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-722.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
