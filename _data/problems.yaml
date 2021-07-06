@@ -285,44 +285,44 @@
   labels: "data structures, divide and conquer, geometry, trees"
   rating: 2700
 
-# - id: "1307A"
-#   title: "Cow and Haybales"
-#   labels: "greedy, implementation"
-#   rating: 800
-#   code: "r620-639/r621/1307a-cow-and-haybales.kt"
-#
-# - id: "1307B"
-#   title: "Cow and Friend"
-#   labels: "geometry, greedy, math"
-#   rating: 1300
-#   code: "r620-639/r621/1307b-cow-and-friend.kt"
-#
-# - id: "1307C"
-#   title: "Cow and Message"
-#   labels: "brute force, dp, math, strings"
-#   rating: 1500
-#   code: "r620-639/r621/1307c-cow-and-message.kt"
-#
-# - id: "1307D"
-#   title: "Cow and Fields"
-#   labels: "binary search, data structures, dfs and similar, graphs, greedy, shortest paths, sortings"
-#   rating: 1900
-#   code: "r620-639/r621/1307d-cow-and-fields.kt"
-#
-# - id: "1307E"
-#   title: "Cow and Treats"
-#   labels: "binary search, combinatorics, dp, greedy, implementation, math"
-#   rating: 2500
-#
-# - id: "1307F"
-#   title: "Cow and Vacation"
-#   labels: "dfs and similar, dsu, trees"
-#   rating: 3300
-#
-# - id: "1307G"
-#   title: "Cow and Exercise"
-#   labels: "flows, graphs, shortest paths"
-#   rating: 3100
+- id: "1307A"
+  title: "Cow and Haybales"
+  labels: "greedy, implementation"
+  rating: 800
+  code: "r620-639/r621/1307a-cow-and-haybales.kt"
+
+- id: "1307B"
+  title: "Cow and Friend"
+  labels: "geometry, greedy, math"
+  rating: 1300
+  code: "r620-639/r621/1307b-cow-and-friend.kt"
+
+- id: "1307C"
+  title: "Cow and Message"
+  labels: "brute force, dp, math, strings"
+  rating: 1500
+  code: "r620-639/r621/1307c-cow-and-message.kt"
+
+- id: "1307D"
+  title: "Cow and Fields"
+  labels: "binary search, data structures, dfs and similar, graphs, greedy, shortest paths, sortings"
+  rating: 1900
+  code: "r620-639/r621/1307d-cow-and-fields.kt"
+
+- id: "1307E"
+  title: "Cow and Treats"
+  labels: "binary search, combinatorics, dp, greedy, implementation, math"
+  rating: 2500
+
+- id: "1307F"
+  title: "Cow and Vacation"
+  labels: "dfs and similar, dsu, trees"
+  rating: 3300
+
+- id: "1307G"
+  title: "Cow and Exercise"
+  labels: "flows, graphs, shortest paths"
+  rating: 3100
 
 - id: "1312A"
   title: "Two Regular Polygons"
