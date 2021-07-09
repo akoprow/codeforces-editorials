@@ -211,6 +211,48 @@
   labels: "combinatorics, dp, probabilities"
   rating: 2700
 
+- id: "1299D"
+  title: "Around the World"
+  labels: "bitmasks, combinatorics, dfs and similar, dp, graphs, graphs, math, trees"
+  rating: 3000
+
+- id: "1299E"
+  title: "So Mean"
+  labels: "interactive, math"
+  rating: 3400
+
+- id: "1300A"
+  title: "Non-zero"
+  labels: "implementation, math"
+  rating: 800
+  code: "r600-619/r618/1300a-non-zero.kt"
+
+- id: "1300B"
+  title: "Assigning to Classes"
+  labels: "greedy, implementation, sortings"
+  rating: 1000
+  code: "r600-619/r618/1300b-assigning-to-classes.kt"
+
+- id: "1300C"
+  title: "Anu Has a Function"
+  labels: "greedy, math"
+  also-as: "1299A"
+  rating: 1500
+  code: "r600-619/r618/1300c-anu-has-a-function.kt"
+
+- id: "1300D"
+  title: "Aerodynamic"
+  labels: "geometry"
+  also-as: "1299B"
+  rating: 1800
+  code: "r600-619/r618/1300d-aerodynamic.kt"
+
+- id: "1300E"
+  title: "Water Balance"
+  labels: "data structures, geometry, greedy"
+  also-as: "1299C"
+  rating: 2100
+
 - id: "1301A"
   title: "Three Strings"
   labels: "implementation, strings"
