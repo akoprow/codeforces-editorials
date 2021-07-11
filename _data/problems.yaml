@@ -4160,3 +4160,31 @@
 #   title: "Abnormal Permutation Pairs (hard version)"
 #   labels: "combinatorics, dp, math"
 #
+
+- id: "1543A"
+  title: "Exciting Bets"
+  labels: "greedy, math, number theory"
+  code: "r720-739/r730/1543a-exciting-bets.kt"
+
+- id: "1543B"
+  title: "Customising the Track"
+  labels: "combinatorics, greedy, math"
+  code: "r720-739/r730/1543b-customising-the-track.kt"
+
+- id: "1543C"
+  title: "Need for Pink Slips"
+  labels: "bitmasks, brute force, dfs and similar, implementation, math, probabilities"
+  code: "r720-739/r730/1543c-need-for-pink-slips.kt"
+
+- id: "1543D1"
+  title: "RPD and Rap Sheet (Easy Version)"
+  labels: "bitmasks, constructive algorithms, interactive, math"
+  code: "r720-739/r730/1543d1-RPD-and-rap-sheet-easy.kt"
+
+- id: "1543D2"
+  title: "RPD and Rap Sheet (Hard Version)"
+  labels: "brute force, constructive algorithms, interactive, math"
+
+- id: "1543E"
+  title: "The Final Pursuit"
+  labels: "bitmasks, constructive algorithms, divide and conquer, graphs, greedy, math"
