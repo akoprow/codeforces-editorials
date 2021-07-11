@@ -12,6 +12,221 @@
     </author>
     
       <item>
+        <title>Round 730 (Div. II)</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1543&quot;&gt;Codeforces Round #730 (Div. 2)&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1543&lt;/tiny&gt;A
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1543a/&quot;&gt;
+    Exciting Bets
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1543/problem/A&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r730/1543a-exciting-bets.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;number theory&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Firstly, if \(a = b\) then we can gen infinite result by continuing to increment them both. Otherwise, without loss of generality assume \(a &amp;gt; b\).  Note that \(a - b\), let’s denote it by \(d\), does not change under the operations.  Also, we have \(gcd(a, b) = gcd(a, a - b) = gcd(a, d)\) so the answer is bound by \(d\).  And we can always get \(d\) as we can always decrease \((a, b)\) down to \((d, 0)\).  However, we might be able to do it in fewer moves as it’s enough to move \(a\) – either up, or down – to any multiple of \(d\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1543&lt;/tiny&gt;B
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1543b/&quot;&gt;
+    Customising the Track
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1543/problem/B&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r730/1543b-customising-the-track.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It’s fairly easy to see that the optimal arrangement is to make the traffic on all tracks as evenly distributed as possible.  Let’s denote by \(S = \sum_i a_i\).  If \(S \mod n = 0\) then we can make the traffic exactly equal on all tracks and the answer is \(0\).  Otherwise, we’ll have \(S \mod n\) tracks that have traffic greater by one than the other \(n - (S \mod n)\) tracks.  Those two classes of tracks are the only ones that contribute to the answer, each one contributes \(1\) for a total of\((S \mod n) \cdot (n - (S \mod n))\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1543&lt;/tiny&gt;C
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1543c/&quot;&gt;
+    Need for Pink Slips
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1543/problem/C&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r730/1543c-need-for-pink-slips.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;probabilities&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Crucial observation is that \(v \ge 1.0\), which means that after every move the probability for the pink slip increases by at least \(0.05\) and so there will be at most \(21\) draws and we can brute force the process for a \(O(2^21)\) solution without any memoization at all.&lt;/p&gt;
+
+&lt;p&gt;As to precision problems we need to be careful when comparing doubles.  We can either use \(\epsilon\) in comparisons or convert everything to longs.  For the latter notice that there are at most four digits after the dot so we can just multiply everything by \(10,000\) and then again by \(2^{20}\) to ensure we have enough precision for divisions by two that we might have to perform at every step.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1543&lt;/tiny&gt;D1
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1543d1/&quot;&gt;
+    RPD and Rap Sheet (Easy Version)
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1543/problem/D1&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r730/1543d1-RPD-and-rap-sheet-easy.kt&quot;&gt;(Code)&lt;/a&gt;
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We have \(n\) guesses and \(n\) possible passwords; is there a way for us to try all options one by one?  The problem is that after each guess the password changes… but we do know &lt;em&gt;how&lt;/em&gt; it changes.  If the password was \(pass_{old}\) and we guessed \(guess\) then it changes to \(pass_{new}\) such that: \(pass_{old} \oplus pass_{new} = guess\), i.e. \(pass_{new} = pass_{old} \oplus guess\).  So after \(i\) guesses we have: \(pass_{new} = pass_{old} \oplus guess_1 \oplus \ldots \oplus guess_i\).  We can maintain \(p = guess_1 \oplus \ldots \oplus guess_i\) and in the i’th query we can check if the original password was \(i\) by querying for \(i \oplus p\).&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1543&lt;/tiny&gt;D2
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1543d2/&quot;&gt;
+    RPD and Rap Sheet (Hard Version)
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1543/problem/D2&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  
+  &lt;tiny&gt;1543&lt;/tiny&gt;E
+
+  
+  &lt;a href=&quot;/codeforces-editorials/problems/1543e/&quot;&gt;
+    The Final Pursuit
+  &lt;/a&gt;
+  &lt;a href=&quot;https://codeforces.com/contest/1543/problem/E&quot;&gt;
+  [CF]
+  &lt;/a&gt;
+
+  
+
+  
+
+  &lt;labels&gt;
+  
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;bitmasks&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;divide and conquer&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
+  
+    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
+  
+  &lt;/labels&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;object data=&quot;notes/R-730.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
+
+</description>
+        <pubDate>Wed, 07 Jul 2021 00:00:00 +0100</pubDate>
+        <link>//R-730</link>
+        <link href="/R-730"/>
+        <guid isPermaLink="true">/R-730</guid>
+      </item>
+    
+      <item>
         <title>Round 724 (Div II)</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1536&quot;&gt;Codeforces Round #724 (Div. 2)&lt;/a&gt;&lt;/p&gt;
 
@@ -2255,275 +2470,6 @@
         <link>//R-710</link>
         <link href="/R-710"/>
         <guid isPermaLink="true">/R-710</guid>
-      </item>
-    
-      <item>
-        <title>Round 709 (Div I+II)</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1483&quot;&gt;Codeforces Round #709 (Div. 1, based on Technocup 2021 Final Round)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://codeforces.com/contest/1484&quot;&gt;Codeforces Round #709 (Div. 2, based on Technocup 2021 Final Round)&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1484&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1484a/&quot;&gt;
-    Prison Break
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1484/problem/A&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r709/1484a-prison-break.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:800 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;800&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;constructive algorithms&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;It’s fairly easy to find a solution with \(n \cdot m\), for instance doing a snake like pattern from top-left to bottom, going row by row.  An argument why that’s optimal is: if we think about it as a graph we start with \(n \cdot m\) components and with one move we connect at most two into ones, so we need \(n \cdot m - 1\) move to make the graph connected, plus one to connect with the outside world.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1484&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1484b/&quot;&gt;
-    Restore Modulo
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1484/problem/B&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r709/1484b-restore-modulo.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1500 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1500&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;math&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Let’s look at all the differences of consecutive elements.  We have few cases:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;if there’s just one distinct value we can choose infinitely many large \(m\)s.&lt;/li&gt;
-  &lt;li&gt;if there are more than two distinct values then there is no answer.&lt;/li&gt;
-  &lt;li&gt;why can we have two values?  Because one (positive) might be a “regular” one bumping up by \(c\) and the other one (negative) might be once we “wrap up” modulo \(m\).  In this case the positive one is \(c\) and \(m\) is the difference between the two.  What remains to be done is to check whether this is indeed a valid solution.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1484&lt;/tiny&gt;C / &lt;tiny&gt;1483&lt;/tiny&gt;A
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1484c/&quot;&gt;
-    Basic Diplomacy
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1484/problem/C&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r709/1484c-basic-diplomacy.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1600 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1600&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;combinatorics&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;flows&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;greedy&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Greedy.  If there are days with \(0\) candidates there is no answer.  For days with \(1\) candidate let’s choose him.  From then one we have a choice and let’s greedily choose a friend that was used least times so far.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1484&lt;/tiny&gt;D / &lt;tiny&gt;1483&lt;/tiny&gt;B
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1484d/&quot;&gt;
-    Playlist
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1484/problem/D&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  &lt;a href=&quot;https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r700-719/r709/1484d-playlist.kt&quot;&gt;(Code)&lt;/a&gt;
-
-  &lt;rating&gt;R:1900 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;1900&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dsu&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;implementation&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;p&gt;It helps to first think how we would naively simulate it.  We need to remove entries so let’s keep everything on a doubly linked circular list.&lt;/p&gt;
-
-&lt;p&gt;Why simple simulation is not good enough?  Because we can have an input like lots of \(2\)s followed by lots of \(3\) and we only do one deletion per “round” so this is going to be too slow.&lt;/p&gt;
-
-&lt;p&gt;One way to speed it up is to in addition to regular pointers in the list add “shortcut” links.  If we go through a block \(a_1, \ldots a_n\) without doing any deletions and then finally do a deletion from \(a_n\) to \(b\) then we add shortcuts from \(a_1, \ldots a_{n-1}\) to \(a_n\) as those numbers (on their own) will never be reduced.&lt;/p&gt;
-
-&lt;p&gt;From here on it’s just a matter of careful implementation; when done properly this is actually short and sweet.  What helps a lot is that we have a fixed initial size of the input so instead of doing any pointers we just store appropriate indices in static arrays.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1484&lt;/tiny&gt;E / &lt;tiny&gt;1483&lt;/tiny&gt;C
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1484e/&quot;&gt;
-    Skyline Photo
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1484/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2100 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2100&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dp&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1484&lt;/tiny&gt;F / &lt;tiny&gt;1483&lt;/tiny&gt;D
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1484f/&quot;&gt;
-    Useful Edges
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1484/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:2400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;2400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;brute force&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;graphs&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;shortest paths&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1483&lt;/tiny&gt;E
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1483e/&quot;&gt;
-    Vabank
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1483/problem/E&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3200 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3200&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;binary search&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;interactive&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
-  
-  &lt;tiny&gt;1483&lt;/tiny&gt;F
-
-  
-  &lt;a href=&quot;/codeforces-editorials/problems/1483f/&quot;&gt;
-    Exam
-  &lt;/a&gt;
-  &lt;a href=&quot;https://codeforces.com/contest/1483/problem/F&quot;&gt;
-  [CF]
-  &lt;/a&gt;
-
-  
-
-  &lt;rating&gt;R:3400 &lt;meter min=&quot;800&quot; max=&quot;3600&quot; value=&quot;3400&quot; /&gt;&lt;/rating&gt;
-
-  &lt;labels&gt;
-  
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;data structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dfs and similar&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;dsu&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;string suffix structures&lt;/span&gt;
-  
-    &lt;span class=&quot;badge rounded-pill bg-warning text-dark&quot;&gt;trees&lt;/span&gt;
-  
-  &lt;/labels&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;object data=&quot;notes/R-709.pdf&quot; width=&quot;1000&quot; height=&quot;1000&quot; type=&quot;application/pdf&quot; /&gt;
-
-</description>
-        <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-        <link>//R-709</link>
-        <link href="/R-709"/>
-        <guid isPermaLink="true">/R-709</guid>
       </item>
     
   </channel>

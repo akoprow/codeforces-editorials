@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 730 (Div. II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 730 (Div. II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 730 (Div. II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #730 (Div. 2)" />
+<meta property="og:description" content="Codeforces Round #730 (Div. 2)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-07T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 730 (Div. II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/codeforces-editorials/R-730","headline":"Round 730 (Div. II)","dateModified":"2021-07-07T00:00:00+01:00","datePublished":"2021-07-07T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-730"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #730 (Div. 2)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 730 (Div. II)</h2>
+  <time datetime="2021-07-07T00:00:00+01:00" class="by-line">07 Jul 2021</time>
+  <p><a href="https://codeforces.com/contest/1543">Codeforces Round #730 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1543</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1543a/">
+    Exciting Bets
+  </a>
+  <a href="https://codeforces.com/contest/1543/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r730/1543a-exciting-bets.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">number theory</span>
+  
+  </labels>
+</div>
+
+<p>Firstly, if \(a = b\) then we can gen infinite result by continuing to increment them both. Otherwise, without loss of generality assume \(a &gt; b\).  Note that \(a - b\), let’s denote it by \(d\), does not change under the operations.  Also, we have \(gcd(a, b) = gcd(a, a - b) = gcd(a, d)\) so the answer is bound by \(d\).  And we can always get \(d\) as we can always decrease \((a, b)\) down to \((d, 0)\).  However, we might be able to do it in fewer moves as it’s enough to move \(a\) – either up, or down – to any multiple of \(d\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1543</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1543b/">
+    Customising the Track
+  </a>
+  <a href="https://codeforces.com/contest/1543/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r730/1543b-customising-the-track.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>It’s fairly easy to see that the optimal arrangement is to make the traffic on all tracks as evenly distributed as possible.  Let’s denote by \(S = \sum_i a_i\).  If \(S \mod n = 0\) then we can make the traffic exactly equal on all tracks and the answer is \(0\).  Otherwise, we’ll have \(S \mod n\) tracks that have traffic greater by one than the other \(n - (S \mod n)\) tracks.  Those two classes of tracks are the only ones that contribute to the answer, each one contributes \(1\) for a total of\((S \mod n) \cdot (n - (S \mod n))\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1543</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1543c/">
+    Need for Pink Slips
+  </a>
+  <a href="https://codeforces.com/contest/1543/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r730/1543c-need-for-pink-slips.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dfs and similar</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">implementation</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">probabilities</span>
+  
+  </labels>
+</div>
+
+<p>Crucial observation is that \(v \ge 1.0\), which means that after every move the probability for the pink slip increases by at least \(0.05\) and so there will be at most \(21\) draws and we can brute force the process for a \(O(2^21)\) solution without any memoization at all.</p>
+
+<p>As to precision problems we need to be careful when comparing doubles.  We can either use \(\epsilon\) in comparisons or convert everything to longs.  For the latter notice that there are at most four digits after the dot so we can just multiply everything by \(10,000\) and then again by \(2^{20}\) to ensure we have enough precision for divisions by two that we might have to perform at every step.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1543</tiny>D1
+
+  
+  <a href="/codeforces-editorials/problems/1543d1/">
+    RPD and Rap Sheet (Easy Version)
+  </a>
+  <a href="https://codeforces.com/contest/1543/problem/D1">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r730/1543d1-RPD-and-rap-sheet-easy.kt">(Code)</a>
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>We have \(n\) guesses and \(n\) possible passwords; is there a way for us to try all options one by one?  The problem is that after each guess the password changes… but we do know <em>how</em> it changes.  If the password was \(pass_{old}\) and we guessed \(guess\) then it changes to \(pass_{new}\) such that: \(pass_{old} \oplus pass_{new} = guess\), i.e. \(pass_{new} = pass_{old} \oplus guess\).  So after \(i\) guesses we have: \(pass_{new} = pass_{old} \oplus guess_1 \oplus \ldots \oplus guess_i\).  We can maintain \(p = guess_1 \oplus \ldots \oplus guess_i\) and in the i’th query we can check if the original password was \(i\) by querying for \(i \oplus p\).</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1543</tiny>D2
+
+  
+  <a href="/codeforces-editorials/problems/1543d2/">
+    RPD and Rap Sheet (Hard Version)
+  </a>
+  <a href="https://codeforces.com/contest/1543/problem/D2">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1543</tiny>E
+
+  
+  <a href="/codeforces-editorials/problems/1543e/">
+    The Final Pursuit
+  </a>
+  <a href="https://codeforces.com/contest/1543/problem/E">
+  [CF]
+  </a>
+
+  
+
+  
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">bitmasks</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">constructive algorithms</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">divide and conquer</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-730.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
