@@ -129,3 +129,5 @@
 ./gen.py 1534 LATOKEN2021 "Codeforces LATOKEN Round 1 (Div. 1 + Div. 2)"
 ./gen.py 1542 R-729   "Round 729 (Div. II)"
 ./gen.py 1543 R-730   "Round 730 (Div. II)"
+./gen.py 1545 R-732   "Round 732 (Div. I+II)"
+./gen.py 1546 R-732   "Round 732 (Div. I+II)"

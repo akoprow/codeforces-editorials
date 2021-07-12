@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
+  <meta name="generator" content="Jekyll">
+
+  <title>Round 732 (Div. I+II)</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/codeforces-editorials/css/main.css">
+
+  <link href="/codeforces-editorials/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Round 732 (Div. I+II) | Codeforces editorials</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Round 732 (Div. I+II)" />
+<meta name="author" content="Adam Koprowski" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Codeforces Round #732 (Div. 1)" />
+<meta property="og:description" content="Codeforces Round #732 (Div. 1)" />
+<meta property="og:site_name" content="Codeforces editorials" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-11T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Round 732 (Div. I+II)" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"/codeforces-editorials/R-732","headline":"Round 732 (Div. I+II)","dateModified":"2021-07-11T00:00:00+01:00","datePublished":"2021-07-11T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/codeforces-editorials/R-732"},"author":{"@type":"Person","name":"Adam Koprowski"},"description":"Codeforces Round #732 (Div. 1)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+  </script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHM3SPE7F9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHM3SPE7F9');
+  </script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/codeforces-editorials/">
+    
+    <h1>adam@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/codeforces-editorials/"><h2 class="header-link">Contests</h2></a>
+<a href="/codeforces-editorials/problems"><h2 class="header-link">Problems</h2></a>
+<a href="/codeforces-editorials/todo"><h2 class="header-link">TODO</h2></a>
+
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Round 732 (Div. I+II)</h2>
+  <time datetime="2021-07-11T00:00:00+01:00" class="by-line">11 Jul 2021</time>
+  <p><a href="https://codeforces.com/contest/1545">Codeforces Round #732 (Div. 1)</a></p>
+
+<p><a href="https://codeforces.com/contest/1546">Codeforces Round #732 (Div. 2)</a></p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1546</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1546a/">
+    AquaMoon and Two Arrays
+  </a>
+  <a href="https://codeforces.com/contest/1546/problem/A">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r732/1546a-AquaMoon-and-two-arrays.kt">(Code)</a>
+
+  <rating>R:800 <meter min="800" max="3600" value="800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">greedy</span>
+  
+  </labels>
+</div>
+
+<p>Let’s build lists of indices that need to be increased/decreased by 1.  So if \(a_i &gt; b_i\) then insert entry \(i\) into the decrement list \(a_i-b_i\) times and similarly for \(a_i &lt; b_i\).  Now, if those two lists have different lengths then clearly there is no solution.  Otherwise, just pair them up into operations (zip) and we’re done.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1546</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1546b/">
+    AquaMoon and Stolen String
+  </a>
+  <a href="https://codeforces.com/contest/1546/problem/B">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r732/1546b-AquaMoon-and-stolen-string.kt">(Code)</a>
+
+  <rating>R:1200 <meter min="800" max="3600" value="1200" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+  </labels>
+</div>
+
+<p>Let’s reconstruct the stolen string index by index.  For any given position let’s count the frequencies of all letters.  Note that letters will appear in pairs: once from the list of original strings and once from the scrambled up strings (but we do not care about the order) and only the stolen string’s letter will contribute once without a pair.  So we can keep track of parities and the only letter occurring odd number of times is from the stolen string.</p>
+
+<p>Alternatively, we can keep a multiset of letters (again, per index) and add all the ones from the original string and then remove the ones from the paired up strings.  The only letter remaining is from the secret string.</p>
+
+<p>Yet another approach is to xor the letters together.  All pairs will cancel each other out and we will be left with the secret letter.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1546</tiny>C / <tiny>1545</tiny>A
+
+  
+  <a href="/codeforces-editorials/problems/1546c/">
+    AquaMoon and Strange Sort
+  </a>
+  <a href="https://codeforces.com/contest/1546/problem/C">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r732/1546c-AquaMoon-and-strange-sort.kt">(Code)</a>
+
+  <rating>R:1500 <meter min="800" max="3600" value="1500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">sortings</span>
+  
+  </labels>
+</div>
+
+<p>We can see that the nonsense with arrows essentially means that each number can move an even number of positions. So we can count for all letters how many times they occur on even positions in: a) the original array, b) the sorted array.  If those two numbers are equal then we can go from one to the other; otherwise, we cannot.  So the answer is “YES” iff. the multisets obtained from numbers at even positions in original and sorted arrays are equal.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1546</tiny>D / <tiny>1545</tiny>B
+
+  
+  <a href="/codeforces-editorials/problems/1546d/">
+    AquaMoon and Chess
+  </a>
+  <a href="https://codeforces.com/contest/1546/problem/D">
+  [CF]
+  </a>
+
+  <a href="https://github.com/akoprow/competetive-programming/blob/master/src/codeforces/r720-739/r732/1546d-AquaMoon-and-chess.kt">(Code)</a>
+
+  <rating>R:1900 <meter min="800" max="3600" value="1900" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<p>First simple observation is understanding what do the moves mean.  Essentially we need to have two adjacent pawns and we can move them (both together) to the left or right (provided that position is empty).</p>
+
+<p>A more difficult observation is that the only things that matter are:</p>
+
+<ul>
+  <li>the number of disjoint groups of pawns \(g\) (i.e. \(5\) pawns in a row give us two groups) and</li>
+  <li>the number of empty positions \(e\).</li>
+</ul>
+
+<p>That is because we can move from any such configuration to any other such configuration. So the final answer is \({g+e}\choose{g}\).</p>
+
+<p><code class="language-plaintext highlighter-rouge">TODO</code>: This is very hand-wave’y; understand better and improve this description.</p>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1546</tiny>E / <tiny>1545</tiny>C
+
+  
+  <a href="/codeforces-editorials/problems/1546e/">
+    AquaMoon and Permutations
+  </a>
+  <a href="https://codeforces.com/contest/1546/problem/E">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:2800 <meter min="800" max="3600" value="2800" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">combinatorics</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">graphs</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1546</tiny>F / <tiny>1545</tiny>D
+
+  
+  <a href="/codeforces-editorials/problems/1546f/">
+    AquaMoon and Wrong Coordinate
+  </a>
+  <a href="https://codeforces.com/contest/1546/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3000 <meter min="800" max="3600" value="3000" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">interactive</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">math</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1545</tiny>E1
+
+  
+  <a href="/codeforces-editorials/problems/1545e1/">
+    AquaMoon and Time Stop (easy version)
+  </a>
+  <a href="https://codeforces.com/contest/1545/problem/E1">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3500 <meter min="800" max="3600" value="3500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1545</tiny>E2
+
+  
+  <a href="/codeforces-editorials/problems/1545e2/">
+    AquaMoon and Time Stop (hard version)
+  </a>
+  <a href="https://codeforces.com/contest/1545/problem/E2">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3500 <meter min="800" max="3600" value="3500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<div class="alert alert-primary" role="alert">
+  
+  <tiny>1545</tiny>F
+
+  
+  <a href="/codeforces-editorials/problems/1545f/">
+    AquaMoon and Potatoes
+  </a>
+  <a href="https://codeforces.com/contest/1545/problem/F">
+  [CF]
+  </a>
+
+  
+
+  <rating>R:3500 <meter min="800" max="3600" value="3500" /></rating>
+
+  <labels>
+  
+  
+    <span class="badge rounded-pill bg-warning text-dark">brute force</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">data structures</span>
+  
+    <span class="badge rounded-pill bg-warning text-dark">dp</span>
+  
+  </labels>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO
+</code></pre></div></div>
+
+<hr />
+
+<object data="notes/R-732.pdf" width="1000" height="1000" type="application/pdf" />
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Adam Koprowski</b>
+    </span>
+    
+    <span>© 2021</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>
