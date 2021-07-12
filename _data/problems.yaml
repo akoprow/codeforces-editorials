@@ -4188,3 +4188,56 @@
 - id: "1543E"
   title: "The Final Pursuit"
   labels: "bitmasks, constructive algorithms, divide and conquer, graphs, greedy, math"
+
+- id: "1545E1"
+  title: "AquaMoon and Time Stop (easy version)"
+  labels: "data structures, data structures, dp, dp"
+  rating: 3500
+
+- id: "1545E2"
+  title: "AquaMoon and Time Stop (hard version)"
+  labels: "data structures, dp"
+  rating: 3500
+
+- id: "1545F"
+  title: "AquaMoon and Potatoes"
+  labels: "brute force, data structures, dp"
+  rating: 3500
+
+- id: "1546A"
+  title: "AquaMoon and Two Arrays"
+  labels: "brute force, greedy"
+  rating: 800
+  code: "r720-739/r732/1546a-AquaMoon-and-two-arrays.kt"
+
+- id: "1546B"
+  title: "AquaMoon and Stolen String"
+  labels: "interactive"
+  rating: 1200
+  code: "r720-739/r732/1546b-AquaMoon-and-stolen-string.kt"
+
+- id: "1546C"
+  title: "AquaMoon and Strange Sort"
+  labels: "sortings"
+  also-as: "1545A"
+  rating: 1500
+  code: "r720-739/r732/1546c-AquaMoon-and-strange-sort.kt"
+
+- id: "1546D"
+  title: "AquaMoon and Chess"
+  labels: "combinatorics, math"
+  also-as: "1545B"
+  rating: 1900
+  code: "r720-739/r732/1546d-AquaMoon-and-chess.kt"
+
+- id: "1546E"
+  title: "AquaMoon and Permutations"
+  labels: "combinatorics, graphs"
+  also-as: "1545C"
+  rating: 2800
+
+- id: "1546F"
+  title: "AquaMoon and Wrong Coordinate"
+  labels: "interactive, math"
+  also-as: "1545D"
+  rating: 3000
