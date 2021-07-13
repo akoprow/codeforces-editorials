@@ -3964,30 +3964,36 @@
 - id: "1535A"
   title: "Fair Playoff"
   labels: "brute force, implementation, math"
+  rating: 800
   code: "edu/edu110/1535a-fair-playoff.kt"
 
 - id: "1535B"
   title: "Array Reodering"
   labels: "brute force, greedy, math, number theory, sortings"
+  rating: 900
   code: "edu/edu110/1535b-array-reordering.kt"
 
 - id: "1535C"
   title: "Unstable String"
   labels: "dp, strings, two pointers"
+  rating: 1400
   code: "edu/edu110/1535c-unstable-string.kt"
 
 - id: "1535D"
   title: "Playoff Tournament"
   labels: "data structures, implementation, trees"
+  rating: 1800
   code: "edu/edu110/1535d-playoff-tournament.kt"
 
 - id: "1535E"
   title: "Gold Transfer"
   labels: "binary search, data structures, greedy, interactive, trees"
+  rating: 2200
 
 - id: "1535F"
   title: "String Distance"
   labels: "binary search, hashing, strings"
+  rating: 3000
 
 - id: "1536A"
   title: "Omkar and Bad Story"
@@ -4164,29 +4170,35 @@
 - id: "1543A"
   title: "Exciting Bets"
   labels: "greedy, math, number theory"
+  rating: 900
   code: "r720-739/r730/1543a-exciting-bets.kt"
 
 - id: "1543B"
   title: "Customising the Track"
   labels: "combinatorics, greedy, math"
+  rating: 900
   code: "r720-739/r730/1543b-customising-the-track.kt"
 
 - id: "1543C"
   title: "Need for Pink Slips"
   labels: "bitmasks, brute force, dfs and similar, implementation, math, probabilities"
+  rating: 1900
   code: "r720-739/r730/1543c-need-for-pink-slips.kt"
 
 - id: "1543D1"
   title: "RPD and Rap Sheet (Easy Version)"
   labels: "bitmasks, constructive algorithms, interactive, math"
+  rating: 1700
   code: "r720-739/r730/1543d1-RPD-and-rap-sheet-easy.kt"
 
 - id: "1543D2"
   title: "RPD and Rap Sheet (Hard Version)"
+  rating: 2200
   labels: "brute force, constructive algorithms, interactive, math"
 
 - id: "1543E"
   title: "The Final Pursuit"
+  rating: 2700
   labels: "bitmasks, constructive algorithms, divide and conquer, graphs, greedy, math"
 
 - id: "1545E1"
@@ -4241,3 +4253,45 @@
   labels: "interactive, math"
   also-as: "1545D"
   rating: 3000
+
+- id: "1547A"
+  title: "Shortest Path with Obstacle"
+  labels: "implementation, math"
+  rating: 800
+  code: "r720-739/r731/1547a-shortest-path-with-obstacle.kt"
+
+- id: "1547B"
+  title: "Alphabetical Strings"
+  labels: "greedy, implementation, strings"
+  rating: 800
+  code: "r720-739/r731/1547b-alphabetical-strings.kt"
+
+- id: "1547C"
+  title: "Pair Programming"
+  labels: "greedy, two pointers"
+  rating: 1100
+  code: "r720-739/r731/1547c-pair-programming.kt"
+
+- id: "1547D"
+  title: "Co-growing Sequence"
+  labels: "bitmasks, greedy"
+  rating: 1300
+  code: "r720-739/r731/1547d-co-growing-sequence.kt"
+
+- id: "1547E"
+  title: "Air Conditioners"
+  labels: "data structures, dp, implementation, shortest paths, sortings, two pointers"
+  rating: 1500
+  code: "r720-739/r731/1547e-air-conditioners.kt"
+
+- id: "1547F"
+  title: "Array Stabilization (GCD version)"
+  labels: "binary search, brute force, data structures, number theory, two pointers"
+  rating: 1900
+  code: "r720-739/r731/1547f-array-stabilization-gcd-version.kt"
+
+- id: "1547G"
+  title: "How Many Paths?"
+  labels: "dfs and similar, dp, graphs, trees"
+  rating: 2100
+  code: "r720-739/r731/1547g-how-many-paths.kt"
